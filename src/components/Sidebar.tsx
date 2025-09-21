@@ -86,6 +86,7 @@ const sidebarItems: SidebarItem[] = [
     icon: <Smartphone size={18} />,
     children: [
       { title: 'React Native', href: '/mobile-development/react-native', icon: <ChevronRight size={16} /> },
+      { title: 'Expo & EAS', href: '/mobile-development/expo', icon: <ChevronRight size={16} /> },
       { title: 'Flutter', href: '/mobile-development/flutter', icon: <ChevronRight size={16} /> },
       { title: 'Native iOS', href: '/mobile-development/ios', icon: <ChevronRight size={16} /> },
       { title: 'Native Android', href: '/mobile-development/android', icon: <ChevronRight size={16} /> }

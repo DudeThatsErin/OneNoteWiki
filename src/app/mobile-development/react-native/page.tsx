@@ -1,0 +1,395 @@
+import Link from 'next/link';
+import { ArrowLeft, ArrowRight, Smartphone, Code, Zap, Users, Globe, Package } from 'lucide-react';
+
+const reactNativeFeatures = [
+  {
+    title: 'Cross-Platform',
+    description: 'Write once, run on both iOS and Android with native performance',
+    icon: <Globe className="w-5 h-5" />,
+    details: 'Share up to 95% of code between platforms while maintaining native look and feel'
+  },
+  {
+    title: 'Native Performance',
+    description: 'Direct access to native APIs and components for optimal performance',
+    icon: <Zap className="w-5 h-5" />,
+    details: 'Uses native components instead of web views for better performance'
+  },
+  {
+    title: 'Hot Reloading',
+    description: 'See changes instantly without losing application state',
+    icon: <Code className="w-5 h-5" />,
+    details: 'Fast development cycle with immediate feedback on code changes'
+  },
+  {
+    title: 'Large Community',
+    description: 'Extensive ecosystem with thousands of libraries and active community',
+    icon: <Users className="w-5 h-5" />,
+    details: 'Backed by Meta (Facebook) with strong community support and resources'
+  },
+  {
+    title: 'JavaScript/TypeScript',
+    description: 'Use familiar web technologies to build mobile applications',
+    icon: <Package className="w-5 h-5" />,
+    details: 'Leverage existing JavaScript knowledge and npm ecosystem'
+  },
+  {
+    title: 'Native Modules',
+    description: 'Easily integrate native code when needed for platform-specific features',
+    icon: <Smartphone className="w-5 h-5" />,
+    details: 'Bridge between JavaScript and native code for custom functionality'
+  }
+];
+
+const projectIdeas = [
+  {
+    level: 'Beginner',
+    color: 'green',
+    projects: [
+      'Weather App: Display current weather and forecasts',
+      'To-Do List: Task management with local storage',
+      'Calculator: Scientific calculator with history',
+      'News Reader: Fetch and display news articles',
+      'Timer/Stopwatch: Multiple timers with notifications',
+      'Expense Tracker: Track daily expenses with categories'
+    ]
+  },
+  {
+    level: 'Intermediate',
+    color: 'yellow',
+    projects: [
+      'Social Media App: Posts, likes, comments with authentication',
+      'E-commerce App: Product catalog with shopping cart',
+      'Chat Application: Real-time messaging with Socket.io',
+      'Fitness Tracker: Track workouts and progress',
+      'Recipe App: Search recipes with favorites and meal planning',
+      'Music Player: Audio playback with playlists'
+    ]
+  },
+  {
+    level: 'Advanced',
+    color: 'red',
+    projects: [
+      'Video Streaming: Netflix-like app with offline viewing',
+      'Ride Sharing: Uber-like app with maps and payments',
+      'Banking App: Secure transactions with biometric auth',
+      'AR Shopping: Augmented reality product visualization',
+      'IoT Controller: Control smart home devices',
+      'Cryptocurrency Wallet: Secure crypto transactions'
+    ]
+  }
+];
+
+export default function ReactNativePage() {
+  return (
+    <div className="space-y-8">
+      {/* Navigation */}
+      <div className="flex items-center justify-between">
+        <Link
+          href="/mobile-development"
+          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span>Back to Mobile Development</span>
+        </Link>
+        <Link
+          href="/mobile-development/flutter"
+          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          <span>Next: Flutter</span>
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
+
+      {/* Header */}
+      <div className="space-y-4">
+        <div className="flex items-center space-x-3">
+          <div className="text-4xl">⚛️</div>
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">React Native</h1>
+            <p className="text-gray-600 dark:text-gray-300">Build native mobile apps using React</p>
+          </div>
+        </div>
+        <p className="text-lg text-gray-600 dark:text-gray-300">
+          React Native is a popular open-source framework for building mobile applications using React. 
+          Created by Meta (Facebook), it allows developers to build native mobile apps for iOS and Android 
+          using JavaScript and React concepts.
+        </p>
+      </div>
+
+      {/* Quick Stats */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">2015</div>
+          <div className="text-sm text-blue-700 dark:text-blue-300">First Released</div>
+        </div>
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">Intermediate</div>
+          <div className="text-sm text-blue-700 dark:text-blue-300">Difficulty Level</div>
+        </div>
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">100k+</div>
+          <div className="text-sm text-blue-700 dark:text-blue-300">GitHub Stars</div>
+        </div>
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">Meta</div>
+          <div className="text-sm text-blue-700 dark:text-blue-300">Maintained by</div>
+        </div>
+      </div>
+
+      {/* Key Features */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          Why Choose React Native?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {reactNativeFeatures.map((feature, index) => (
+            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+              <div className="flex items-center space-x-3 mb-3">
+                <div className="text-blue-600">{feature.icon}</div>
+                <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
+              </div>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{feature.description}</p>
+              <p className="text-gray-500 dark:text-gray-400 text-xs">{feature.details}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Getting Started */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Getting Started</h2>
+        
+        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Quick Setup</h3>
+          <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
+{`# Install React Native CLI
+npm install -g @react-native-community/cli
+
+# Create a new project
+npx react-native init MyAwesomeProject
+
+# Navigate to project directory
+cd MyAwesomeProject
+
+# Start Metro bundler
+npx react-native start
+
+# Run on Android (in another terminal)
+npx react-native run-android
+
+# Run on iOS (macOS only)
+npx react-native run-ios`}
+          </pre>
+        </div>
+
+        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Basic Component Example</h3>
+          <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
+{`import React, { useState } from 'react';
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+  Alert,
+} from 'react-native';
+
+const App = () => {
+  const [name, setName] = useState('');
+  const [count, setCount] = useState(0);
+
+  const handlePress = () => {
+    Alert.alert('Hello!', \`Hello \${name || 'World'}!\`);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Welcome to React Native!</Text>
+      
+      <TextInput
+        style={styles.input}
+        placeholder="Enter your name"
+        value={name}
+        onChangeText={setName}
+      />
+      
+      <TouchableOpacity style={styles.button} onPress={handlePress}>
+        <Text style={styles.buttonText}>Say Hello</Text>
+      </TouchableOpacity>
+      
+      <View style={styles.counter}>
+        <Text style={styles.counterText}>Count: {count}</Text>
+        <TouchableOpacity
+          style={styles.counterButton}
+          onPress={() => setCount(count + 1)}
+        >
+          <Text style={styles.buttonText}>+</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f5f5f5',
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 30,
+    color: '#333',
+  },
+  input: {
+    width: '100%',
+    height: 50,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 8,
+    paddingHorizontal: 15,
+    marginBottom: 20,
+    backgroundColor: 'white',
+  },
+  button: {
+    backgroundColor: '#007AFF',
+    paddingHorizontal: 30,
+    paddingVertical: 15,
+    borderRadius: 8,
+    marginBottom: 20,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  counter: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 15,
+  },
+  counterText: {
+    fontSize: 18,
+    color: '#333',
+  },
+  counterButton: {
+    backgroundColor: '#34C759',
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
+
+export default App;`}
+          </pre>
+        </div>
+      </section>
+
+      {/* Project Ideas */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          React Native Project Ideas
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {projectIdeas.map((category, index) => (
+            <div key={index} className={`bg-${category.color}-50 dark:bg-${category.color}-900/20 p-6 rounded-lg border border-${category.color}-200 dark:border-${category.color}-800`}>
+              <h3 className={`font-semibold text-${category.color}-900 dark:text-${category.color}-100 mb-3`}>
+                {category.level === 'Beginner' ? '🟢' : category.level === 'Intermediate' ? '🟡' : '🔴'} {category.level} Projects
+              </h3>
+              <ul className={`space-y-2 text-${category.color}-800 dark:text-${category.color}-200 text-sm`}>
+                {category.projects.map((project, i) => (
+                  <li key={i}>• <strong>{project.split(':')[0]}:</strong> {project.split(':')[1]}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Popular Libraries */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Popular Libraries & Tools</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Navigation</h3>
+            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+              <li>• React Navigation</li>
+              <li>• React Native Navigation</li>
+              <li>• React Router Native</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">State Management</h3>
+            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+              <li>• Redux Toolkit</li>
+              <li>• Zustand</li>
+              <li>• MobX</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">UI Components</h3>
+            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+              <li>• NativeBase</li>
+              <li>• React Native Elements</li>
+              <li>• UI Kitten</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Networking</h3>
+            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+              <li>• Axios</li>
+              <li>• React Query</li>
+              <li>• Apollo GraphQL</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Storage</h3>
+            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+              <li>• AsyncStorage</li>
+              <li>• Realm</li>
+              <li>• SQLite</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Testing</h3>
+            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+              <li>• Jest</li>
+              <li>• Detox</li>
+              <li>• React Native Testing Library</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation */}
+      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+        <Link
+          href="/mobile-development"
+          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span>Back to Mobile Development</span>
+        </Link>
+        <Link
+          href="/mobile-development/flutter"
+          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+        >
+          <span>Next: Flutter</span>
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
+    </div>
+  );
+}

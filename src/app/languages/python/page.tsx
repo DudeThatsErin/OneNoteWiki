@@ -258,6 +258,53 @@ print(message)`}
         </div>
       </section>
 
+      {/* Project Ideas */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          Python Project Ideas
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Beginner Projects */}
+          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">🟢 Beginner Projects</h3>
+            <ul className="space-y-2 text-green-800 dark:text-green-200 text-sm">
+              <li>• <strong>Password Generator:</strong> Create secure passwords with custom rules</li>
+              <li>• <strong>Number Guessing Game:</strong> Interactive guessing game with hints</li>
+              <li>• <strong>Unit Converter:</strong> Convert between different units (temperature, length, etc.)</li>
+              <li>• <strong>Simple Calculator:</strong> Basic arithmetic with a GUI using tkinter</li>
+              <li>• <strong>File Organizer:</strong> Sort files into folders by extension</li>
+              <li>• <strong>Word Counter:</strong> Analyze text files for word frequency</li>
+            </ul>
+          </div>
+
+          {/* Intermediate Projects */}
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
+            <h3 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-3">🟡 Intermediate Projects</h3>
+            <ul className="space-y-2 text-yellow-800 dark:text-yellow-200 text-sm">
+              <li>• <strong>Web Scraper:</strong> Extract data from websites using BeautifulSoup</li>
+              <li>• <strong>Personal Budget Tracker:</strong> Track expenses with data visualization</li>
+              <li>• <strong>Weather Dashboard:</strong> Display weather data with charts</li>
+              <li>• <strong>Task Automation:</strong> Automate repetitive tasks with scripts</li>
+              <li>• <strong>API Client:</strong> Build a client for REST APIs with requests</li>
+              <li>• <strong>Data Analysis Tool:</strong> Analyze CSV data with pandas</li>
+            </ul>
+          </div>
+
+          {/* Advanced Projects */}
+          <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
+            <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">🔴 Advanced Projects</h3>
+            <ul className="space-y-2 text-red-800 dark:text-red-200 text-sm">
+              <li>• <strong>Machine Learning Model:</strong> Build predictive models with scikit-learn</li>
+              <li>• <strong>Web Application:</strong> Full-stack app with Django or Flask</li>
+              <li>• <strong>Stock Price Predictor:</strong> Use ML to predict stock movements</li>
+              <li>• <strong>Chatbot:</strong> AI-powered chatbot with natural language processing</li>
+              <li>• <strong>Image Recognition:</strong> Classify images using deep learning</li>
+              <li>• <strong>Cryptocurrency Tracker:</strong> Real-time crypto data with alerts</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Getting Started */}
       <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">

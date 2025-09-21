@@ -414,6 +414,53 @@ public class Person {
         </div>
       </section>
 
+      {/* Project Ideas */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          Java Project Ideas
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Beginner Projects */}
+          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">🟢 Beginner Projects</h3>
+            <ul className="space-y-2 text-green-800 dark:text-green-200 text-sm">
+              <li>• <strong>Student Management System:</strong> CRUD operations with file storage</li>
+              <li>• <strong>Banking System:</strong> Account management with basic transactions</li>
+              <li>• <strong>Library Management:</strong> Book checkout system with OOP principles</li>
+              <li>• <strong>Calculator GUI:</strong> Swing-based calculator with advanced operations</li>
+              <li>• <strong>Tic-Tac-Toe Game:</strong> Console or GUI-based game with AI</li>
+              <li>• <strong>Address Book:</strong> Contact management with search functionality</li>
+            </ul>
+          </div>
+
+          {/* Intermediate Projects */}
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
+            <h3 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-3">🟡 Intermediate Projects</h3>
+            <ul className="space-y-2 text-yellow-800 dark:text-yellow-200 text-sm">
+              <li>• <strong>E-commerce Backend:</strong> REST API with Spring Boot and JPA</li>
+              <li>• <strong>Chat Application:</strong> Multi-client chat using sockets</li>
+              <li>• <strong>Employee Management:</strong> Full CRUD with database integration</li>
+              <li>• <strong>File Compression Tool:</strong> Implement compression algorithms</li>
+              <li>• <strong>Web Crawler:</strong> Extract data from websites with multithreading</li>
+              <li>• <strong>Online Quiz System:</strong> Web-based quiz with user authentication</li>
+            </ul>
+          </div>
+
+          {/* Advanced Projects */}
+          <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
+            <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">🔴 Advanced Projects</h3>
+            <ul className="space-y-2 text-red-800 dark:text-red-200 text-sm">
+              <li>• <strong>Microservices Architecture:</strong> Distributed system with Spring Cloud</li>
+              <li>• <strong>Real-time Trading System:</strong> High-frequency trading platform</li>
+              <li>• <strong>Content Management System:</strong> Full-featured CMS with security</li>
+              <li>• <strong>Distributed Cache:</strong> Build a Redis-like caching system</li>
+              <li>• <strong>Android App:</strong> Native Android application with backend</li>
+              <li>• <strong>Search Engine:</strong> Build a web search engine with indexing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Getting Started */}
       <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">

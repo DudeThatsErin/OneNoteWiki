@@ -542,6 +542,53 @@ int main() {
         </div>
       </section>
 
+      {/* Project Ideas */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          C++ Project Ideas
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Beginner Projects */}
+          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">🟢 Beginner Projects</h3>
+            <ul className="space-y-2 text-green-800 dark:text-green-200 text-sm">
+              <li>• <strong>Console Calculator:</strong> Advanced calculator with expression parsing</li>
+              <li>• <strong>Student Grade Manager:</strong> Store and calculate student grades</li>
+              <li>• <strong>Simple Text Editor:</strong> Basic text manipulation and file I/O</li>
+              <li>• <strong>Number Base Converter:</strong> Convert between binary, decimal, hex</li>
+              <li>• <strong>Hangman Game:</strong> Word guessing game with ASCII art</li>
+              <li>• <strong>Contact Manager:</strong> Store contacts with search functionality</li>
+            </ul>
+          </div>
+
+          {/* Intermediate Projects */}
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
+            <h3 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-3">🟡 Intermediate Projects</h3>
+            <ul className="space-y-2 text-yellow-800 dark:text-yellow-200 text-sm">
+              <li>• <strong>2D Game Engine:</strong> Simple game engine with SDL or SFML</li>
+              <li>• <strong>File Compression:</strong> Implement Huffman coding algorithm</li>
+              <li>• <strong>Database System:</strong> Simple relational database with B-trees</li>
+              <li>• <strong>Network Chat Server:</strong> Multi-client chat with sockets</li>
+              <li>• <strong>Image Processing:</strong> Apply filters and transformations</li>
+              <li>• <strong>Memory Allocator:</strong> Custom memory management system</li>
+            </ul>
+          </div>
+
+          {/* Advanced Projects */}
+          <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
+            <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">🔴 Advanced Projects</h3>
+            <ul className="space-y-2 text-red-800 dark:text-red-200 text-sm">
+              <li>• <strong>3D Graphics Engine:</strong> OpenGL-based rendering engine</li>
+              <li>• <strong>Operating System Kernel:</strong> Basic OS with memory management</li>
+              <li>• <strong>Compiler/Interpreter:</strong> Build a programming language</li>
+              <li>• <strong>High-Frequency Trading:</strong> Low-latency trading system</li>
+              <li>• <strong>Ray Tracer:</strong> Photorealistic rendering engine</li>
+              <li>• <strong>Distributed System:</strong> Multi-node distributed computing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Getting Started */}
       <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">

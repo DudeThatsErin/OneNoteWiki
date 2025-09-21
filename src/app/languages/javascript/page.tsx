@@ -284,6 +284,53 @@ export default function JavaScriptPage() {
         </div>
       </section>
 
+      {/* Project Ideas */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          JavaScript Project Ideas
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Beginner Projects */}
+          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">🟢 Beginner Projects</h3>
+            <ul className="space-y-2 text-green-800 dark:text-green-200 text-sm">
+              <li>• <strong>To-Do List App:</strong> Add, edit, delete tasks with local storage</li>
+              <li>• <strong>Calculator:</strong> Basic arithmetic operations with a clean UI</li>
+              <li>• <strong>Digital Clock:</strong> Real-time clock with date display</li>
+              <li>• <strong>Random Quote Generator:</strong> Fetch and display inspirational quotes</li>
+              <li>• <strong>Color Palette Generator:</strong> Generate random color schemes</li>
+              <li>• <strong>Simple Weather App:</strong> Display weather using an API</li>
+            </ul>
+          </div>
+
+          {/* Intermediate Projects */}
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
+            <h3 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-3">🟡 Intermediate Projects</h3>
+            <ul className="space-y-2 text-yellow-800 dark:text-yellow-200 text-sm">
+              <li>• <strong>Expense Tracker:</strong> Track income/expenses with charts</li>
+              <li>• <strong>Movie Search App:</strong> Search movies using TMDB API</li>
+              <li>• <strong>Memory Card Game:</strong> Interactive card matching game</li>
+              <li>• <strong>Recipe Finder:</strong> Search and save recipes with filters</li>
+              <li>• <strong>Chat Application:</strong> Real-time messaging with Socket.io</li>
+              <li>• <strong>Portfolio Website:</strong> Responsive personal portfolio</li>
+            </ul>
+          </div>
+
+          {/* Advanced Projects */}
+          <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
+            <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">🔴 Advanced Projects</h3>
+            <ul className="space-y-2 text-red-800 dark:text-red-200 text-sm">
+              <li>• <strong>E-commerce Platform:</strong> Full shopping cart with payments</li>
+              <li>• <strong>Social Media Dashboard:</strong> Analytics and post management</li>
+              <li>• <strong>Video Streaming App:</strong> Upload and stream videos</li>
+              <li>• <strong>Project Management Tool:</strong> Kanban boards with teams</li>
+              <li>• <strong>Real-time Collaboration:</strong> Google Docs-like editor</li>
+              <li>• <strong>Cryptocurrency Tracker:</strong> Live prices with portfolio</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Quick Start */}
       <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
