@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  /* Standard list styling for content areas */
+  .content-list {
+    @apply list-disc list-inside text-gray-600 dark:text-gray-300;
+  }
+  
+  .content-list > li {
+    @apply mb-3;
+  }
+  
+  .content-list.marker-blue > li::marker {
+    color: rgb(37 99 235); /* blue-600 */
+  }
+  
+  .content-list.marker-green > li::marker {
+    color: rgb(34 197 94); /* green-500 */
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

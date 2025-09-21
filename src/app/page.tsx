@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BookOpen, Code, Globe, Smartphone, Database, Layers, Lightbulb, HelpCircle } from 'lucide-react';
+import { BookOpen, Code, Globe, Smartphone, Database, Layers, Lightbulb, HelpCircle, MessageCircle, Bot } from 'lucide-react';
 
 const quickStartCards = [
   {
@@ -68,18 +68,17 @@ export default function HomePage() {
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
           Welcome to CodingHelp Wiki
         </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        <p className="pt-2 pb-4 text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
           Your comprehensive guide to learning programming and software development. 
           Created by the CodingHelp community to help aspiring developers on their coding journey.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+        <div className="flex flex-col gap-4 justify-center items-center pb-4">
           <Link
             href="/getting-started"
             className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
           >
             Start Learning
           </Link>
-          <div className="flex items-center space-x-4">
             <a
               href="https://discord.gg/geQEUBm"
               target="_blank"
@@ -96,7 +95,6 @@ export default function HomePage() {
             >
               Visit Subreddit
             </a>
-          </div>
         </div>
       </div>
 
@@ -112,13 +110,15 @@ export default function HomePage() {
               href={card.href}
               className={`p-6 rounded-lg border-2 transition-all hover:shadow-lg hover:scale-105 ${card.color}`}
             >
-              <div className="space-y-3">
-                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-white dark:bg-gray-800 shadow-sm">
-                  {card.icon}
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-white dark:bg-gray-800 shadow-sm flex-shrink-0">
+                    {card.icon}
+                  </div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                    {card.title}
+                  </h3>
                 </div>
-                <h3 className="font-semibold text-gray-900 dark:text-white">
-                  {card.title}
-                </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
                   {card.description}
                 </p>
@@ -138,23 +138,23 @@ export default function HomePage() {
           helping others learn to code. Join us on Discord for real-time help or visit our subreddit 
           for discussions and Q&A.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col lg:flex-row gap-4 justify-center items-center">
           <a
             href="https://discord.gg/geQEUBm"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors"
           >
-            <span>💬</span>
+            <MessageCircle className="w-5 h-5" />
             <span>Join Discord Server</span>
           </a>
           <a
             href="https://reddit.com/r/CodingHelp"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors"
+            className="flex items-center space-x-2 px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white rounded-lg font-medium transition-colors"
           >
-            <span>🤝</span>
+            <Bot className="w-5 h-5" />
             <span>Visit r/CodingHelp</span>
           </a>
         </div>

@@ -79,21 +79,21 @@ const languages = [
 const projectCategories = [
   {
     level: 'Beginner',
-    icon: <Users className="w-6 h-6" />,
+    icon: <Users className="w-6 h-6" suppressHydrationWarning />,
     color: 'green',
     description: 'Perfect for learning fundamentals and building confidence',
     examples: ['To-Do Lists', 'Calculators', 'Simple Games', 'Basic CRUD Apps']
   },
   {
     level: 'Intermediate',
-    icon: <Zap className="w-6 h-6" />,
+    icon: <Zap className="w-6 h-6" suppressHydrationWarning />,
     color: 'yellow',
     description: 'Challenging projects that expand your skills',
     examples: ['Web APIs', 'Database Integration', 'Real-time Apps', 'Mobile Apps']
   },
   {
     level: 'Advanced',
-    icon: <Trophy className="w-6 h-6" />,
+    icon: <Trophy className="w-6 h-6" suppressHydrationWarning />,
     color: 'red',
     description: 'Complex projects for experienced developers',
     examples: ['Distributed Systems', 'Machine Learning', 'Compilers', 'Game Engines']
@@ -231,14 +231,14 @@ export default function ProjectIdeasPage() {
                   href="/project-ideas/swift"
                   className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
                 >
-                  <Apple className="w-4 h-4" />
+                  <Apple className="w-4 h-4" suppressHydrationWarning />
                   <span>Swift Project Ideas</span>
                 </Link>
                 <Link
                   href="/mobile-development"
                   className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium transition-colors"
                 >
-                  <Smartphone className="w-4 h-4" />
+                  <Smartphone className="w-4 h-4" suppressHydrationWarning />
                   <span>Mobile Development Guide</span>
                 </Link>
               </div>
@@ -282,7 +282,7 @@ export default function ProjectIdeasPage() {
                       </div>
                     </div>
                   </div>
-                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" suppressHydrationWarning />
                 </div>
                 
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{language.description}</p>

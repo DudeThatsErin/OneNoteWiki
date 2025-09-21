@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { BookOpen, ArrowRight, CheckCircle } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord, faReddit } from '@fortawesome/free-brands-svg-icons';
 
 const gettingStartedSteps = [
   {
@@ -30,23 +32,23 @@ const gettingStartedSteps = [
 
 export default function GettingStartedPage() {
   return (
-    <div className="space-y-8">
+    <>
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col items-start p-4">
+        <div className="flex items-center gap-[1rem]">
           <BookOpen className="w-8 h-8 text-blue-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Getting Started with Programming
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white pb-2">
+            Getting Started
           </h1>
         </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
+        <p className="pt-4 text-lg text-gray-600 dark:text-gray-300">
           Welcome to your programming journey! This section will guide you through the basics 
           of programming, from understanding what programming is to writing your first program.
         </p>
       </div>
 
       {/* Learning Path */}
-      <div className="space-y-6">
+      <div className="space-y-6 py-4">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Your Learning Path
         </h2>
@@ -83,32 +85,32 @@ export default function GettingStartedPage() {
       </div>
 
       {/* Quick Tips */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+      <div className="mb-4">
         <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
-          💡 Tips for Success
+          Tips for Success
         </h3>
         <ul className="space-y-2 text-blue-800 dark:text-blue-200">
           <li className="flex items-start space-x-2">
-            <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" />
+            <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0 text-green-500" />
             <span>Take your time - programming is a skill that develops gradually</span>
           </li>
           <li className="flex items-start space-x-2">
-            <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" />
+            <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0 text-green-500" />
             <span>Practice regularly, even if it's just 15-30 minutes a day</span>
           </li>
           <li className="flex items-start space-x-2">
-            <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" />
+            <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0 text-green-500" />
             <span>Don't be afraid to make mistakes - they're part of learning</span>
           </li>
           <li className="flex items-start space-x-2">
-            <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" />
+            <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0 text-green-500" />
             <span>Join our community for help and support when you get stuck</span>
           </li>
         </ul>
       </div>
 
       {/* Community Support */}
-      <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+      <div className="my-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           Need Help?
         </h3>
@@ -122,7 +124,8 @@ export default function GettingStartedPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors"
           >
-            💬 Ask on Discord
+            <FontAwesomeIcon icon={faDiscord} className="w-4 h-4 mr-2" />
+            Ask on Discord
           </a>
           <a
             href="https://reddit.com/r/CodingHelp"
@@ -130,10 +133,11 @@ export default function GettingStartedPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors"
           >
-            🤝 Post on Reddit
+            <FontAwesomeIcon icon={faReddit} className="w-4 h-4 mr-2" />
+            Post on Reddit
           </a>
         </div>
       </div>
-    </div>
+    </>
   );
 }

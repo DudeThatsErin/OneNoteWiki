@@ -121,7 +121,7 @@ export default function SetupPage() {
   return (
     <div className="space-y-8">
       {/* Navigation */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <Link
           href="/getting-started/choosing-language"
           className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
@@ -139,39 +139,33 @@ export default function SetupPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
-          <Settings className="w-8 h-8 text-green-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Setting Up Your Environment
-          </h1>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
+      <div className="flex flex-col items-start py-2">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white pb-2">
+          Setting Up Your Environment
+        </h1>
+        <p className="text-lg text-gray-600 dark:text-gray-300 pb-4">
           Before you can start coding, you need to set up your development environment. 
           This includes installing a code editor, your programming language, and essential tools.
         </p>
       </div>
 
       {/* Setup Overview */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
-          🛠️ What You'll Need
+      <div className="pb-4">
+        <h3 className="text-2xl font-semibold mb-4">
+          What You'll Need
         </h3>
         <div className="space-y-4">
           {setupSteps.map((step, index) => (
-            <div key={index} className="flex items-start space-x-3">
-              <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
-                {index + 1}
-              </div>
-              <div>
-                <h4 className="font-semibold text-green-900 dark:text-green-100">{step.title}</h4>
-                <p className="text-green-800 dark:text-green-200 text-sm mb-2">{step.description}</p>
-                <ul className="text-green-700 dark:text-green-300 text-xs space-y-1">
-                  {step.details.map((detail, i) => (
-                    <li key={i}>• {detail}</li>
-                  ))}
-                </ul>
-              </div>
+            <div key={index}>
+              <h4 className="font-semibold pb-3">
+                {index + 1}. {step.title}
+              </h4>
+              <p className="pb-1">{step.description}</p>
+              <ul className="content-list marker-blue pb-4">
+                {step.details.map((detail, i) => (
+                  <li key={i}>{detail}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
@@ -185,11 +179,11 @@ export default function SetupPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {editorComparison.map((editor, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+              <div className="flex flex-col items-center justify-between mb-3">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   {editor.name}
                 </h3>
-                <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                <span className={`text-sm px-4 py-1 rounded-full font-medium ${
                   editor.price === 'Free' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                   'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300'
                 }`}>
@@ -199,37 +193,38 @@ export default function SetupPage() {
               
               <div className="space-y-3">
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1 text-sm">✅ Pros:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Pros:</h4>
+                  <ul className="content-list marker-blue">
                     {editor.pros.map((pro, i) => (
-                      <li key={i}>• {pro}</li>
+                      <li key={i}>{pro}</li>
                     ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1 text-sm">❌ Cons:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Cons:</h4>
+                  <ul className="content-list marker-blue">
                     {editor.cons.map((con, i) => (
-                      <li key={i}>• {con}</li>
+                      <li key={i}>{con}</li>
                     ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1 text-sm">🎯 Best For:</h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-xs">{editor.bestFor}</p>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Best For:</h4>
+                  <p className="text-gray-600 dark:text-gray-300">{editor.bestFor}</p>
                 </div>
-                
+                <div className="flex items-center justify-center pt-2">
                 <a
                   href={editor.downloadUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm font-medium transition-colors"
+                  className="flex w-fit text-center items-center space-x-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm font-medium transition-colors"
                 >
                   <Download className="w-4 h-4" />
                   <span>Download</span>
                 </a>
+                </div>
               </div>
             </div>
           ))}
@@ -237,7 +232,7 @@ export default function SetupPage() {
       </section>
 
       {/* Language-Specific Setup */}
-      <section className="space-y-6">
+      <section className="space-y-6 py-4">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Language-Specific Setup
         </h2>
@@ -283,58 +278,22 @@ export default function SetupPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Essential VS Code Extensions
         </h2>
-        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+        <div className="py-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">General Extensions:</h4>
-              <ul className="space-y-2">
-                <li className="flex items-start space-x-2">
-                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <strong className="text-blue-900 dark:text-blue-100">Prettier</strong>
-                    <p className="text-blue-800 dark:text-blue-200 text-sm">Code formatter</p>
-                  </div>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <strong className="text-blue-900 dark:text-blue-100">GitLens</strong>
-                    <p className="text-blue-800 dark:text-blue-200 text-sm">Enhanced Git capabilities</p>
-                  </div>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <strong className="text-blue-900 dark:text-blue-100">Live Server</strong>
-                    <p className="text-blue-800 dark:text-blue-200 text-sm">Local development server</p>
-                  </div>
-                </li>
+              <ul className="content-list marker-blue">
+                <li><strong>Prettier</strong> - Code formatter</li>
+                <li><strong>GitLens</strong> - Enhanced Git capabilities</li>
+                <li><strong>Live Server</strong> - Local development server</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Language-Specific:</h4>
-              <ul className="space-y-2">
-                <li className="flex items-start space-x-2">
-                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <strong className="text-blue-900 dark:text-blue-100">Python</strong>
-                    <p className="text-blue-800 dark:text-blue-200 text-sm">Python language support</p>
-                  </div>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <strong className="text-blue-900 dark:text-blue-100">ES7+ React/Redux/React-Native</strong>
-                    <p className="text-blue-800 dark:text-blue-200 text-sm">JavaScript/React snippets</p>
-                  </div>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <strong className="text-blue-900 dark:text-blue-100">Extension Pack for Java</strong>
-                    <p className="text-blue-800 dark:text-blue-200 text-sm">Complete Java development</p>
-                  </div>
-                </li>
+              <ul className="content-list marker-blue">
+                <li><strong>Python</strong> - Python language support</li>
+                <li><strong>ES7+ React/Redux/React-Native</strong> - JavaScript/React snippets</li>
+                <li><strong>Extension Pack for Java</strong> - Complete Java development</li>
               </ul>
             </div>
           </div>
@@ -342,36 +301,36 @@ export default function SetupPage() {
       </section>
 
       {/* Terminal Setup */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
+      <div className="pb-4">
         <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
-          💻 Terminal/Command Line Setup
+          Terminal/Command Line Setup
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Windows:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
-              <li>• Use PowerShell or Command Prompt</li>
-              <li>• Consider Windows Terminal (modern)</li>
-              <li>• WSL2 for Linux compatibility</li>
-              <li>• Git Bash for Unix-like commands</li>
+            <ul className="content-list marker-blue">
+              <li>Use PowerShell or Command Prompt</li>
+              <li>Consider Windows Terminal (modern)</li>
+              <li>WSL2 for Linux compatibility</li>
+              <li>Git Bash for Unix-like commands</li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">macOS:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
-              <li>• Built-in Terminal app</li>
-              <li>• iTerm2 for advanced features</li>
-              <li>• Zsh is default shell</li>
-              <li>• Homebrew for package management</li>
+            <ul className="content-list marker-blue">
+              <li>Built-in Terminal app</li>
+              <li>iTerm2 for advanced features</li>
+              <li>Zsh is default shell</li>
+              <li>Homebrew for package management</li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Linux:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
-              <li>• Built-in terminal emulator</li>
-              <li>• Bash or Zsh shell</li>
-              <li>• Package manager (apt, yum, pacman)</li>
-              <li>• Highly customizable</li>
+            <ul className="content-list marker-blue">
+              <li>Built-in terminal emulator</li>
+              <li>Bash or Zsh shell</li>
+              <li>Package manager (apt, yum, pacman)</li>
+              <li>Highly customizable</li>
             </ul>
           </div>
         </div>
@@ -380,24 +339,24 @@ export default function SetupPage() {
       {/* Troubleshooting */}
       <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-6 border border-yellow-200 dark:border-yellow-800">
         <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-4">
-          🔧 Common Setup Issues
+          Common Setup Issues
         </h3>
         <div className="space-y-3">
           <div>
             <h4 className="font-semibold text-yellow-900 dark:text-yellow-100">PATH Issues:</h4>
-            <p className="text-yellow-800 dark:text-yellow-200 text-sm">
+            <p className="text-yellow-800 dark:text-yellow-200">
               If commands aren't recognized, you may need to add the installation directory to your system PATH.
             </p>
           </div>
           <div>
             <h4 className="font-semibold text-yellow-900 dark:text-yellow-100">Permission Errors:</h4>
-            <p className="text-yellow-800 dark:text-yellow-200 text-sm">
-              On macOS/Linux, you might need to use `sudo` for system-wide installations.
+            <p className="text-yellow-800 dark:text-yellow-200">
+              On macOS/Linux, you might need to use <code>sudo</code> for system-wide installations.
             </p>
           </div>
           <div>
             <h4 className="font-semibold text-yellow-900 dark:text-yellow-100">Version Conflicts:</h4>
-            <p className="text-yellow-800 dark:text-yellow-200 text-sm">
+            <p className="text-yellow-800 dark:text-yellow-200">
               Use virtual environments (Python) or version managers (Node.js) to avoid conflicts.
             </p>
           </div>
@@ -405,7 +364,7 @@ export default function SetupPage() {
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/getting-started/choosing-language"
           className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
@@ -415,7 +374,7 @@ export default function SetupPage() {
         </Link>
         <Link
           href="/getting-started/first-program"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Your First Program</span>
           <ArrowRight className="w-4 h-4" />

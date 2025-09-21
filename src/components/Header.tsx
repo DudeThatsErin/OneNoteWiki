@@ -3,7 +3,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useTheme } from '@/contexts/ThemeContext';
-import { Sun, Moon, MessageCircle, Bot, Menu, X } from 'lucide-react';
+import { Sun, Moon, Menu, X } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord, faReddit } from '@fortawesome/free-brands-svg-icons';
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -29,18 +31,6 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
-            <Link 
-              href="/getting-started" 
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
-            >
-              Getting Started
-            </Link>
-            <Link 
-              href="/languages" 
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
-            >
-              Languages
-            </Link>
             <Link 
               href="/project-ideas" 
               className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
@@ -81,7 +71,7 @@ export default function Header() {
                 className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
                 title="Join our Discord"
               >
-                <MessageCircle size={20} />
+                <FontAwesomeIcon icon={faDiscord} className="w-5 h-5" />
               </a>
               <a
                 href="https://reddit.com/r/CodingHelp"
@@ -90,7 +80,7 @@ export default function Header() {
                 className="p-2 text-gray-600 hover:text-orange-600 dark:text-gray-300 dark:hover:text-orange-400 transition-colors"
                 title="Visit our Subreddit"
               >
-                <Bot size={20} />
+                <FontAwesomeIcon icon={faReddit} className="w-5 h-5" />
               </a>
             </div>
 
@@ -99,11 +89,12 @@ export default function Header() {
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
               title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+              suppressHydrationWarning
             >
               {theme === 'light' ? (
-                <Moon size={20} className="text-gray-600 dark:text-gray-300" />
+                <Moon size={20} className="text-gray-600 dark:text-gray-300" suppressHydrationWarning />
               ) : (
-                <Sun size={20} className="text-gray-600 dark:text-gray-300" />
+                <Sun size={20} className="text-gray-600 dark:text-gray-300" suppressHydrationWarning />
               )}
             </button>
 
@@ -112,11 +103,12 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
               title="Toggle menu"
+              suppressHydrationWarning
             >
               {isMobileMenuOpen ? (
-                <X size={20} className="text-gray-600 dark:text-gray-300" />
+                <X size={20} className="text-gray-600 dark:text-gray-300" suppressHydrationWarning />
               ) : (
-                <Menu size={20} className="text-gray-600 dark:text-gray-300" />
+                <Menu size={20} className="text-gray-600 dark:text-gray-300" suppressHydrationWarning />
               )}
             </button>
           </div>
@@ -126,6 +118,13 @@ export default function Header() {
         {isMobileMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 dark:border-gray-700 py-4">
             <nav className="flex flex-col space-y-4">
+              <Link 
+                href="/" 
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
               <Link 
                 href="/getting-started" 
                 className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
@@ -138,24 +137,49 @@ export default function Header() {
                 className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Languages
+                Programming Languages
               </Link>
               <Link 
-                href="/project-ideas" 
+                href="/web-development" 
                 className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Project Ideas
+                Web Development
               </Link>
               <Link 
-                href="/bot-commands" 
-                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors flex items-center space-x-2"
+                href="/frameworks" 
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <span>Bot Commands</span>
-                <span className="text-xs px-2 py-0.5 bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300 rounded-full">
-                  Soon
-                </span>
+                Frameworks
+              </Link>
+              <Link 
+                href="/mobile-development" 
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Mobile Development
+              </Link>
+              <Link 
+                href="/data-databases" 
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Data & Databases
+              </Link>
+              <Link 
+                href="/devops-tools" 
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                DevOps & Tools
+              </Link>
+              <Link 
+                href="/ai" 
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                AI & Machine Learning
               </Link>
               <Link 
                 href="/resources" 
@@ -180,8 +204,8 @@ export default function Header() {
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
                 >
-                  <MessageCircle size={16} />
-                  <span className="text-sm">Discord</span>
+                  <FontAwesomeIcon icon={faDiscord} className="w-4 h-4" />
+                  <span className="pl-1">Discord</span>
                 </a>
                 <a
                   href="https://reddit.com/r/CodingHelp"
@@ -189,8 +213,8 @@ export default function Header() {
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-gray-600 hover:text-orange-600 dark:text-gray-300 dark:hover:text-orange-400 transition-colors"
                 >
-                  <Bot size={16} />
-                  <span className="text-sm">Reddit</span>
+                  <FontAwesomeIcon icon={faReddit} className="w-4 h-4" />
+                  <span className="pl-1">Reddit</span>
                 </a>
               </div>
             </nav>

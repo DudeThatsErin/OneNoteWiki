@@ -95,10 +95,10 @@ const languages = [
 ];
 
 const languageStats = [
-  { label: 'Most Popular', value: 'JavaScript', icon: <Star className="w-4 h-4" /> },
-  { label: 'Best for Beginners', value: 'Python', icon: <Users className="w-4 h-4" /> },
-  { label: 'Fastest Growing', value: 'Rust', icon: <TrendingUp className="w-4 h-4" /> },
-  { label: 'Highest Performance', value: 'C++', icon: <Zap className="w-4 h-4" /> }
+  { label: 'Most Popular', value: 'JavaScript', icon: <Star className="w-4 h-4" suppressHydrationWarning /> },
+  { label: 'Best for Beginners', value: 'Python', icon: <Users className="w-4 h-4" suppressHydrationWarning /> },
+  { label: 'Fastest Growing', value: 'Rust', icon: <TrendingUp className="w-4 h-4" suppressHydrationWarning /> },
+  { label: 'Highest Performance', value: 'C++', icon: <Zap className="w-4 h-4" suppressHydrationWarning /> }
 ];
 
 export default function LanguagesPage() {
@@ -107,7 +107,7 @@ export default function LanguagesPage() {
       {/* Header */}
       <div className="flex flex-col gap-4 md:gap-6 px-2 md:px-0">
         <div className="flex items-center gap-3 md:gap-4">
-          <Code className="w-8 h-8 md:w-10 md:h-10 text-blue-600" />
+          <Code className="w-8 h-8 md:w-10 md:h-10 text-blue-600" suppressHydrationWarning />
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
             Programming Languages
           </h1>
@@ -209,7 +209,7 @@ export default function LanguagesPage() {
                     </div>
                   </div>
                 </div>
-                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-gray-400" />
+                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-gray-400" suppressHydrationWarning />
               </div>
               
               <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base mb-6 leading-relaxed">
@@ -232,7 +232,7 @@ export default function LanguagesPage() {
       </div>
 
       {/* Learning Resources */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 md:p-8 border border-gray-200 dark:border-gray-700 mx-2 md:mx-0">
+      <div className="p-6 md:p-8">
         <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-6">
           General Learning Resources
         </h3>
@@ -261,32 +261,32 @@ export default function LanguagesPage() {
       </div>
 
       {/* Getting Started */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 md:p-8 border border-gray-200 dark:border-gray-700 mx-2 md:mx-0">
+      <div className="p-6 md:p-8">
         <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-6">
           Tips for Success
         </h3>
         <div className="flex flex-col gap-6 text-gray-700 dark:text-gray-300">
           <div className="flex items-start gap-4">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm md:text-base font-bold mt-1">1</div>
-            <p className="text-sm md:text-base leading-relaxed">
+            <p className="ml-2 text-sm md:text-base leading-relaxed">
               <strong>Take your time</strong> - programming is a skill that develops gradually
             </p>
           </div>
           <div className="flex items-start gap-4">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm md:text-base font-bold mt-1">2</div>
-            <p className="text-sm md:text-base leading-relaxed">
+            <p className="ml-2 text-sm md:text-base leading-relaxed">
               <strong>Practice regularly, even if it's just 15-30 minutes a day</strong>
             </p>
           </div>
           <div className="flex items-start gap-4">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm md:text-base font-bold mt-1">3</div>
-            <p className="text-sm md:text-base leading-relaxed">
+            <p className="ml-2 text-sm md:text-base leading-relaxed">
               <strong>Don't be afraid to make mistakes</strong> - they're part of learning
             </p>
           </div>
           <div className="flex items-start gap-4">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm md:text-base font-bold mt-1">4</div>
-            <p className="text-sm md:text-base leading-relaxed">
+            <p className="ml-2 text-sm md:text-base leading-relaxed">
               <strong>Join our community for help and support when you get stuck</strong>
             </p>
           </div>

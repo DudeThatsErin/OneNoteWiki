@@ -128,12 +128,12 @@ export default function FirstProgramPage() {
   return (
     <div className="space-y-8">
       {/* Navigation */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <Link
           href="/getting-started/setup"
           className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-4 h-4" suppressHydrationWarning />
           <span>Previous: Setting Up Environment</span>
         </Link>
         <Link
@@ -141,40 +141,37 @@ export default function FirstProgramPage() {
           className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Explore Languages</span>
-          <ArrowLeft className="w-4 h-4 rotate-180" />
+          <ArrowLeft className="w-4 h-4 rotate-180" suppressHydrationWarning />
         </Link>
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
-          <Play className="w-8 h-8 text-green-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Your First Program
-          </h1>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
+      <div className="flex flex-col items-start py-2">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+          Your First Program
+        </h1>
+        <p className="text-lg text-gray-600 dark:text-gray-300 my-4">
           Congratulations! You're about to write your first program. We'll start with the traditional 
           "Hello, World!" program and explore basic programming concepts.
         </p>
       </div>
 
       {/* Why Hello World */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="py-4">
+        <h3 className="text-lg font-semibold pb-4">
           🌍 Why "Hello, World!"?
         </h3>
-        <div className="text-green-800 dark:text-green-200 space-y-2">
+        <div className="pb-4">
           <p>
             The "Hello, World!" program is a time-honored tradition in programming. It's usually the first 
             program that new programmers write because it:
           </p>
-          <ul className="text-sm space-y-1 ml-4">
-            <li>• Tests that your development environment is working correctly</li>
-            <li>• Introduces basic syntax of the programming language</li>
-            <li>• Gives you the satisfaction of running your first program</li>
-            <li>• Is simple enough to understand immediately</li>
-            <li>• Has been used since the 1970s - you're joining a long tradition!</li>
+          <ul className="content-list marker-blue">
+            <li>Tests that your development environment is working correctly</li>
+            <li>Introduces basic syntax of the programming language</li>
+            <li>Gives you the satisfaction of running your first program</li>
+            <li>Is simple enough to understand immediately</li>
+            <li>Has been used since the 1970s - you're joining a long tradition!</li>
           </ul>
         </div>
       </div>
@@ -259,20 +256,20 @@ export default function FirstProgramPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Easy Challenges:</h4>
-              <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
-                <li>• Change "Hello, World!" to your name</li>
-                <li>• Add another print statement</li>
-                <li>• Create variables for your age and city</li>
-                <li>• Print a simple math calculation</li>
+              <ul className="content-list text-sm">
+                <li>Change "Hello, World!" to your name</li>
+                <li>Add another print statement</li>
+                <li>Create variables for your age and city</li>
+                <li>Print a simple math calculation</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Next Steps:</h4>
-              <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
-                <li>• Ask the user for their name (input)</li>
-                <li>• Use an if statement for conditions</li>
-                <li>• Create a simple loop</li>
-                <li>• Write a basic function</li>
+              <ul className="content-list text-sm">
+                <li>Ask the user for their name (input)</li>
+                <li>Use an if statement for conditions</li>
+                <li>Create a simple loop</li>
+                <li>Write a basic function</li>
               </ul>
             </div>
           </div>
@@ -313,22 +310,22 @@ export default function FirstProgramPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">When Your Code Doesn't Work:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
-              <li>• Read the error message carefully</li>
-              <li>• Check for typos in variable names</li>
-              <li>• Make sure all brackets and quotes match</li>
-              <li>• Check your indentation (especially in Python)</li>
-              <li>• Try running simpler versions of your code</li>
+            <ul className="content-list text-sm">
+              <li>Read the error message carefully</li>
+              <li>Check for typos in variable names</li>
+              <li>Make sure all brackets and quotes match</li>
+              <li>Check your indentation (especially in Python)</li>
+              <li>Try running simpler versions of your code</li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Good Debugging Habits:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
-              <li>• Add print statements to see what's happening</li>
-              <li>• Test small pieces of code separately</li>
-              <li>• Use your editor's syntax highlighting</li>
-              <li>• Don't be afraid to start over with a simpler version</li>
-              <li>• Ask for help when you're stuck</li>
+            <ul className="content-list text-sm">
+              <li>Add print statements to see what's happening</li>
+              <li>Test small pieces of code separately</li>
+              <li>Use your editor's syntax highlighting</li>
+              <li>Don't be afraid to start over with a simpler version</li>
+              <li>Ask for help when you're stuck</li>
             </ul>
           </div>
         </div>
@@ -359,12 +356,12 @@ export default function FirstProgramPage() {
         </h3>
         <div className="space-y-3 text-yellow-800 dark:text-yellow-200">
           <p>Now that you've written your first program, here are some great next steps:</p>
-          <ul className="text-sm space-y-1 ml-4">
-            <li>• Explore more about your chosen programming language</li>
-            <li>• Learn about variables, loops, and functions in depth</li>
-            <li>• Try building a simple calculator or guessing game</li>
-            <li>• Join our community to share your progress and get help</li>
-            <li>• Start working through structured tutorials and courses</li>
+          <ul className="content-list text-sm">
+            <li>Explore more about your chosen programming language</li>
+            <li>Learn about variables, loops, and functions in depth</li>
+            <li>Try building a simple calculator or guessing game</li>
+            <li>Join our community to share your progress and get help</li>
+            <li>Start working through structured tutorials and courses</li>
           </ul>
         </div>
       </div>
@@ -375,15 +372,15 @@ export default function FirstProgramPage() {
           href="/getting-started/setup"
           className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-4 h-4" suppressHydrationWarning />
           <span>Previous: Setting Up Environment</span>
         </Link>
         <Link
           href="/languages"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Explore Languages</span>
-          <ArrowLeft className="w-4 h-4 rotate-180" />
+          <ArrowLeft className="w-4 h-4 rotate-180" suppressHydrationWarning />
         </Link>
       </div>
     </div>
