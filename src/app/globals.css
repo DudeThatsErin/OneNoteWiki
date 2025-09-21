@@ -98,95 +98,142 @@ body {
   
   /* Additional responsive adjustments for very small screens */
   @media (max-width: 768px) {
+    /* Make text LARGER on mobile for better readability */
     .text-3xl {
+      font-size: 1.75rem !important;
+      line-height: 2rem !important;
+    }
+    
+    .text-2xl {
       font-size: 1.5rem !important;
       line-height: 1.75rem !important;
     }
     
-    .text-2xl {
+    .text-xl {
       font-size: 1.25rem !important;
       line-height: 1.5rem !important;
     }
     
-    .text-xl {
+    .text-lg {
+      font-size: 1.125rem !important;
+      line-height: 1.5rem !important;
+    }
+    
+    .text-base {
       font-size: 1rem !important;
       line-height: 1.375rem !important;
     }
     
-    /* Drastically reduce padding on mobile */
+    .text-sm {
+      font-size: 0.875rem !important;
+      line-height: 1.25rem !important;
+    }
+    
+    .text-xs {
+      font-size: 0.75rem !important;
+      line-height: 1rem !important;
+    }
+    
+    /* Drastically reduce padding on mobile but keep text readable */
     .p-6 {
-      padding: 0.5rem !important;
+      padding: 0.75rem !important;
     }
     
     .p-4 {
-      padding: 0.375rem !important;
+      padding: 0.5rem !important;
     }
     
     .p-3 {
-      padding: 0.25rem !important;
+      padding: 0.375rem !important;
     }
     
     /* Minimal spacing on mobile */
     .space-y-8 > * + * {
-      margin-top: 0.75rem !important;
-    }
-    
-    .space-y-6 > * + * {
       margin-top: 0.5rem !important;
     }
     
-    .space-y-4 > * + * {
+    .space-y-6 > * + * {
       margin-top: 0.375rem !important;
     }
     
-    .space-y-3 > * + * {
+    .space-y-4 > * + * {
       margin-top: 0.25rem !important;
+    }
+    
+    .space-y-3 > * + * {
+      margin-top: 0.1875rem !important;
     }
     
     .space-y-2 > * + * {
       margin-top: 0.125rem !important;
     }
     
-    /* Reduce margins */
-    .mb-4 {
-      margin-bottom: 0.5rem !important;
+    /* Force all grids to single column on mobile */
+    .grid-cols-1,
+    .grid-cols-2,
+    .grid-cols-3,
+    .grid-cols-4,
+    .md\\:grid-cols-2,
+    .md\\:grid-cols-3,
+    .md\\:grid-cols-4,
+    .lg\\:grid-cols-2,
+    .lg\\:grid-cols-3,
+    .lg\\:grid-cols-4 {
+      grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
     }
     
-    .mb-3 {
+    /* Reduce margins more aggressively */
+    .mb-6 {
       margin-bottom: 0.375rem !important;
     }
     
-    .mb-2 {
+    .mb-4 {
       margin-bottom: 0.25rem !important;
     }
     
-    .mt-4 {
-      margin-top: 0.5rem !important;
+    .mb-3 {
+      margin-bottom: 0.1875rem !important;
     }
     
-    .mt-3 {
+    .mb-2 {
+      margin-bottom: 0.125rem !important;
+    }
+    
+    .mt-6 {
       margin-top: 0.375rem !important;
     }
     
-    .mt-2 {
+    .mt-4 {
       margin-top: 0.25rem !important;
+    }
+    
+    .mt-3 {
+      margin-top: 0.1875rem !important;
+    }
+    
+    .mt-2 {
+      margin-top: 0.125rem !important;
     }
     
     /* Reduce gap in grids and flex containers */
     .gap-6 {
-      gap: 0.5rem !important;
-    }
-    
-    .gap-4 {
-      gap: 0.375rem !important;
-    }
-    
-    .gap-3 {
       gap: 0.25rem !important;
     }
     
-    .gap-2 {
+    .gap-4 {
+      gap: 0.1875rem !important;
+    }
+    
+    .gap-3 {
       gap: 0.125rem !important;
+    }
+    
+    .gap-2 {
+      gap: 0.0625rem !important;
+    }
+    
+    .gap-1 {
+      gap: 0.0625rem !important;
     }
     
     /* Make cards more compact */
@@ -201,21 +248,45 @@ body {
     
     /* Make main content area more compact */
     .max-w-4xl {
-      padding: 0 0.5rem !important;
+      padding: 0 0.25rem !important;
     }
     
     /* Reduce flex and space between items */
     .space-x-3 > * + * {
-      margin-left: 0.5rem !important;
+      margin-left: 0.25rem !important;
     }
     
     .space-x-2 > * + * {
-      margin-left: 0.25rem !important;
+      margin-left: 0.125rem !important;
+    }
+    
+    .space-x-1 > * + * {
+      margin-left: 0.0625rem !important;
     }
     
     /* Make navigation more compact */
     .justify-between {
-      gap: 0.5rem !important;
+      gap: 0.25rem !important;
+    }
+    
+    /* Optimize flex layouts for mobile */
+    .flex-col {
+      gap: 0.25rem !important;
+    }
+    
+    .flex-wrap {
+      gap: 0.125rem !important;
+    }
+    
+    /* Make lists more compact */
+    .list-disc,
+    .list-decimal {
+      padding-left: 1rem !important;
+    }
+    
+    /* Optimize tag/badge spacing */
+    .inline-flex {
+      margin: 0.0625rem !important;
     }
     
     /* Reduce icon sizes */
