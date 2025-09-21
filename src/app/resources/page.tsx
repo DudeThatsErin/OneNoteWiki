@@ -8,7 +8,7 @@ const resourceCategories = [
     examples: ['freeCodeCamp', 'Codecademy', 'Coursera', 'Udemy'],
     href: '/resources/platforms',
     icon: <BookOpen className="w-6 h-6" />,
-    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
+    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700'
   },
   {
     title: 'Books & Documentation',
@@ -16,7 +16,7 @@ const resourceCategories = [
     examples: ['MDN Docs', 'Programming Books', 'API References', 'Tutorials'],
     href: '/resources/books',
     icon: <BookOpen className="w-6 h-6" />,
-    color: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700'
   },
   {
     title: 'Practice Problems',
@@ -24,7 +24,7 @@ const resourceCategories = [
     examples: ['LeetCode', 'HackerRank', 'Codewars', 'Project Euler'],
     href: '/resources/practice',
     icon: <Code className="w-6 h-6" />,
-    color: 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800'
+    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700'
   },
   {
     title: 'Communities',
@@ -32,7 +32,7 @@ const resourceCategories = [
     examples: ['Stack Overflow', 'Reddit', 'Discord', 'GitHub'],
     href: '/resources/communities',
     icon: <Users className="w-6 h-6" />,
-    color: 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800'
+    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700'
   }
 ];
 
@@ -81,14 +81,14 @@ export default function ResourcesPage() {
       </div>
 
       {/* Why Resources Matter */}
-      <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-6 border border-yellow-200 dark:border-yellow-800">
-        <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-4">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🎯 Why Good Resources Matter
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2">📈 Accelerated Learning:</h4>
-            <ul className="text-yellow-800 dark:text-yellow-200 text-sm space-y-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">📈 Accelerated Learning:</h4>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
               <li>• Structured learning paths</li>
               <li>• Expert-curated content</li>
               <li>• Progressive difficulty</li>
@@ -97,8 +97,8 @@ export default function ResourcesPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2">🤝 Community Support:</h4>
-            <ul className="text-yellow-800 dark:text-yellow-200 text-sm space-y-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🤝 Community Support:</h4>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
               <li>• Get help when stuck</li>
               <li>• Learn from others' mistakes</li>
               <li>• Share your knowledge</li>
@@ -107,8 +107,8 @@ export default function ResourcesPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2">🎯 Practical Skills:</h4>
-            <ul className="text-yellow-800 dark:text-yellow-200 text-sm space-y-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🎯 Practical Skills:</h4>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
               <li>• Real-world projects</li>
               <li>• Industry best practices</li>
               <li>• Current technologies</li>
@@ -201,14 +201,14 @@ export default function ResourcesPage() {
           Essential Skills: Getting Help Online
         </h2>
         
-        <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-6 border border-red-200 dark:border-red-800">
-          <h3 className="text-lg font-semibold text-red-900 dark:text-red-100 mb-4">
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             🆘 How to Ask Questions Effectively
           </h3>
           <div className="space-y-4">
-            <div className="bg-white dark:bg-gray-800 p-4 rounded border border-red-200 dark:border-red-700">
-              <h4 className="font-semibold text-red-900 dark:text-red-100 mb-2">📋 Before You Ask:</h4>
-              <ul className="text-red-800 dark:text-red-200 text-sm space-y-1">
+            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded border border-gray-200 dark:border-gray-600">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">📋 Before You Ask:</h4>
+              <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
                 <li>• Search for existing solutions (Google, Stack Overflow, documentation)</li>
                 <li>• Try to solve it yourself first - show your attempts</li>
                 <li>• Read the error message carefully</li>
@@ -216,9 +216,9 @@ export default function ResourcesPage() {
               </ul>
             </div>
             
-            <div className="bg-white dark:bg-gray-800 p-4 rounded border border-red-200 dark:border-red-700">
-              <h4 className="font-semibold text-red-900 dark:text-red-100 mb-2">✅ When You Ask:</h4>
-              <ul className="text-red-800 dark:text-red-200 text-sm space-y-1">
+            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded border border-gray-200 dark:border-gray-600">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">✅ When You Ask:</h4>
+              <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
                 <li>• Be specific about what you're trying to achieve</li>
                 <li>• Include relevant code, error messages, and context</li>
                 <li>• Mention what you've already tried</li>
@@ -227,9 +227,9 @@ export default function ResourcesPage() {
               </ul>
             </div>
             
-            <div className="bg-yellow-100 dark:bg-yellow-900/30 p-4 rounded border border-yellow-300 dark:border-yellow-700">
-              <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2">🚫 Don't Ask to Ask!</h4>
-              <p className="text-yellow-800 dark:text-yellow-200 text-sm mb-2">
+            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded border border-gray-200 dark:border-gray-600">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🚫 Don't Ask to Ask!</h4>
+              <p className="text-gray-700 dark:text-gray-300 text-sm mb-2">
                 Instead of "Can someone help me with JavaScript?" or "Is anyone here good with Python?", 
                 just ask your specific question directly.
               </p>
@@ -237,7 +237,7 @@ export default function ResourcesPage() {
                 href="https://dontasktoask.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-yellow-700 dark:text-yellow-300 hover:underline text-sm font-medium"
+                className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
               >
                 📖 Read "Don't Ask to Ask" →
               </a>
@@ -247,19 +247,19 @@ export default function ResourcesPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Code Sharing */}
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               💻 How to Share Code Online
             </h3>
             <div className="space-y-4">
               <div>
-                <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Quick Code Snippets:</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Quick Code Snippets:</h4>
                 <div className="space-y-2">
                   <a
                     href="https://codepen.io"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block p-3 bg-white dark:bg-gray-800 rounded border border-blue-200 dark:border-blue-700 hover:shadow-md transition-shadow"
+                    className="block p-3 bg-gray-50 dark:bg-gray-700 rounded border border-gray-200 dark:border-gray-600 hover:shadow-md transition-shadow"
                   >
                     <div className="flex items-center justify-between">
                       <div>
@@ -340,14 +340,14 @@ export default function ResourcesPage() {
           </div>
 
           {/* Google Search Tips */}
-          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-            <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               🔍 How to Google Programming Problems
             </h3>
             <div className="space-y-4">
               <div>
-                <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Search Strategies:</h4>
-                <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Search Strategies:</h4>
+                <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
                   <li>• Include the programming language in your search</li>
                   <li>• Use specific error messages (in quotes)</li>
                   <li>• Add "stackoverflow" or "github" to your search</li>
@@ -356,7 +356,7 @@ export default function ResourcesPage() {
               </div>
               
               <div>
-                <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Example Searches:</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Example Searches:</h4>
                 <div className="space-y-2">
                   <div className="bg-white dark:bg-gray-800 p-2 rounded text-xs">
                     <strong>Bad:</strong> "code not working"
@@ -371,12 +371,12 @@ export default function ResourcesPage() {
               </div>
               
               <div>
-                <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Useful Search Operators:</h4>
-                <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
-                  <li>• <code className="bg-green-100 dark:bg-green-900/30 px-1 rounded">"exact phrase"</code> - Search exact text</li>
-                  <li>• <code className="bg-green-100 dark:bg-green-900/30 px-1 rounded">site:stackoverflow.com</code> - Search specific site</li>
-                  <li>• <code className="bg-green-100 dark:bg-green-900/30 px-1 rounded">-word</code> - Exclude a word</li>
-                  <li>• <code className="bg-green-100 dark:bg-green-900/30 px-1 rounded">filetype:pdf</code> - Search file types</li>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Useful Search Operators:</h4>
+                <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
+                  <li>• <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded">"exact phrase"</code> - Search exact text</li>
+                  <li>• <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded">site:stackoverflow.com</code> - Search specific site</li>
+                  <li>• <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded">-word</code> - Exclude a word</li>
+                  <li>• <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded">filetype:pdf</code> - Search file types</li>
                 </ul>
               </div>
             </div>
@@ -385,51 +385,51 @@ export default function ResourcesPage() {
       </section>
 
       {/* Learning Path Recommendations */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🗺️ Recommended Learning Path
         </h3>
         <div className="space-y-4">
           <div className="flex items-start space-x-3">
-            <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
+            <div className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
-              <h4 className="font-semibold text-blue-900 dark:text-blue-100">Choose a Learning Platform</h4>
-              <p className="text-blue-800 dark:text-blue-200 text-sm">Start with structured courses on platforms like freeCodeCamp or Codecademy</p>
+              <h4 className="font-semibold text-gray-900 dark:text-white">Choose a Learning Platform</h4>
+              <p className="text-gray-700 dark:text-gray-300 text-sm">Start with structured courses on platforms like freeCodeCamp or Codecademy</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
-            <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
+            <div className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
-              <h4 className="font-semibold text-blue-900 dark:text-blue-100">Supplement with Documentation</h4>
-              <p className="text-blue-800 dark:text-blue-200 text-sm">Read official docs and quality books to deepen understanding</p>
+              <h4 className="font-semibold text-gray-900 dark:text-white">Supplement with Documentation</h4>
+              <p className="text-gray-700 dark:text-gray-300 text-sm">Read official docs and quality books to deepen understanding</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
-            <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
+            <div className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
-              <h4 className="font-semibold text-blue-900 dark:text-blue-100">Practice Regularly</h4>
-              <p className="text-blue-800 dark:text-blue-200 text-sm">Solve coding challenges on platforms like LeetCode or HackerRank</p>
+              <h4 className="font-semibold text-gray-900 dark:text-white">Practice Regularly</h4>
+              <p className="text-gray-700 dark:text-gray-300 text-sm">Solve coding challenges on platforms like LeetCode or HackerRank</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
-            <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
+            <div className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
-              <h4 className="font-semibold text-blue-900 dark:text-blue-100">Join Communities</h4>
-              <p className="text-blue-800 dark:text-blue-200 text-sm">Connect with other learners for support, motivation, and knowledge sharing</p>
+              <h4 className="font-semibold text-gray-900 dark:text-white">Join Communities</h4>
+              <p className="text-gray-700 dark:text-gray-300 text-sm">Connect with other learners for support, motivation, and knowledge sharing</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Free vs Paid Resources */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           💰 Free vs Paid Resources
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">🆓 Free Resources:</h4>
-            <div className="space-y-2 text-green-800 dark:text-green-200 text-sm">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🆓 Free Resources:</h4>
+            <div className="space-y-2 text-gray-700 dark:text-gray-300 text-sm">
               <p><strong>Pros:</strong> No cost, often high quality, large communities</p>
               <p><strong>Cons:</strong> Less structured, no certificates, limited support</p>
               <p><strong>Best for:</strong> Self-motivated learners, exploring new topics</p>
@@ -437,8 +437,8 @@ export default function ResourcesPage() {
             </div>
           </div>
           <div>
-            <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">💳 Paid Resources:</h4>
-            <div className="space-y-2 text-green-800 dark:text-green-200 text-sm">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">💳 Paid Resources:</h4>
+            <div className="space-y-2 text-gray-700 dark:text-gray-300 text-sm">
               <p><strong>Pros:</strong> Structured curriculum, certificates, instructor support</p>
               <p><strong>Cons:</strong> Cost, may become outdated, subscription models</p>
               <p><strong>Best for:</strong> Career advancement, comprehensive learning paths</p>
@@ -449,14 +449,14 @@ export default function ResourcesPage() {
       </div>
 
       {/* Success Tips */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-        <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🏆 Tips for Learning Success
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Study Habits:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Study Habits:</h4>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
               <li>• Set aside dedicated learning time daily</li>
               <li>• Use the Pomodoro Technique (25-min focused sessions)</li>
               <li>• Take regular breaks to avoid burnout</li>
@@ -465,8 +465,8 @@ export default function ResourcesPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Active Learning:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Active Learning:</h4>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
               <li>• Code along with tutorials, don't just watch</li>
               <li>• Explain concepts to others (rubber duck debugging)</li>
               <li>• Build projects to apply what you learn</li>
@@ -475,8 +475,8 @@ export default function ResourcesPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Staying Motivated:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Staying Motivated:</h4>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
               <li>• Track your progress and celebrate small wins</li>
               <li>• Find an accountability partner or study group</li>
               <li>• Focus on building projects you're passionate about</li>
@@ -485,8 +485,8 @@ export default function ResourcesPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Problem Solving:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Problem Solving:</h4>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
               <li>• Read error messages carefully</li>
               <li>• Break complex problems into smaller parts</li>
               <li>• Use debugging tools and print statements</li>

@@ -121,21 +121,21 @@ export default function ProjectIdeasPage() {
 
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">240+</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Total Projects</div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="text-2xl font-bold text-gray-900 dark:text-white">240+</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">Total Projects</div>
         </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">8</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Languages</div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="text-2xl font-bold text-gray-900 dark:text-white">8</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">Languages</div>
         </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">3</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Difficulty Levels</div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="text-2xl font-bold text-gray-900 dark:text-white">3</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">Difficulty Levels</div>
         </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">30</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Projects per Language</div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+          <div className="text-2xl font-bold text-gray-900 dark:text-white">30</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">Projects per Language</div>
         </div>
       </div>
 
@@ -146,23 +146,23 @@ export default function ProjectIdeasPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projectCategories.map((category, index) => (
-            <div key={index} className={`bg-${category.color}-50 dark:bg-${category.color}-900/20 p-6 rounded-lg border border-${category.color}-200 dark:border-${category.color}-800`}>
+            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center space-x-3 mb-4">
-                <div className={`text-${category.color}-600`}>{category.icon}</div>
-                <h3 className={`text-xl font-semibold text-${category.color}-900 dark:text-${category.color}-100`}>
+                <div className="text-gray-600 dark:text-gray-400">{category.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                   {category.level}
                 </h3>
               </div>
-              <p className={`text-${category.color}-800 dark:text-${category.color}-200 text-sm mb-4`}>
+              <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
                 {category.description}
               </p>
               <div>
-                <h4 className={`font-semibold text-${category.color}-900 dark:text-${category.color}-100 mb-2 text-sm`}>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">
                   Example Projects:
                 </h4>
                 <div className="flex flex-wrap gap-1">
                   {category.examples.map((example, i) => (
-                    <span key={i} className={`text-xs px-2 py-1 bg-${category.color}-100 dark:bg-${category.color}-900/30 text-${category.color}-700 dark:text-${category.color}-300 rounded-full`}>
+                    <span key={i} className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
                       {example}
                     </span>
                   ))}
@@ -179,7 +179,7 @@ export default function ProjectIdeasPage() {
           iPhone App Development
         </h2>
         
-        <div className="bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
           <div className="flex items-start space-x-4">
             <div className="text-4xl">📱</div>
             <div className="flex-1">
@@ -212,11 +212,11 @@ export default function ProjectIdeasPage() {
                 </div>
               </div>
               
-              <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-800">
-                <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2">
-                  💡 Getting Started Steps:
+              <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                  Getting Started Steps:
                 </h4>
-                <ol className="text-yellow-800 dark:text-yellow-200 text-sm space-y-1">
+                <ol className="text-gray-700 dark:text-gray-300 text-sm space-y-2">
                   <li>1. Get a Mac computer (required for iOS development)</li>
                   <li>2. Download Xcode from the Mac App Store (free)</li>
                   <li>3. Learn Swift programming language basics</li>
@@ -308,9 +308,9 @@ export default function ProjectIdeasPage() {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">✅ Best Practices</h3>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-2">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Best Practices</h3>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-2">
               <li>• Start with beginner projects to build confidence</li>
               <li>• Complete projects fully before moving to the next</li>
               <li>• Add your own features and improvements</li>
@@ -320,9 +320,9 @@ export default function ProjectIdeasPage() {
             </ul>
           </div>
           
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">💡 Learning Tips</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-2">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Learning Tips</h3>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-2">
               <li>• Break large projects into smaller tasks</li>
               <li>• Research and plan before coding</li>
               <li>• Use version control (Git) for all projects</li>
@@ -335,7 +335,7 @@ export default function ProjectIdeasPage() {
       </section>
 
       {/* Call to Action */}
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
         <div className="text-center">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
             Ready to Start Building?

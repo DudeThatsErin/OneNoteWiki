@@ -9,7 +9,7 @@ const languages = [
     popularity: 'Very High',
     useCases: ['Web Development', 'Data Science', 'AI/ML', 'Automation'],
     href: '/languages/python',
-    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800',
+    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700',
     icon: '🐍'
   },
   {
@@ -19,7 +19,7 @@ const languages = [
     popularity: 'Very High',
     useCases: ['Web Development', 'Mobile Apps', 'Desktop Apps', 'Server-side'],
     href: '/languages/javascript',
-    color: 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800',
+    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700',
     icon: '🟨'
   },
   {
@@ -29,7 +29,7 @@ const languages = [
     popularity: 'Very High',
     useCases: ['Enterprise Apps', 'Android Development', 'Web Backend', 'Desktop Apps'],
     href: '/languages/java',
-    color: 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800',
+    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700',
     icon: '☕'
   },
   {
@@ -39,7 +39,7 @@ const languages = [
     popularity: 'High',
     useCases: ['Game Development', 'System Programming', 'Embedded Systems', 'High-Performance Apps'],
     href: '/languages/cpp',
-    color: 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800',
+    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700',
     icon: '⚡'
   },
   {
@@ -49,7 +49,7 @@ const languages = [
     popularity: 'High',
     useCases: ['Windows Apps', 'Web Development', 'Game Development', 'Enterprise Software'],
     href: '/languages/csharp',
-    color: 'bg-indigo-50 dark:bg-indigo-900/20 border-indigo-200 dark:border-indigo-800',
+    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700',
     icon: '#️⃣'
   },
   {
@@ -59,7 +59,7 @@ const languages = [
     popularity: 'Growing',
     useCases: ['Cloud Services', 'Microservices', 'Network Programming', 'DevOps Tools'],
     href: '/languages/go',
-    color: 'bg-cyan-50 dark:bg-cyan-900/20 border-cyan-200 dark:border-cyan-800',
+    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700',
     icon: '🐹'
   },
   {
@@ -69,7 +69,7 @@ const languages = [
     popularity: 'Growing',
     useCases: ['System Programming', 'Web Assembly', 'Blockchain', 'Performance-Critical Apps'],
     href: '/languages/rust',
-    color: 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800',
+    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700',
     icon: '🦀'
   },
   {
@@ -79,7 +79,7 @@ const languages = [
     popularity: 'Very High',
     useCases: ['Web Development', 'CMS', 'E-commerce', 'Server-side Scripting'],
     href: '/languages/php',
-    color: 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800',
+    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700',
     icon: '🐘'
   },
   {
@@ -89,7 +89,7 @@ const languages = [
     popularity: 'High',
     useCases: ['Web Apps', 'Desktop Apps', 'Cloud Services', 'Enterprise Solutions'],
     href: '/languages/dotnet',
-    color: 'bg-indigo-50 dark:bg-indigo-900/20 border-indigo-200 dark:border-indigo-800',
+    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700',
     icon: '🔷'
   }
 ];
@@ -132,14 +132,14 @@ export default function LanguagesPage() {
       </div>
 
       {/* How to Choose */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
-          🤔 How to Choose Your First Programming Language
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+          How to Choose Your First Programming Language
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
-            <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">🎯 Consider Your Goals:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Consider Your Goals:</h4>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-2">
               <li>• Web development → JavaScript</li>
               <li>• Data science → Python</li>
               <li>• Mobile apps → Java/Kotlin or Swift</li>
@@ -148,8 +148,8 @@ export default function LanguagesPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">📈 Market Demand:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Market Demand:</h4>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-2">
               <li>• JavaScript - Highest demand</li>
               <li>• Python - Growing rapidly</li>
               <li>• Java - Enterprise standard</li>
@@ -158,8 +158,8 @@ export default function LanguagesPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">🎓 Learning Curve:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Learning Curve:</h4>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-2">
               <li>• Python - Very beginner-friendly</li>
               <li>• JavaScript - Good for beginners</li>
               <li>• Java - Moderate complexity</li>
@@ -183,8 +183,10 @@ export default function LanguagesPage() {
               className={`block p-6 rounded-lg border-2 transition-all hover:shadow-lg hover:scale-105 ${language.color}`}
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center space-x-3">
-                  <span className="text-2xl">{language.icon}</span>
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center">
+                  <span className="text-lg">{language.icon}</span>
+                </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                       {language.name}
@@ -230,14 +232,14 @@ export default function LanguagesPage() {
       </div>
 
       {/* Learning Resources */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
-          📚 General Learning Resources
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+          General Learning Resources
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Free Resources:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Free Resources:</h4>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
               <li>• freeCodeCamp - Interactive coding lessons</li>
               <li>• Codecademy - Hands-on programming courses</li>
               <li>• MDN Web Docs - Comprehensive web development</li>
@@ -246,8 +248,8 @@ export default function LanguagesPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Practice Platforms:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Practice Platforms:</h4>
+            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
               <li>• LeetCode - Algorithm and data structure problems</li>
               <li>• HackerRank - Programming challenges</li>
               <li>• Codewars - Coding kata and challenges</li>
@@ -259,27 +261,35 @@ export default function LanguagesPage() {
       </div>
 
       {/* Getting Started */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-        <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
-          🚀 Getting Started Tips
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+          Tips for Success
         </h3>
-        <div className="space-y-3 text-purple-800 dark:text-purple-200">
-          <p>
-            <strong>1. Start with one language:</strong> Focus on mastering one language before moving to others. 
-            Python or JavaScript are excellent first choices.
-          </p>
-          <p>
-            <strong>2. Practice regularly:</strong> Consistency is key. Even 30 minutes of daily practice 
-            is better than long, infrequent sessions.
-          </p>
-          <p>
-            <strong>3. Build projects:</strong> Apply what you learn by building real projects. 
-            Start small and gradually increase complexity.
-          </p>
-          <p>
-            <strong>4. Join communities:</strong> Connect with other learners and experienced developers 
-            through forums, Discord servers, and local meetups.
-          </p>
+        <div className="space-y-4 text-gray-700 dark:text-gray-300">
+          <div className="flex items-start space-x-3">
+            <div className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm font-bold mt-0.5">1</div>
+            <p>
+              <strong>Take your time</strong> - programming is a skill that develops gradually
+            </p>
+          </div>
+          <div className="flex items-start space-x-3">
+            <div className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm font-bold mt-0.5">2</div>
+            <p>
+              <strong>Practice regularly, even if it's just 15-30 minutes a day</strong>
+            </p>
+          </div>
+          <div className="flex items-start space-x-3">
+            <div className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm font-bold mt-0.5">3</div>
+            <p>
+              <strong>Don't be afraid to make mistakes</strong> - they're part of learning
+            </p>
+          </div>
+          <div className="flex items-start space-x-3">
+            <div className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm font-bold mt-0.5">4</div>
+            <p>
+              <strong>Join our community for help and support when you get stuck</strong>
+            </p>
+          </div>
         </div>
       </div>
     </div>
