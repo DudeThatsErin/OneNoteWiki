@@ -12,7 +12,8 @@ import {
   Layers,
   Database,
   Globe,
-  Smartphone
+  Smartphone,
+  Package
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -62,6 +63,18 @@ const sidebarItems: SidebarItem[] = [
       { title: 'Frontend Frameworks', href: '/web-development/frontend', icon: <ChevronRight size={16} /> },
       { title: 'Backend Development', href: '/web-development/backend', icon: <ChevronRight size={16} /> },
       { title: 'Full Stack', href: '/web-development/fullstack', icon: <ChevronRight size={16} /> }
+    ]
+  },
+  {
+    title: 'Frameworks',
+    href: '/frameworks',
+    icon: <Package size={18} />,
+    children: [
+      { title: 'Frontend Frameworks', href: '/frameworks/frontend', icon: <ChevronRight size={16} /> },
+      { title: 'Backend Frameworks', href: '/frameworks/backend', icon: <ChevronRight size={16} /> },
+      { title: 'Full Stack Frameworks', href: '/frameworks/fullstack', icon: <ChevronRight size={16} /> },
+      { title: 'Mobile Frameworks', href: '/frameworks/mobile', icon: <ChevronRight size={16} /> },
+      { title: 'CSS Frameworks', href: '/frameworks/css', icon: <ChevronRight size={16} /> }
     ]
   },
   {
