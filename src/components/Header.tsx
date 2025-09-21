@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useTheme } from '@/contexts/ThemeContext';
-import { Sun, Moon, MessageCircle, Users } from 'lucide-react';
+import { Sun, Moon, MessageCircle, Bot } from 'lucide-react';
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -71,7 +71,7 @@ export default function Header() {
                 className="p-2 text-gray-600 hover:text-orange-600 dark:text-gray-300 dark:hover:text-orange-400 transition-colors"
                 title="Visit our Subreddit"
               >
-                <Users size={20} />
+                <Bot size={20} />
               </a>
             </div>
 
