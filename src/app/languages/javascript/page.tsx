@@ -1,18 +1,108 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Globe, Smartphone, Server, Zap } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Globe, Smartphone, Server, Zap, Code, Users, Layers, BookOpen, Clock } from 'lucide-react';
 
 const jsFeatures = [
-  { title: 'Versatile', description: 'Frontend, backend, mobile, and desktop development' },
-  { title: 'Dynamic', description: 'Flexible typing and runtime code modification' },
-  { title: 'Event-Driven', description: 'Perfect for interactive user interfaces' },
-  { title: 'Huge Ecosystem', description: 'Massive npm package repository' }
+  {
+    title: 'Versatile & Ubiquitous',
+    description: 'The only language that runs natively in web browsers, with expanding reach everywhere',
+    icon: <Globe className="w-5 h-5" />,
+    details: 'From frontend to backend, mobile apps to desktop applications, JavaScript is everywhere'
+  },
+  {
+    title: 'Dynamic & Flexible',
+    description: 'Dynamically typed with first-class functions and multiple programming paradigms',
+    icon: <Zap className="w-5 h-5" />,
+    details: 'Supports procedural, object-oriented, and functional programming styles'
+  },
+  {
+    title: 'Event-Driven',
+    description: 'Built for handling user interactions and asynchronous operations',
+    icon: <Code className="w-5 h-5" />,
+    details: 'Perfect for creating interactive user interfaces and real-time applications'
+  },
+  {
+    title: 'Massive Ecosystem',
+    description: 'Largest package ecosystem in the world with npm containing over 2 million packages',
+    icon: <Layers className="w-5 h-5" />,
+    details: 'Find libraries and frameworks for virtually any functionality you need'
+  },
+  {
+    title: 'Rapid Development',
+    description: 'No compilation step needed - write code and see results immediately',
+    icon: <BookOpen className="w-5 h-5" />,
+    details: 'Hot reloading and live editing capabilities speed up development cycles'
+  },
+  {
+    title: 'Active Community',
+    description: 'Largest programming community with extensive resources and support',
+    icon: <Users className="w-5 h-5" />,
+    details: 'Over 17 million developers worldwide, extensive documentation, and helpful forums'
+  }
 ];
 
-const jsEnvironments = [
-  { name: 'Browser', description: 'Client-side web development', icon: <Globe className="w-5 h-5" /> },
-  { name: 'Node.js', description: 'Server-side JavaScript runtime', icon: <Server className="w-5 h-5" /> },
-  { name: 'Mobile', description: 'React Native, Ionic, Cordova', icon: <Smartphone className="w-5 h-5" /> },
-  { name: 'Desktop', description: 'Electron, Tauri applications', icon: <Zap className="w-5 h-5" /> }
+const jsUseCases = [
+  {
+    category: 'Frontend Web Development',
+    description: 'Create interactive, dynamic user interfaces for websites and web applications',
+    examples: ['Facebook', 'Netflix', 'Airbnb', 'Google Maps'],
+    frameworks: ['React', 'Vue.js', 'Angular', 'Svelte', 'Next.js'],
+    popularity: 'Very High',
+    difficulty: 'Beginner to Advanced'
+  },
+  {
+    category: 'Backend Development',
+    description: 'Build scalable server-side applications and APIs with Node.js',
+    examples: ['Netflix API', 'Uber backend', 'WhatsApp', 'LinkedIn'],
+    frameworks: ['Node.js', 'Express.js', 'Koa.js', 'Fastify', 'NestJS'],
+    popularity: 'Very High',
+    difficulty: 'Intermediate to Advanced'
+  },
+  {
+    category: 'Mobile App Development',
+    description: 'Cross-platform mobile applications using JavaScript frameworks',
+    examples: ['Instagram', 'Discord', 'Skype', 'Tesla app'],
+    frameworks: ['React Native', 'Ionic', 'Cordova', 'NativeScript'],
+    popularity: 'High',
+    difficulty: 'Intermediate to Advanced'
+  },
+  {
+    category: 'Desktop Applications',
+    description: 'Cross-platform desktop applications using web technologies',
+    examples: ['VS Code', 'Discord', 'Slack', 'WhatsApp Desktop'],
+    frameworks: ['Electron', 'Tauri', 'NW.js'],
+    popularity: 'Medium to High',
+    difficulty: 'Intermediate'
+  }
+];
+
+const jsSections = [
+  {
+    title: 'JavaScript Fundamentals',
+    description: 'Master variables, functions, objects, arrays, and control flow',
+    href: '/languages/javascript/fundamentals',
+    icon: <BookOpen className="w-6 h-6" />,
+    topics: ['Variables & Data Types', 'Functions & Scope', 'Objects & Arrays', 'Control Flow', 'Error Handling'],
+    difficulty: 'Beginner',
+    estimatedTime: '2-3 hours'
+  },
+  {
+    title: 'Frameworks & Libraries',
+    description: 'Explore React, Vue, Angular, Node.js and popular JavaScript tools',
+    href: '/languages/javascript/frameworks',
+    icon: <Layers className="w-6 h-6" />,
+    topics: ['React Deep Dive', 'Vue.js Basics', 'Angular Overview', 'Node.js & Express', 'Framework Comparison'],
+    difficulty: 'Intermediate',
+    estimatedTime: '3-4 hours'
+  },
+  {
+    title: 'Asynchronous Programming',
+    description: 'Learn callbacks, promises, async/await, and the event loop',
+    href: '/languages/javascript/async',
+    icon: <Clock className="w-6 h-6" />,
+    topics: ['Callbacks & Callback Hell', 'Promises & Promise Chaining', 'Async/Await', 'Fetch API', 'Event Loop'],
+    difficulty: 'Intermediate to Advanced',
+    estimatedTime: '2-3 hours'
+  }
 ];
 
 export default function JavaScriptPage() {
@@ -39,246 +129,194 @@ export default function JavaScriptPage() {
       {/* Header */}
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
-          <span className="text-4xl">🟨</span>
+          <div className="text-4xl">🟨</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">JavaScript</h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              The language of the web - and much more
-            </p>
+            <p className="text-gray-600 dark:text-gray-300">The language of the web - and much more</p>
           </div>
+        </div>
+        <p className="text-lg text-gray-600 dark:text-gray-300">
+          JavaScript is a high-level, dynamic programming language that's essential for web development. 
+          Originally created for browsers in 1995, it has evolved into a versatile language used for 
+          frontend, backend, mobile, and desktop development.
+        </p>
+      </div>
+
+      {/* Quick Stats */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800">
+          <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">1995</div>
+          <div className="text-sm text-yellow-700 dark:text-yellow-300">First Released</div>
+        </div>
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800">
+          <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">Beginner</div>
+          <div className="text-sm text-yellow-700 dark:text-yellow-300">Difficulty Level</div>
+        </div>
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800">
+          <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">#1</div>
+          <div className="text-sm text-yellow-700 dark:text-yellow-300">Most Used Language</div>
+        </div>
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800">
+          <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">17M+</div>
+          <div className="text-sm text-yellow-700 dark:text-yellow-300">Developers</div>
         </div>
       </div>
 
-      {/* Why JavaScript */}
-      <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-6 border border-yellow-200 dark:border-yellow-800">
-        <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-4">
-          🌟 Why Choose JavaScript?
-        </h3>
+      {/* Learning Sections */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          JavaScript Learning Path
+        </h2>
+        <div className="space-y-6">
+          {jsSections.map((section, index) => (
+            <Link key={index} href={section.href} className="block group">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-yellow-300 dark:hover:border-yellow-600 transition-colors">
+                <div className="flex items-start space-x-4">
+                  <div className="text-yellow-600 group-hover:text-yellow-700 transition-colors">
+                    {section.icon}
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors">
+                        {section.title}
+                      </h3>
+                      <div className="flex items-center space-x-2">
+                        <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                          section.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
+                          section.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
+                          'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300'
+                        }`}>
+                          {section.difficulty}
+                        </span>
+                        <span className="text-xs text-gray-500 dark:text-gray-400">{section.estimatedTime}</span>
+                      </div>
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">{section.description}</p>
+                    <div className="flex flex-wrap gap-1">
+                      {section.topics.map((topic, i) => (
+                        <span key={i} className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
+                          {topic}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-yellow-600 transition-colors" />
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Key Features */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          Why Choose JavaScript?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {jsFeatures.map((feature, index) => (
-            <div key={index} className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-yellow-600 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <h4 className="font-semibold text-yellow-900 dark:text-yellow-100">{feature.title}</h4>
-                <p className="text-yellow-800 dark:text-yellow-200 text-sm">{feature.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* JavaScript Environments */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Where JavaScript Runs</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {jsEnvironments.map((env, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center space-x-3 mb-3">
-                <div className="text-yellow-600">{env.icon}</div>
-                <h3 className="font-semibold text-gray-900 dark:text-white">{env.name}</h3>
+                <div className="text-yellow-600">{feature.icon}</div>
+                <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
               </div>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">{env.description}</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{feature.description}</p>
+              <p className="text-gray-500 dark:text-gray-400 text-xs">{feature.details}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Getting Started */}
+      {/* Use Cases */}
       <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Getting Started</h2>
-        
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
-            💻 Your First JavaScript Program
-          </h3>
-          <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
-{`// Hello World in JavaScript
-console.log("Hello, World!");
-
-// Variables and data types
-let name = "Alice";
-const age = 25;
-var isStudent = true;
-
-// Template literals
-console.log(\`My name is \${name}, I'm \${age} years old\`);
-
-// Arrays and objects
-const fruits = ["apple", "banana", "orange"];
-const person = {
-  name: "Bob",
-  age: 30,
-  city: "New York"
-};
-
-// Functions
-function greet(name) {
-  return \`Hello, \${name}!\`;
-}
-
-// Arrow functions (ES6+)
-const multiply = (a, b) => a * b;
-
-// DOM manipulation (in browser)
-document.getElementById("myButton").addEventListener("click", function() {
-  alert("Button clicked!");
-});`}
-          </pre>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          What Can You Build with JavaScript?
+        </h2>
+        <div className="space-y-6">
+          {jsUseCases.map((useCase, index) => (
+            <div key={index} className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-xl font-semibold text-yellow-900 dark:text-yellow-100">{useCase.category}</h3>
+                <div className="flex items-center space-x-2">
+                  <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                    useCase.difficulty.includes('Beginner') ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
+                    useCase.difficulty.includes('Intermediate') && useCase.difficulty.includes('Advanced') ? 'bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300' :
+                    useCase.difficulty.includes('Intermediate') ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
+                    'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300'
+                  }`}>
+                    {useCase.difficulty}
+                  </span>
+                  <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                    useCase.popularity === 'Very High' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
+                    useCase.popularity === 'High' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
+                    'bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-300'
+                  }`}>
+                    {useCase.popularity}
+                  </span>
+                </div>
+              </div>
+              <p className="text-yellow-800 dark:text-yellow-200 text-sm mb-4">{useCase.description}</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2 text-sm">Real-World Examples:</h4>
+                  <div className="flex flex-wrap gap-1">
+                    {useCase.examples.map((example, i) => (
+                      <span key={i} className="text-xs px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full">
+                        {example}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2 text-sm">Popular Frameworks:</h4>
+                  <div className="flex flex-wrap gap-1">
+                    {useCase.frameworks.map((framework, i) => (
+                      <span key={i} className="text-xs px-2 py-1 bg-yellow-200 dark:bg-yellow-800/30 text-yellow-800 dark:text-yellow-200 rounded-full">
+                        {framework}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Modern JavaScript */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Modern JavaScript (ES6+)</h2>
-        
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
-            🚀 Modern Features
-          </h3>
-          <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
-{`// Destructuring
-const { name, age } = person;
-const [first, second] = fruits;
-
-// Spread operator
-const newFruits = [...fruits, "grape"];
-const newPerson = { ...person, country: "USA" };
-
-// Async/Await
-async function fetchData() {
-  try {
-    const response = await fetch('https://api.example.com/data');
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}
-
-// Classes
-class Animal {
-  constructor(name) {
-    this.name = name;
-  }
-  
-  speak() {
-    console.log(\`\${this.name} makes a sound\`);
-  }
-}
-
-class Dog extends Animal {
-  speak() {
-    console.log(\`\${this.name} barks\`);
-  }
-}
-
-// Modules
-export const utils = {
-  formatDate: (date) => date.toLocaleDateString()
-};`}
-          </pre>
-        </div>
-      </section>
-
-      {/* Popular Frameworks */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Popular JavaScript Frameworks</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Frontend</h3>
-            <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-              <li>• React - Component-based UI</li>
-              <li>• Vue.js - Progressive framework</li>
-              <li>• Angular - Full framework</li>
-              <li>• Svelte - Compile-time optimization</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Backend</h3>
-            <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-              <li>• Express.js - Minimal web framework</li>
-              <li>• Fastify - High performance</li>
-              <li>• NestJS - Enterprise-grade</li>
-              <li>• Koa.js - Next-gen Express</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Full Stack</h3>
-            <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-              <li>• Next.js - React framework</li>
-              <li>• Nuxt.js - Vue framework</li>
-              <li>• Gatsby - Static site generator</li>
-              <li>• Remix - Full stack web framework</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Learning Path */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
-          🎯 JavaScript Learning Path
+      {/* Quick Start */}
+      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
+        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+          🚀 Getting Started with JavaScript
         </h3>
         <div className="space-y-4">
           <div className="flex items-start space-x-3">
-            <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
+            <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
-              <h4 className="font-semibold text-blue-900 dark:text-blue-100">JavaScript Fundamentals (3-4 weeks)</h4>
-              <p className="text-blue-800 dark:text-blue-200 text-sm">Variables, functions, objects, arrays, DOM manipulation</p>
+              <h4 className="font-semibold text-green-900 dark:text-green-100">No Installation Needed</h4>
+              <p className="text-green-800 dark:text-green-200 text-sm">JavaScript runs in any web browser - just open the developer console</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
-            <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
+            <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
-              <h4 className="font-semibold text-blue-900 dark:text-blue-100">Modern JavaScript (2-3 weeks)</h4>
-              <p className="text-blue-800 dark:text-blue-200 text-sm">ES6+ features, async/await, modules, classes</p>
+              <h4 className="font-semibold text-green-900 dark:text-green-100">Choose Your Environment</h4>
+              <p className="text-green-800 dark:text-green-200 text-sm">Browser console, CodePen, VS Code, or Node.js for server-side</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
-            <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
+            <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
-              <h4 className="font-semibold text-blue-900 dark:text-blue-100">Choose Your Path (4-6 weeks)</h4>
-              <p className="text-blue-800 dark:text-blue-200 text-sm">Frontend frameworks, Node.js backend, or full-stack development</p>
+              <h4 className="font-semibold text-green-900 dark:text-green-100">Start with HTML</h4>
+              <p className="text-green-800 dark:text-green-200 text-sm">Create an HTML file and add &lt;script&gt; tags to begin coding</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
-            <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
+            <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
-              <h4 className="font-semibold text-blue-900 dark:text-blue-100">Build Projects (Ongoing)</h4>
-              <p className="text-blue-800 dark:text-blue-200 text-sm">Create interactive websites and web applications</p>
+              <h4 className="font-semibold text-green-900 dark:text-green-100">Learn the Fundamentals</h4>
+              <p className="text-green-800 dark:text-green-200 text-sm">Master variables, functions, DOM manipulation, and asynchronous programming</p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Resources */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
-          📚 JavaScript Learning Resources
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Free Resources:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
-              <li>• MDN Web Docs (comprehensive reference)</li>
-              <li>• JavaScript.info (modern tutorial)</li>
-              <li>• freeCodeCamp JavaScript course</li>
-              <li>• Eloquent JavaScript (free book)</li>
-              <li>• You Don't Know JS (book series)</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Practice Projects:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
-              <li>• Interactive calculator</li>
-              <li>• Todo list application</li>
-              <li>• Weather app with API</li>
-              <li>• Simple games (tic-tac-toe, snake)</li>
-              <li>• Personal portfolio website</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -294,7 +332,7 @@ export const utils = {
         </Link>
         <Link
           href="/languages/java"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center space-x-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Java</span>
           <ArrowRight className="w-4 h-4" />

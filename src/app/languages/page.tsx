@@ -71,6 +71,26 @@ const languages = [
     href: '/languages/rust',
     color: 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800',
     icon: '🦀'
+  },
+  {
+    name: 'PHP',
+    description: 'Server-side scripting language powering most of the web, including WordPress',
+    difficulty: 'Beginner',
+    popularity: 'Very High',
+    useCases: ['Web Development', 'CMS', 'E-commerce', 'Server-side Scripting'],
+    href: '/languages/php',
+    color: 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800',
+    icon: '🐘'
+  },
+  {
+    name: '.NET',
+    description: 'Microsoft\'s cross-platform framework for building modern applications',
+    difficulty: 'Intermediate',
+    popularity: 'High',
+    useCases: ['Web Apps', 'Desktop Apps', 'Cloud Services', 'Enterprise Solutions'],
+    href: '/languages/dotnet',
+    color: 'bg-indigo-50 dark:bg-indigo-900/20 border-indigo-200 dark:border-indigo-800',
+    icon: '🔷'
   }
 ];
 

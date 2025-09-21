@@ -14,9 +14,11 @@ export default function Header() {
           {/* Logo and Title */}
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">CH</span>
-              </div>
+              <img 
+                src="https://cdn.discordapp.com/avatars/1017655436704481290/5603c2d1480875125ca4ba708eb35c46.png" 
+                alt="CodingHelp Logo" 
+                className="w-8 h-8 rounded-lg"
+              />
               <span className="font-bold text-xl text-gray-900 dark:text-white">
                 CodingHelp Wiki
               </span>

@@ -52,7 +52,9 @@ const sidebarItems: SidebarItem[] = [
       { title: 'C++', href: '/languages/cpp', icon: <ChevronRight size={16} /> },
       { title: 'C#', href: '/languages/csharp', icon: <ChevronRight size={16} /> },
       { title: 'Go', href: '/languages/go', icon: <ChevronRight size={16} /> },
-      { title: 'Rust', href: '/languages/rust', icon: <ChevronRight size={16} /> }
+      { title: 'Rust', href: '/languages/rust', icon: <ChevronRight size={16} /> },
+      { title: 'PHP', href: '/languages/php', icon: <ChevronRight size={16} /> },
+      { title: '.NET', href: '/languages/dotnet', icon: <ChevronRight size={16} /> }
     ]
   },
   {

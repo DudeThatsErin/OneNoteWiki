@@ -1,18 +1,82 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Code, Database, Brain, Zap } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Code, Database, Brain, Zap, Star, ExternalLink, BookOpen, Users, Globe } from 'lucide-react';
 
 const pythonFeatures = [
-  { title: 'Simple Syntax', description: 'Clean, readable code that\'s easy to learn and understand' },
-  { title: 'Versatile', description: 'Used for web development, data science, AI, automation, and more' },
-  { title: 'Large Community', description: 'Extensive libraries, frameworks, and community support' },
-  { title: 'Cross-Platform', description: 'Runs on Windows, macOS, Linux, and many other platforms' }
+  {
+    title: 'Readable Syntax',
+    description: 'Python\'s syntax closely resembles English, making it intuitive to read and write',
+    icon: <BookOpen className="w-5 h-5" />,
+    details: 'Uses indentation for code blocks instead of braces, enforcing clean code structure'
+  },
+  {
+    title: 'Interpreted Language',
+    description: 'No compilation step needed - write code and run it immediately',
+    icon: <Zap className="w-5 h-5" />,
+    details: 'Interactive REPL allows for rapid prototyping and testing of code snippets'
+  },
+  {
+    title: 'Dynamically Typed',
+    description: 'Variables don\'t need explicit type declarations, increasing development speed',
+    icon: <Code className="w-5 h-5" />,
+    details: 'Type hints available for better code documentation and IDE support'
+  },
+  {
+    title: 'Extensive Standard Library',
+    description: 'Batteries included - vast standard library covers most common programming tasks',
+    icon: <Database className="w-5 h-5" />,
+    details: 'From file I/O to networking, web servers to data structures - it\'s all built-in'
+  },
+  {
+    title: 'Cross-Platform',
+    description: 'Write once, run anywhere - Python works on all major operating systems',
+    icon: <Globe className="w-5 h-5" />,
+    details: 'Same code runs on Windows, macOS, Linux, and many embedded systems'
+  },
+  {
+    title: 'Large Community',
+    description: 'Massive, active community providing libraries, frameworks, and support',
+    icon: <Users className="w-5 h-5" />,
+    details: 'Over 400,000 packages on PyPI, extensive documentation, and helpful forums'
+  }
 ];
 
-const pythonLibraries = [
-  { category: 'Web Development', libraries: ['Django', 'Flask', 'FastAPI', 'Pyramid'] },
-  { category: 'Data Science', libraries: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn'] },
-  { category: 'Machine Learning', libraries: ['Scikit-learn', 'TensorFlow', 'PyTorch', 'Keras'] },
-  { category: 'Automation', libraries: ['Selenium', 'BeautifulSoup', 'Requests', 'Scrapy'] }
+const pythonUseCases = [
+  {
+    category: 'Web Development',
+    description: 'Build scalable web applications and APIs',
+    examples: ['Instagram backend', 'Pinterest', 'Spotify backend', 'YouTube'],
+    frameworks: ['Django', 'Flask', 'FastAPI', 'Pyramid', 'Tornado'],
+    popularity: 'Very High',
+    difficulty: 'Beginner to Intermediate',
+    details: 'Python excels in rapid web development with frameworks like Django providing everything needed for complex web applications out of the box.'
+  },
+  {
+    category: 'Data Science & Analytics',
+    description: 'Analyze data, create visualizations, and extract insights',
+    examples: ['Netflix recommendations', 'Uber surge pricing', 'Financial analysis', 'Scientific research'],
+    frameworks: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Plotly', 'Jupyter'],
+    popularity: 'Very High',
+    difficulty: 'Beginner to Advanced',
+    details: 'Python is the de facto standard for data science with powerful libraries for data manipulation, analysis, and visualization.'
+  },
+  {
+    category: 'Machine Learning & AI',
+    description: 'Build intelligent systems and predictive models',
+    examples: ['Tesla Autopilot', 'Google Search', 'Amazon recommendations', 'Medical diagnosis'],
+    frameworks: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Keras', 'OpenCV', 'NLTK'],
+    popularity: 'Very High',
+    difficulty: 'Intermediate to Advanced',
+    details: 'Leading language for ML/AI with comprehensive libraries for deep learning, computer vision, and natural language processing.'
+  },
+  {
+    category: 'Automation & Scripting',
+    description: 'Automate repetitive tasks and system administration',
+    examples: ['System backups', 'File organization', 'Web scraping', 'DevOps automation'],
+    frameworks: ['Selenium', 'BeautifulSoup', 'Requests', 'Scrapy', 'Ansible', 'Fabric'],
+    popularity: 'Very High',
+    difficulty: 'Beginner',
+    details: 'Python\'s simplicity makes it perfect for automation scripts, from simple file operations to complex system administration tasks.'
+  }
 ];
 
 export default function PythonPage() {
@@ -39,146 +103,112 @@ export default function PythonPage() {
       {/* Header */}
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
-          <span className="text-4xl">🐍</span>
+          <div className="text-4xl">🐍</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Python</h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              The versatile, beginner-friendly programming language
-            </p>
+            <p className="text-gray-600 dark:text-gray-300">The versatile, beginner-friendly programming language</p>
           </div>
+        </div>
+        <p className="text-lg text-gray-600 dark:text-gray-300">
+          Python is a high-level, interpreted programming language known for its simplicity and readability. 
+          Created by Guido van Rossum in 1991, Python emphasizes code readability and allows developers to 
+          express concepts in fewer lines of code than many other languages.
+        </p>
+      </div>
+
+      {/* Quick Stats */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">1991</div>
+          <div className="text-sm text-blue-700 dark:text-blue-300">First Released</div>
+        </div>
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">Beginner</div>
+          <div className="text-sm text-blue-700 dark:text-blue-300">Difficulty Level</div>
+        </div>
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">#1</div>
+          <div className="text-sm text-blue-700 dark:text-blue-300">TIOBE Index</div>
+        </div>
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">15.7M+</div>
+          <div className="text-sm text-blue-700 dark:text-blue-300">Developers</div>
         </div>
       </div>
 
-      {/* Why Python */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
-          🌟 Why Choose Python?
-        </h3>
+      {/* Key Features */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          Why Choose Python?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {pythonFeatures.map((feature, index) => (
-            <div key={index} className="flex items-start space-x-3">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <h4 className="font-semibold text-blue-900 dark:text-blue-100">{feature.title}</h4>
-                <p className="text-blue-800 dark:text-blue-200 text-sm">{feature.description}</p>
+            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+              <div className="flex items-center space-x-3 mb-3">
+                <div className="text-blue-600">{feature.icon}</div>
+                <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
               </div>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{feature.description}</p>
+              <p className="text-gray-500 dark:text-gray-400 text-xs">{feature.details}</p>
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Getting Started */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Getting Started</h2>
-        
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
-            💻 Your First Python Program
-          </h3>
-          <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
-{`# Hello World in Python
-print("Hello, World!")
-
-# Variables and data types
-name = "Alice"
-age = 25
-height = 5.6
-is_student = True
-
-print(f"My name is {name}, I'm {age} years old")
-
-# Lists and loops
-fruits = ["apple", "banana", "orange"]
-for fruit in fruits:
-    print(f"I like {fruit}")
-
-# Functions
-def greet(name):
-    return f"Hello, {name}!"
-
-message = greet("Python")
-print(message)`}
-          </pre>
-        </div>
       </section>
 
-      {/* Core Concepts */}
+      {/* Use Cases */}
       <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Core Python Concepts</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-            <div className="flex items-center space-x-2 mb-3">
-              <Code className="w-5 h-5 text-blue-600" />
-              <h3 className="font-semibold text-gray-900 dark:text-white">Basic Syntax</h3>
-            </div>
-            <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-              <li>• Variables and data types</li>
-              <li>• Control structures (if/else, loops)</li>
-              <li>• Functions and modules</li>
-              <li>• Lists, dictionaries, tuples</li>
-              <li>• String manipulation</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-            <div className="flex items-center space-x-2 mb-3">
-              <Zap className="w-5 h-5 text-blue-600" />
-              <h3 className="font-semibold text-gray-900 dark:text-white">Object-Oriented Programming</h3>
-            </div>
-            <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-              <li>• Classes and objects</li>
-              <li>• Inheritance and polymorphism</li>
-              <li>• Encapsulation</li>
-              <li>• Magic methods</li>
-              <li>• Decorators</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-            <div className="flex items-center space-x-2 mb-3">
-              <Database className="w-5 h-5 text-blue-600" />
-              <h3 className="font-semibold text-gray-900 dark:text-white">File & Data Handling</h3>
-            </div>
-            <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-              <li>• File I/O operations</li>
-              <li>• JSON and CSV handling</li>
-              <li>• Database connections</li>
-              <li>• API requests</li>
-              <li>• Error handling</li>
-            </ul>
-          </div>
-          
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-            <div className="flex items-center space-x-2 mb-3">
-              <Brain className="w-5 h-5 text-blue-600" />
-              <h3 className="font-semibold text-gray-900 dark:text-white">Advanced Topics</h3>
-            </div>
-            <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-              <li>• List comprehensions</li>
-              <li>• Generators and iterators</li>
-              <li>• Context managers</li>
-              <li>• Async/await</li>
-              <li>• Testing with pytest</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Popular Libraries */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Popular Python Libraries</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {pythonLibraries.map((category, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-3">{category.category}</h3>
-              <div className="flex flex-wrap gap-2">
-                {category.libraries.map((library, i) => (
-                  <span key={i} className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full">
-                    {library}
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          What Can You Build with Python?
+        </h2>
+        <div className="space-y-6">
+          {pythonUseCases.map((useCase, index) => (
+            <div key={index} className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-xl font-semibold text-blue-900 dark:text-blue-100">{useCase.category}</h3>
+                <div className="flex items-center space-x-2">
+                  <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                    useCase.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
+                    useCase.difficulty === 'Beginner to Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
+                    useCase.difficulty === 'Beginner to Advanced' ? 'bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300' :
+                    useCase.difficulty === 'Intermediate to Advanced' ? 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300' :
+                    'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300'
+                  }`}>
+                    {useCase.difficulty}
                   </span>
-                ))}
+                  <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                    useCase.popularity === 'Very High' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
+                    useCase.popularity === 'High' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
+                    useCase.popularity === 'Medium' ? 'bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300' :
+                    'bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-300'
+                  }`}>
+                    {useCase.popularity}
+                  </span>
+                </div>
+              </div>
+              <p className="text-blue-800 dark:text-blue-200 text-sm mb-3">{useCase.description}</p>
+              <p className="text-blue-700 dark:text-blue-300 text-sm mb-4">{useCase.details}</p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 text-sm">Real-World Examples:</h4>
+                  <div className="flex flex-wrap gap-1">
+                    {useCase.examples.map((example, i) => (
+                      <span key={i} className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">
+                        {example}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 text-sm">Popular Frameworks:</h4>
+                  <div className="flex flex-wrap gap-1">
+                    {useCase.frameworks.map((framework, i) => (
+                      <span key={i} className="text-xs px-2 py-1 bg-blue-200 dark:bg-blue-800/30 text-blue-800 dark:text-blue-200 rounded-full">
+                        {framework}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           ))}
@@ -187,107 +217,80 @@ print(message)`}
 
       {/* Code Example */}
       <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Practical Example</h2>
-        
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          Python Code Examples
+        </h2>
         <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
-            📊 Data Analysis with Pandas
+            🚀 Getting Started - Basic Syntax
           </h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
-{`import pandas as pd
-import matplotlib.pyplot as plt
+{`# Hello World and Basic Concepts
+print("Hello, World!")
 
-# Read data from CSV
-df = pd.read_csv('sales_data.csv')
+# Variables and Data Types
+name = "Alice"           # String
+age = 25                 # Integer
+height = 5.6             # Float
+is_student = True        # Boolean
+hobbies = ["reading", "coding", "gaming"]  # List
 
-# Basic data exploration
-print(df.head())
-print(df.info())
-print(df.describe())
+# String formatting (f-strings)
+print(f"My name is {name}, I'm {age} years old")
 
-# Data manipulation
-df['total_sales'] = df['quantity'] * df['price']
-monthly_sales = df.groupby('month')['total_sales'].sum()
+# Control Structures
+if age >= 18:
+    print("You're an adult!")
+else:
+    print("You're a minor")
 
-# Data visualization
-plt.figure(figsize=(10, 6))
-monthly_sales.plot(kind='bar')
-plt.title('Monthly Sales')
-plt.xlabel('Month')
-plt.ylabel('Total Sales ($)')
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
+# Loops
+for hobby in hobbies:
+    print(f"I enjoy {hobby}")
 
-# Filter and analyze
-high_value_sales = df[df['total_sales'] > 1000]
-print(f"High value sales: {len(high_value_sales)} transactions")`}
+# Functions
+def greet(name, age):
+    return f"Hello {name}, you are {age} years old!"
+
+message = greet("Python", 32)
+print(message)`}
           </pre>
         </div>
       </section>
 
-      {/* Learning Path */}
+      {/* Getting Started */}
       <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
-          🎯 Python Learning Path
+          🚀 Getting Started with Python
         </h3>
         <div className="space-y-4">
           <div className="flex items-start space-x-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Python Basics (2-4 weeks)</h4>
-              <p className="text-green-800 dark:text-green-200 text-sm">Variables, data types, control structures, functions</p>
+              <h4 className="font-semibold text-green-900 dark:text-green-100">Install Python</h4>
+              <p className="text-green-800 dark:text-green-200 text-sm">Download from python.org or use package managers like Homebrew (Mac) or apt (Linux)</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Object-Oriented Programming (2-3 weeks)</h4>
-              <p className="text-green-800 dark:text-green-200 text-sm">Classes, objects, inheritance, encapsulation</p>
+              <h4 className="font-semibold text-green-900 dark:text-green-100">Choose an Editor</h4>
+              <p className="text-green-800 dark:text-green-200 text-sm">VS Code with Python extension, PyCharm, or even IDLE for beginners</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Libraries & Frameworks (4-6 weeks)</h4>
-              <p className="text-green-800 dark:text-green-200 text-sm">Choose your path: web development, data science, or automation</p>
+              <h4 className="font-semibold text-green-900 dark:text-green-100">Write Your First Program</h4>
+              <p className="text-green-800 dark:text-green-200 text-sm">Start with print("Hello, World!") and build from there</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Build Projects (Ongoing)</h4>
-              <p className="text-green-800 dark:text-green-200 text-sm">Apply your skills with real-world projects</p>
+              <h4 className="font-semibold text-green-900 dark:text-green-100">Learn the Fundamentals</h4>
+              <p className="text-green-800 dark:text-green-200 text-sm">Master variables, data types, control structures, functions, and basic data structures</p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Resources */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-        <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
-          📚 Python Learning Resources
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Free Resources:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
-              <li>• Python.org Official Tutorial</li>
-              <li>• Automate the Boring Stuff with Python</li>
-              <li>• Python for Everybody (Coursera)</li>
-              <li>• Real Python (articles and tutorials)</li>
-              <li>• Python Crash Course (book)</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Practice Projects:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
-              <li>• Calculator and simple games</li>
-              <li>• Web scraper for data collection</li>
-              <li>• Personal expense tracker</li>
-              <li>• Weather app with API integration</li>
-              <li>• Data analysis of CSV files</li>
-            </ul>
           </div>
         </div>
       </div>
