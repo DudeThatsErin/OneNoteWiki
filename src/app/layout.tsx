@@ -3,6 +3,7 @@ import './globals.css';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: 'CodingHelp Wiki - Learn to Code',
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="antialiased">
+        <SpeedInsights />
         <ThemeProvider>
           <div className="min-h-screen bg-white dark:bg-gray-900">
             <Header />
