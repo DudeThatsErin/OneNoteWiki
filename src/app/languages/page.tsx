@@ -132,7 +132,7 @@ export default function LanguagesPage() {
       </div>
 
       {/* How to Choose */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 md:p-8 border border-gray-200 dark:border-gray-700 mx-2 md:mx-0">
+      <div className="p-6 md:p-8">
         <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-6">
           How to Choose Your First Programming Language
         </h3>
