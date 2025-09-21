@@ -56,7 +56,7 @@ export default function Header() {
             {/* Community Links */}
             <div className="flex items-center space-x-2">
               <a
-                href="https://discord.gg/codinghelp"
+                href="https://discord.gg/geQEUBm"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"

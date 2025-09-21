@@ -195,6 +195,195 @@ export default function ResourcesPage() {
         </div>
       </section>
 
+      {/* Getting Help Online */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          Essential Skills: Getting Help Online
+        </h2>
+        
+        <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-6 border border-red-200 dark:border-red-800">
+          <h3 className="text-lg font-semibold text-red-900 dark:text-red-100 mb-4">
+            🆘 How to Ask Questions Effectively
+          </h3>
+          <div className="space-y-4">
+            <div className="bg-white dark:bg-gray-800 p-4 rounded border border-red-200 dark:border-red-700">
+              <h4 className="font-semibold text-red-900 dark:text-red-100 mb-2">📋 Before You Ask:</h4>
+              <ul className="text-red-800 dark:text-red-200 text-sm space-y-1">
+                <li>• Search for existing solutions (Google, Stack Overflow, documentation)</li>
+                <li>• Try to solve it yourself first - show your attempts</li>
+                <li>• Read the error message carefully</li>
+                <li>• Create a minimal reproducible example</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 p-4 rounded border border-red-200 dark:border-red-700">
+              <h4 className="font-semibold text-red-900 dark:text-red-100 mb-2">✅ When You Ask:</h4>
+              <ul className="text-red-800 dark:text-red-200 text-sm space-y-1">
+                <li>• Be specific about what you're trying to achieve</li>
+                <li>• Include relevant code, error messages, and context</li>
+                <li>• Mention what you've already tried</li>
+                <li>• Use proper formatting (code blocks, etc.)</li>
+                <li>• Be patient and respectful</li>
+              </ul>
+            </div>
+            
+            <div className="bg-yellow-100 dark:bg-yellow-900/30 p-4 rounded border border-yellow-300 dark:border-yellow-700">
+              <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2">🚫 Don't Ask to Ask!</h4>
+              <p className="text-yellow-800 dark:text-yellow-200 text-sm mb-2">
+                Instead of "Can someone help me with JavaScript?" or "Is anyone here good with Python?", 
+                just ask your specific question directly.
+              </p>
+              <a
+                href="https://dontasktoask.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-yellow-700 dark:text-yellow-300 hover:underline text-sm font-medium"
+              >
+                📖 Read "Don't Ask to Ask" →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Code Sharing */}
+          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+            <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
+              💻 How to Share Code Online
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Quick Code Snippets:</h4>
+                <div className="space-y-2">
+                  <a
+                    href="https://codepen.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-3 bg-white dark:bg-gray-800 rounded border border-blue-200 dark:border-blue-700 hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h5 className="font-medium text-gray-900 dark:text-white">CodePen</h5>
+                        <p className="text-gray-600 dark:text-gray-300 text-xs">HTML, CSS, JavaScript</p>
+                      </div>
+                      <span className="text-blue-600 dark:text-blue-400 text-xs">→</span>
+                    </div>
+                  </a>
+                  
+                  <a
+                    href="https://jsfiddle.net"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-3 bg-white dark:bg-gray-800 rounded border border-blue-200 dark:border-blue-700 hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h5 className="font-medium text-gray-900 dark:text-white">JSFiddle</h5>
+                        <p className="text-gray-600 dark:text-gray-300 text-xs">Web development playground</p>
+                      </div>
+                      <span className="text-blue-600 dark:text-blue-400 text-xs">→</span>
+                    </div>
+                  </a>
+                  
+                  <a
+                    href="https://replit.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-3 bg-white dark:bg-gray-800 rounded border border-blue-200 dark:border-blue-700 hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h5 className="font-medium text-gray-900 dark:text-white">Replit</h5>
+                        <p className="text-gray-600 dark:text-gray-300 text-xs">Full development environment</p>
+                      </div>
+                      <span className="text-blue-600 dark:text-blue-400 text-xs">→</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Longer Code/Projects:</h4>
+                <div className="space-y-2">
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-3 bg-white dark:bg-gray-800 rounded border border-blue-200 dark:border-blue-700 hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h5 className="font-medium text-gray-900 dark:text-white">GitHub</h5>
+                        <p className="text-gray-600 dark:text-gray-300 text-xs">Full projects, version control</p>
+                      </div>
+                      <span className="text-blue-600 dark:text-blue-400 text-xs">→</span>
+                    </div>
+                  </a>
+                  
+                  <a
+                    href="https://pastebin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-3 bg-white dark:bg-gray-800 rounded border border-blue-200 dark:border-blue-700 hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h5 className="font-medium text-gray-900 dark:text-white">Pastebin</h5>
+                        <p className="text-gray-600 dark:text-gray-300 text-xs">Simple text/code sharing</p>
+                      </div>
+                      <span className="text-blue-600 dark:text-blue-400 text-xs">→</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Google Search Tips */}
+          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+            <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+              🔍 How to Google Programming Problems
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Search Strategies:</h4>
+                <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+                  <li>• Include the programming language in your search</li>
+                  <li>• Use specific error messages (in quotes)</li>
+                  <li>• Add "stackoverflow" or "github" to your search</li>
+                  <li>• Search for the concept, not just the code</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Example Searches:</h4>
+                <div className="space-y-2">
+                  <div className="bg-white dark:bg-gray-800 p-2 rounded text-xs">
+                    <strong>Bad:</strong> "code not working"
+                  </div>
+                  <div className="bg-white dark:bg-gray-800 p-2 rounded text-xs">
+                    <strong>Good:</strong> "python list comprehension syntax error"
+                  </div>
+                  <div className="bg-white dark:bg-gray-800 p-2 rounded text-xs">
+                    <strong>Better:</strong> "python 'SyntaxError: invalid syntax' list comprehension"
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Useful Search Operators:</h4>
+                <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+                  <li>• <code className="bg-green-100 dark:bg-green-900/30 px-1 rounded">"exact phrase"</code> - Search exact text</li>
+                  <li>• <code className="bg-green-100 dark:bg-green-900/30 px-1 rounded">site:stackoverflow.com</code> - Search specific site</li>
+                  <li>• <code className="bg-green-100 dark:bg-green-900/30 px-1 rounded">-word</code> - Exclude a word</li>
+                  <li>• <code className="bg-green-100 dark:bg-green-900/30 px-1 rounded">filetype:pdf</code> - Search file types</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Learning Path Recommendations */}
       <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
         <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">

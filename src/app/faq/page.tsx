@@ -129,7 +129,7 @@ export default function FAQPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <a
-            href="https://discord.gg/codinghelp"
+            href="https://discord.gg/geQEUBm"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors"

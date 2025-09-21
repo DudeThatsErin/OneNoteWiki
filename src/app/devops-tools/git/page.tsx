@@ -29,19 +29,151 @@ const gitPlatforms = [
     name: 'GitHub',
     description: 'The world\'s largest code hosting platform',
     features: ['Public/private repos', 'Actions CI/CD', 'Issues & PRs', 'GitHub Pages'],
-    bestFor: 'Open source projects, collaboration, portfolio'
+    bestFor: 'Open source projects, collaboration, portfolio',
+    url: 'https://github.com',
+    pricing: 'Free for public repos, paid for private'
   },
   {
     name: 'GitLab',
     description: 'Complete DevOps platform with built-in CI/CD',
     features: ['Integrated CI/CD', 'Issue tracking', 'Wiki', 'Container registry'],
-    bestFor: 'Enterprise teams, complete DevOps workflow'
+    bestFor: 'Enterprise teams, complete DevOps workflow',
+    url: 'https://gitlab.com',
+    pricing: 'Free tier available, paid for advanced features'
   },
   {
     name: 'Bitbucket',
     description: 'Atlassian\'s Git solution integrated with Jira',
     features: ['Jira integration', 'Pipelines', 'Pull requests', 'Code insights'],
-    bestFor: 'Teams using Atlassian tools, enterprise'
+    bestFor: 'Teams using Atlassian tools, enterprise',
+    url: 'https://bitbucket.org',
+    pricing: 'Free for small teams, paid for larger teams'
+  },
+  {
+    name: 'Azure DevOps',
+    description: 'Microsoft\'s comprehensive DevOps platform',
+    features: ['Azure Repos', 'Azure Pipelines', 'Work items', 'Test plans'],
+    bestFor: 'Microsoft ecosystem, enterprise development',
+    url: 'https://dev.azure.com',
+    pricing: 'Free for small teams, paid for additional features'
+  },
+  {
+    name: 'SourceForge',
+    description: 'One of the oldest code hosting platforms',
+    features: ['Project hosting', 'Download statistics', 'Ticketing', 'Forums'],
+    bestFor: 'Open source projects, legacy projects',
+    url: 'https://sourceforge.net',
+    pricing: 'Free for open source projects'
+  },
+  {
+    name: 'Codeberg',
+    description: 'Non-profit Git hosting focused on privacy',
+    features: ['Privacy-focused', 'No tracking', 'Open source', 'Community-driven'],
+    bestFor: 'Privacy-conscious developers, open source',
+    url: 'https://codeberg.org',
+    pricing: 'Completely free'
+  }
+];
+
+const gitVsGitHub = [
+  {
+    aspect: 'What it is',
+    git: 'Version control system (software)',
+    github: 'Cloud hosting service for Git repositories'
+  },
+  {
+    aspect: 'Installation',
+    git: 'Install on your computer',
+    github: 'Access through web browser'
+  },
+  {
+    aspect: 'Usage',
+    git: 'Command line tool for version control',
+    github: 'Web interface + Git functionality'
+  },
+  {
+    aspect: 'Storage',
+    git: 'Local repositories on your machine',
+    github: 'Remote repositories in the cloud'
+  },
+  {
+    aspect: 'Collaboration',
+    git: 'Basic merging and branching',
+    github: 'Pull requests, issues, project management'
+  },
+  {
+    aspect: 'Cost',
+    git: 'Free and open source',
+    github: 'Free for public repos, paid for private'
+  }
+];
+
+const gitWorkflow = [
+  {
+    step: 'Initialize Repository',
+    command: 'git init',
+    description: 'Create a new Git repository in your project folder',
+    when: 'Starting a new project or adding Git to existing project'
+  },
+  {
+    step: 'Add Files',
+    command: 'git add .',
+    description: 'Stage files for commit (prepare them to be saved)',
+    when: 'After making changes you want to save'
+  },
+  {
+    step: 'Commit Changes',
+    command: 'git commit -m "message"',
+    description: 'Save staged changes with a descriptive message',
+    when: 'When you want to create a checkpoint of your work'
+  },
+  {
+    step: 'Connect to Remote',
+    command: 'git remote add origin <url>',
+    description: 'Link your local repository to a remote repository',
+    when: 'First time connecting to GitHub/GitLab/etc.'
+  },
+  {
+    step: 'Push Changes',
+    command: 'git push origin main',
+    description: 'Upload your commits to the remote repository',
+    when: 'When you want to backup or share your changes'
+  },
+  {
+    step: 'Pull Changes',
+    command: 'git pull origin main',
+    description: 'Download and merge changes from remote repository',
+    when: 'Before starting work or when others have made changes'
+  }
+];
+
+const gitResources = [
+  {
+    category: 'Interactive Learning',
+    resources: [
+      { name: 'Learn Git Branching', url: 'https://learngitbranching.js.org', description: 'Visual and interactive Git tutorial' },
+      { name: 'Git Immersion', url: 'https://gitimmersion.com', description: 'Guided tour through Git fundamentals' },
+      { name: 'GitHub Skills', url: 'https://skills.github.com', description: 'Hands-on courses for GitHub' },
+      { name: 'Atlassian Git Tutorials', url: 'https://www.atlassian.com/git/tutorials', description: 'Comprehensive Git tutorials' }
+    ]
+  },
+  {
+    category: 'Documentation & References',
+    resources: [
+      { name: 'Pro Git Book', url: 'https://git-scm.com/book', description: 'Complete Git reference (free online)' },
+      { name: 'Git Official Documentation', url: 'https://git-scm.com/docs', description: 'Official Git command reference' },
+      { name: 'GitHub Docs', url: 'https://docs.github.com', description: 'Complete GitHub documentation' },
+      { name: 'GitLab Docs', url: 'https://docs.gitlab.com', description: 'GitLab user and admin documentation' }
+    ]
+  },
+  {
+    category: 'Tools & Utilities',
+    resources: [
+      { name: 'Git Cheat Sheet', url: 'https://education.github.com/git-cheat-sheet-education.pdf', description: 'Quick reference for Git commands' },
+      { name: 'Gitignore.io', url: 'https://gitignore.io', description: 'Generate .gitignore files for your projects' },
+      { name: 'Git Kraken', url: 'https://www.gitkraken.com', description: 'Visual Git client with GUI' },
+      { name: 'SourceTree', url: 'https://www.sourcetreeapp.com', description: 'Free Git GUI for Windows and Mac' }
+    ]
   }
 ];
 
@@ -273,12 +405,81 @@ git pull origin main`}
         </div>
       </section>
 
+      {/* How to Use Git */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          How to Use Git: Step-by-Step Guide
+        </h2>
+        
+        <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
+          <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+            🚀 Basic Git Workflow
+          </h3>
+          <div className="space-y-4">
+            {gitWorkflow.map((step, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                  {index + 1}
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-green-900 dark:text-green-100">{step.step}</h4>
+                  <code className="text-sm bg-green-100 dark:bg-green-900/30 px-2 py-1 rounded text-green-800 dark:text-green-200">
+                    {step.command}
+                  </code>
+                  <p className="text-green-800 dark:text-green-200 text-sm mt-1">{step.description}</p>
+                  <p className="text-green-700 dark:text-green-300 text-xs mt-1">
+                    <strong>When to use:</strong> {step.when}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Git vs GitHub */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          Git vs GitHub: Understanding the Difference
+        </h2>
+        
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-6 border border-yellow-200 dark:border-yellow-800">
+          <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-4">
+            🤔 Common Confusion Explained
+          </h3>
+          <p className="text-yellow-800 dark:text-yellow-200 text-sm mb-4">
+            Many beginners confuse Git and GitHub. Here's the key difference: <strong>Git is the tool, GitHub is the service.</strong>
+          </p>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white dark:bg-gray-800 rounded-lg">
+              <thead className="bg-yellow-100 dark:bg-yellow-900/30">
+                <tr>
+                  <th className="px-4 py-3 text-left text-sm font-semibold text-yellow-900 dark:text-yellow-100">Aspect</th>
+                  <th className="px-4 py-3 text-left text-sm font-semibold text-yellow-900 dark:text-yellow-100">Git</th>
+                  <th className="px-4 py-3 text-left text-sm font-semibold text-yellow-900 dark:text-yellow-100">GitHub</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-yellow-200 dark:divide-yellow-700">
+                {gitVsGitHub.map((comparison, index) => (
+                  <tr key={index}>
+                    <td className="px-4 py-3 text-sm font-medium text-gray-900 dark:text-white">{comparison.aspect}</td>
+                    <td className="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">{comparison.git}</td>
+                    <td className="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">{comparison.github}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {/* Git Platforms */}
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          Popular Git Platforms
+          Git Hosting Platforms Comparison
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {gitPlatforms.map((platform, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
@@ -297,9 +498,53 @@ git pull origin main`}
                   ))}
                 </div>
               </div>
-              <div>
+              <div className="mb-3">
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-1 text-sm">Best For:</h4>
                 <p className="text-gray-600 dark:text-gray-300 text-xs">{platform.bestFor}</p>
+              </div>
+              <div className="mb-4">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-1 text-sm">Pricing:</h4>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{platform.pricing}</p>
+              </div>
+              <a
+                href={platform.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm font-medium transition-colors"
+              >
+                Visit Platform
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Git Learning Resources */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          Git Learning Resources
+        </h2>
+        <div className="space-y-6">
+          {gitResources.map((category, index) => (
+            <div key={index} className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
+              <h3 className="text-lg font-bold text-purple-900 dark:text-purple-100 mb-4">
+                {category.category}
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {category.resources.map((resource, i) => (
+                  <div key={i} className="bg-white dark:bg-gray-800 p-4 rounded border border-purple-200 dark:border-purple-700">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{resource.name}</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">{resource.description}</p>
+                    <a
+                      href={resource.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-purple-600 dark:text-purple-400 hover:underline text-sm font-medium"
+                    >
+                      Visit Resource →
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

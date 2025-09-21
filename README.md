@@ -3,7 +3,7 @@
 A comprehensive wiki for learning programming and software development, created by the CodingHelp community.
 
 🌐 **Live Site:** [https://coding-help.vercel.app](https://coding-help.vercel.app)  
-💬 **Discord:** [https://discord.gg/codinghelp](https://discord.gg/codinghelp)  
+💬 **Discord:** [https://discord.gg/geQEUBm](https://discord.gg/geQEUBm)  
 🤝 **Reddit:** [https://reddit.com/r/CodingHelp](https://reddit.com/r/CodingHelp)
 
 ## Features

@@ -81,7 +81,7 @@ export default function HomePage() {
           </Link>
           <div className="flex items-center space-x-4">
             <a
-              href="https://discord.gg/codinghelp"
+              href="https://discord.gg/geQEUBm"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg font-medium transition-colors"
@@ -140,7 +140,7 @@ export default function HomePage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-            href="https://discord.gg/codinghelp"
+            href="https://discord.gg/geQEUBm"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors"
