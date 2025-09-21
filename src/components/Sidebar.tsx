@@ -13,7 +13,8 @@ import {
   Database,
   Globe,
   Smartphone,
-  Package
+  Package,
+  Brain
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -107,6 +108,17 @@ const sidebarItems: SidebarItem[] = [
       { title: 'IDEs & Editors', href: '/devops-tools/editors', icon: <ChevronRight size={16} /> },
       { title: 'Testing', href: '/devops-tools/testing', icon: <ChevronRight size={16} /> },
       { title: 'Deployment', href: '/devops-tools/deployment', icon: <ChevronRight size={16} /> }
+    ]
+  },
+  {
+    title: 'AI & Machine Learning',
+    href: '/ai',
+    icon: <Brain size={18} />,
+    children: [
+      { title: 'AI Dos and Don\'ts', href: '/ai/dos-donts', icon: <ChevronRight size={16} /> },
+      { title: 'Prompt Engineering', href: '/ai/prompting', icon: <ChevronRight size={16} /> },
+      { title: 'Building Your Own AI', href: '/ai/build-ai', icon: <ChevronRight size={16} /> },
+      { title: 'AI Languages & Tools', href: '/ai/languages-tools', icon: <ChevronRight size={16} /> }
     ]
   },
   {
