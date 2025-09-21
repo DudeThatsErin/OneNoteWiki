@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Smartphone, Code, Zap, Users, Globe, Package } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Code, BookOpen, Users, Zap, Star, ExternalLink, Shield, Layers, Cpu, Settings, Navigation, Upload, Globe, Package, Smartphone } from 'lucide-react';
 
 const reactNativeFeatures = [
   {
@@ -155,9 +155,153 @@ export default function ReactNativePage() {
         </div>
       </section>
 
+      {/* Learning Path */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          React Native Learning Path
+        </h2>
+        <div className="space-y-6">
+          <Link href="/mobile-development/react-native/setup" className="block group">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors">
+              <div className="flex items-start space-x-4">
+                <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
+                  <Settings className="w-6 h-6" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      Setup & Environment
+                    </h3>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-xs px-2 py-1 rounded-full font-medium bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300">
+                        Beginner
+                      </span>
+                      <span className="text-xs text-gray-500 dark:text-gray-400">2-3 hours</span>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                    Complete development environment setup for React Native development
+                  </p>
+                  <div className="flex flex-wrap gap-1">
+                    {['Node.js', 'React Native CLI', 'Android Studio', 'Xcode', 'Emulators'].map((topic, i) => (
+                      <span key={i} className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
+                        {topic}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/mobile-development/react-native/components" className="block group">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors">
+              <div className="flex items-start space-x-4">
+                <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
+                  <Layers className="w-6 h-6" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      Components & UI
+                    </h3>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-xs px-2 py-1 rounded-full font-medium bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300">
+                        Intermediate
+                      </span>
+                      <span className="text-xs text-gray-500 dark:text-gray-400">4-5 hours</span>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                    Master React Native components, styling, and responsive layouts
+                  </p>
+                  <div className="flex flex-wrap gap-1">
+                    {['Core Components', 'StyleSheet', 'Flexbox', 'Lists', 'Forms', 'Platform Styles'].map((topic, i) => (
+                      <span key={i} className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
+                        {topic}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/mobile-development/react-native/navigation" className="block group">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors">
+              <div className="flex items-start space-x-4">
+                <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
+                  <Navigation className="w-6 h-6" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      Navigation
+                    </h3>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-xs px-2 py-1 rounded-full font-medium bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300">
+                        Intermediate
+                      </span>
+                      <span className="text-xs text-gray-500 dark:text-gray-400">3-4 hours</span>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                    Implement navigation patterns with React Navigation library
+                  </p>
+                  <div className="flex flex-wrap gap-1">
+                    {['Stack Navigation', 'Tab Navigation', 'Drawer Navigation', 'Deep Linking', 'Navigation Hooks'].map((topic, i) => (
+                      <span key={i} className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
+                        {topic}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/mobile-development/react-native/deployment" className="block group">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors">
+              <div className="flex items-start space-x-4">
+                <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
+                  <Upload className="w-6 h-6" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      Deployment
+                    </h3>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-xs px-2 py-1 rounded-full font-medium bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300">
+                        Advanced
+                      </span>
+                      <span className="text-xs text-gray-500 dark:text-gray-400">5-6 hours</span>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                    Build, sign, and deploy your apps to Google Play Store and Apple App Store
+                  </p>
+                  <div className="flex flex-wrap gap-1">
+                    {['App Signing', 'Build Optimization', 'App Store Guidelines', 'CI/CD', 'Monitoring'].map((topic, i) => (
+                      <span key={i} className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
+                        {topic}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Getting Started */}
       <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Getting Started</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Quick Start Guide</h2>
         
         <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Quick Setup</h3>
