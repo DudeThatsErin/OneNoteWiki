@@ -88,32 +88,32 @@ export default function ResourcesPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">📈 Accelerated Learning:</h4>
-            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
-              <li>• Structured learning paths</li>
-              <li>• Expert-curated content</li>
-              <li>• Progressive difficulty</li>
-              <li>• Immediate feedback</li>
-              <li>• Time-tested methods</li>
+            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
+              <li>Structured learning paths</li>
+              <li>Expert-curated content</li>
+              <li>Progressive difficulty</li>
+              <li>Immediate feedback</li>
+              <li>Time-tested methods</li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🤝 Community Support:</h4>
-            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
-              <li>• Get help when stuck</li>
-              <li>• Learn from others' mistakes</li>
-              <li>• Share your knowledge</li>
-              <li>• Find study partners</li>
-              <li>• Stay motivated</li>
+            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
+              <li>Get help when stuck</li>
+              <li>Learn from others' mistakes</li>
+              <li>Share your knowledge</li>
+              <li>Find study partners</li>
+              <li>Stay motivated</li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🎯 Practical Skills:</h4>
-            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
-              <li>• Real-world projects</li>
-              <li>• Industry best practices</li>
-              <li>• Current technologies</li>
-              <li>• Problem-solving skills</li>
-              <li>• Portfolio building</li>
+            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
+              <li>Real-world projects</li>
+              <li>Industry best practices</li>
+              <li>Current technologies</li>
+              <li>Problem-solving skills</li>
+              <li>Portfolio building</li>
             </ul>
           </div>
         </div>
@@ -208,22 +208,22 @@ export default function ResourcesPage() {
           <div className="space-y-4">
             <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded border border-gray-200 dark:border-gray-600">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">📋 Before You Ask:</h4>
-              <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
-                <li>• Search for existing solutions (Google, Stack Overflow, documentation)</li>
-                <li>• Try to solve it yourself first - show your attempts</li>
-                <li>• Read the error message carefully</li>
-                <li>• Create a minimal reproducible example</li>
+              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
+                <li>Search for existing solutions (Google, Stack Overflow, documentation)</li>
+                <li>Try to solve it yourself first - show your attempts</li>
+                <li>Read the error message carefully</li>
+                <li>Create a minimal reproducible example</li>
               </ul>
             </div>
             
             <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded border border-gray-200 dark:border-gray-600">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">✅ When You Ask:</h4>
-              <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-1">
-                <li>• Be specific about what you're trying to achieve</li>
-                <li>• Include relevant code, error messages, and context</li>
-                <li>• Mention what you've already tried</li>
-                <li>• Use proper formatting (code blocks, etc.)</li>
-                <li>• Be patient and respectful</li>
+              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
+                <li>Be specific about what you're trying to achieve</li>
+                <li>Include relevant code, error messages, and context</li>
+                <li>Mention what you've already tried</li>
+                <li>Use proper formatting (code blocks, etc.)</li>
+                <li>Be patient and respectful</li>
               </ul>
             </div>
             
