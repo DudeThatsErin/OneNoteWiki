@@ -4,6 +4,7 @@ import './globals.css';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
+import Footer from '@/components/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -61,16 +62,17 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         <ThemeProvider>
-          <div className="min-h-screen bg-white dark:bg-gray-900">
+          <div className="min-h-screen bg-white dark:bg-gray-900 flex flex-col">
             <Header />
-            <div className="flex">
+            <div className="flex flex-1">
               <Sidebar />
-              <main className="flex-1 p-6 overflow-y-auto h-[calc(100vh-4rem)]">
+              <main className="flex-1 p-4 sm:p-6 overflow-y-auto">
                 <div className="max-w-4xl mx-auto">
                   {children}
                 </div>
               </main>
             </div>
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

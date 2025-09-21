@@ -116,25 +116,6 @@ export default function ReactNativePage() {
         </p>
       </div>
 
-      {/* Quick Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">2015</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">First Released</div>
-        </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">Intermediate</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Difficulty Level</div>
-        </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">100k+</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">GitHub Stars</div>
-        </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">Meta</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Maintained by</div>
-        </div>
-      </div>
 
       {/* Key Features */}
       <section className="space-y-6">

@@ -88,6 +88,7 @@ const sidebarItems: SidebarItem[] = [
       { title: 'React Native', href: '/mobile-development/react-native', icon: <ChevronRight size={16} /> },
       { title: 'Expo & EAS', href: '/mobile-development/expo', icon: <ChevronRight size={16} /> },
       { title: 'Flutter', href: '/mobile-development/flutter', icon: <ChevronRight size={16} /> },
+      { title: 'Java (Android)', href: '/mobile-development/java-android', icon: <ChevronRight size={16} /> },
       { title: 'Native iOS', href: '/mobile-development/ios', icon: <ChevronRight size={16} /> },
       { title: 'Native Android', href: '/mobile-development/android', icon: <ChevronRight size={16} /> }
     ]
@@ -153,7 +154,7 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-64 bg-gray-50 dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 h-[calc(100vh-4rem)] overflow-y-auto">
+    <aside className="hidden lg:block w-64 bg-gray-50 dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 overflow-y-auto">
       <nav className="p-4 space-y-2">
         {sidebarItems.map((item) => (
           <div key={item.href}>
