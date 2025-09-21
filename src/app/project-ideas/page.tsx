@@ -9,7 +9,7 @@ const languages = [
     href: '/project-ideas/javascript',
     color: 'yellow',
     popularity: 'Very High',
-    difficulty: 'Beginner Friendly'
+    difficulty: 'Beginner'
   },
   {
     name: 'Python',
@@ -18,7 +18,7 @@ const languages = [
     href: '/project-ideas/python',
     color: 'blue',
     popularity: 'Very High',
-    difficulty: 'Beginner Friendly'
+    difficulty: 'Beginner'
   },
   {
     name: 'Java',
@@ -266,7 +266,7 @@ export default function ProjectIdeasPage() {
                       </h3>
                       <div className="flex items-center space-x-2 mt-1">
                         <span className={`text-xs px-2 py-1 rounded-full font-medium ${
-                          language.difficulty === 'Beginner Friendly' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
+                          language.difficulty === 'Beginner' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300' :
                           language.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
                           'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300'
                         }`}>

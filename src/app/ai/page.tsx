@@ -69,6 +69,43 @@ const skillLevels = [
 export default function AIPage() {
   return (
     <div className="space-y-8">
+      {/* Quick Reference */}
+      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
+        <h2 className="text-xl font-semibold text-purple-900 dark:text-purple-100 mb-4 flex items-center">
+          <Brain className="w-5 h-5 mr-2" />
+          Quick Reference: AI Best Practices
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Before Using AI:</h3>
+            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+              <li>• Define clear requirements</li>
+              <li>• Consider security implications</li>
+              <li>• Check company policies</li>
+              <li>• Plan for testing and review</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">While Using AI:</h3>
+            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+              <li>• Provide clear, specific prompts</li>
+              <li>• Iterate and refine requests</li>
+              <li>• Ask for explanations</li>
+              <li>• Request multiple approaches</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">After AI Generation:</h3>
+            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+              <li>• Review and understand code</li>
+              <li>• Test thoroughly</li>
+              <li>• Refactor if needed</li>
+              <li>• Document AI assistance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
@@ -201,7 +238,7 @@ export default function AIPage() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                        app.difficulty === 'Beginner' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' :
+                        app.difficulty === 'Beginner' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200' :
                         app.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200' :
                         'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
                       }`}>
@@ -257,37 +294,37 @@ export default function AIPage() {
       </section>
 
       {/* Getting Started */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+        <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
           🚀 Getting Started with AI
         </h3>
         <div className="space-y-4">
           <div className="flex items-start space-x-3">
-            <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
+            <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Learn AI Best Practices</h4>
-              <p className="text-green-800 dark:text-green-200 text-sm">Understand dos and don'ts before diving deep into AI tools</p>
+              <h4 className="font-semibold text-blue-900 dark:text-blue-100">Learn AI Best Practices</h4>
+              <p className="text-blue-800 dark:text-blue-200 text-sm">Understand dos and don'ts before diving deep into AI tools</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
-            <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
+            <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Master Prompt Engineering</h4>
-              <p className="text-green-800 dark:text-green-200 text-sm">Learn to communicate effectively with AI systems</p>
+              <h4 className="font-semibold text-blue-900 dark:text-blue-100">Master Prompt Engineering</h4>
+              <p className="text-blue-800 dark:text-blue-200 text-sm">Learn to communicate effectively with AI systems</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
-            <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
+            <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Choose Your Tools</h4>
-              <p className="text-green-800 dark:text-green-200 text-sm">Explore languages and frameworks that fit your goals</p>
+              <h4 className="font-semibold text-blue-900 dark:text-blue-100">Choose Your Tools</h4>
+              <p className="text-blue-800 dark:text-blue-200 text-sm">Explore languages and frameworks that fit your goals</p>
             </div>
           </div>
           <div className="flex items-start space-x-3">
-            <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
+            <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
-              <h4 className="font-semibold text-green-900 dark:text-green-100">Build Your First AI Project</h4>
-              <p className="text-green-800 dark:text-green-200 text-sm">Start with simple integrations and gradually build complexity</p>
+              <h4 className="font-semibold text-blue-900 dark:text-blue-100">Build Your First AI Project</h4>
+              <p className="text-blue-800 dark:text-blue-200 text-sm">Start with simple integrations and gradually build complexity</p>
             </div>
           </div>
         </div>
