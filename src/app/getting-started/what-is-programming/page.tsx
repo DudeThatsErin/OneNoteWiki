@@ -3,19 +3,19 @@ import { ArrowLeft, Lightbulb, Cpu, Code, ArrowRight } from 'lucide-react';
 
 export default function WhatIsProgrammingPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <Link
           href="/getting-started"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" suppressHydrationWarning />
           <span>Back to Getting Started</span>
         </Link>
         <Link
           href="/getting-started/choosing-language"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Choosing Your First Language</span>
           <ArrowRight className="w-4 h-4" suppressHydrationWarning />
@@ -34,10 +34,10 @@ export default function WhatIsProgrammingPage() {
 
       {/* Main Content */}
       <div className="prose prose-gray dark:prose-invert max-w-none">
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {/* Introduction */}
           <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800 mb-7">
-            <div className="flex items-start space-x-3">
+            <div className="flex items-start gap-3">
               <Lightbulb className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
               <div>
                 <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2">
@@ -53,14 +53,14 @@ export default function WhatIsProgrammingPage() {
 
           {/* How Computers Work */}
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center space-x-2">
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
               <Cpu className="w-6 h-6 text-gray-600 hidden sm:block" />
               <span>How Computers Work</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-300 my-4">
               To understand programming, it helps to understand how computers work:
             </p>
-            <ul className="content-list marker-blue">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 content-list marker-blue [&>li]:mb-3">
               <li><strong>Input:</strong> Computers receive information (like keyboard presses, mouse clicks, or data from files)</li>
               <li><strong>Processing:</strong> The computer's processor (CPU) follows instructions to manipulate that information</li>
               <li><strong>Output:</strong> The computer produces results (like displaying text on screen, playing sounds, or saving files)</li>
@@ -69,7 +69,7 @@ export default function WhatIsProgrammingPage() {
 
           {/* What Programming Does */}
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center space-x-2 pt-4">
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2 pt-4">
               <Code className="w-6 h-6 text-gray-600 hidden sm:block" />
               <span>What Programming Does</span>
             </h2>
@@ -115,7 +115,7 @@ export default function WhatIsProgrammingPage() {
             </p>
             <div className="p-4">
               <h4 className="font-semibold text-gray-900 dark:text-white pb-2">Popular Programming Languages:</h4>
-              <ul className="content-list marker-blue">
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 content-list marker-blue [&>li]:mb-3">
                 <li><strong>Python:</strong> Great for beginners, used for web development, data analysis, and AI</li>
                 <li><strong>JavaScript:</strong> Essential for web development and interactive websites</li>
                 <li><strong>Java:</strong> Widely used for large applications and Android apps</li>
@@ -136,7 +136,7 @@ export default function WhatIsProgrammingPage() {
               <p className="text-gray-600 dark:text-gray-300 mb-3">
                 Imagine you want to create a calculator that adds two numbers:
               </p>
-              <ol className="text-gray-800 dark:text-gray-200 space-y-2">
+              <ol className="text-gray-800 dark:text-gray-200 flex flex-col gap-2">
                 <li>1. <strong>Input:</strong> Ask the user for two numbers</li>
                 <li>2. <strong>Processing:</strong> Add the two numbers together</li>
                 <li>3. <strong>Output:</strong> Display the result to the user</li>
@@ -189,14 +189,14 @@ export default function WhatIsProgrammingPage() {
       <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/getting-started"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Getting Started</span>
         </Link>
         <Link
           href="/getting-started/choosing-language"
-          className="flex items-center space-x-2 px-4 py-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 px-4 py-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Choosing Your First Language</span>
           <ArrowRight className="w-4 h-4" />

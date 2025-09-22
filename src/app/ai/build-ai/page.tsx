@@ -174,19 +174,19 @@ const toolsAndFrameworks = [
 
 export default function BuildAIPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/ai/prompting"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Prompt Engineering</span>
         </Link>
         <Link
           href="/ai/languages-tools"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: AI Languages & Tools</span>
           <ArrowRight className="w-4 h-4" />
@@ -194,8 +194,8 @@ export default function BuildAIPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <Brain className="w-8 h-8 text-blue-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             Building Your Own AI
@@ -212,7 +212,7 @@ export default function BuildAIPage() {
         <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
           🚀 Where to Start as a Mid-Level Developer
         </h3>
-        <div className="space-y-4 text-blue-800 dark:text-blue-200">
+        <div className="flex flex-col gap-4 md:gap-6 text-blue-800 dark:text-blue-200">
           <p>
             As a mid-level programmer, you have a significant advantage in AI development. You understand 
             software architecture, debugging, and production concerns - skills that many AI tutorials skip.
@@ -220,7 +220,7 @@ export default function BuildAIPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Your Strengths:</h4>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm [&>li]:mb-1">
                 <li>• Software engineering best practices</li>
                 <li>• API design and integration</li>
                 <li>• Testing and debugging skills</li>
@@ -230,7 +230,7 @@ export default function BuildAIPage() {
             </div>
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Focus Areas:</h4>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm [&>li]:mb-1">
                 <li>• Start with API integrations (leverage existing AI)</li>
                 <li>• Learn data manipulation and analysis</li>
                 <li>• Understand ML model lifecycle</li>
@@ -243,18 +243,18 @@ export default function BuildAIPage() {
       </div>
 
       {/* Project Types */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Types of AI Projects
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {aiProjectTypes.map((project, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white">
                   {project.type}
                 </h3>
-                <div className="flex space-x-2">
+                <div className="flex gap-2">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                     project.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                     project.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -273,7 +273,7 @@ export default function BuildAIPage() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Examples:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {project.examples.map((example, i) => (
                       <li key={i}>• {example}</li>
                     ))}
@@ -281,7 +281,7 @@ export default function BuildAIPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Key Skills:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {project.skills.map((skill, i) => (
                       <li key={i}>• {skill}</li>
                     ))}
@@ -304,14 +304,14 @@ export default function BuildAIPage() {
       </section>
 
       {/* Learning Path */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           AI Development Learning Path
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {learningPath.map((phase, index) => (
             <div key={index} className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
-              <div className="flex items-center space-x-3 mb-4">
+              <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                   {index + 1}
                 </div>
@@ -325,7 +325,7 @@ export default function BuildAIPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
                   <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2 text-sm">Topics to Learn:</h4>
-                  <ul className="text-purple-800 dark:text-purple-200 text-xs space-y-1">
+                  <ul className="text-purple-800 dark:text-purple-200 text-xs [&>li]:mb-1">
                     {phase.topics.map((topic, i) => (
                       <li key={i}>• {topic}</li>
                     ))}
@@ -333,7 +333,7 @@ export default function BuildAIPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2 text-sm">Practice Projects:</h4>
-                  <ul className="text-purple-800 dark:text-purple-200 text-xs space-y-1">
+                  <ul className="text-purple-800 dark:text-purple-200 text-xs [&>li]:mb-1">
                     {phase.projects.map((project, i) => (
                       <li key={i}>• {project}</li>
                     ))}
@@ -341,7 +341,7 @@ export default function BuildAIPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2 text-sm">Recommended Resources:</h4>
-                  <ul className="text-purple-800 dark:text-purple-200 text-xs space-y-1">
+                  <ul className="text-purple-800 dark:text-purple-200 text-xs [&>li]:mb-1">
                     {phase.resources.map((resource, i) => (
                       <li key={i}>• {resource}</li>
                     ))}
@@ -354,7 +354,7 @@ export default function BuildAIPage() {
       </section>
 
       {/* Practical Projects */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Real-World Project Ideas
         </h2>
@@ -378,7 +378,7 @@ export default function BuildAIPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
                   <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2 text-sm">Key Features:</h4>
-                  <ul className="text-green-800 dark:text-green-200 text-xs space-y-1">
+                  <ul className="text-green-800 dark:text-green-200 text-xs [&>li]:mb-1">
                     {project.features.map((feature, i) => (
                       <li key={i}>• {feature}</li>
                     ))}
@@ -386,7 +386,7 @@ export default function BuildAIPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2 text-sm">Learning Outcomes:</h4>
-                  <ul className="text-green-800 dark:text-green-200 text-xs space-y-1">
+                  <ul className="text-green-800 dark:text-green-200 text-xs [&>li]:mb-1">
                     {project.learningOutcomes.map((outcome, i) => (
                       <li key={i}>• {outcome}</li>
                     ))}
@@ -410,11 +410,11 @@ export default function BuildAIPage() {
       </section>
 
       {/* Tools and Frameworks */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Essential Tools and Frameworks
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {toolsAndFrameworks.map((category, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
@@ -447,29 +447,29 @@ export default function BuildAIPage() {
         <h3 className="text-lg font-semibold text-orange-900 dark:text-orange-100 mb-4">
           🎯 Your First AI Project: Step by Step
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-orange-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-orange-900 dark:text-orange-100">Choose a Simple API Integration</h4>
               <p className="text-orange-800 dark:text-orange-200 text-sm">Start with OpenAI API or Google Cloud Vision to build a basic chatbot or image analyzer</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-orange-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-orange-900 dark:text-orange-100">Apply Your Web Development Skills</h4>
               <p className="text-orange-800 dark:text-orange-200 text-sm">Build a proper web interface using your existing frontend/backend knowledge</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-orange-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-orange-900 dark:text-orange-100">Focus on Production Quality</h4>
               <p className="text-orange-800 dark:text-orange-200 text-sm">Add error handling, rate limiting, logging, and testing - things many AI tutorials skip</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-orange-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-orange-900 dark:text-orange-100">Deploy and Iterate</h4>
@@ -483,14 +483,14 @@ export default function BuildAIPage() {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/ai/prompting"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Prompt Engineering</span>
         </Link>
         <Link
           href="/ai/languages-tools"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: AI Languages & Tools</span>
           <ArrowRight className="w-4 h-4" />

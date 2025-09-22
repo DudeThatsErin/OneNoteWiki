@@ -126,19 +126,19 @@ const commonErrors = [
 
 export default function FirstProgramPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <Link
           href="/getting-started/setup"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" suppressHydrationWarning />
           <span>Previous: Setting Up Environment</span>
         </Link>
         <Link
           href="/languages"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Explore Languages</span>
           <ArrowLeft className="w-4 h-4 rotate-180" suppressHydrationWarning />
@@ -166,26 +166,25 @@ export default function FirstProgramPage() {
             The "Hello, World!" program is a time-honored tradition in programming. It's usually the first 
             program that new programmers write because it:
           </p>
-          <ul className="content-list marker-blue">
+          <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 content-list marker-blue [&>li]:mb-3">
             <li>Tests that your development environment is working correctly</li>
             <li>Introduces basic syntax of the programming language</li>
             <li>Gives you the satisfaction of running your first program</li>
-            <li>Is simple enough to understand immediately</li>
-            <li>Has been used since the 1970s - you're joining a long tradition!</li>
+            <li>Connects you to a long tradition of programmers</li>
           </ul>
         </div>
       </div>
 
       {/* Language Examples */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Hello World in Different Languages
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {languageExamples.map((lang, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
               <div className="bg-gray-50 dark:bg-gray-900 px-6 py-3 border-b border-gray-200 dark:border-gray-700">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center gap-3">
                   <span className="text-xl">{lang.icon}</span>
                   <h3 className="text-lg font-bold text-gray-900 dark:text-white">
                     {lang.language}
@@ -193,7 +192,7 @@ export default function FirstProgramPage() {
                 </div>
               </div>
               
-              <div className="p-6 space-y-4">
+              <div className="p-6 flex flex-col gap-4 md:gap-6">
                 <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-gray-100 dark:bg-gray-900 p-4 rounded">
                   <code>{lang.code}</code>
                 </pre>
@@ -206,9 +205,9 @@ export default function FirstProgramPage() {
                   <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 text-sm">
                     How to Run:
                   </h4>
-                  <ol className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+                  <ol className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
                     {lang.runInstructions.map((instruction, i) => (
-                      <li key={i} className="flex items-start space-x-2">
+                      <li key={i} className="flex items-start gap-2">
                         <span className="w-4 h-4 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold mt-0.5">
                           {i + 1}
                         </span>
@@ -224,14 +223,14 @@ export default function FirstProgramPage() {
       </section>
 
       {/* Programming Concepts */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Basic Programming Concepts
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {programmingConcepts.map((concept, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <Code className="w-5 h-5 text-purple-600" />
                 <h3 className="font-semibold text-gray-900 dark:text-white">{concept.concept}</h3>
               </div>
@@ -249,23 +248,23 @@ export default function FirstProgramPage() {
         <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
           🎯 Try It Yourself
         </h3>
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4 md:gap-6">
           <p className="text-purple-800 dark:text-purple-200">
             Now it's your turn! Try modifying the Hello World program:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Easy Challenges:</h4>
-              <ul className="content-list text-sm">
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-2">
                 <li>Change "Hello, World!" to your name</li>
                 <li>Add another print statement</li>
                 <li>Create variables for your age and city</li>
-                <li>Print a simple math calculation</li>
+                <li>Try different text and numbers</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Next Steps:</h4>
-              <ul className="content-list text-sm">
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-2">
                 <li>Ask the user for their name (input)</li>
                 <li>Use an if statement for conditions</li>
                 <li>Create a simple loop</li>
@@ -277,14 +276,14 @@ export default function FirstProgramPage() {
       </div>
 
       {/* Common Errors */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Common Beginner Errors
         </h2>
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4 md:gap-6">
           {commonErrors.map((error, index) => (
             <div key={index} className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
-              <div className="flex items-start space-x-3">
+              <div className="flex items-start gap-3">
                 <AlertCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
                 <div className="flex-1">
                   <h4 className="font-semibold text-red-900 dark:text-red-100">{error.error}</h4>
@@ -310,17 +309,16 @@ export default function FirstProgramPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">When Your Code Doesn't Work:</h4>
-            <ul className="content-list text-sm">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-2">
               <li>Read the error message carefully</li>
               <li>Check for typos in variable names</li>
               <li>Make sure all brackets and quotes match</li>
-              <li>Check your indentation (especially in Python)</li>
-              <li>Try running simpler versions of your code</li>
+              <li>Try running the code line by line</li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Good Debugging Habits:</h4>
-            <ul className="content-list text-sm">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-2">
               <li>Add print statements to see what's happening</li>
               <li>Test small pieces of code separately</li>
               <li>Use your editor's syntax highlighting</li>
@@ -333,7 +331,7 @@ export default function FirstProgramPage() {
 
       {/* Celebration */}
       <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <div className="text-center space-y-4">
+        <div className="text-center flex flex-col gap-4 md:gap-6">
           <div className="text-4xl">🎉</div>
           <h3 className="text-xl font-bold text-gray-900 dark:text-white">
             Congratulations!
@@ -342,7 +340,7 @@ export default function FirstProgramPage() {
             You've just written your first program! This is the beginning of an exciting journey. 
             Every expert programmer started exactly where you are now.
           </p>
-          <div className="flex items-center justify-center space-x-2">
+          <div className="flex items-center justify-center gap-2">
             <CheckCircle className="w-5 h-5 text-green-600" />
             <span className="text-green-600 font-medium">First Program Complete!</span>
           </div>
@@ -354,14 +352,14 @@ export default function FirstProgramPage() {
         <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-4">
           🚀 What's Next?
         </h3>
-        <div className="space-y-3 text-yellow-800 dark:text-yellow-200">
+        <div className="flex flex-col gap-3 text-yellow-800 dark:text-yellow-200">
           <p>Now that you've written your first program, here are some great next steps:</p>
-          <ul className="content-list text-sm">
+          <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-2">
             <li>Explore more about your chosen programming language</li>
             <li>Learn about variables, loops, and functions in depth</li>
             <li>Try building a simple calculator or guessing game</li>
-            <li>Join our community to share your progress and get help</li>
-            <li>Start working through structured tutorials and courses</li>
+            <li>Join programming communities and forums</li>
+            <li>Start working on small projects that interest you</li>
           </ul>
         </div>
       </div>
@@ -370,14 +368,14 @@ export default function FirstProgramPage() {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/getting-started/setup"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" suppressHydrationWarning />
           <span>Previous: Setting Up Environment</span>
         </Link>
         <Link
           href="/languages"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Explore Languages</span>
           <ArrowLeft className="w-4 h-4 rotate-180" suppressHydrationWarning />

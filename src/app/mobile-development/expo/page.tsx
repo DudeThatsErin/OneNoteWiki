@@ -81,19 +81,19 @@ const projectIdeas = [
 
 export default function ExpoPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/mobile-development/react-native"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: React Native</span>
         </Link>
         <Link
           href="/mobile-development/flutter"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Flutter</span>
           <ArrowRight className="w-4 h-4" />
@@ -101,8 +101,8 @@ export default function ExpoPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <div className="text-4xl">🚀</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Expo & EAS</h1>
@@ -136,14 +136,14 @@ export default function ExpoPage() {
       </div>
 
       {/* Key Features */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Why Choose Expo?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {expoFeatures.map((feature, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-purple-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
               </div>
@@ -155,7 +155,7 @@ export default function ExpoPage() {
       </section>
 
       {/* Getting Started */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Getting Started with Expo</h2>
         
         <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
@@ -318,7 +318,7 @@ const styles = StyleSheet.create({
       </section>
 
       {/* EAS Services */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">EAS (Expo Application Services)</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -372,7 +372,7 @@ eas update --branch preview`}
       </section>
 
       {/* Project Ideas */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Expo Project Ideas
         </h2>
@@ -382,7 +382,7 @@ eas update --branch preview`}
               <h3 className={`font-semibold text-${category.color}-900 dark:text-${category.color}-100 mb-3`}>
                 {category.level === 'Beginner' ? '🟢' : category.level === 'Intermediate' ? '🟡' : '🔴'} {category.level} Projects
               </h3>
-              <ul className={`space-y-2 text-${category.color}-800 dark:text-${category.color}-200 text-sm`}>
+              <ul className={`flex flex-col gap-2 text-${category.color}-800 dark:text-${category.color}-200 text-sm`}>
                 {category.projects.map((project, i) => (
                   <li key={i}>• <strong>{project.split(':')[0]}:</strong> {project.split(':')[1]}</li>
                 ))}
@@ -393,13 +393,13 @@ eas update --branch preview`}
       </section>
 
       {/* Popular Expo Libraries */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Popular Expo SDK Libraries</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Camera & Media</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+            <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
               <li>• expo-camera</li>
               <li>• expo-image-picker</li>
               <li>• expo-av (audio/video)</li>
@@ -409,7 +409,7 @@ eas update --branch preview`}
           
           <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Location & Maps</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+            <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
               <li>• expo-location</li>
               <li>• react-native-maps</li>
               <li>• expo-task-manager</li>
@@ -419,7 +419,7 @@ eas update --branch preview`}
           
           <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Notifications</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+            <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
               <li>• expo-notifications</li>
               <li>• expo-device</li>
               <li>• expo-constants</li>
@@ -429,7 +429,7 @@ eas update --branch preview`}
           
           <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Storage & Auth</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+            <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
               <li>• expo-secure-store</li>
               <li>• expo-auth-session</li>
               <li>• expo-local-authentication</li>
@@ -443,14 +443,14 @@ eas update --branch preview`}
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/mobile-development/react-native"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: React Native</span>
         </Link>
         <Link
           href="/mobile-development/flutter"
-          className="flex items-center space-x-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Flutter</span>
           <ArrowRight className="w-4 h-4" />

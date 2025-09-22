@@ -144,19 +144,19 @@ const choosingCriteria = [
 
 export default function PlatformsPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/resources"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Resources</span>
         </Link>
         <Link
           href="/resources/books"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Books & Documentation</span>
           <ArrowRight className="w-4 h-4" />
@@ -164,8 +164,8 @@ export default function PlatformsPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <BookOpen className="w-8 h-8 text-blue-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             Learning Platforms
@@ -182,7 +182,7 @@ export default function PlatformsPage() {
         <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
           🎯 Choosing the Right Platform
         </h3>
-        <div className="text-blue-800 dark:text-blue-200 space-y-2">
+        <div className="text-blue-800 dark:text-blue-200 flex flex-col gap-2">
           <p>
             With hundreds of learning platforms available, choosing the right one can be overwhelming. 
             The key is matching the platform to your learning style, goals, and available time.
@@ -195,23 +195,23 @@ export default function PlatformsPage() {
       </div>
 
       {/* Platform Comparison */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Popular Learning Platforms
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {platforms.map((platform, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center gap-3">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">{platform.name}</h3>
-                  <div className="flex items-center space-x-1">
+                  <div className="flex items-center flex flex-col gap-31">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className={`w-4 h-4 ${i < platform.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
                     ))}
                   </div>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center gap-2">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                     platform.type === 'Free' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                     platform.type === 'Freemium' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -227,7 +227,7 @@ export default function PlatformsPage() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">✅ Strengths:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {platform.strengths.map((strength, i) => (
                       <li key={i}>• {strength}</li>
                     ))}
@@ -235,7 +235,7 @@ export default function PlatformsPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">❌ Weaknesses:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {platform.weaknesses.map((weakness, i) => (
                       <li key={i}>• {weakness}</li>
                     ))}
@@ -243,7 +243,7 @@ export default function PlatformsPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">🎯 Best For:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {platform.bestFor.map((use, i) => (
                       <li key={i}>• {use}</li>
                     ))}
@@ -262,8 +262,8 @@ export default function PlatformsPage() {
               </div>
               
               <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-300">
-                  <div className="flex items-center space-x-1">
+                <div className="flex items-center flex flex-col gap-34 text-sm text-gray-600 dark:text-gray-300">
+                  <div className="flex items-center flex flex-col gap-31">
                     <Clock className="w-4 h-4" />
                     <span>{platform.timeCommitment}</span>
                   </div>
@@ -283,7 +283,7 @@ export default function PlatformsPage() {
       </section>
 
       {/* Platform Types */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Types of Learning Platforms
         </h2>
@@ -307,7 +307,7 @@ export default function PlatformsPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div>
                   <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-1 text-xs">Pros:</h4>
-                  <ul className="text-purple-800 dark:text-purple-200 text-xs space-y-1">
+                  <ul className="text-purple-800 dark:text-purple-200 text-xs [&>li]:mb-1">
                     {type.pros.map((pro, i) => (
                       <li key={i}>• {pro}</li>
                     ))}
@@ -315,7 +315,7 @@ export default function PlatformsPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-1 text-xs">Cons:</h4>
-                  <ul className="text-purple-800 dark:text-purple-200 text-xs space-y-1">
+                  <ul className="text-purple-800 dark:text-purple-200 text-xs [&>li]:mb-1">
                     {type.cons.map((con, i) => (
                       <li key={i}>• {con}</li>
                     ))}
@@ -328,7 +328,7 @@ export default function PlatformsPage() {
       </section>
 
       {/* Choosing Criteria */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           How to Choose the Right Platform
         </h2>
@@ -336,7 +336,7 @@ export default function PlatformsPage() {
           {choosingCriteria.map((criteria, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <h3 className="font-semibold text-gray-900 dark:text-white mb-3">{criteria.factor}</h3>
-              <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+              <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
                 {criteria.considerations.map((consideration, i) => (
                   <li key={i}>• {consideration}</li>
                 ))}
@@ -354,7 +354,7 @@ export default function PlatformsPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Complete Beginners:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• Start with <strong>freeCodeCamp</strong></li>
               <li>• Supplement with <strong>Khan Academy</strong></li>
               <li>• Join community forums</li>
@@ -363,7 +363,7 @@ export default function PlatformsPage() {
           </div>
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Career Changers:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• <strong>Coursera</strong> for structured learning</li>
               <li>• <strong>Udemy</strong> for specific skills</li>
               <li>• Consider bootcamp programs</li>
@@ -372,7 +372,7 @@ export default function PlatformsPage() {
           </div>
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Working Professionals:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• <strong>Pluralsight</strong> for tech skills</li>
               <li>• <strong>Udemy</strong> for specific topics</li>
               <li>• Focus on relevant technologies</li>
@@ -386,14 +386,14 @@ export default function PlatformsPage() {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/resources"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Resources</span>
         </Link>
         <Link
           href="/resources/books"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Books & Documentation</span>
           <ArrowRight className="w-4 h-4" />

@@ -43,27 +43,27 @@ const webDevConcepts = [
 
 export default function WebDevelopmentPage() {
   return (
-    <div className="space-y-8">
+    <>
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
-          <Globe className="w-8 h-8 text-purple-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+      <div className="flex flex-col items-start p-4">
+        <div className="flex items-center gap-3">
+          <Globe className="w-8 h-8 text-blue-600" />
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white pb-2">
             Web Development
           </h1>
         </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Learn to build modern, responsive websites and web applications. From basic HTML/CSS 
-          to full-stack development with the latest frameworks and technologies.
+        <p className="pt-4 text-lg text-gray-600 dark:text-gray-300">
+          Build modern, responsive websites and web applications. From basic HTML/CSS 
+          to full-stack development with modern frameworks and tools.
         </p>
       </div>
 
       {/* Learning Paths */}
-      <div className="space-y-6">
+      <div className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Learning Paths
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex flex-col gap-4">
           {webDevPaths.map((path, index) => (
             <Link
               key={path.href}
@@ -71,19 +71,15 @@ export default function WebDevelopmentPage() {
               className={`block p-6 rounded-lg border-2 transition-all hover:shadow-lg hover:scale-105 ${path.color}`}
             >
               <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-sm">
                     <span className="text-purple-600 font-semibold text-sm">
                       {index + 1}
                     </span>
                   </div>
-                  <span className={`text-xs px-2 py-1 rounded-full font-medium ${
-                    path.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
-                    path.difficulty === 'Intermediate' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300' :
-                    'bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300'
-                  }`}>
-                    {path.difficulty}
-                  </span>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    {path.title}
+                  </h3>
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400" />
               </div>
@@ -105,7 +101,7 @@ export default function WebDevelopmentPage() {
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {webDevConcepts.map((concept) => (
-            <div key={concept} className="flex items-center space-x-2">
+            <div key={concept} className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
               <span className="text-gray-700 dark:text-gray-300 text-sm">{concept}</span>
             </div>
@@ -118,18 +114,18 @@ export default function WebDevelopmentPage() {
         <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
           🚀 Getting Started with Web Development
         </h3>
-        <div className="space-y-3 text-purple-800 dark:text-purple-200">
+        <div className="flex flex-col gap-3 text-purple-800 dark:text-purple-200">
           <p>
             <strong>New to web development?</strong> Start with HTML & CSS to learn the fundamentals 
             of web page structure and styling.
           </p>
           <p>
-            <strong>Have some experience?</strong> Jump into frontend frameworks to learn modern 
-            JavaScript development with React, Vue, or Angular.
+            <strong>Have some experience?</strong> Jump into JavaScript and modern frameworks 
+            like React or Vue to build interactive applications.
           </p>
           <p>
-            <strong>Ready for more?</strong> Explore backend development to build APIs and databases, 
-            then combine everything in full-stack projects.
+            <strong>Want to go full-stack?</strong> Learn backend technologies like Node.js, 
+            Python, or PHP to handle server-side logic and databases.
           </p>
         </div>
         <div className="mt-4">
@@ -143,49 +139,49 @@ export default function WebDevelopmentPage() {
       </div>
 
       {/* Tools & Technologies */}
-      <div className="space-y-4">
+      <div className="flex flex-col gap-4 md:gap-6">
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
           Popular Tools & Technologies
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Frontend</h4>
-            <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-              <li>• React / Next.js</li>
-              <li>• Vue / Nuxt.js</li>
-              <li>• Angular</li>
-              <li>• Svelte / SvelteKit</li>
+            <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
+              <li>React / Next.js</li>
+              <li>Vue / Nuxt.js</li>
+              <li>Angular</li>
+              <li>Svelte</li>
             </ul>
           </div>
           <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Backend</h4>
-            <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-              <li>• Node.js / Express</li>
-              <li>• Python / Django</li>
-              <li>• PHP / Laravel</li>
-              <li>• Ruby on Rails</li>
+            <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
+              <li>Node.js / Express</li>
+              <li>Python / Django</li>
+              <li>PHP / Laravel</li>
+              <li>Ruby / Rails</li>
             </ul>
           </div>
           <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Databases</h4>
-            <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-              <li>• PostgreSQL</li>
-              <li>• MongoDB</li>
-              <li>• MySQL</li>
-              <li>• Firebase</li>
+            <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+              <li>MySQL</li>
+              <li>Redis</li>
             </ul>
           </div>
           <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Tools</h4>
-            <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-              <li>• VS Code</li>
-              <li>• Git / GitHub</li>
-              <li>• Webpack / Vite</li>
-              <li>• Docker</li>
+            <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
+              <li>VS Code</li>
+              <li>Git / GitHub</li>
+              <li>Webpack / Vite</li>
+              <li>Docker</li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

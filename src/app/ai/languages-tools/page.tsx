@@ -107,12 +107,12 @@ const recommendations = [
 
 export default function AILanguagesToolsPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/ai/build-ai"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Building Your Own AI</span>
@@ -120,8 +120,8 @@ export default function AILanguagesToolsPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <Zap className="w-8 h-8 text-purple-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             AI Languages & Tools
@@ -134,19 +134,19 @@ export default function AILanguagesToolsPage() {
       </div>
 
       {/* Language Comparison */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Programming Languages for AI
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {programmingLanguages.map((lang, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center gap-3">
                   <span className="text-2xl">{lang.icon}</span>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">{lang.name}</h3>
                 </div>
-                <div className="flex space-x-2">
+                <div className="flex gap-2">
                   <span className="text-xs px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded-full font-medium">
                     {lang.popularity}
                   </span>
@@ -162,7 +162,7 @@ export default function AILanguagesToolsPage() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">✅ Strengths:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {lang.strengths.map((strength, i) => (
                       <li key={i}>• {strength}</li>
                     ))}
@@ -170,7 +170,7 @@ export default function AILanguagesToolsPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">❌ Weaknesses:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {lang.weaknesses.map((weakness, i) => (
                       <li key={i}>• {weakness}</li>
                     ))}
@@ -178,7 +178,7 @@ export default function AILanguagesToolsPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">🎯 Best For:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {lang.bestFor.map((use, i) => (
                       <li key={i}>• {use}</li>
                     ))}
@@ -201,7 +201,7 @@ export default function AILanguagesToolsPage() {
       </section>
 
       {/* Development Tools */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Essential Development Tools
         </h2>
@@ -211,7 +211,7 @@ export default function AILanguagesToolsPage() {
               <h3 className="text-lg font-bold text-blue-900 dark:text-blue-100 mb-4">
                 {category.category}
               </h3>
-              <div className="space-y-3">
+              <div className="flex flex-col gap-3">
                 {category.tools.map((tool, i) => (
                   <div key={i} className="bg-white dark:bg-gray-800 p-3 rounded border border-blue-200 dark:border-blue-700">
                     <div className="flex items-center justify-between mb-1">
@@ -234,7 +234,7 @@ export default function AILanguagesToolsPage() {
       </section>
 
       {/* Recommendations */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Recommendations by Background
         </h2>
@@ -253,7 +253,7 @@ export default function AILanguagesToolsPage() {
               <p className="text-green-800 dark:text-green-200 text-sm mb-3">{rec.reasoning}</p>
               <div className="mb-3">
                 <h4 className="font-semibold text-green-900 dark:text-green-100 text-sm mb-1">Start with:</h4>
-                <ul className="text-green-800 dark:text-green-200 text-xs space-y-1">
+                <ul className="text-green-800 dark:text-green-200 text-xs [&>li]:mb-1">
                   {rec.startWith.map((item, i) => (
                     <li key={i}>• {item}</li>
                   ))}
@@ -272,29 +272,29 @@ export default function AILanguagesToolsPage() {
         <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
           🚀 Quick Start Guide
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100">Choose Your Primary Language</h4>
               <p className="text-purple-800 dark:text-purple-200 text-sm">Python for most cases, JavaScript if you're a web developer</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100">Set Up Your Environment</h4>
               <p className="text-purple-800 dark:text-purple-200 text-sm">Install Python/Node.js, set up Jupyter/VS Code, create virtual environments</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100">Start with APIs</h4>
               <p className="text-purple-800 dark:text-purple-200 text-sm">Begin with OpenAI API or cloud AI services before building custom models</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100">Build and Deploy</h4>
@@ -308,14 +308,14 @@ export default function AILanguagesToolsPage() {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/ai/build-ai"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Building Your Own AI</span>
         </Link>
         <Link
           href="/ai"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Back to AI Overview</span>
         </Link>

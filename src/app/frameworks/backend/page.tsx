@@ -78,7 +78,7 @@ const backendFrameworks = [
 
 export default function BackendFrameworksPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Quick Reference */}
       <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
         <h2 className="text-xl font-semibold text-blue-900 dark:text-blue-100 mb-4 flex items-center">
@@ -88,7 +88,7 @@ export default function BackendFrameworksPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">For Beginners:</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>• <strong>Express.js:</strong> Simple and flexible</li>
               <li>• <strong>FastAPI:</strong> Modern Python with docs</li>
               <li>• <strong>Flask:</strong> Minimal Python framework</li>
@@ -96,7 +96,7 @@ export default function BackendFrameworksPage() {
           </div>
           <div>
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">For Enterprise:</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>• <strong>Spring Boot:</strong> Java enterprise standard</li>
               <li>• <strong>ASP.NET Core:</strong> Microsoft ecosystem</li>
               <li>• <strong>Django:</strong> Python with batteries included</li>
@@ -104,7 +104,7 @@ export default function BackendFrameworksPage() {
           </div>
           <div>
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">For Rapid Development:</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>• <strong>Ruby on Rails:</strong> Convention over configuration</li>
               <li>• <strong>Django:</strong> Admin interface included</li>
               <li>• <strong>Express.js:</strong> Quick API development</li>
@@ -114,10 +114,10 @@ export default function BackendFrameworksPage() {
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center gap-2">
         <Link
           href="/frameworks"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Frameworks</span>
@@ -125,8 +125,8 @@ export default function BackendFrameworksPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <div className="text-4xl">🖥️</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Backend Frameworks</h1>
@@ -141,7 +141,7 @@ export default function BackendFrameworksPage() {
       </div>
 
       {/* Framework Comparison */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Popular Backend Frameworks</h2>
         
         <div className="grid grid-cols-1 gap-8">
@@ -149,14 +149,14 @@ export default function BackendFrameworksPage() {
             <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center gap-3">
                     <span className="text-3xl">{framework.icon}</span>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{framework.name}</h3>
                       <p className="text-sm text-gray-500 dark:text-gray-400">{framework.language}</p>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center gap-2">
                     <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                       framework.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                       framework.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -180,7 +180,7 @@ export default function BackendFrameworksPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features</h4>
-                    <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                       {framework.features.map((feature, i) => (
                         <li key={i}>• {feature}</li>
                       ))}
@@ -189,7 +189,7 @@ export default function BackendFrameworksPage() {
                   
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Best For</h4>
-                    <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                       {framework.useCases.map((useCase, i) => (
                         <li key={i}>• {useCase}</li>
                       ))}
@@ -198,7 +198,7 @@ export default function BackendFrameworksPage() {
                   
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Pros</h4>
-                    <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                       {framework.pros.map((pro, i) => (
                         <li key={i}>• {pro}</li>
                       ))}
@@ -207,7 +207,7 @@ export default function BackendFrameworksPage() {
                   
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Cons</h4>
-                    <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                       {framework.cons.map((con, i) => (
                         <li key={i}>• {con}</li>
                       ))}
@@ -221,13 +221,13 @@ export default function BackendFrameworksPage() {
       </section>
 
       {/* Learning Resources */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Learning Resources</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">JavaScript/Node.js</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-2">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://expressjs.com/" className="hover:underline">Express.js Official</a></li>
               <li>• <a href="https://nestjs.com/" className="hover:underline">NestJS Framework</a></li>
               <li>• <a href="https://koajs.com/" className="hover:underline">Koa.js</a></li>
@@ -236,7 +236,7 @@ export default function BackendFrameworksPage() {
           
           <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Python</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-2">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://www.djangoproject.com/" className="hover:underline">Django</a></li>
               <li>• <a href="https://fastapi.tiangolo.com/" className="hover:underline">FastAPI</a></li>
               <li>• <a href="https://flask.palletsprojects.com/" className="hover:underline">Flask</a></li>
@@ -245,7 +245,7 @@ export default function BackendFrameworksPage() {
           
           <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Java & C#</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-2">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://spring.io/projects/spring-boot" className="hover:underline">Spring Boot</a></li>
               <li>• <a href="https://docs.microsoft.com/en-us/aspnet/core/" className="hover:underline">ASP.NET Core</a></li>
               <li>• <a href="https://rubyonrails.org/" className="hover:underline">Ruby on Rails</a></li>

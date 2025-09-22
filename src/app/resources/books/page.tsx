@@ -212,19 +212,19 @@ const readingTips = [
 
 export default function BooksPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/resources/platforms"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Learning Platforms</span>
         </Link>
         <Link
           href="/resources/practice"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Practice Problems</span>
           <ArrowRight className="w-4 h-4" />
@@ -232,8 +232,8 @@ export default function BooksPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <BookOpen className="w-8 h-8 text-green-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             Books & Documentation
@@ -253,7 +253,7 @@ export default function BooksPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Deep Understanding:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• Comprehensive coverage of topics</li>
               <li>• Structured learning progression</li>
               <li>• Expert insights and experience</li>
@@ -262,7 +262,7 @@ export default function BooksPage() {
           </div>
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Quality Content:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• Peer-reviewed and edited</li>
               <li>• Well-researched information</li>
               <li>• Proven methodologies</li>
@@ -271,7 +271,7 @@ export default function BooksPage() {
           </div>
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Focused Learning:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• No distractions or ads</li>
               <li>• Offline accessibility</li>
               <li>• Encourages deep reading</li>
@@ -282,11 +282,11 @@ export default function BooksPage() {
       </div>
 
       {/* Essential Programming Books */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Essential Programming Books
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {programmingBooks.map((book, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-start justify-between mb-4">
@@ -294,8 +294,8 @@ export default function BooksPage() {
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{book.title}</h3>
                   <p className="text-gray-600 dark:text-gray-300 text-sm">by {book.author}</p>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <div className="flex items-center space-x-1">
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center flex flex-col gap-31">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className={`w-4 h-4 ${i < book.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
                     ))}
@@ -319,7 +319,7 @@ export default function BooksPage() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">📖 Key Topics:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {book.keyTopics.map((topic, i) => (
                       <li key={i}>• {topic}</li>
                     ))}
@@ -331,7 +331,7 @@ export default function BooksPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">🎯 Best For:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {book.bestFor.map((use, i) => (
                       <li key={i}>• {use}</li>
                     ))}
@@ -348,7 +348,7 @@ export default function BooksPage() {
       </section>
 
       {/* Documentation Sources */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Essential Documentation Sources
         </h2>
@@ -357,8 +357,8 @@ export default function BooksPage() {
             <div key={index} className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-lg font-bold text-blue-900 dark:text-blue-100">{site.name}</h3>
-                <div className="flex items-center space-x-2">
-                  <div className="flex items-center space-x-1">
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center flex flex-col gap-31">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className={`w-3 h-3 ${i < site.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
                     ))}
@@ -384,7 +384,7 @@ export default function BooksPage() {
               
               <div className="mb-4">
                 <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-1 text-sm">Strengths:</h4>
-                <ul className="text-blue-800 dark:text-blue-200 text-xs space-y-1">
+                <ul className="text-blue-800 dark:text-blue-200 text-xs [&>li]:mb-1">
                   {site.strengths.map((strength, i) => (
                     <li key={i}>• {strength}</li>
                   ))}
@@ -395,7 +395,7 @@ export default function BooksPage() {
                 href={site.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm font-medium transition-colors"
+                className="inline-flex items-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm font-medium transition-colors"
               >
                 <span>Visit Documentation</span>
                 <ExternalLink className="w-4 h-4" />
@@ -406,7 +406,7 @@ export default function BooksPage() {
       </section>
 
       {/* Book Categories */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Book Categories Guide
         </h2>
@@ -418,7 +418,7 @@ export default function BooksPage() {
               
               <div className="mb-3">
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-1 text-sm">Recommended Books:</h4>
-                <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                   {category.recommendedBooks.map((book, i) => (
                     <li key={i}>• {book}</li>
                   ))}
@@ -435,7 +435,7 @@ export default function BooksPage() {
       </section>
 
       {/* Reading Tips */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Effective Reading Strategies
         </h2>
@@ -457,29 +457,29 @@ export default function BooksPage() {
         <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
           📋 Recommended Reading Order
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100">Start with Language-Specific Books</h4>
               <p className="text-purple-800 dark:text-purple-200 text-sm">Master your primary programming language first</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100">Learn Best Practices</h4>
               <p className="text-purple-800 dark:text-purple-200 text-sm">Read "Clean Code" and "The Pragmatic Programmer"</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100">Explore Design Patterns</h4>
               <p className="text-purple-800 dark:text-purple-200 text-sm">Understand common solutions to programming problems</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100">Focus on Career Development</h4>
@@ -493,14 +493,14 @@ export default function BooksPage() {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/resources/platforms"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Learning Platforms</span>
         </Link>
         <Link
           href="/resources/practice"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Practice Problems</span>
           <ArrowRight className="w-4 h-4" />

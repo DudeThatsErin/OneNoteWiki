@@ -88,17 +88,16 @@ const mobileFeatures = [
 
 export default function MobileDevelopmentPage() {
   return (
-    <div className="space-y-8">
+    <>
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
-          <div className="text-4xl">📱</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Mobile Development</h1>
-            <p className="text-gray-600 dark:text-gray-300">Build native and cross-platform mobile applications</p>
-          </div>
+      <div className="flex flex-col items-start p-4">
+        <div className="flex items-center gap-[1rem]">
+          <Smartphone className="w-8 h-8 text-blue-600" />
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white pb-2">
+            Mobile Development
+          </h1>
         </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
+        <p className="pt-4 text-lg text-gray-600 dark:text-gray-300">
           Mobile development encompasses creating applications for smartphones and tablets. 
           Choose from cross-platform frameworks like React Native and Flutter, or go native 
           with platform-specific tools for optimal performance and platform integration.
@@ -106,34 +105,39 @@ export default function MobileDevelopmentPage() {
       </div>
 
       {/* Quick Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">6.8B</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Mobile Users</div>
-        </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">3.8M</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Apps on Google Play</div>
-        </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">2.2M</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Apps on App Store</div>
-        </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">88%</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Time Spent in Apps</div>
+      <div className="py-4">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Mobile Development Overview
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">6.8B</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Mobile Users</div>
+          </div>
+          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">3.8M</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Apps on Google Play</div>
+          </div>
+          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">2.2M</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Apps on App Store</div>
+          </div>
+          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">88%</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Time Spent in Apps</div>
+          </div>
         </div>
       </div>
 
       {/* Why Mobile Development */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+      <div className="py-4">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
           Why Mobile Development?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {mobileFeatures.map((feature, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+            <div key={index} className="p-6">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
               </div>
@@ -142,58 +146,55 @@ export default function MobileDevelopmentPage() {
             </div>
           ))}
         </div>
-      </section>
+      </div>
 
       {/* Mobile Frameworks */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Choose Your Mobile Framework</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="py-4">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Choose Your Mobile Framework</h2>
+        <div className="flex flex-col gap-4">
           {mobileFrameworks.map((framework, index) => (
-            <Link key={index} href={framework.href} className="block group">
-              <div className={`${framework.color} p-6 rounded-lg border hover:shadow-lg transition-all duration-200`}>
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-3">
-                    <span className="text-2xl">{framework.icon}</span>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                        {framework.name}
-                      </h3>
-                      <div className="flex items-center space-x-2 mt-1">
-                        <span className={`text-xs px-2 py-1 rounded-full font-medium ${
-                          framework.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
-                          framework.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
-                          'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300'
-                        }`}>
-                          {framework.difficulty}
-                        </span>
-                        <span className={`text-xs px-2 py-1 rounded-full font-medium ${
-                          framework.popularity === 'Very High' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
-                          'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300'
-                        }`}>
-                          {framework.popularity}
-                        </span>
-                      </div>
-                    </div>
+            <Link key={index} href={framework.href} className="block p-4 md:p-6 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+                    <span className="text-lg">{framework.icon}</span>
                   </div>
-                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
                 </div>
-                
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{framework.description}</p>
-                
-                <div className="space-y-3">
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                      {framework.name}
+                    </h3>
+                    <ArrowRight className="w-5 h-5 text-gray-400" />
+                  </div>
+                  <div className="flex items-center gap-2 mt-1 mb-2">
+                    <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                      framework.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
+                      framework.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
+                      'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300'
+                    }`}>
+                      {framework.difficulty}
+                    </span>
+                    <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                      framework.popularity === 'Very High' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
+                      'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300'
+                    }`}>
+                      {framework.popularity}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 mt-1 mb-3">
+                    {framework.description}
+                  </p>
                   <div>
-                    <h4 className="font-semibold text-gray-700 dark:text-gray-300 text-sm mb-2">Use Cases:</h4>
-                    <div className="flex flex-wrap gap-1">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Use Cases:</h4>
+                    <div className="flex flex-wrap gap-1 mb-3">
                       {framework.useCases.map((useCase, i) => (
-                        <span key={i} className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
+                        <span key={i} className="text-xs px-2 py-1 bg-gray-50 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300">
                           {useCase}
                         </span>
                       ))}
                     </div>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-gray-700 dark:text-gray-300 text-sm mb-2">Used by:</h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Used by:</h4>
                     <div className="flex flex-wrap gap-1">
                       {framework.companies.map((company, i) => (
                         <span key={i} className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">
@@ -207,10 +208,10 @@ export default function MobileDevelopmentPage() {
             </Link>
           ))}
         </div>
-      </section>
+      </div>
 
       {/* Framework Comparison */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Framework Comparison</h2>
         
         <div className="overflow-x-auto">
@@ -226,38 +227,38 @@ export default function MobileDevelopmentPage() {
             </thead>
             <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
               <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">React Native</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">JavaScript/TypeScript</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Good</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Moderate</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white flex flex-col gap-8 md:gap-12">React Native</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">JavaScript/TypeScript</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">Good</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">Moderate</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Web developers, rapid development</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Expo</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">JavaScript/TypeScript</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Good</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Easy</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white flex flex-col gap-8 md:gap-12">Expo</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">JavaScript/TypeScript</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">Good</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">Easy</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Beginners, prototypes, MVPs</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Flutter</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Dart</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Excellent</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Moderate</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white flex flex-col gap-8 md:gap-12">Flutter</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">Dart</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">Excellent</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">Moderate</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Custom UI, high performance</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Native iOS</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Swift</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Excellent</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Steep</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white flex flex-col gap-8 md:gap-12">Native iOS</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">Swift</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">Excellent</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">Steep</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">iOS-only, platform features</td>
               </tr>
               <tr>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Native Android</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Kotlin/Java</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Excellent</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300">Steep</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white flex flex-col gap-8 md:gap-12">Native Android</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">Kotlin/Java</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">Excellent</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300 flex flex-col gap-8 md:gap-12">Steep</td>
                 <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-300">Android-only, platform features</td>
               </tr>
             </tbody>
@@ -270,29 +271,29 @@ export default function MobileDevelopmentPage() {
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
           🚀 Getting Started with Mobile Development
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Choose Your Approach</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Cross-platform for faster development, native for maximum performance</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Set Up Development Environment</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Install required tools, SDKs, and emulators/simulators</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Build Your First App</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Start with a simple "Hello World" app and gradually add features</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Learn Platform Guidelines</h4>
@@ -301,6 +302,6 @@ export default function MobileDevelopmentPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

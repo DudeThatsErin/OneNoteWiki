@@ -49,10 +49,10 @@ const devopsPhases = [
 
 export default function DevOpsToolsPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <Layers className="w-8 h-8 text-purple-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             DevOps & Tools
@@ -69,7 +69,7 @@ export default function DevOpsToolsPage() {
         <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
           🔄 What is DevOps?
         </h3>
-        <div className="space-y-4 text-purple-800 dark:text-purple-200">
+        <div className="flex flex-col gap-4 md:gap-6 text-purple-800 dark:text-purple-200">
           <p>
             <strong>DevOps</strong> is a set of practices that combines software development (Dev) and 
             IT operations (Ops) to shorten the development lifecycle and provide continuous delivery 
@@ -78,7 +78,7 @@ export default function DevOpsToolsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">🎯 Goals:</h4>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm [&>li]:mb-1">
                 <li>• Faster time to market</li>
                 <li>• Improved collaboration</li>
                 <li>• Higher quality software</li>
@@ -88,7 +88,7 @@ export default function DevOpsToolsPage() {
             </div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">🏗️ Key Practices:</h4>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm [&>li]:mb-1">
                 <li>• Continuous Integration (CI)</li>
                 <li>• Continuous Deployment (CD)</li>
                 <li>• Infrastructure as Code</li>
@@ -98,7 +98,7 @@ export default function DevOpsToolsPage() {
             </div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">💼 Benefits:</h4>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm [&>li]:mb-1">
                 <li>• Reduced manual errors</li>
                 <li>• Faster bug fixes</li>
                 <li>• Improved team productivity</li>
@@ -111,7 +111,7 @@ export default function DevOpsToolsPage() {
       </div>
 
       {/* Tool Categories */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Essential Tool Categories
         </h2>
@@ -148,7 +148,7 @@ export default function DevOpsToolsPage() {
       </section>
 
       {/* DevOps Lifecycle */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           DevOps Lifecycle
         </h2>
@@ -171,7 +171,7 @@ export default function DevOpsToolsPage() {
               <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                 {devopsPhases.map((phase, index) => (
                   <tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700/50">
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-6 py-4 whitespace-nowrap flex flex-col gap-3">
                       <div className="font-medium text-gray-900 dark:text-white">{phase.phase}</div>
                     </td>
                     <td className="px-6 py-4">
@@ -199,29 +199,29 @@ export default function DevOpsToolsPage() {
         <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
           🚀 Getting Started with DevOps
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100">Master Version Control</h4>
               <p className="text-blue-800 dark:text-blue-200 text-sm">Learn Git fundamentals - branching, merging, and collaboration workflows</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100">Choose Your Development Environment</h4>
               <p className="text-blue-800 dark:text-blue-200 text-sm">Set up a powerful IDE or editor with extensions and plugins</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100">Learn Testing Fundamentals</h4>
               <p className="text-blue-800 dark:text-blue-200 text-sm">Understand unit testing, integration testing, and test automation</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100">Explore Deployment Options</h4>
@@ -239,7 +239,7 @@ export default function DevOpsToolsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Frontend Development:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• <strong>Editor:</strong> VS Code + Extensions</li>
               <li>• <strong>Version Control:</strong> Git + GitHub</li>
               <li>• <strong>Testing:</strong> Jest + Cypress</li>
@@ -248,7 +248,7 @@ export default function DevOpsToolsPage() {
           </div>
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Backend Development:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• <strong>Editor:</strong> IntelliJ IDEA + VS Code</li>
               <li>• <strong>Version Control:</strong> Git + GitLab</li>
               <li>• <strong>Testing:</strong> JUnit + Postman</li>
@@ -257,7 +257,7 @@ export default function DevOpsToolsPage() {
           </div>
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Full Stack Development:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• <strong>Editor:</strong> VS Code</li>
               <li>• <strong>Version Control:</strong> Git + GitHub</li>
               <li>• <strong>Testing:</strong> Jest + Playwright</li>
@@ -266,7 +266,7 @@ export default function DevOpsToolsPage() {
           </div>
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Enterprise Development:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• <strong>Editor:</strong> IntelliJ IDEA + Eclipse</li>
               <li>• <strong>Version Control:</strong> Git + Bitbucket</li>
               <li>• <strong>Testing:</strong> JUnit + Selenium</li>
@@ -284,7 +284,7 @@ export default function DevOpsToolsPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2">DevOps Engineer:</h4>
-            <ul className="text-orange-800 dark:text-orange-200 text-sm space-y-1">
+            <ul className="text-orange-800 dark:text-orange-200 text-sm [&>li]:mb-1">
               <li>• CI/CD pipeline management</li>
               <li>• Infrastructure automation</li>
               <li>• Cloud platform expertise</li>
@@ -293,7 +293,7 @@ export default function DevOpsToolsPage() {
           </div>
           <div>
             <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2">Site Reliability Engineer:</h4>
-            <ul className="text-orange-800 dark:text-orange-200 text-sm space-y-1">
+            <ul className="text-orange-800 dark:text-orange-200 text-sm [&>li]:mb-1">
               <li>• System reliability and uptime</li>
               <li>• Performance optimization</li>
               <li>• Incident response</li>
@@ -302,7 +302,7 @@ export default function DevOpsToolsPage() {
           </div>
           <div>
             <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2">Cloud Architect:</h4>
-            <ul className="text-orange-800 dark:text-orange-200 text-sm space-y-1">
+            <ul className="text-orange-800 dark:text-orange-200 text-sm [&>li]:mb-1">
               <li>• Cloud infrastructure design</li>
               <li>• Security and compliance</li>
               <li>• Cost optimization</li>

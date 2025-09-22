@@ -71,19 +71,19 @@ const dotnetUseCases = [
 
 export default function DotNetPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/languages/php"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: PHP</span>
         </Link>
         <Link
           href="/languages"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Back to Languages</span>
           <ArrowRight className="w-4 h-4" />
@@ -91,8 +91,8 @@ export default function DotNetPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <div className="text-4xl">🔷</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">.NET</h1>
@@ -127,14 +127,14 @@ export default function DotNetPage() {
       </div>
 
       {/* Key Features */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Why Choose .NET?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {dotnetFeatures.map((feature, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-indigo-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
               </div>
@@ -145,16 +145,16 @@ export default function DotNetPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           What Can You Build with .NET?
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {dotnetUseCases.map((useCase, index) => (
             <div key={index} className="bg-indigo-50 dark:bg-indigo-900/20 p-6 rounded-lg border border-indigo-200 dark:border-indigo-800">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-xl font-semibold text-indigo-900 dark:text-indigo-100">{useCase.category}</h3>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center gap-2">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                     useCase.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
                     useCase.difficulty === 'Intermediate to Advanced' ? 'bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300' :
@@ -201,11 +201,11 @@ export default function DotNetPage() {
       </section>
 
       {/* Code Example */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           .NET Code Examples
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
               🚀 C# Console Application
@@ -312,29 +312,29 @@ public class User
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
           🚀 Getting Started with .NET
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Install .NET SDK</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Download the latest .NET SDK from dotnet.microsoft.com</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Choose Your IDE</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Visual Studio, Visual Studio Code, or JetBrains Rider</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Create Your First Project</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Use `dotnet new console` to create a simple console application</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Learn C# Fundamentals</h4>
@@ -348,14 +348,14 @@ public class User
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/languages/php"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: PHP</span>
         </Link>
         <Link
           href="/languages"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Back to Languages</span>
         </Link>

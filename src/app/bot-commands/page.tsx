@@ -163,14 +163,14 @@ export default function BotCommandsPage() {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <div className="text-4xl">🤖</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Discord Bot Commands</h1>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center gap-2">
               <span className="px-3 py-1 bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300 rounded-full text-sm font-medium">
                 Coming Soon
               </span>
@@ -202,7 +202,7 @@ export default function BotCommandsPage() {
                 href="https://github.com/DudeThatsErin/CodingHelpBot"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
               >
                 <Github className="w-4 h-4" />
                 <span>View Source Code</span>
@@ -216,12 +216,12 @@ export default function BotCommandsPage() {
       </div>
 
       {/* Command Categories */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Command Categories
         </h2>
         
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4 md:gap-6">
           {commandCategories.map((category) => {
             const isExpanded = expandedCategories.includes(category.id);
             
@@ -232,7 +232,7 @@ export default function BotCommandsPage() {
                   className="w-full p-6 text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
+                    <div className="flex items-center gap-3">
                       <div className="text-blue-600">{category.icon}</div>
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -243,7 +243,7 @@ export default function BotCommandsPage() {
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center gap-2">
                       <span className="text-sm text-gray-500 dark:text-gray-400">
                         {category.commands.length} commands
                       </span>
@@ -258,11 +258,11 @@ export default function BotCommandsPage() {
                 
                 {isExpanded && (
                   <div className="border-t border-gray-200 dark:border-gray-700 p-6 bg-gray-50 dark:bg-gray-700/50">
-                    <div className="space-y-6">
+                    <div className="flex flex-col gap-6 md:gap-8">
                       {category.commands.map((command, index) => (
                         <div key={index} className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
                           <div className="mb-3">
-                            <div className="flex items-center space-x-2 mb-2">
+                            <div className="flex items-center gap-2 mb-2">
                               <code className="text-lg font-mono font-semibold text-blue-600 dark:text-blue-400">
                                 {command.name}
                               </code>
@@ -275,7 +275,7 @@ export default function BotCommandsPage() {
                             </p>
                           </div>
                           
-                          <div className="space-y-3">
+                          <div className="flex flex-col gap-3">
                             <div>
                               <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">
                                 Usage:
@@ -299,9 +299,9 @@ export default function BotCommandsPage() {
                                 <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">
                                   Parameters:
                                 </h4>
-                                <div className="space-y-2">
+                                <div className="flex flex-col gap-2">
                                   {command.parameters.map((param, paramIndex) => (
-                                    <div key={paramIndex} className="flex items-start space-x-3 text-sm">
+                                    <div key={paramIndex} className="flex items-start gap-3 text-sm">
                                       <code className="text-blue-600 dark:text-blue-400 font-mono">
                                         {param.name}
                                       </code>
@@ -346,7 +346,7 @@ export default function BotCommandsPage() {
             <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2">
               What's Ready:
             </h4>
-            <ul className="text-yellow-800 dark:text-yellow-200 text-sm space-y-1">
+            <ul className="text-yellow-800 dark:text-yellow-200 text-sm [&>li]:mb-1">
               <li>• Bot architecture and framework</li>
               <li>• Command structure design</li>
               <li>• Database integration planning</li>
@@ -357,7 +357,7 @@ export default function BotCommandsPage() {
             <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2">
               Coming Next:
             </h4>
-            <ul className="text-yellow-800 dark:text-yellow-200 text-sm space-y-1">
+            <ul className="text-yellow-800 dark:text-yellow-200 text-sm [&>li]:mb-1">
               <li>• Help and resource commands</li>
               <li>• Code formatting and explanation</li>
               <li>• Community interaction features</li>
@@ -380,7 +380,7 @@ export default function BotCommandsPage() {
             href="https://github.com/DudeThatsErin/CodingHelpBot"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
           >
             <Github className="w-4 h-4" />
             <span>Contribute on GitHub</span>

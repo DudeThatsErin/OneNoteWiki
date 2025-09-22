@@ -204,19 +204,19 @@ const cppLibraries = [
 
 export default function CppPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/languages/java"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Java</span>
         </Link>
         <Link
           href="/languages/csharp"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: C#</span>
           <ArrowRight className="w-4 h-4" />
@@ -224,8 +224,8 @@ export default function CppPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <div className="text-4xl">🔥</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">C++</h1>
@@ -260,15 +260,15 @@ export default function CppPage() {
       </div>
 
       {/* Learning Sections */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           C++ Learning Path
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {cppSections.map((section, index) => (
             <Link key={index} href={section.href} className="block group">
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors">
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start flex flex-col gap-3">
                   <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
                     {section.icon}
                   </div>
@@ -277,7 +277,7 @@ export default function CppPage() {
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                         {section.title}
                       </h3>
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center gap-2">
                         <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                           section.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                           section.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -307,14 +307,14 @@ export default function CppPage() {
       </section>
 
       {/* Key Features */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Why Choose C++?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {cppFeatures.map((feature, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
               </div>
@@ -326,7 +326,7 @@ export default function CppPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           What Can You Build with C++?
         </h2>
@@ -357,7 +357,7 @@ export default function CppPage() {
       </section>
 
       {/* Code Example */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           C++ Code Example
         </h2>
@@ -430,14 +430,14 @@ int main() {
       </section>
 
       {/* Learning Path */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           C++ Learning Path
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {cppLearningPath.map((phase, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-4">
+              <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                   {index + 1}
                 </div>
@@ -450,7 +450,7 @@ int main() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Topics to Learn:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                     {phase.topics.map((topic, i) => (
                       <li key={i}>• {topic}</li>
                     ))}
@@ -458,7 +458,7 @@ int main() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Practice Projects:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                     {phase.projects.map((project, i) => (
                       <li key={i}>• {project}</li>
                     ))}
@@ -471,7 +471,7 @@ int main() {
       </section>
 
       {/* Popular Libraries */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Popular C++ Libraries
         </h2>
@@ -480,7 +480,7 @@ int main() {
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="font-semibold text-gray-900 dark:text-white">{library.name}</h3>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center gap-2">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                     library.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                     library.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -511,11 +511,11 @@ int main() {
       </section>
 
       {/* Learning Resources */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           C++ Learning Resources
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {cppResources.map((category, index) => (
             <div key={index} className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
               <h3 className="text-lg font-bold text-blue-900 dark:text-blue-100 mb-4">
@@ -543,7 +543,7 @@ int main() {
       </section>
 
       {/* Project Ideas */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           C++ Project Ideas
         </h2>
@@ -551,7 +551,7 @@ int main() {
           {/* Beginner Projects */}
           <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
             <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">🟢 Beginner Projects</h3>
-            <ul className="space-y-2 text-green-800 dark:text-green-200 text-sm">
+            <ul className="flex flex-col gap-2 text-green-800 dark:text-green-200 text-sm">
               <li>• <strong>Console Calculator:</strong> Advanced calculator with expression parsing</li>
               <li>• <strong>Student Grade Manager:</strong> Store and calculate student grades</li>
               <li>• <strong>Simple Text Editor:</strong> Basic text manipulation and file I/O</li>
@@ -564,7 +564,7 @@ int main() {
           {/* Intermediate Projects */}
           <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
             <h3 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-3">🟡 Intermediate Projects</h3>
-            <ul className="space-y-2 text-yellow-800 dark:text-yellow-200 text-sm">
+            <ul className="flex flex-col gap-2 text-yellow-800 dark:text-yellow-200 text-sm">
               <li>• <strong>2D Game Engine:</strong> Simple game engine with SDL or SFML</li>
               <li>• <strong>File Compression:</strong> Implement Huffman coding algorithm</li>
               <li>• <strong>Database System:</strong> Simple relational database with B-trees</li>
@@ -577,7 +577,7 @@ int main() {
           {/* Advanced Projects */}
           <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
             <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">🔴 Advanced Projects</h3>
-            <ul className="space-y-2 text-red-800 dark:text-red-200 text-sm">
+            <ul className="flex flex-col gap-2 text-red-800 dark:text-red-200 text-sm">
               <li>• <strong>3D Graphics Engine:</strong> OpenGL-based rendering engine</li>
               <li>• <strong>Operating System Kernel:</strong> Basic OS with memory management</li>
               <li>• <strong>Compiler/Interpreter:</strong> Build a programming language</li>
@@ -594,29 +594,29 @@ int main() {
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
           🚀 Getting Started with C++
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Install a C++ Compiler</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">GCC, Clang, or MSVC depending on your platform</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Choose an IDE or Editor</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Visual Studio, CLion, Code::Blocks, or VS Code</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Write Your First Program</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Start with "Hello, World!" to test your setup</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Master the Fundamentals</h4>
@@ -630,14 +630,14 @@ int main() {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/languages/java"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Java</span>
         </Link>
         <Link
           href="/languages/csharp"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: C#</span>
           <ArrowRight className="w-4 h-4" />

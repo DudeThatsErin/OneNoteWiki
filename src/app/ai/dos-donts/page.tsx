@@ -176,19 +176,19 @@ const commonMistakes = [
 
 export default function AIDosAndDontsPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/ai"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to AI & ML</span>
         </Link>
         <Link
           href="/ai/prompting"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Prompt Engineering</span>
           <ArrowRight className="w-4 h-4" />
@@ -196,8 +196,8 @@ export default function AIDosAndDontsPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <Shield className="w-8 h-8 text-red-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             AI Dos and Don'ts
@@ -217,7 +217,7 @@ export default function AIDosAndDontsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Your Advantage:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>• You can evaluate AI suggestions critically</li>
               <li>• You understand code architecture and patterns</li>
               <li>• You know when something "smells" wrong</li>
@@ -226,7 +226,7 @@ export default function AIDosAndDontsPage() {
           </div>
           <div>
             <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Your Responsibility:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>• Guide junior developers in AI usage</li>
               <li>• Maintain code quality standards</li>
               <li>• Balance AI assistance with skill development</li>
@@ -237,22 +237,22 @@ export default function AIDosAndDontsPage() {
       </div>
 
       {/* DO's Section */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white flex items-center space-x-2">
+      <section className="flex flex-col gap-6 md:gap-8">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
           <CheckCircle className="w-6 h-6 text-green-600" />
           <span>What TO DO</span>
         </h2>
         
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {aiDos.map((category, index) => (
             <div key={index} className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
               <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
                 {category.category}
               </h3>
-              <div className="space-y-4">
+              <div className="flex flex-col gap-4 md:gap-6">
                 {category.items.map((item, i) => (
                   <div key={i} className="bg-white dark:bg-gray-800 p-4 rounded border border-green-200 dark:border-green-700">
-                    <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2 flex items-center space-x-2">
+                    <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2 flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-600" />
                       <span>{item.title}</span>
                     </h4>
@@ -269,22 +269,22 @@ export default function AIDosAndDontsPage() {
       </section>
 
       {/* DON'T's Section */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white flex items-center space-x-2">
+      <section className="flex flex-col gap-6 md:gap-8">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
           <XCircle className="w-6 h-6 text-red-600" />
           <span>What NOT TO DO</span>
         </h2>
         
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {aiDonts.map((category, index) => (
             <div key={index} className="bg-red-50 dark:bg-red-900/20 rounded-lg p-6 border border-red-200 dark:border-red-800">
               <h3 className="text-lg font-semibold text-red-900 dark:text-red-100 mb-4">
                 {category.category}
               </h3>
-              <div className="space-y-4">
+              <div className="flex flex-col gap-4 md:gap-6">
                 {category.items.map((item, i) => (
                   <div key={i} className="bg-white dark:bg-gray-800 p-4 rounded border border-red-200 dark:border-red-700">
-                    <h4 className="font-semibold text-red-900 dark:text-red-100 mb-2 flex items-center space-x-2">
+                    <h4 className="font-semibold text-red-900 dark:text-red-100 mb-2 flex items-center gap-2">
                       <XCircle className="w-4 h-4 text-red-600" />
                       <span>{item.title}</span>
                     </h4>
@@ -301,7 +301,7 @@ export default function AIDosAndDontsPage() {
       </section>
 
       {/* Ethical Considerations */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Ethical Considerations
         </h2>
@@ -310,7 +310,7 @@ export default function AIDosAndDontsPage() {
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{consideration.principle}</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">{consideration.description}</p>
-              <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+              <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                 {consideration.practices.map((practice, i) => (
                   <li key={i}>• {practice}</li>
                 ))}
@@ -321,14 +321,14 @@ export default function AIDosAndDontsPage() {
       </section>
 
       {/* Common Mistakes */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Common Mistakes to Avoid
         </h2>
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4 md:gap-6">
           {commonMistakes.map((mistake, index) => (
             <div key={index} className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800">
-              <div className="flex items-start space-x-3">
+              <div className="flex items-start gap-3">
                 <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
                 <div className="flex-1">
                   <h4 className="font-semibold text-yellow-900 dark:text-yellow-100">{mistake.mistake}</h4>
@@ -353,7 +353,7 @@ export default function AIDosAndDontsPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Before Using AI:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• Define clear requirements</li>
               <li>• Consider security implications</li>
               <li>• Check company policies</li>
@@ -362,7 +362,7 @@ export default function AIDosAndDontsPage() {
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">While Using AI:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• Provide clear, specific prompts</li>
               <li>• Iterate and refine requests</li>
               <li>• Ask for explanations</li>
@@ -371,7 +371,7 @@ export default function AIDosAndDontsPage() {
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">After AI Generation:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• Review and understand code</li>
               <li>• Test thoroughly</li>
               <li>• Refactor if needed</li>
@@ -385,14 +385,14 @@ export default function AIDosAndDontsPage() {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/ai"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to AI & ML</span>
         </Link>
         <Link
           href="/ai/prompting"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Prompt Engineering</span>
           <ArrowRight className="w-4 h-4" />

@@ -12,7 +12,7 @@ const iosFeatures = [
     title: 'Swift Programming',
     description: 'Modern, safe, and expressive programming language by Apple',
     icon: <Code className="w-5 h-5" />,
-    details: 'Swift provides safety, performance, and expressiveness for iOS development'
+    details: 'Swift provides flex flex-col gap-3, performance, and expressiveness for iOS development'
   },
   {
     title: 'iOS Ecosystem',
@@ -30,19 +30,19 @@ const iosFeatures = [
 
 export default function NativeiOSPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/mobile-development/java-android"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Java Android</span>
         </Link>
         <Link
           href="/mobile-development/android"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Native Android</span>
           <ArrowRight className="w-4 h-4" />
@@ -50,8 +50,8 @@ export default function NativeiOSPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <div className="text-4xl">🍎</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Native iOS Development</h1>
@@ -67,7 +67,7 @@ export default function NativeiOSPage() {
 
       {/* Requirements Notice */}
       <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-6 border border-yellow-200 dark:border-yellow-800">
-        <div className="flex items-start space-x-3">
+        <div className="flex items-start gap-3">
           <Apple className="w-6 h-6 text-yellow-600 mt-1" />
           <div>
             <h3 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2">macOS Required</h3>
@@ -80,14 +80,14 @@ export default function NativeiOSPage() {
       </div>
 
       {/* Key Features */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Why Choose Native iOS Development?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {iosFeatures.map((feature, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
               </div>
@@ -99,15 +99,15 @@ export default function NativeiOSPage() {
       </section>
 
       {/* Development Setup */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Development Setup</h2>
         
         <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Required Tools</h3>
-          <div className="space-y-4">
+          <div className="flex flex-col gap-4 md:gap-6">
             <div>
               <h4 className="font-medium text-gray-900 dark:text-white mb-2">1. Xcode</h4>
-              <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+              <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                 <li>• Download from Mac App Store (free)</li>
                 <li>• Includes Swift compiler, iOS Simulator, and Interface Builder</li>
                 <li>• Built-in debugging and performance analysis tools</li>
@@ -117,7 +117,7 @@ export default function NativeiOSPage() {
             
             <div>
               <h4 className="font-medium text-gray-900 dark:text-white mb-2">2. Apple Developer Account</h4>
-              <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+              <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                 <li>• Free account: Test on simulator only</li>
                 <li>• Paid account ($99/year): Test on devices and publish to App Store</li>
                 <li>• Access to beta software and advanced app capabilities</li>
@@ -129,7 +129,7 @@ export default function NativeiOSPage() {
       </section>
 
       {/* Basic Swift Example */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Basic iOS App Structure</h2>
         
         <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
@@ -190,7 +190,7 @@ class ViewController: UIViewController {
       </section>
 
       {/* SwiftUI Example */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">SwiftUI (Modern Approach)</h2>
         
         <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
@@ -248,13 +248,13 @@ struct ContentView_Previews: PreviewProvider {
       </section>
 
       {/* Key iOS Concepts */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Key iOS Development Concepts</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">UI Frameworks</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• <strong>UIKit:</strong> Traditional iOS UI framework</li>
               <li>• <strong>SwiftUI:</strong> Modern declarative UI framework</li>
               <li>• <strong>Storyboards:</strong> Visual interface design</li>
@@ -264,7 +264,7 @@ struct ContentView_Previews: PreviewProvider {
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">App Architecture</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• <strong>MVC:</strong> Model-View-Controller pattern</li>
               <li>• <strong>MVVM:</strong> Model-View-ViewModel with SwiftUI</li>
               <li>• <strong>Delegates:</strong> Communication between objects</li>
@@ -274,7 +274,7 @@ struct ContentView_Previews: PreviewProvider {
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Data & Storage</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• <strong>Core Data:</strong> Object graph and persistence</li>
               <li>• <strong>UserDefaults:</strong> Simple key-value storage</li>
               <li>• <strong>Keychain:</strong> Secure credential storage</li>
@@ -284,7 +284,7 @@ struct ContentView_Previews: PreviewProvider {
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">iOS Frameworks</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• <strong>Foundation:</strong> Basic functionality and data types</li>
               <li>• <strong>AVFoundation:</strong> Audio and video processing</li>
               <li>• <strong>Core Location:</strong> Location and mapping services</li>
@@ -295,13 +295,13 @@ struct ContentView_Previews: PreviewProvider {
       </section>
 
       {/* Learning Resources */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Learning Resources</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Official Resources</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-2">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://developer.apple.com/" className="hover:underline">Apple Developer</a></li>
               <li>• <a href="https://developer.apple.com/swift/" className="hover:underline">Swift.org</a></li>
               <li>• <a href="https://developer.apple.com/documentation/" className="hover:underline">Apple Documentation</a></li>
@@ -311,7 +311,7 @@ struct ContentView_Previews: PreviewProvider {
           
           <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
             <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">Learning Platforms</h3>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-2">
+            <ul className="text-green-800 dark:text-green-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://www.hackingwithswift.com/" className="hover:underline">Hacking with Swift</a></li>
               <li>• <a href="https://www.raywenderlich.com/" className="hover:underline">Ray Wenderlich</a></li>
               <li>• <a href="https://cs193p.sites.stanford.edu/" className="hover:underline">Stanford CS193p</a></li>
@@ -321,7 +321,7 @@ struct ContentView_Previews: PreviewProvider {
           
           <div className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
             <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-3">Community</h3>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-2">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://stackoverflow.com/questions/tagged/ios" className="hover:underline">Stack Overflow</a></li>
               <li>• <a href="https://www.reddit.com/r/iOSProgramming/" className="hover:underline">r/iOSProgramming</a></li>
               <li>• <a href="https://iosdevweekly.com/" className="hover:underline">iOS Dev Weekly</a></li>
@@ -332,13 +332,13 @@ struct ContentView_Previews: PreviewProvider {
       </section>
 
       {/* Project Ideas */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Project Ideas</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Beginner Projects</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• Tip Calculator with Custom UI</li>
               <li>• Personal Journal with Core Data</li>
               <li>• Weather App with Location Services</li>
@@ -349,7 +349,7 @@ struct ContentView_Previews: PreviewProvider {
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Advanced Projects</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• Social Media App with CloudKit</li>
               <li>• Fitness Tracker with HealthKit</li>
               <li>• AR Shopping App with ARKit</li>
@@ -364,14 +364,14 @@ struct ContentView_Previews: PreviewProvider {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/mobile-development/java-android"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Java Android</span>
         </Link>
         <Link
           href="/mobile-development/android"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Native Android</span>
           <ArrowRight className="w-4 h-4" />

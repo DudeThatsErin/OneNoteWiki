@@ -78,7 +78,7 @@ const fullStackFrameworks = [
 
 export default function FullStackFrameworksPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Quick Reference */}
       <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
         <h2 className="text-xl font-semibold text-purple-900 dark:text-purple-100 mb-4 flex items-center">
@@ -88,7 +88,7 @@ export default function FullStackFrameworksPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">For React Developers:</h3>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• <strong>Next.js:</strong> Most popular, great ecosystem</li>
               <li>• <strong>Remix:</strong> Web standards focused</li>
               <li>• <strong>T3 Stack:</strong> Type-safe development</li>
@@ -96,7 +96,7 @@ export default function FullStackFrameworksPage() {
           </div>
           <div>
             <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">For Vue Developers:</h3>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• <strong>Nuxt.js:</strong> Vue.js full-stack solution</li>
               <li>• <strong>Quasar:</strong> Vue with mobile support</li>
               <li>• <strong>Gridsome:</strong> Static site generation</li>
@@ -104,7 +104,7 @@ export default function FullStackFrameworksPage() {
           </div>
           <div>
             <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">For Performance:</h3>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• <strong>SvelteKit:</strong> Minimal bundle size</li>
               <li>• <strong>Astro:</strong> Static-first approach</li>
               <li>• <strong>Next.js:</strong> Optimized by default</li>
@@ -114,10 +114,10 @@ export default function FullStackFrameworksPage() {
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center gap-2">
         <Link
           href="/frameworks"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Frameworks</span>
@@ -125,8 +125,8 @@ export default function FullStackFrameworksPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <div className="text-4xl">🏗️</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Full-Stack Frameworks</h1>
@@ -141,7 +141,7 @@ export default function FullStackFrameworksPage() {
       </div>
 
       {/* Framework Comparison */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Popular Full-Stack Frameworks</h2>
         
         <div className="grid grid-cols-1 gap-8">
@@ -149,14 +149,14 @@ export default function FullStackFrameworksPage() {
             <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center gap-3">
                     <span className="text-3xl">{framework.icon}</span>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{framework.name}</h3>
                       <p className="text-sm text-gray-500 dark:text-gray-400">{framework.language}</p>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center gap-2">
                     <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                       framework.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                       framework.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -180,7 +180,7 @@ export default function FullStackFrameworksPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features</h4>
-                    <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                       {framework.features.map((feature, i) => (
                         <li key={i}>• {feature}</li>
                       ))}
@@ -189,7 +189,7 @@ export default function FullStackFrameworksPage() {
                   
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Best For</h4>
-                    <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                       {framework.useCases.map((useCase, i) => (
                         <li key={i}>• {useCase}</li>
                       ))}
@@ -198,7 +198,7 @@ export default function FullStackFrameworksPage() {
                   
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Pros</h4>
-                    <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                       {framework.pros.map((pro, i) => (
                         <li key={i}>• {pro}</li>
                       ))}
@@ -207,7 +207,7 @@ export default function FullStackFrameworksPage() {
                   
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Cons</h4>
-                    <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                       {framework.cons.map((con, i) => (
                         <li key={i}>• {con}</li>
                       ))}
@@ -221,13 +221,13 @@ export default function FullStackFrameworksPage() {
       </section>
 
       {/* Learning Resources */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Learning Resources</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">React-Based</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-2">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://nextjs.org/" className="hover:underline">Next.js Official</a></li>
               <li>• <a href="https://remix.run/" className="hover:underline">Remix Framework</a></li>
               <li>• <a href="https://create.t3.gg/" className="hover:underline">T3 Stack</a></li>
@@ -236,7 +236,7 @@ export default function FullStackFrameworksPage() {
           
           <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Vue-Based</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-2">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://nuxtjs.org/" className="hover:underline">Nuxt.js</a></li>
               <li>• <a href="https://quasar.dev/" className="hover:underline">Quasar Framework</a></li>
               <li>• <a href="https://gridsome.org/" className="hover:underline">Gridsome</a></li>
@@ -245,7 +245,7 @@ export default function FullStackFrameworksPage() {
           
           <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Other</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-2">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://kit.svelte.dev/" className="hover:underline">SvelteKit</a></li>
               <li>• <a href="https://astro.build/" className="hover:underline">Astro</a></li>
               <li>• <a href="https://www.meteor.com/" className="hover:underline">Meteor</a></li>

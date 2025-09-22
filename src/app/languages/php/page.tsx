@@ -26,19 +26,19 @@ const phpFeatures = [
 
 export default function PHPPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/languages/rust"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Rust</span>
         </Link>
         <Link
           href="/languages"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Back to Languages</span>
           <ArrowRight className="w-4 h-4" />
@@ -46,8 +46,8 @@ export default function PHPPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <div className="text-4xl">🐘</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">PHP</h1>
@@ -82,14 +82,14 @@ export default function PHPPage() {
       </div>
 
       {/* Key Features */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Why Choose PHP?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {phpFeatures.map((feature, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-purple-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
               </div>
@@ -100,7 +100,7 @@ export default function PHPPage() {
       </section>
 
       {/* Code Example */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           PHP Code Example
         </h2>
@@ -158,29 +158,29 @@ foreach ($users as $user) {
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
           🚀 Getting Started with PHP
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Install PHP</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Download from php.net or use XAMPP/WAMP for local development</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Set Up Web Server</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Use Apache, Nginx, or PHP's built-in server for development</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Write Your First Script</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Create a .php file with &lt;?php echo "Hello, World!"; ?&gt;</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Learn the Basics</h4>
@@ -194,14 +194,14 @@ foreach ($users as $user) {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/languages/rust"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Rust</span>
         </Link>
         <Link
           href="/languages"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Back to Languages</span>
         </Link>

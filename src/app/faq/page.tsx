@@ -97,10 +97,10 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
 
 export default function FAQPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <HelpCircle className="w-8 h-8 text-blue-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             Frequently Asked Questions
@@ -112,7 +112,7 @@ export default function FAQPage() {
       </div>
 
       {/* FAQ Items */}
-      <div className="space-y-4">
+      <div className="flex flex-col gap-4 md:gap-6">
         {faqs.map((faq) => (
           <FAQItem key={faq.id} faq={faq} />
         ))}

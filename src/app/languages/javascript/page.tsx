@@ -107,19 +107,19 @@ const jsSections = [
 
 export default function JavaScriptPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/languages/python"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Python</span>
         </Link>
         <Link
           href="/languages/java"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Java</span>
           <ArrowRight className="w-4 h-4" />
@@ -127,8 +127,8 @@ export default function JavaScriptPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <div className="text-4xl">🟨</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">JavaScript</h1>
@@ -163,15 +163,15 @@ export default function JavaScriptPage() {
       </div>
 
       {/* Learning Sections */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           JavaScript Learning Path
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {jsSections.map((section, index) => (
             <Link key={index} href={section.href} className="block group">
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-yellow-300 dark:hover:border-yellow-600 transition-colors">
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start flex flex-col gap-3">
                   <div className="text-yellow-600 group-hover:text-yellow-700 transition-colors">
                     {section.icon}
                   </div>
@@ -180,7 +180,7 @@ export default function JavaScriptPage() {
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors">
                         {section.title}
                       </h3>
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center gap-2">
                         <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                           section.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                           section.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -209,14 +209,14 @@ export default function JavaScriptPage() {
       </section>
 
       {/* Key Features */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Why Choose JavaScript?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {jsFeatures.map((feature, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-yellow-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
               </div>
@@ -228,16 +228,16 @@ export default function JavaScriptPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           What Can You Build with JavaScript?
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {jsUseCases.map((useCase, index) => (
             <div key={index} className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-xl font-semibold text-yellow-900 dark:text-yellow-100">{useCase.category}</h3>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center gap-2">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                     useCase.difficulty.includes('Beginner') ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                     useCase.difficulty.includes('Intermediate') && useCase.difficulty.includes('Advanced') ? 'bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300' :
@@ -285,7 +285,7 @@ export default function JavaScriptPage() {
       </section>
 
       {/* Project Ideas */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           JavaScript Project Ideas
         </h2>
@@ -293,7 +293,7 @@ export default function JavaScriptPage() {
           {/* Beginner Projects */}
           <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
             <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">🟢 Beginner Projects</h3>
-            <ul className="space-y-2 text-green-800 dark:text-green-200 text-sm">
+            <ul className="flex flex-col gap-2 text-green-800 dark:text-green-200 text-sm">
               <li>• <strong>To-Do List App:</strong> Add, edit, delete tasks with local storage</li>
               <li>• <strong>Calculator:</strong> Basic arithmetic operations with a clean UI</li>
               <li>• <strong>Digital Clock:</strong> Real-time clock with date display</li>
@@ -306,7 +306,7 @@ export default function JavaScriptPage() {
           {/* Intermediate Projects */}
           <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
             <h3 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-3">🟡 Intermediate Projects</h3>
-            <ul className="space-y-2 text-yellow-800 dark:text-yellow-200 text-sm">
+            <ul className="flex flex-col gap-2 text-yellow-800 dark:text-yellow-200 text-sm">
               <li>• <strong>Expense Tracker:</strong> Track income/expenses with charts</li>
               <li>• <strong>Movie Search App:</strong> Search movies using TMDB API</li>
               <li>• <strong>Memory Card Game:</strong> Interactive card matching game</li>
@@ -319,7 +319,7 @@ export default function JavaScriptPage() {
           {/* Advanced Projects */}
           <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
             <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">🔴 Advanced Projects</h3>
-            <ul className="space-y-2 text-red-800 dark:text-red-200 text-sm">
+            <ul className="flex flex-col gap-2 text-red-800 dark:text-red-200 text-sm">
               <li>• <strong>E-commerce Platform:</strong> Full shopping cart with payments</li>
               <li>• <strong>Social Media Dashboard:</strong> Analytics and post management</li>
               <li>• <strong>Video Streaming App:</strong> Upload and stream videos</li>
@@ -336,29 +336,29 @@ export default function JavaScriptPage() {
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
           🚀 Getting Started with JavaScript
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">No Installation Needed</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">JavaScript runs in any web browser - just open the developer console</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Choose Your Environment</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Browser console, CodePen, VS Code, or Node.js for server-side</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Start with HTML</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Create an HTML file and add &lt;script&gt; tags to begin coding</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Learn the Fundamentals</h4>
@@ -372,14 +372,14 @@ export default function JavaScriptPage() {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/languages/python"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Python</span>
         </Link>
         <Link
           href="/languages/java"
-          className="flex items-center space-x-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Java</span>
           <ArrowRight className="w-4 h-4" />

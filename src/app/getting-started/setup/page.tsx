@@ -119,19 +119,19 @@ const languageSetup = [
 
 export default function SetupPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <Link
           href="/getting-started/choosing-language"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Choosing Language</span>
         </Link>
         <Link
           href="/getting-started/first-program"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Your First Program</span>
           <ArrowRight className="w-4 h-4" />
@@ -154,14 +154,14 @@ export default function SetupPage() {
         <h3 className="text-2xl font-semibold mb-4">
           What You'll Need
         </h3>
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4 md:gap-6">
           {setupSteps.map((step, index) => (
             <div key={index}>
               <h4 className="font-semibold pb-3">
                 {index + 1}. {step.title}
               </h4>
               <p className="pb-1">{step.description}</p>
-              <ul className="content-list marker-blue pb-4">
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 content-list marker-blue [&>li]:mb-3 pb-4">
                 {step.details.map((detail, i) => (
                   <li key={i}>{detail}</li>
                 ))}
@@ -172,7 +172,7 @@ export default function SetupPage() {
       </div>
 
       {/* Code Editor Comparison */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Choose Your Code Editor
         </h2>
@@ -191,10 +191,10 @@ export default function SetupPage() {
                 </span>
               </div>
               
-              <div className="space-y-3">
+              <div className="flex flex-col gap-3">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Pros:</h4>
-                  <ul className="content-list marker-blue">
+                  <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 content-list marker-blue [&>li]:mb-3">
                     {editor.pros.map((pro, i) => (
                       <li key={i}>{pro}</li>
                     ))}
@@ -203,7 +203,7 @@ export default function SetupPage() {
                 
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Cons:</h4>
-                  <ul className="content-list marker-blue">
+                  <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 content-list marker-blue [&>li]:mb-3">
                     {editor.cons.map((con, i) => (
                       <li key={i}>{con}</li>
                     ))}
@@ -219,7 +219,7 @@ export default function SetupPage() {
                   href={editor.downloadUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex w-fit text-center items-center space-x-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm font-medium transition-colors"
+                  className="flex w-fit text-center items-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm font-medium transition-colors"
                 >
                   <Download className="w-4 h-4" />
                   <span>Download</span>
@@ -232,25 +232,25 @@ export default function SetupPage() {
       </section>
 
       {/* Language-Specific Setup */}
-      <section className="space-y-6 py-4">
+      <section className="flex flex-col gap-6 md:gap-8 py-4">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Language-Specific Setup
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {languageSetup.map((lang, index) => (
             <div key={index} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-4">
+              <div className="flex items-center gap-3 mb-4">
                 <span className="text-2xl">{lang.icon}</span>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   {lang.language} Setup
                 </h3>
               </div>
               
-              <div className="space-y-3">
+              <div className="flex flex-col gap-3">
                 <h4 className="font-semibold text-gray-900 dark:text-white">Installation Steps:</h4>
-                <ol className="space-y-2">
+                <ol className="flex flex-col gap-2">
                   {lang.steps.map((step, i) => (
-                    <li key={i} className="flex items-start space-x-2">
+                    <li key={i} className="flex items-start gap-2">
                       <span className="w-5 h-5 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full flex items-center justify-center text-xs font-bold mt-0.5">
                         {i + 1}
                       </span>
@@ -274,7 +274,7 @@ export default function SetupPage() {
       </section>
 
       {/* Essential Extensions/Plugins */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Essential VS Code Extensions
         </h2>
@@ -282,15 +282,16 @@ export default function SetupPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">General Extensions:</h4>
-              <ul className="content-list marker-blue">
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 content-list marker-blue [&>li]:mb-3">
                 <li><strong>Prettier</strong> - Code formatter</li>
                 <li><strong>GitLens</strong> - Enhanced Git capabilities</li>
                 <li><strong>Live Server</strong> - Local development server</li>
+                <li><strong>Bracket Pair Colorizer</strong> - Color-coded brackets</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Language-Specific:</h4>
-              <ul className="content-list marker-blue">
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 content-list marker-blue [&>li]:mb-3">
                 <li><strong>Python</strong> - Python language support</li>
                 <li><strong>ES7+ React/Redux/React-Native</strong> - JavaScript/React snippets</li>
                 <li><strong>Extension Pack for Java</strong> - Complete Java development</li>
@@ -308,7 +309,7 @@ export default function SetupPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Windows:</h4>
-            <ul className="content-list marker-blue">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 content-list marker-blue [&>li]:mb-3">
               <li>Use PowerShell or Command Prompt</li>
               <li>Consider Windows Terminal (modern)</li>
               <li>WSL2 for Linux compatibility</li>
@@ -317,7 +318,7 @@ export default function SetupPage() {
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">macOS:</h4>
-            <ul className="content-list marker-blue">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 content-list marker-blue [&>li]:mb-3">
               <li>Built-in Terminal app</li>
               <li>iTerm2 for advanced features</li>
               <li>Zsh is default shell</li>
@@ -326,7 +327,7 @@ export default function SetupPage() {
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Linux:</h4>
-            <ul className="content-list marker-blue">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 content-list marker-blue [&>li]:mb-3">
               <li>Built-in terminal emulator</li>
               <li>Bash or Zsh shell</li>
               <li>Package manager (apt, yum, pacman)</li>
@@ -341,7 +342,7 @@ export default function SetupPage() {
         <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-4">
           Common Setup Issues
         </h3>
-        <div className="space-y-3">
+        <div className="flex flex-col gap-3">
           <div>
             <h4 className="font-semibold text-yellow-900 dark:text-yellow-100">PATH Issues:</h4>
             <p className="text-yellow-800 dark:text-yellow-200">
@@ -367,14 +368,14 @@ export default function SetupPage() {
       <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/getting-started/choosing-language"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Choosing Language</span>
         </Link>
         <Link
           href="/getting-started/first-program"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Your First Program</span>
           <ArrowRight className="w-4 h-4" />

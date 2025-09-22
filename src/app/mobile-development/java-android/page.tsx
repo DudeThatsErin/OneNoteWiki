@@ -30,19 +30,19 @@ const javaAndroidFeatures = [
 
 export default function JavaAndroidPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/mobile-development/flutter"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Flutter</span>
         </Link>
         <Link
           href="/mobile-development/ios"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Native iOS</span>
           <ArrowRight className="w-4 h-4" />
@@ -50,8 +50,8 @@ export default function JavaAndroidPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <div className="text-4xl">☕</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Java Android Development</h1>
@@ -66,14 +66,14 @@ export default function JavaAndroidPage() {
       </div>
 
       {/* Key Features */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Why Choose Java for Android?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {javaAndroidFeatures.map((feature, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
               </div>
@@ -85,12 +85,12 @@ export default function JavaAndroidPage() {
       </section>
 
       {/* Development Setup */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Development Setup</h2>
         
         <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Required Tools</h3>
-          <div className="space-y-4">
+          <div className="flex flex-col gap-4 md:gap-6">
             <div>
               <h4 className="font-medium text-gray-900 dark:text-white mb-2">1. Java Development Kit (JDK)</h4>
               <pre className="text-sm text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-900 p-3 rounded">
@@ -105,7 +105,7 @@ javac -version`}
             
             <div>
               <h4 className="font-medium text-gray-900 dark:text-white mb-2">2. Android Studio</h4>
-              <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+              <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                 <li>• Download from <a href="https://developer.android.com/studio" className="text-blue-600 hover:underline">developer.android.com/studio</a></li>
                 <li>• Includes Android SDK, emulator, and build tools</li>
                 <li>• Built-in support for Java and Kotlin</li>
@@ -117,7 +117,7 @@ javac -version`}
       </section>
 
       {/* Basic Android App Structure */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Basic Android App Structure</h2>
         
         <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
@@ -194,13 +194,13 @@ public class MainActivity extends AppCompatActivity {
       </section>
 
       {/* Key Concepts */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Key Android Concepts</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Activities & Fragments</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• <strong>Activity:</strong> Single screen with user interface</li>
               <li>• <strong>Fragment:</strong> Reusable UI component within activities</li>
               <li>• <strong>Lifecycle:</strong> onCreate, onStart, onResume, onPause, onStop, onDestroy</li>
@@ -210,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">UI Components</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• <strong>Views:</strong> TextView, Button, ImageView, EditText</li>
               <li>• <strong>Layouts:</strong> LinearLayout, RelativeLayout, ConstraintLayout</li>
               <li>• <strong>RecyclerView:</strong> Efficient list and grid displays</li>
@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Data Storage</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• <strong>SharedPreferences:</strong> Key-value storage</li>
               <li>• <strong>SQLite:</strong> Local database</li>
               <li>• <strong>Room:</strong> Database abstraction layer</li>
@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Networking & APIs</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• <strong>HTTP Clients:</strong> OkHttp, Volley</li>
               <li>• <strong>JSON Parsing:</strong> Gson, Jackson</li>
               <li>• <strong>REST APIs:</strong> Retrofit library</li>
@@ -241,13 +241,13 @@ public class MainActivity extends AppCompatActivity {
       </section>
 
       {/* Learning Resources */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Learning Resources</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Official Resources</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-2">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://developer.android.com/" className="hover:underline">Android Developers</a></li>
               <li>• <a href="https://developer.android.com/courses" className="hover:underline">Android Courses</a></li>
               <li>• <a href="https://developer.android.com/guide" className="hover:underline">Developer Guides</a></li>
@@ -257,7 +257,7 @@ public class MainActivity extends AppCompatActivity {
           
           <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
             <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">Popular Libraries</h3>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-2">
+            <ul className="text-green-800 dark:text-green-200 text-sm flex flex-col gap-2">
               <li>• <strong>Retrofit:</strong> HTTP client</li>
               <li>• <strong>Glide:</strong> Image loading</li>
               <li>• <strong>Room:</strong> Database ORM</li>
@@ -267,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
           
           <div className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
             <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-3">Architecture</h3>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-2">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm flex flex-col gap-2">
               <li>• <strong>MVVM:</strong> Model-View-ViewModel</li>
               <li>• <strong>MVP:</strong> Model-View-Presenter</li>
               <li>• <strong>Clean Architecture:</strong> Layered approach</li>
@@ -278,13 +278,13 @@ public class MainActivity extends AppCompatActivity {
       </section>
 
       {/* Project Ideas */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Project Ideas</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Beginner Projects</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• Simple Calculator App</li>
               <li>• To-Do List with SQLite</li>
               <li>• Weather App with API</li>
@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Advanced Projects</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• E-commerce Shopping App</li>
               <li>• Social Media Platform</li>
               <li>• Fitness Tracking App</li>
@@ -310,14 +310,14 @@ public class MainActivity extends AppCompatActivity {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/mobile-development/flutter"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Flutter</span>
         </Link>
         <Link
           href="/mobile-development/ios"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Native iOS</span>
           <ArrowRight className="w-4 h-4" />

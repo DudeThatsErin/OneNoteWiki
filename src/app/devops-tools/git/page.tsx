@@ -68,8 +68,8 @@ const gitPlatforms = [
   {
     name: 'Codeberg',
     description: 'Non-profit Git hosting focused on privacy',
-    features: ['Privacy-focused', 'No tracking', 'Open source', 'Community-driven'],
-    bestFor: 'Privacy-conscious developers, open source',
+    features: ['Privflex flex-col gap-3focused', 'No tracking', 'Open source', 'Community-driven'],
+    bestFor: 'Privflex flex-col gap-3conscious developers, open source',
     url: 'https://codeberg.org',
     pricing: 'Completely free'
   }
@@ -179,19 +179,19 @@ const gitResources = [
 
 export default function GitPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/devops-tools"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to DevOps & Tools</span>
         </Link>
         <Link
           href="/devops-tools/editors"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: IDEs & Editors</span>
           <ArrowRight className="w-4 h-4" />
@@ -199,8 +199,8 @@ export default function GitPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <GitBranch className="w-8 h-8 text-orange-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             Version Control (Git)
@@ -217,7 +217,7 @@ export default function GitPage() {
         <h3 className="text-lg font-semibold text-orange-900 dark:text-orange-100 mb-4">
           🌳 What is Git?
         </h3>
-        <div className="space-y-4 text-orange-800 dark:text-orange-200">
+        <div className="flex flex-col gap-4 md:gap-6 text-orange-800 dark:text-orange-200">
           <p>
             <strong>Git</strong> is a distributed version control system that tracks changes in your 
             code over time. It allows multiple developers to work on the same project simultaneously 
@@ -226,7 +226,7 @@ export default function GitPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2">Why Use Git?</h4>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm [&>li]:mb-1">
                 <li>• Track every change to your code</li>
                 <li>• Collaborate safely with team members</li>
                 <li>• Revert to previous versions easily</li>
@@ -236,7 +236,7 @@ export default function GitPage() {
             </div>
             <div>
               <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2">Key Benefits:</h4>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm [&>li]:mb-1">
                 <li>• Distributed (works offline)</li>
                 <li>• Fast and lightweight</li>
                 <li>• Industry standard</li>
@@ -249,14 +249,14 @@ export default function GitPage() {
       </div>
 
       {/* Core Concepts */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Core Git Concepts
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {gitConcepts.map((concept, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-orange-600">{concept.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{concept.title}</h3>
               </div>
@@ -267,7 +267,7 @@ export default function GitPage() {
       </section>
 
       {/* Essential Git Commands */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Essential Git Commands
         </h2>
@@ -308,7 +308,7 @@ git log --graph            # Visual branch representation`}
       </section>
 
       {/* Branching and Merging */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Branching and Merging
         </h2>
@@ -348,7 +348,7 @@ git pull origin main`}
       </section>
 
       {/* Git Workflow */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Common Git Workflow
         </h2>
@@ -357,8 +357,8 @@ git pull origin main`}
           <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
             📋 Feature Branch Workflow
           </h3>
-          <div className="space-y-4">
-            <div className="flex items-start space-x-3">
+          <div className="flex flex-col gap-4 md:gap-6">
+            <div className="flex items-start gap-3">
               <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
               <div>
                 <h4 className="font-semibold text-blue-900 dark:text-blue-100">Create Feature Branch</h4>
@@ -367,7 +367,7 @@ git pull origin main`}
                 </p>
               </div>
             </div>
-            <div className="flex items-start space-x-3">
+            <div className="flex items-start gap-3">
               <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
               <div>
                 <h4 className="font-semibold text-blue-900 dark:text-blue-100">Make Changes and Commit</h4>
@@ -376,7 +376,7 @@ git pull origin main`}
                 </p>
               </div>
             </div>
-            <div className="flex items-start space-x-3">
+            <div className="flex items-start gap-3">
               <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
               <div>
                 <h4 className="font-semibold text-blue-900 dark:text-blue-100">Push to Remote</h4>
@@ -385,14 +385,14 @@ git pull origin main`}
                 </p>
               </div>
             </div>
-            <div className="flex items-start space-x-3">
+            <div className="flex items-start gap-3">
               <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
               <div>
                 <h4 className="font-semibold text-blue-900 dark:text-blue-100">Create Pull Request</h4>
                 <p className="text-blue-800 dark:text-blue-200 text-sm">Open PR on GitHub/GitLab for code review</p>
               </div>
             </div>
-            <div className="flex items-start space-x-3">
+            <div className="flex items-start gap-3">
               <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">5</div>
               <div>
                 <h4 className="font-semibold text-blue-900 dark:text-blue-100">Merge and Clean Up</h4>
@@ -406,7 +406,7 @@ git pull origin main`}
       </section>
 
       {/* How to Use Git */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           How to Use Git: Step-by-Step Guide
         </h2>
@@ -415,9 +415,9 @@ git pull origin main`}
           <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
             🚀 Basic Git Workflow
           </h3>
-          <div className="space-y-4">
+          <div className="flex flex-col gap-4 md:gap-6">
             {gitWorkflow.map((step, index) => (
-              <div key={index} className="flex items-start space-x-3">
+              <div key={index} className="flex items-start gap-3">
                 <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                   {index + 1}
                 </div>
@@ -438,7 +438,7 @@ git pull origin main`}
       </section>
 
       {/* Git vs GitHub */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Git vs GitHub: Understanding the Difference
         </h2>
@@ -475,7 +475,7 @@ git pull origin main`}
       </section>
 
       {/* Git Platforms */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Git Hosting Platforms Comparison
         </h2>
@@ -520,11 +520,11 @@ git pull origin main`}
       </section>
 
       {/* Git Learning Resources */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Git Learning Resources
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {gitResources.map((category, index) => (
             <div key={index} className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
               <h3 className="text-lg font-bold text-purple-900 dark:text-purple-100 mb-4">
@@ -559,7 +559,7 @@ git pull origin main`}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Commit Messages:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• Use present tense ("Add feature" not "Added feature")</li>
               <li>• Keep first line under 50 characters</li>
               <li>• Be descriptive and specific</li>
@@ -568,7 +568,7 @@ git pull origin main`}
           </div>
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Branching:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• Use descriptive branch names</li>
               <li>• Keep branches focused on single features</li>
               <li>• Delete merged branches</li>
@@ -577,7 +577,7 @@ git pull origin main`}
           </div>
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Collaboration:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• Always pull before pushing</li>
               <li>• Use pull requests for code review</li>
               <li>• Don't commit directly to main branch</li>
@@ -586,7 +586,7 @@ git pull origin main`}
           </div>
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Security:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• Never commit passwords or API keys</li>
               <li>• Use .gitignore for sensitive files</li>
               <li>• Enable two-factor authentication</li>
@@ -604,7 +604,7 @@ git pull origin main`}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Interactive Learning:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• Learn Git Branching (interactive tutorial)</li>
               <li>• GitHub Skills (hands-on courses)</li>
               <li>• Git Immersion (step-by-step walkthrough)</li>
@@ -613,7 +613,7 @@ git pull origin main`}
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Documentation & Books:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• Pro Git Book (free online)</li>
               <li>• Git Official Documentation</li>
               <li>• GitHub Docs</li>
@@ -627,14 +627,14 @@ git pull origin main`}
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/devops-tools"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to DevOps & Tools</span>
         </Link>
         <Link
           href="/devops-tools/editors"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: IDEs & Editors</span>
           <ArrowRight className="w-4 h-4" />

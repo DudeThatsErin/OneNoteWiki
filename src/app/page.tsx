@@ -62,17 +62,17 @@ const quickStartCards = [
 
 export default function HomePage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Hero Section */}
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+      <div className="text-center flex flex-col gap-4 md:gap-6">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
           Welcome to CodingHelp Wiki
         </h1>
-        <p className="pt-2 pb-4 text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        <p className="pt-2 pb-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
           Your comprehensive guide to learning programming and software development. 
           Created by the CodingHelp community to help aspiring developers on their coding journey.
         </p>
-        <div className="flex flex-col gap-4 justify-center items-center pb-4">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center pb-4">
           <Link
             href="/getting-started"
             className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
@@ -99,27 +99,27 @@ export default function HomePage() {
       </div>
 
       {/* Quick Start Cards */}
-      <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white text-center">
+      <div className="flex flex-col gap-6 md:gap-8">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white text-center">
           Explore Topics
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
           {quickStartCards.map((card) => (
             <Link
               key={card.href}
               href={card.href}
               className={`p-6 rounded-lg border-2 transition-all hover:shadow-lg hover:scale-105 ${card.color}`}
             >
-              <div className="flex flex-col gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-white dark:bg-gray-800 shadow-sm flex-shrink-0">
+              <div className="flex flex-col gap-3 md:gap-4">
+                <div className="flex items-center gap-3 xl:flex-col xl:items-start xl:gap-2">
+                  <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-lg bg-white dark:bg-gray-800 shadow-sm flex-shrink-0">
                     {card.icon}
                   </div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                  <h3 className="text-sm md:text-base font-semibold text-gray-900 dark:text-white">
                     {card.title}
                   </h3>
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
+                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
                   {card.description}
                 </p>
               </div>
@@ -129,21 +129,20 @@ export default function HomePage() {
       </div>
 
       {/* Community Section */}
-      <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 text-center space-y-4">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+      <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 md:p-8 text-center flex flex-col gap-4 md:gap-6">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
           Join Our Community
         </h2>
-        <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          CodingHelp Wiki is maintained by a vibrant community of developers who are passionate about 
-          helping others learn to code. Join us on Discord for real-time help or visit our subreddit 
-          for discussions and Q&A.
+        <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Connect with fellow developers, get help with your coding questions, and share your knowledge 
+          with others in our supportive community.
         </p>
-        <div className="flex flex-col lg:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center pt-2 md:pt-4">
           <a
             href="https://discord.gg/geQEUBm"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors"
+            className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors"
           >
             <MessageCircle className="w-5 h-5" />
             <span>Join Discord Server</span>
@@ -152,7 +151,7 @@ export default function HomePage() {
             href="https://reddit.com/r/CodingHelp"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white rounded-lg font-medium transition-colors"
+            className="flex items-center gap-2 px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white rounded-lg font-medium transition-colors"
           >
             <Bot className="w-5 h-5" />
             <span>Visit r/CodingHelp</span>
@@ -161,11 +160,11 @@ export default function HomePage() {
       </div>
 
       {/* Recent Updates or Featured Content */}
-      <div className="space-y-4">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
           Featured Content
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
               🚀 Getting Started Guide

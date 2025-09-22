@@ -174,19 +174,19 @@ const difficultyProgression = [
 
 export default function PracticePage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/resources/books"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Books & Documentation</span>
         </Link>
         <Link
           href="/resources/communities"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Communities</span>
           <ArrowRight className="w-4 h-4" />
@@ -194,8 +194,8 @@ export default function PracticePage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <Code className="w-8 h-8 text-purple-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             Practice Problems
@@ -215,7 +215,7 @@ export default function PracticePage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Skill Development:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• Reinforce programming concepts</li>
               <li>• Improve problem-solving abilities</li>
               <li>• Learn new algorithms and patterns</li>
@@ -224,7 +224,7 @@ export default function PracticePage() {
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Career Benefits:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• Prepare for technical interviews</li>
               <li>• Demonstrate skills to employers</li>
               <li>• Build a strong portfolio</li>
@@ -233,7 +233,7 @@ export default function PracticePage() {
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Personal Growth:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• Build confidence in coding</li>
               <li>• Develop persistence and grit</li>
               <li>• Learn from mistakes</li>
@@ -244,15 +244,15 @@ export default function PracticePage() {
       </div>
 
       {/* Practice Platforms */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Top Practice Platforms
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {practicePlatforms.map((platform, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center gap-3">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">{platform.name}</h3>
                   <div className="flex items-center space-x-1">
                     {[...Array(5)].map((_, i) => (
@@ -260,7 +260,7 @@ export default function PracticePage() {
                     ))}
                   </div>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center gap-2">
                   <span className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full font-medium">
                     {platform.type}
                   </span>
@@ -275,7 +275,7 @@ export default function PracticePage() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">✅ Strengths:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {platform.strengths.map((strength, i) => (
                       <li key={i}>• {strength}</li>
                     ))}
@@ -283,7 +283,7 @@ export default function PracticePage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">❌ Weaknesses:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {platform.weaknesses.map((weakness, i) => (
                       <li key={i}>• {weakness}</li>
                     ))}
@@ -291,7 +291,7 @@ export default function PracticePage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">🎯 Best For:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {platform.bestFor.map((use, i) => (
                       <li key={i}>• {use}</li>
                     ))}
@@ -299,7 +299,7 @@ export default function PracticePage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">📊 Details:</h4>
-                  <div className="text-xs text-gray-600 dark:text-gray-300 space-y-1">
+                  <div className="text-xs text-gray-600 dark:text-gray-300 [&>li]:mb-1">
                     <p><strong>Problems:</strong> {platform.problemCount}</p>
                     <p><strong>Languages:</strong> {platform.languages.slice(0, 3).join(', ')}...</p>
                   </div>
@@ -322,7 +322,7 @@ export default function PracticePage() {
       </section>
 
       {/* Types of Practice */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Types of Programming Practice
         </h2>
@@ -332,7 +332,7 @@ export default function PracticePage() {
               <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">{type.type}</h3>
               <p className="text-blue-800 dark:text-blue-200 text-sm mb-3">{type.description}</p>
               
-              <div className="space-y-3">
+              <div className="flex flex-col gap-3">
                 <div>
                   <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-1 text-sm">Key Skills:</h4>
                   <div className="flex flex-wrap gap-1">
@@ -364,23 +364,23 @@ export default function PracticePage() {
       </section>
 
       {/* Practice Strategies */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Effective Practice Strategies
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {practiceStrategies.map((strategy, index) => (
             <div key={index} className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-              <div className="flex items-center space-x-2 mb-3">
+              <div className="flex items-center gap-2 mb-3">
                 <Target className="w-5 h-5 text-green-600" />
                 <h3 className="font-semibold text-green-900 dark:text-green-100">{strategy.strategy}</h3>
               </div>
               <p className="text-green-800 dark:text-green-200 text-sm mb-3">{strategy.description}</p>
               
-              <div className="space-y-2">
+              <div className="flex flex-col gap-2">
                 <div>
                   <h4 className="font-semibold text-green-900 dark:text-green-100 mb-1 text-sm">Benefits:</h4>
-                  <ul className="text-green-800 dark:text-green-200 text-xs space-y-1">
+                  <ul className="text-green-800 dark:text-green-200 text-xs [&>li]:mb-1">
                     {strategy.benefits.map((benefit, i) => (
                       <li key={i}>• {benefit}</li>
                     ))}
@@ -402,14 +402,14 @@ export default function PracticePage() {
       </section>
 
       {/* Difficulty Progression */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Practice Progression Guide
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {difficultyProgression.map((level, index) => (
             <div key={index} className="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg border border-orange-200 dark:border-orange-800">
-              <div className="flex items-center space-x-3 mb-4">
+              <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                   {index + 1}
                 </div>
@@ -423,7 +423,7 @@ export default function PracticePage() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div>
                   <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2 text-sm">Key Topics:</h4>
-                  <ul className="text-orange-800 dark:text-orange-200 text-xs space-y-1">
+                  <ul className="text-orange-800 dark:text-orange-200 text-xs [&>li]:mb-1">
                     {level.topics.map((topic, i) => (
                       <li key={i}>• {topic}</li>
                     ))}
@@ -431,7 +431,7 @@ export default function PracticePage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2 text-sm">Platforms:</h4>
-                  <ul className="text-orange-800 dark:text-orange-200 text-xs space-y-1">
+                  <ul className="text-orange-800 dark:text-orange-200 text-xs [&>li]:mb-1">
                     {level.platforms.map((platform, i) => (
                       <li key={i}>• {platform}</li>
                     ))}
@@ -439,7 +439,7 @@ export default function PracticePage() {
                 </div>
                 <div className="md:col-span-2">
                   <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2 text-sm">Goals:</h4>
-                  <ul className="text-orange-800 dark:text-orange-200 text-xs space-y-1">
+                  <ul className="text-orange-800 dark:text-orange-200 text-xs [&>li]:mb-1">
                     {level.goals.map((goal, i) => (
                       <li key={i}>• {goal}</li>
                     ))}
@@ -456,29 +456,29 @@ export default function PracticePage() {
         <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-4">
           🚀 Getting Started with Practice
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-yellow-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-yellow-900 dark:text-yellow-100">Choose Your Platform</h4>
               <p className="text-yellow-800 dark:text-yellow-200 text-sm">Start with HackerRank or Codewars for beginners, LeetCode for interview prep</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-yellow-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-yellow-900 dark:text-yellow-100">Set a Schedule</h4>
               <p className="text-yellow-800 dark:text-yellow-200 text-sm">Commit to 30-60 minutes daily rather than long weekend sessions</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-yellow-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-yellow-900 dark:text-yellow-100">Start Easy</h4>
               <p className="text-yellow-800 dark:text-yellow-200 text-sm">Build confidence with easier problems before tackling harder ones</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-yellow-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-yellow-900 dark:text-yellow-100">Learn from Solutions</h4>
@@ -492,14 +492,14 @@ export default function PracticePage() {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/resources/books"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Books & Documentation</span>
         </Link>
         <Link
           href="/resources/communities"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Communities</span>
           <ArrowRight className="w-4 h-4" />

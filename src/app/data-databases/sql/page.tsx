@@ -53,19 +53,19 @@ const popularDatabases = [
 
 export default function SQLBasicsPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/data-databases"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Data & Databases</span>
         </Link>
         <Link
           href="/data-databases/nosql"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: NoSQL Databases</span>
           <ArrowRight className="w-4 h-4" />
@@ -73,8 +73,8 @@ export default function SQLBasicsPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <Table className="w-8 h-8 text-blue-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             SQL Basics
@@ -91,7 +91,7 @@ export default function SQLBasicsPage() {
         <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
           🗃️ What is SQL?
         </h3>
-        <div className="space-y-4 text-blue-800 dark:text-blue-200">
+        <div className="flex flex-col gap-4 md:gap-6 text-blue-800 dark:text-blue-200">
           <p>
             <strong>SQL (Structured Query Language)</strong> is a standardized language for managing 
             and manipulating relational databases. It allows you to create, read, update, and delete 
@@ -100,7 +100,7 @@ export default function SQLBasicsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Key Features:</h4>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm [&>li]:mb-1">
                 <li>• Declarative language (what, not how)</li>
                 <li>• Standardized across database systems</li>
                 <li>• Powerful for complex data relationships</li>
@@ -110,7 +110,7 @@ export default function SQLBasicsPage() {
             </div>
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Common Use Cases:</h4>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm [&>li]:mb-1">
                 <li>• Web application backends</li>
                 <li>• Business data management</li>
                 <li>• Reporting and analytics</li>
@@ -123,14 +123,14 @@ export default function SQLBasicsPage() {
       </div>
 
       {/* Core Concepts */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Core SQL Concepts
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {sqlConcepts.map((concept, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{concept.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{concept.title}</h3>
               </div>
@@ -141,7 +141,7 @@ export default function SQLBasicsPage() {
       </section>
 
       {/* SQL Basics Examples */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Essential SQL Commands
         </h2>
@@ -186,7 +186,7 @@ DELETE FROM users WHERE age < 25;`}
       </section>
 
       {/* Advanced SQL */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Advanced SQL Concepts
         </h2>
@@ -236,7 +236,7 @@ WHERE id IN (
       </section>
 
       {/* Popular SQL Databases */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Popular SQL Databases
         </h2>
@@ -273,29 +273,29 @@ WHERE id IN (
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
           🎯 SQL Learning Path
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Basic Queries (1-2 weeks)</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">SELECT, INSERT, UPDATE, DELETE, WHERE clauses</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Database Design (2-3 weeks)</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Tables, relationships, normalization, constraints</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Advanced Queries (3-4 weeks)</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">JOINs, subqueries, aggregate functions, window functions</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Performance & Administration (Ongoing)</h4>
@@ -313,7 +313,7 @@ WHERE id IN (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Free Resources:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• W3Schools SQL Tutorial</li>
               <li>• SQLBolt (Interactive lessons)</li>
               <li>• PostgreSQL Tutorial</li>
@@ -323,7 +323,7 @@ WHERE id IN (
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Practice Platforms:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• HackerRank SQL challenges</li>
               <li>• LeetCode Database problems</li>
               <li>• SQLZoo interactive tutorials</li>
@@ -338,14 +338,14 @@ WHERE id IN (
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/data-databases"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Data & Databases</span>
         </Link>
         <Link
           href="/data-databases/nosql"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: NoSQL Databases</span>
           <ArrowRight className="w-4 h-4" />

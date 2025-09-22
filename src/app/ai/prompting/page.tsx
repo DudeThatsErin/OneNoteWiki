@@ -209,19 +209,19 @@ const commonMistakes = [
 
 export default function PromptEngineeringPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/ai/dos-donts"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: AI Dos and Don'ts</span>
         </Link>
         <Link
           href="/ai/build-ai"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Building Your Own AI</span>
           <ArrowRight className="w-4 h-4" />
@@ -229,8 +229,8 @@ export default function PromptEngineeringPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <Lightbulb className="w-8 h-8 text-yellow-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             Prompt Engineering
@@ -250,7 +250,7 @@ export default function PromptEngineeringPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2">Quality Results:</h4>
-            <ul className="text-yellow-800 dark:text-yellow-200 text-sm space-y-1">
+            <ul className="text-yellow-800 dark:text-yellow-200 text-sm [&>li]:mb-1">
               <li>• Get more accurate and relevant code</li>
               <li>• Reduce back-and-forth iterations</li>
               <li>• Receive better explanations and documentation</li>
@@ -259,7 +259,7 @@ export default function PromptEngineeringPage() {
           </div>
           <div>
             <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2">Efficiency Gains:</h4>
-            <ul className="text-yellow-800 dark:text-yellow-200 text-sm space-y-1">
+            <ul className="text-yellow-800 dark:text-yellow-200 text-sm [&>li]:mb-1">
               <li>• Save time on repetitive coding tasks</li>
               <li>• Get faster debugging and problem-solving</li>
               <li>• Learn new concepts more effectively</li>
@@ -270,11 +270,11 @@ export default function PromptEngineeringPage() {
       </div>
 
       {/* Core Prompting Techniques */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Core Prompting Techniques
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {promptingTechniques.map((technique, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
@@ -295,7 +295,7 @@ export default function PromptEngineeringPage() {
               
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">💡 Tips:</h4>
-                <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                   {technique.tips.map((tip, i) => (
                     <li key={i}>• {tip}</li>
                   ))}
@@ -307,21 +307,21 @@ export default function PromptEngineeringPage() {
       </section>
 
       {/* Prompt Templates */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Proven Prompt Templates
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {promptTemplates.map((template, index) => (
             <div key={index} className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-              <div className="flex items-center space-x-2 mb-4">
+              <div className="flex items-center gap-2 mb-4">
                 <MessageSquare className="w-5 h-5 text-blue-600" />
                 <h3 className="text-lg font-bold text-blue-900 dark:text-blue-100">
                   {template.category}
                 </h3>
               </div>
               
-              <div className="space-y-4">
+              <div className="flex flex-col gap-4 md:gap-6">
                 <div>
                   <h4 className="font-semibold text-blue-900 dark:text-blue-100 text-sm mb-2">Template:</h4>
                   <pre className="text-blue-800 dark:text-blue-200 text-xs bg-white dark:bg-gray-900 p-3 rounded overflow-x-auto">
@@ -342,14 +342,14 @@ export default function PromptEngineeringPage() {
       </section>
 
       {/* Advanced Techniques */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Advanced Prompting Techniques
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {advancedTechniques.map((technique, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-2 mb-3">
+              <div className="flex items-center gap-2 mb-3">
                 <Target className="w-5 h-5 text-purple-600" />
                 <h3 className="font-semibold text-gray-900 dark:text-white">{technique.name}</h3>
               </div>
@@ -370,14 +370,14 @@ export default function PromptEngineeringPage() {
       </section>
 
       {/* Common Mistakes */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Common Prompting Mistakes
         </h2>
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4 md:gap-6">
           {commonMistakes.map((mistake, index) => (
             <div key={index} className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
-              <div className="flex items-start space-x-3">
+              <div className="flex items-start gap-3">
                 <Zap className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
                 <div className="flex-1">
                   <h4 className="font-semibold text-red-900 dark:text-red-100">{mistake.mistake}</h4>
@@ -399,13 +399,13 @@ export default function PromptEngineeringPage() {
         <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
           🎯 Practice Exercise: Improve These Prompts
         </h3>
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4 md:gap-6">
           <div className="bg-white dark:bg-gray-800 p-4 rounded border border-purple-200 dark:border-purple-700">
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Poor Prompt:</h4>
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">"Write a sorting function"</p>
             
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Your Improved Version Should Include:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• Programming language specification</li>
               <li>• Input/output requirements</li>
               <li>• Performance constraints</li>
@@ -431,7 +431,7 @@ export default function PromptEngineeringPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ChatGPT/GPT-4:</h4>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• Use system messages for consistent behavior</li>
               <li>• Break complex tasks into steps</li>
               <li>• Ask for code in specific formats</li>
@@ -440,7 +440,7 @@ export default function PromptEngineeringPage() {
           </div>
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">GitHub Copilot:</h4>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• Write descriptive function names</li>
               <li>• Use clear comments above code blocks</li>
               <li>• Provide context in nearby code</li>
@@ -449,7 +449,7 @@ export default function PromptEngineeringPage() {
           </div>
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Claude/Other AIs:</h4>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• Test different prompt structures</li>
               <li>• Adjust formality based on the tool</li>
               <li>• Use the tool's strengths (analysis, creativity)</li>
@@ -463,14 +463,14 @@ export default function PromptEngineeringPage() {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/ai/dos-donts"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: AI Dos and Don'ts</span>
         </Link>
         <Link
           href="/ai/build-ai"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Building Your Own AI</span>
           <ArrowRight className="w-4 h-4" />

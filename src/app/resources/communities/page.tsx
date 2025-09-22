@@ -183,19 +183,19 @@ const communityBenefits = [
 
 export default function CommunitiesPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/resources/practice"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Practice Problems</span>
         </Link>
         <Link
           href="/resources"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Back to Resources</span>
           <ArrowLeft className="w-4 h-4 rotate-180" />
@@ -203,8 +203,8 @@ export default function CommunitiesPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <Users className="w-8 h-8 text-orange-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             Programming Communities
@@ -224,7 +224,7 @@ export default function CommunitiesPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2">Learning Support:</h4>
-            <ul className="text-orange-800 dark:text-orange-200 text-sm space-y-1">
+            <ul className="text-orange-800 dark:text-orange-200 text-sm [&>li]:mb-1">
               <li>• Get help when you're stuck</li>
               <li>• Learn from others' experiences</li>
               <li>• Discover new tools and techniques</li>
@@ -233,7 +233,7 @@ export default function CommunitiesPage() {
           </div>
           <div>
             <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2">Career Growth:</h4>
-            <ul className="text-orange-800 dark:text-orange-200 text-sm space-y-1">
+            <ul className="text-orange-800 dark:text-orange-200 text-sm [&>li]:mb-1">
               <li>• Network with professionals</li>
               <li>• Find job opportunities</li>
               <li>• Get career advice</li>
@@ -242,7 +242,7 @@ export default function CommunitiesPage() {
           </div>
           <div>
             <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2">Motivation:</h4>
-            <ul className="text-orange-800 dark:text-orange-200 text-sm space-y-1">
+            <ul className="text-orange-800 dark:text-orange-200 text-sm [&>li]:mb-1">
               <li>• Stay motivated during challenges</li>
               <li>• Celebrate achievements</li>
               <li>• Find accountability partners</li>
@@ -253,15 +253,15 @@ export default function CommunitiesPage() {
       </div>
 
       {/* Popular Communities */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Popular Programming Communities
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {communities.map((community, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center gap-3">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">{community.name}</h3>
                   <span className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full font-medium">
                     {community.type}
@@ -275,7 +275,7 @@ export default function CommunitiesPage() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">✅ Strengths:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {community.strengths.map((strength, i) => (
                       <li key={i}>• {strength}</li>
                     ))}
@@ -283,7 +283,7 @@ export default function CommunitiesPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">❌ Weaknesses:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {community.weaknesses.map((weakness, i) => (
                       <li key={i}>• {weakness}</li>
                     ))}
@@ -291,7 +291,7 @@ export default function CommunitiesPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">🎯 Best For:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {community.bestFor.map((use, i) => (
                       <li key={i}>• {use}</li>
                     ))}
@@ -299,7 +299,7 @@ export default function CommunitiesPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">💡 Pro Tips:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-xs space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
                     {community.tips.map((tip, i) => (
                       <li key={i}>• {tip}</li>
                     ))}
@@ -323,7 +323,7 @@ export default function CommunitiesPage() {
                   href={community.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded text-sm font-medium transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded text-sm font-medium transition-colors"
                 >
                   <span>Visit Community</span>
                   <ExternalLink className="w-4 h-4" />
@@ -335,7 +335,7 @@ export default function CommunitiesPage() {
       </section>
 
       {/* Community Types */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Types of Programming Communities
         </h2>
@@ -345,7 +345,7 @@ export default function CommunitiesPage() {
               <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">{type.type}</h3>
               <p className="text-blue-800 dark:text-blue-200 text-sm mb-3">{type.description}</p>
               
-              <div className="space-y-3">
+              <div className="flex flex-col gap-3">
                 <div>
                   <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-1 text-sm">Examples:</h4>
                   <div className="flex flex-wrap gap-1">
@@ -360,7 +360,7 @@ export default function CommunitiesPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div>
                     <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-1 text-xs">Pros:</h4>
-                    <ul className="text-blue-800 dark:text-blue-200 text-xs space-y-1">
+                    <ul className="text-blue-800 dark:text-blue-200 text-xs [&>li]:mb-1">
                       {type.pros.map((pro, i) => (
                         <li key={i}>• {pro}</li>
                       ))}
@@ -368,7 +368,7 @@ export default function CommunitiesPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-1 text-xs">Cons:</h4>
-                    <ul className="text-blue-800 dark:text-blue-200 text-xs space-y-1">
+                    <ul className="text-blue-800 dark:text-blue-200 text-xs [&>li]:mb-1">
                       {type.cons.map((con, i) => (
                         <li key={i}>• {con}</li>
                       ))}
@@ -386,14 +386,14 @@ export default function CommunitiesPage() {
       </section>
 
       {/* Community Benefits */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Benefits of Community Participation
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {communityBenefits.map((benefit, index) => (
             <div key={index} className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-              <div className="flex items-center space-x-2 mb-3">
+              <div className="flex items-center gap-2 mb-3">
                 <Heart className="w-5 h-5 text-green-600" />
                 <h3 className="font-semibold text-green-900 dark:text-green-100">{benefit.benefit}</h3>
               </div>
@@ -414,20 +414,20 @@ export default function CommunitiesPage() {
       </section>
 
       {/* Participation Tips */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           How to Participate Effectively
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {participationTips.map((category, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-2 mb-3">
+              <div className="flex items-center gap-2 mb-3">
                 <MessageSquare className="w-5 h-5 text-purple-600" />
                 <h3 className="font-semibold text-gray-900 dark:text-white">{category.category}</h3>
               </div>
-              <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+              <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
                 {category.tips.map((tip, i) => (
-                  <li key={i} className="flex items-start space-x-2">
+                  <li key={i} className="flex items-start gap-2">
                     <span className="text-purple-600 mt-1">•</span>
                     <span>{tip}</span>
                   </li>
@@ -443,29 +443,29 @@ export default function CommunitiesPage() {
         <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
           🚀 Getting Started with Communities
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100">Start as a Lurker</h4>
               <p className="text-purple-800 dark:text-purple-200 text-sm">Observe community norms and culture before actively participating</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100">Ask Your First Question</h4>
               <p className="text-purple-800 dark:text-purple-200 text-sm">Start with a well-researched, specific question in a beginner-friendly community</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100">Help Others</h4>
               <p className="text-purple-800 dark:text-purple-200 text-sm">Answer questions you know, even simple ones - teaching reinforces your learning</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100">Build Relationships</h4>
@@ -508,14 +508,14 @@ export default function CommunitiesPage() {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/resources/practice"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Practice Problems</span>
         </Link>
         <Link
           href="/resources"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Back to Resources</span>
         </Link>

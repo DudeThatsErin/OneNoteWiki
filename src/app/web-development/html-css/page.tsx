@@ -19,19 +19,19 @@ const cssBasics = [
 
 export default function HtmlCssPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/web-development"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Web Development</span>
         </Link>
         <Link
           href="/web-development/frontend"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Frontend Frameworks</span>
           <ArrowRight className="w-4 h-4" />
@@ -39,8 +39,8 @@ export default function HtmlCssPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <Code className="w-8 h-8 text-green-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             HTML & CSS
@@ -59,11 +59,11 @@ export default function HtmlCssPage() {
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <div className="flex items-center space-x-2 mb-3">
+            <div className="flex items-center gap-2 mb-3">
               <Layout className="w-5 h-5 text-green-600" />
               <h4 className="font-semibold text-green-900 dark:text-green-100">HTML Fundamentals</h4>
             </div>
-            <ul className="space-y-2">
+            <ul className="flex flex-col gap-2">
               {htmlBasics.map((item, index) => (
                 <li key={index} className="text-green-800 dark:text-green-200 text-sm">
                   <strong>{item.title}:</strong> {item.description}
@@ -72,11 +72,11 @@ export default function HtmlCssPage() {
             </ul>
           </div>
           <div>
-            <div className="flex items-center space-x-2 mb-3">
+            <div className="flex items-center gap-2 mb-3">
               <Palette className="w-5 h-5 text-green-600" />
               <h4 className="font-semibold text-green-900 dark:text-green-100">CSS Fundamentals</h4>
             </div>
-            <ul className="space-y-2">
+            <ul className="flex flex-col gap-2">
               {cssBasics.map((item, index) => (
                 <li key={index} className="text-green-800 dark:text-green-200 text-sm">
                   <strong>{item.title}:</strong> {item.description}
@@ -88,13 +88,13 @@ export default function HtmlCssPage() {
       </div>
 
       {/* HTML Section */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white flex items-center space-x-2">
+      <section className="flex flex-col gap-6 md:gap-8">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
           <Layout className="w-6 h-6 text-gray-600" />
           <span>HTML - HyperText Markup Language</span>
         </h2>
         
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4 md:gap-6">
           <p className="text-gray-600 dark:text-gray-300">
             HTML is the standard markup language for creating web pages. It describes the structure 
             and content of a webpage using elements and tags.
@@ -140,13 +140,13 @@ export default function HtmlCssPage() {
       </section>
 
       {/* CSS Section */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white flex items-center space-x-2">
+      <section className="flex flex-col gap-6 md:gap-8">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
           <Palette className="w-6 h-6 text-gray-600" />
           <span>CSS - Cascading Style Sheets</span>
         </h2>
         
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4 md:gap-6">
           <p className="text-gray-600 dark:text-gray-300">
             CSS is used to style and layout web pages. It controls colors, fonts, spacing, 
             positioning, and responsive behavior.
@@ -213,7 +213,7 @@ nav a:hover {
       </section>
 
       {/* Modern CSS Features */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Modern CSS Features
         </h2>
@@ -259,22 +259,22 @@ nav a:hover {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Free Resources:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
-              <li>• MDN Web Docs (HTML & CSS Reference)</li>
-              <li>• freeCodeCamp (Interactive Lessons)</li>
-              <li>• CSS-Tricks (Tips and Tutorials)</li>
-              <li>• Flexbox Froggy (Flexbox Game)</li>
-              <li>• Grid Garden (CSS Grid Game)</li>
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
+              <li>MDN Web Docs (HTML & CSS Reference)</li>
+              <li>freeCodeCamp (Interactive Lessons)</li>
+              <li>CSS-Tricks (Tips and Tutorials)</li>
+              <li>Flexbox Froggy (Flexbox Game)</li>
+              <li>Grid Garden (CSS Grid Game)</li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Practice Projects:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
-              <li>• Personal Portfolio Website</li>
-              <li>• Restaurant Landing Page</li>
-              <li>• Photo Gallery with Grid</li>
-              <li>• Responsive Navigation Menu</li>
-              <li>• CSS Animation Showcase</li>
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
+              <li>Personal Portfolio Website</li>
+              <li>Restaurant Landing Page</li>
+              <li>Photo Gallery with Grid</li>
+              <li>Responsive Navigation Menu</li>
+              <li>CSS Animation Showcase</li>
             </ul>
           </div>
         </div>
@@ -301,14 +301,14 @@ nav a:hover {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/web-development"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Web Development</span>
         </Link>
         <Link
           href="/web-development/frontend"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Frontend Frameworks</span>
           <ArrowRight className="w-4 h-4" />

@@ -81,70 +81,66 @@ const pythonUseCases = [
 
 export default function PythonPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <Link
           href="/languages"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-4 h-4" suppressHydrationWarning />
           <span>Back to Languages</span>
         </Link>
         <Link
           href="/languages/javascript"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: JavaScript</span>
-          <ArrowRight className="w-4 h-4" />
+          <ArrowRight className="w-4 h-4" suppressHydrationWarning />
         </Link>
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
-          <div className="text-4xl">🐍</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Python</h1>
-            <p className="text-gray-600 dark:text-gray-300">The versatile, beginner-friendly programming language</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
+      <div className="flex flex-col items-start py-2">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+          Python
+        </h1>
+        <p className="text-lg text-gray-600 dark:text-gray-300 pb-4">
           Python is a high-level, interpreted programming language known for its simplicity and readability. 
-          Created by Guido van Rossum in 1991, Python emphasizes code readability and allows developers to 
-          express concepts in fewer lines of code than many other languages.
+          It's perfect for beginners and powerful enough for complex applications in web development, 
+          data science, artificial intelligence, and more.
         </p>
       </div>
 
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
           <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">1991</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">First Released</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">First Released</div>
         </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
           <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">Beginner</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Difficulty Level</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">Difficulty Level</div>
         </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
           <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">#1</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">TIOBE Index</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">TIOBE Index</div>
         </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
           <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">15.7M+</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Developers</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">Developers</div>
         </div>
       </div>
 
       {/* Key Features */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Why Choose Python?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {pythonFeatures.map((feature, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
               </div>
@@ -156,16 +152,16 @@ export default function PythonPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           What Can You Build with Python?
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {pythonUseCases.map((useCase, index) => (
             <div key={index} className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-xl font-semibold text-blue-900 dark:text-blue-100">{useCase.category}</h3>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center gap-2">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                     useCase.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                     useCase.difficulty === 'Beginner to Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -216,7 +212,7 @@ export default function PythonPage() {
       </section>
 
       {/* Code Example */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Python Code Examples
         </h2>
@@ -259,7 +255,7 @@ print(message)`}
       </section>
 
       {/* Project Ideas */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Python Project Ideas
         </h2>
@@ -267,7 +263,7 @@ print(message)`}
           {/* Beginner Projects */}
           <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
             <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">🟢 Beginner Projects</h3>
-            <ul className="space-y-2 text-green-800 dark:text-green-200 text-sm">
+            <ul className="flex flex-col gap-2 text-green-800 dark:text-green-200 text-sm">
               <li>• <strong>Password Generator:</strong> Create secure passwords with custom rules</li>
               <li>• <strong>Number Guessing Game:</strong> Interactive guessing game with hints</li>
               <li>• <strong>Unit Converter:</strong> Convert between different units (temperature, length, etc.)</li>
@@ -280,7 +276,7 @@ print(message)`}
           {/* Intermediate Projects */}
           <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
             <h3 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-3">🟡 Intermediate Projects</h3>
-            <ul className="space-y-2 text-yellow-800 dark:text-yellow-200 text-sm">
+            <ul className="flex flex-col gap-2 text-yellow-800 dark:text-yellow-200 text-sm">
               <li>• <strong>Web Scraper:</strong> Extract data from websites using BeautifulSoup</li>
               <li>• <strong>Personal Budget Tracker:</strong> Track expenses with data visualization</li>
               <li>• <strong>Weather Dashboard:</strong> Display weather data with charts</li>
@@ -293,7 +289,7 @@ print(message)`}
           {/* Advanced Projects */}
           <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
             <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">🔴 Advanced Projects</h3>
-            <ul className="space-y-2 text-red-800 dark:text-red-200 text-sm">
+            <ul className="flex flex-col gap-2 text-red-800 dark:text-red-200 text-sm">
               <li>• <strong>Machine Learning Model:</strong> Build predictive models with scikit-learn</li>
               <li>• <strong>Web Application:</strong> Full-stack app with Django or Flask</li>
               <li>• <strong>Stock Price Predictor:</strong> Use ML to predict stock movements</li>
@@ -310,29 +306,29 @@ print(message)`}
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
           🚀 Getting Started with Python
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Install Python</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Download from python.org or use package managers like Homebrew (Mac) or apt (Linux)</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Choose an Editor</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">VS Code with Python extension, PyCharm, or even IDLE for beginners</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Write Your First Program</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Start with print("Hello, World!") and build from there</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Learn the Fundamentals</h4>
@@ -343,17 +339,17 @@ print(message)`}
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/languages"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline pb-2"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Languages</span>
         </Link>
         <Link
           href="/languages/javascript"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: JavaScript</span>
           <ArrowRight className="w-4 h-4" />

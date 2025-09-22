@@ -146,19 +146,19 @@ const javaFrameworks = [
 
 export default function JavaPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/languages"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Languages</span>
         </Link>
         <Link
           href="/languages/cpp"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: C++</span>
           <ArrowRight className="w-4 h-4" />
@@ -166,8 +166,8 @@ export default function JavaPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <div className="text-4xl">☕</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Java</h1>
@@ -201,14 +201,14 @@ export default function JavaPage() {
       </div>
 
       {/* Key Features */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Why Choose Java?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {javaFeatures.map((feature, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-red-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
               </div>
@@ -219,7 +219,7 @@ export default function JavaPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           What Can You Build with Java?
         </h2>
@@ -250,7 +250,7 @@ export default function JavaPage() {
       </section>
 
       {/* Code Example */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Java Code Example
         </h2>
@@ -302,14 +302,14 @@ public class Person {
       </section>
 
       {/* Learning Path */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Java Learning Path
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {javaLearningPath.map((phase, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-4">
+              <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                   {index + 1}
                 </div>
@@ -322,7 +322,7 @@ public class Person {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Topics to Learn:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                     {phase.topics.map((topic, i) => (
                       <li key={i}>• {topic}</li>
                     ))}
@@ -330,7 +330,7 @@ public class Person {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Practice Projects:</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                  <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
                     {phase.projects.map((project, i) => (
                       <li key={i}>• {project}</li>
                     ))}
@@ -343,7 +343,7 @@ public class Person {
       </section>
 
       {/* Popular Frameworks */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Popular Java Frameworks
         </h2>
@@ -352,7 +352,7 @@ public class Person {
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="font-semibold text-gray-900 dark:text-white">{framework.name}</h3>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center gap-2">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                     framework.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                     framework.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -383,11 +383,11 @@ public class Person {
       </section>
 
       {/* Learning Resources */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Java Learning Resources
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {javaResources.map((category, index) => (
             <div key={index} className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
               <h3 className="text-lg font-bold text-blue-900 dark:text-blue-100 mb-4">
@@ -415,7 +415,7 @@ public class Person {
       </section>
 
       {/* Project Ideas */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Java Project Ideas
         </h2>
@@ -423,7 +423,7 @@ public class Person {
           {/* Beginner Projects */}
           <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
             <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">🟢 Beginner Projects</h3>
-            <ul className="space-y-2 text-green-800 dark:text-green-200 text-sm">
+            <ul className="flex flex-col gap-2 text-green-800 dark:text-green-200 text-sm">
               <li>• <strong>Student Management System:</strong> CRUD operations with file storage</li>
               <li>• <strong>Banking System:</strong> Account management with basic transactions</li>
               <li>• <strong>Library Management:</strong> Book checkout system with OOP principles</li>
@@ -436,7 +436,7 @@ public class Person {
           {/* Intermediate Projects */}
           <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
             <h3 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-3">🟡 Intermediate Projects</h3>
-            <ul className="space-y-2 text-yellow-800 dark:text-yellow-200 text-sm">
+            <ul className="flex flex-col gap-2 text-yellow-800 dark:text-yellow-200 text-sm">
               <li>• <strong>E-commerce Backend:</strong> REST API with Spring Boot and JPA</li>
               <li>• <strong>Chat Application:</strong> Multi-client chat using sockets</li>
               <li>• <strong>Employee Management:</strong> Full CRUD with database integration</li>
@@ -449,7 +449,7 @@ public class Person {
           {/* Advanced Projects */}
           <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
             <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">🔴 Advanced Projects</h3>
-            <ul className="space-y-2 text-red-800 dark:text-red-200 text-sm">
+            <ul className="flex flex-col gap-2 text-red-800 dark:text-red-200 text-sm">
               <li>• <strong>Microservices Architecture:</strong> Distributed system with Spring Cloud</li>
               <li>• <strong>Real-time Trading System:</strong> High-frequency trading platform</li>
               <li>• <strong>Content Management System:</strong> Full-featured CMS with security</li>
@@ -466,29 +466,29 @@ public class Person {
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
           🚀 Getting Started with Java
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Install Java Development Kit (JDK)</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Download and install the latest JDK from Oracle or use OpenJDK</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Choose an IDE</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">IntelliJ IDEA, Eclipse, or VS Code with Java extensions</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Write Your First Program</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Start with the classic "Hello, World!" program to test your setup</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Learn the Fundamentals</h4>
@@ -502,14 +502,14 @@ public class Person {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/languages"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Languages</span>
         </Link>
         <Link
           href="/languages/cpp"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: C++</span>
           <ArrowRight className="w-4 h-4" />

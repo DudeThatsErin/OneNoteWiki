@@ -81,19 +81,19 @@ const careerPaths = [
 
 export default function ChoosingLanguagePage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <Link
           href="/getting-started/what-is-programming"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: What is Programming?</span>
         </Link>
         <Link
           href="/getting-started/setup"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Setting Up Environment</span>
           <ArrowRight className="w-4 h-4" />
@@ -119,16 +119,16 @@ export default function ChoosingLanguagePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Your Goals:</h4>
-            <ul className="content-list marker-blue">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 content-list marker-blue [&>li]:mb-3">
               <li>What do you want to build?</li>
               <li>Are you looking for a career change?</li>
               <li>Do you want to freelance or work for companies?</li>
-              <li>Are you interested in a specific industry?</li>
+              <li>What industries interest you most?</li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Practical Considerations:</h4>
-            <ul className="content-list marker-blue">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 content-list marker-blue [&>li]:mb-3">
               <li>How much time can you dedicate to learning?</li>
               <li>Do you prefer easier or more challenging languages?</li>
               <li>What's the job market like in your area?</li>
@@ -139,21 +139,21 @@ export default function ChoosingLanguagePage() {
       </div>
 
       {/* Language Comparison */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Popular First Languages
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {languageComparisons.map((lang, index) => (
             <div key={index} className={`p-6 rounded-lg border-2 ${lang.color}`}>
               <div className="flex flex-col md:flex-row items-center justify-between mb-4">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center gap-3">
                   <span className="text-2xl">{lang.icon}</span>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                     {lang.name}
                   </h3>
                 </div>
-                <div className="flex space-x-2">
+                <div className="flex gap-2">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                     lang.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                     lang.difficulty === 'Beginner-Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -170,7 +170,7 @@ export default function ChoosingLanguagePage() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">✅ Pros:</h4>
-                  <ul className="content-list">
+                  <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-2">
                     {lang.pros.map((pro, i) => (
                       <li key={i}>{pro}</li>
                     ))}
@@ -178,7 +178,7 @@ export default function ChoosingLanguagePage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">❌ Cons:</h4>
-                  <ul className="content-list">
+                  <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-2">
                     {lang.cons.map((con, i) => (
                       <li key={i}>{con}</li>
                     ))}
@@ -212,7 +212,7 @@ export default function ChoosingLanguagePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[0.5rem]">
           {careerPaths.map((path, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{path.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{path.title}</h3>
               </div>
@@ -238,7 +238,7 @@ export default function ChoosingLanguagePage() {
         <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
           Decision Framework
         </h3>
-        <ol className="list-decimal list-inside space-y-4 text-blue-800 dark:text-blue-200">
+        <ol className="list-decimal list-inside flex flex-col gap-4 md:gap-6 text-blue-800 dark:text-blue-200">
           <li>
             <strong className="text-blue-900 dark:text-blue-100">If you're completely new to programming:</strong>
             <span className="text-sm ml-2">Start with <strong>Python</strong> - it's beginner-friendly and versatile</span>
@@ -266,7 +266,7 @@ export default function ChoosingLanguagePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-red-900 dark:text-red-100 mb-2">Don't:</h4>
-            <ul className="content-list text-sm">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-2">
               <li>Start with C++ or Assembly (too complex for beginners)</li>
               <li>Choose based on salary alone</li>
               <li>Switch languages every few weeks</li>
@@ -276,7 +276,7 @@ export default function ChoosingLanguagePage() {
           </div>
           <div>
             <h4 className="font-semibold text-red-900 dark:text-red-100 mb-2">Do:</h4>
-            <ul className="content-list text-sm">
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-2">
               <li>Pick one and stick with it for at least 3-6 months</li>
               <li>Consider your long-term goals</li>
               <li>Look at job opportunities in your area</li>
@@ -296,7 +296,7 @@ export default function ChoosingLanguagePage() {
           <p className="mb-3">
             <strong>For most beginners, we recommend starting with Python.</strong> Here's why:
           </p>
-          <ul className="content-list text-sm mb-4">
+          <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-2 mb-4">
             <li>Easiest syntax to learn and understand</li>
             <li>Versatile - you can build web apps, analyze data, create automation scripts</li>
             <li>Huge community and tons of learning resources</li>
@@ -314,14 +314,14 @@ export default function ChoosingLanguagePage() {
       <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/getting-started/what-is-programming"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: What is Programming?</span>
         </Link>
         <Link
           href="/getting-started/setup"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Setting Up Environment</span>
           <ArrowRight className="w-4 h-4" />

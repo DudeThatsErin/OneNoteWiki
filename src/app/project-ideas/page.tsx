@@ -102,10 +102,10 @@ const projectCategories = [
 
 export default function ProjectIdeasPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <div className="text-4xl">💡</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Project Ideas</h1>
@@ -140,14 +140,14 @@ export default function ProjectIdeasPage() {
       </div>
 
       {/* Project Categories */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Project Difficulty Levels
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projectCategories.map((category, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-4">
+              <div className="flex items-center gap-3 mb-4">
                 <div className="text-gray-600 dark:text-gray-400">{category.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                   {category.level}
@@ -174,13 +174,13 @@ export default function ProjectIdeasPage() {
       </section>
 
       {/* iPhone App Development */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           iPhone App Development
         </h2>
         
         <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-          <div className="flex items-start space-x-4">
+          <div className="flex items-start flex flex-col gap-3">
             <div className="text-4xl">📱</div>
             <div className="flex-1">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
@@ -193,7 +193,7 @@ export default function ProjectIdeasPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-3">💰 Financial Requirements</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+                  <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
                     <li>• <strong>Apple Developer Program:</strong> $99/year (required for App Store)</li>
                     <li>• <strong>Mac Computer:</strong> $600+ (MacBook Air minimum)</li>
                     <li>• <strong>iPhone for Testing:</strong> $400+ (recommended)</li>
@@ -203,7 +203,7 @@ export default function ProjectIdeasPage() {
                 
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-3">🛠️ Technical Requirements</h4>
-                  <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-2">
+                  <ul className="text-gray-600 dark:text-gray-300 text-sm flex flex-col gap-2">
                     <li>• <strong>macOS:</strong> Required for iOS development</li>
                     <li>• <strong>Xcode:</strong> Free IDE from Apple</li>
                     <li>• <strong>Swift:</strong> Apple's programming language</li>
@@ -216,7 +216,7 @@ export default function ProjectIdeasPage() {
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
                   Getting Started Steps:
                 </h4>
-                <ol className="text-gray-700 dark:text-gray-300 text-sm space-y-2">
+                <ol className="text-gray-700 dark:text-gray-300 text-sm flex flex-col gap-2">
                   <li>1. Get a Mac computer (required for iOS development)</li>
                   <li>2. Download Xcode from the Mac App Store (free)</li>
                   <li>3. Learn Swift programming language basics</li>
@@ -226,17 +226,17 @@ export default function ProjectIdeasPage() {
                 </ol>
               </div>
               
-              <div className="mt-4 flex space-x-4">
+              <div className="mt-4 flex flex flex-col gap-3">
                 <Link
                   href="/project-ideas/swift"
-                  className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
                 >
                   <Apple className="w-4 h-4" suppressHydrationWarning />
                   <span>Swift Project Ideas</span>
                 </Link>
                 <Link
                   href="/mobile-development"
-                  className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium transition-colors"
                 >
                   <Smartphone className="w-4 h-4" suppressHydrationWarning />
                   <span>Mobile Development Guide</span>
@@ -248,7 +248,7 @@ export default function ProjectIdeasPage() {
       </section>
 
       {/* Language Selection */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Choose Your Programming Language
         </h2>
@@ -258,13 +258,13 @@ export default function ProjectIdeasPage() {
             <Link key={index} href={language.href} className="block group">
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200 hover:shadow-lg">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center gap-3">
                     <span className="text-3xl">{language.icon}</span>
                     <div>
                       <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                         {language.name}
                       </h3>
-                      <div className="flex items-center space-x-2 mt-1">
+                      <div className="flex items-center gap-2 mt-1">
                         <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                           language.difficulty === 'Beginner' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300' :
                           language.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -289,7 +289,7 @@ export default function ProjectIdeasPage() {
                 
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-gray-500 dark:text-gray-400">30 Projects Available</span>
-                  <div className="flex items-center space-x-1">
+                  <div className="flex items-center flex flex-col gap-3">
                     <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                     <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                     <div className="w-2 h-2 bg-red-400 rounded-full"></div>
@@ -302,7 +302,7 @@ export default function ProjectIdeasPage() {
       </section>
 
       {/* How to Use */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           How to Use These Project Ideas
         </h2>
@@ -310,7 +310,7 @@ export default function ProjectIdeasPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Best Practices</h3>
-            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-700 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• Start with beginner projects to build confidence</li>
               <li>• Complete projects fully before moving to the next</li>
               <li>• Add your own features and improvements</li>
@@ -322,7 +322,7 @@ export default function ProjectIdeasPage() {
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">Learning Tips</h3>
-            <ul className="text-gray-700 dark:text-gray-300 text-sm space-y-2">
+            <ul className="text-gray-700 dark:text-gray-300 text-sm flex flex-col gap-2">
               <li>• Break large projects into smaller tasks</li>
               <li>• Research and plan before coding</li>
               <li>• Use version control (Git) for all projects</li>

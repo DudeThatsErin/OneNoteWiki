@@ -91,12 +91,12 @@ const frameworkStats = [
 
 export default function FrontendFrameworksPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/frameworks"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Frameworks</span>
@@ -104,16 +104,13 @@ export default function FrontendFrameworksPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
-          <Code className="w-8 h-8 text-blue-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Frontend Frameworks
-          </h1>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Discover powerful frontend frameworks for building modern, interactive user interfaces. 
-          From React's flexibility to Vue's simplicity, find the right tool for your project.
+      <div className="flex flex-col items-start py-2">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+          Frontend Frameworks
+        </h1>
+        <p className="text-lg text-gray-600 dark:text-gray-300 pb-4">
+          Modern JavaScript frameworks and libraries for building interactive user interfaces 
+          and single-page applications.
         </p>
       </div>
 
@@ -121,7 +118,7 @@ export default function FrontendFrameworksPage() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {frameworkStats.map((stat, index) => (
           <div key={index} className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <div className="flex items-center space-x-2 mb-2">
+            <div className="flex items-center gap-2 mb-2">
               <div className="text-blue-600">{stat.icon}</div>
               <span className="text-sm font-medium text-gray-600 dark:text-gray-300">{stat.label}</span>
             </div>
@@ -138,7 +135,7 @@ export default function FrontendFrameworksPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Purpose:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>• Structure and organize frontend code</li>
               <li>• Provide reusable UI components</li>
               <li>• Handle state management and data flow</li>
@@ -148,7 +145,7 @@ export default function FrontendFrameworksPage() {
           </div>
           <div>
             <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Key Features:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>• Component-based architecture</li>
               <li>• Virtual DOM or efficient rendering</li>
               <li>• Data binding and state management</li>
@@ -160,11 +157,11 @@ export default function FrontendFrameworksPage() {
       </div>
 
       {/* Framework Comparison */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Popular Frontend Frameworks
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {frontendFrameworks.map((framework, index) => (
             <div key={index} className={`p-6 rounded-lg border-2 ${framework.color}`}>
               <div className="flex items-center justify-between mb-4">
@@ -172,7 +169,7 @@ export default function FrontendFrameworksPage() {
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                     {framework.name}
                   </h3>
-                  <div className="flex items-center space-x-3 mt-1">
+                  <div className="flex items-center gap-3 mt-1">
                     <span className="text-sm text-gray-600 dark:text-gray-300">
                       by {framework.maintainer}
                     </span>
@@ -181,7 +178,7 @@ export default function FrontendFrameworksPage() {
                     </span>
                   </div>
                 </div>
-                <div className="flex space-x-2">
+                <div className="flex gap-2">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                     framework.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                     framework.difficulty === 'Intermediate' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300' :
@@ -207,7 +204,7 @@ export default function FrontendFrameworksPage() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">✅ Pros:</h4>
-                  <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                  <ul className="text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
                     {framework.pros.map((pro, i) => (
                       <li key={i}>• {pro}</li>
                     ))}
@@ -215,7 +212,7 @@ export default function FrontendFrameworksPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">❌ Cons:</h4>
-                  <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                  <ul className="text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
                     {framework.cons.map((con, i) => (
                       <li key={i}>• {con}</li>
                     ))}
@@ -223,7 +220,7 @@ export default function FrontendFrameworksPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🎯 Best For:</h4>
-                  <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                  <ul className="text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
                     {framework.useCases.map((useCase, i) => (
                       <li key={i}>• {useCase}</li>
                     ))}
@@ -231,7 +228,7 @@ export default function FrontendFrameworksPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">📊 Details:</h4>
-                  <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                  <ul className="text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
                     <li>• Language: {framework.language}</li>
                     <li>• First Release: {framework.firstRelease}</li>
                     <li>• Maintainer: {framework.maintainer}</li>
@@ -248,29 +245,29 @@ export default function FrontendFrameworksPage() {
         <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
           🎯 Frontend Framework Learning Path
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Master JavaScript Fundamentals</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">ES6+, DOM manipulation, async/await, modules</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Choose Your First Framework</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Vue.js for beginners, React for job market, Angular for enterprise</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Build Projects</h4>
               <p className="text-green-800 dark:text-green-200 text-sm">Todo app, weather app, e-commerce site</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-green-900 dark:text-green-100">Learn Advanced Concepts</h4>
@@ -288,7 +285,7 @@ export default function FrontendFrameworksPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">🔰 For Beginners:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• <strong>Vue.js</strong> - Gentle learning curve</li>
               <li>• <strong>Svelte</strong> - Less complexity</li>
               <li>• Start with official tutorials</li>
@@ -297,7 +294,7 @@ export default function FrontendFrameworksPage() {
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">💼 For Job Market:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• <strong>React</strong> - Highest demand</li>
               <li>• <strong>Angular</strong> - Enterprise focus</li>
               <li>• Build a strong portfolio</li>
@@ -306,7 +303,7 @@ export default function FrontendFrameworksPage() {
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">🚀 For Performance:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• <strong>Svelte</strong> - Compile-time optimization</li>
               <li>• <strong>Vue.js</strong> - Efficient rendering</li>
               <li>• Consider bundle size</li>
@@ -320,7 +317,7 @@ export default function FrontendFrameworksPage() {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/frameworks"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Frameworks</span>

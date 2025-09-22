@@ -61,19 +61,19 @@ const backendConcepts = [
 
 export default function BackendPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/web-development/frontend"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Frontend Frameworks</span>
         </Link>
         <Link
           href="/web-development/fullstack"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Full Stack Development</span>
           <ArrowRight className="w-4 h-4" />
@@ -81,8 +81,8 @@ export default function BackendPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <Server className="w-8 h-8 text-purple-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             Backend Development
@@ -102,7 +102,7 @@ export default function BackendPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Backend Responsibilities:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• Server-side logic and business rules</li>
               <li>• Database operations and data management</li>
               <li>• API development and integration</li>
@@ -113,7 +113,7 @@ export default function BackendPage() {
           </div>
           <div>
             <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Key Technologies:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• Programming languages (Node.js, Python, Java, Go)</li>
               <li>• Web frameworks (Express, Django, Spring)</li>
               <li>• Databases (PostgreSQL, MongoDB, Redis)</li>
@@ -125,14 +125,14 @@ export default function BackendPage() {
       </div>
 
       {/* Core Concepts */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Core Backend Concepts
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {backendConcepts.map((concept, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-purple-600">{concept.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{concept.title}</h3>
               </div>
@@ -143,11 +143,11 @@ export default function BackendPage() {
       </section>
 
       {/* Backend Languages & Frameworks */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Popular Backend Technologies
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           {backendLanguages.map((lang, index) => (
             <div key={index} className={`p-6 rounded-lg border-2 ${lang.color}`}>
               <div className="flex items-center justify-between mb-4">
@@ -166,7 +166,7 @@ export default function BackendPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">✅ Pros:</h4>
-                  <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                  <ul className="text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
                     {lang.pros.map((pro, i) => (
                       <li key={i}>• {pro}</li>
                     ))}
@@ -174,7 +174,7 @@ export default function BackendPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">❌ Cons:</h4>
-                  <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                  <ul className="text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
                     {lang.cons.map((con, i) => (
                       <li key={i}>• {con}</li>
                     ))}
@@ -182,7 +182,7 @@ export default function BackendPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🛠️ Frameworks:</h4>
-                  <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                  <ul className="text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
                     {lang.frameworks.map((framework, i) => (
                       <li key={i}>• {framework}</li>
                     ))}
@@ -195,7 +195,7 @@ export default function BackendPage() {
       </section>
 
       {/* API Development */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           API Development
         </h2>
@@ -260,7 +260,7 @@ app.listen(3000, () => {
       </section>
 
       {/* Database Integration */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Database Integration
         </h2>
@@ -271,7 +271,7 @@ app.listen(3000, () => {
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
               Structured data with relationships, ACID compliance, and complex queries.
             </p>
-            <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+            <ul className="text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
               <li>• PostgreSQL - Advanced features, JSON support</li>
               <li>• MySQL - Popular, reliable, good performance</li>
               <li>• SQLite - Lightweight, serverless, great for development</li>
@@ -283,7 +283,7 @@ app.listen(3000, () => {
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
               Flexible schema, horizontal scaling, and document-based storage.
             </p>
-            <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+            <ul className="text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
               <li>• MongoDB - Document database, JSON-like documents</li>
               <li>• Redis - In-memory, great for caching and sessions</li>
               <li>• Cassandra - Wide-column, highly scalable</li>
@@ -293,7 +293,7 @@ app.listen(3000, () => {
       </section>
 
       {/* Authentication & Security */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Authentication & Security
         </h2>
@@ -305,7 +305,7 @@ app.listen(3000, () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <h4 className="font-semibold text-red-900 dark:text-red-100 mb-2">Authentication:</h4>
-              <ul className="text-red-800 dark:text-red-200 text-sm space-y-1">
+              <ul className="text-red-800 dark:text-red-200 text-sm [&>li]:mb-1">
                 <li>• Use JWT tokens for stateless authentication</li>
                 <li>• Implement proper password hashing (bcrypt)</li>
                 <li>• Add rate limiting to prevent brute force attacks</li>
@@ -314,7 +314,7 @@ app.listen(3000, () => {
             </div>
             <div>
               <h4 className="font-semibold text-red-900 dark:text-red-100 mb-2">Data Protection:</h4>
-              <ul className="text-red-800 dark:text-red-200 text-sm space-y-1">
+              <ul className="text-red-800 dark:text-red-200 text-sm [&>li]:mb-1">
                 <li>• Validate and sanitize all user inputs</li>
                 <li>• Use parameterized queries to prevent SQL injection</li>
                 <li>• Implement proper CORS policies</li>
@@ -330,36 +330,36 @@ app.listen(3000, () => {
         <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
           🎯 Backend Learning Path
         </h3>
-        <div className="space-y-4">
-          <div className="flex items-start space-x-3">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100">Choose a Language & Framework</h4>
               <p className="text-blue-800 dark:text-blue-200 text-sm">Start with Node.js/Express or Python/Flask for beginners</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100">Learn Database Fundamentals</h4>
               <p className="text-blue-800 dark:text-blue-200 text-sm">SQL basics, database design, and ORM/ODM usage</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100">Build RESTful APIs</h4>
               <p className="text-blue-800 dark:text-blue-200 text-sm">CRUD operations, proper HTTP methods, status codes</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100">Implement Authentication</h4>
               <p className="text-blue-800 dark:text-blue-200 text-sm">User registration, login, JWT tokens, password security</p>
             </div>
           </div>
-          <div className="flex items-start space-x-3">
+          <div className="flex items-start gap-3">
             <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">5</div>
             <div>
               <h4 className="font-semibold text-blue-900 dark:text-blue-100">Deploy & Scale</h4>
@@ -377,7 +377,7 @@ app.listen(3000, () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Beginner Projects:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• Simple REST API for a blog</li>
               <li>• User authentication system</li>
               <li>• File upload and storage service</li>
@@ -386,7 +386,7 @@ app.listen(3000, () => {
           </div>
           <div>
             <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Advanced Projects:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• Real-time chat API with WebSockets</li>
               <li>• Microservices architecture</li>
               <li>• Payment processing integration</li>
@@ -400,14 +400,14 @@ app.listen(3000, () => {
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/web-development/frontend"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Previous: Frontend Frameworks</span>
         </Link>
         <Link
           href="/web-development/fullstack"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Full Stack Development</span>
           <ArrowRight className="w-4 h-4" />

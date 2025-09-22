@@ -81,19 +81,19 @@ const projectIdeas = [
 
 export default function ReactNativePage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
           href="/mobile-development"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Mobile Development</span>
         </Link>
         <Link
           href="/mobile-development/flutter"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <span>Next: Flutter</span>
           <ArrowRight className="w-4 h-4" />
@@ -101,31 +101,25 @@ export default function ReactNativePage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
-          <div className="text-4xl">⚛️</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">React Native</h1>
-            <p className="text-gray-600 dark:text-gray-300">Build native mobile apps using React</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          React Native is a popular open-source framework for building mobile applications using React. 
-          Created by Meta (Facebook), it allows developers to build native mobile apps for iOS and Android 
-          using JavaScript and React concepts.
+      <div className="flex flex-col items-start py-2">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+          React Native
+        </h1>
+        <p className="text-lg text-gray-600 dark:text-gray-300 pb-4">
+          React Native lets you build mobile apps using only JavaScript and React. 
+          It uses the same design as React, letting you compose a rich mobile UI from declarative components.
         </p>
       </div>
 
-
       {/* Key Features */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Why Choose React Native?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {reactNativeFeatures.map((feature, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center space-x-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
               </div>
@@ -137,14 +131,14 @@ export default function ReactNativePage() {
       </section>
 
       {/* Learning Path */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           React Native Learning Path
         </h2>
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 md:gap-8">
           <Link href="/mobile-development/react-native/setup" className="block group">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors">
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start flex flex-col gap-4 md:gap-6">
                 <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
                   <Settings className="w-6 h-6" />
                 </div>
@@ -153,7 +147,7 @@ export default function ReactNativePage() {
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       Setup & Environment
                     </h3>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center gap-2">
                       <span className="text-xs px-2 py-1 rounded-full font-medium bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300">
                         Beginner
                       </span>
@@ -178,7 +172,7 @@ export default function ReactNativePage() {
 
           <Link href="/mobile-development/react-native/components" className="block group">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors">
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start flex flex-col gap-4 md:gap-6">
                 <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
                   <Layers className="w-6 h-6" />
                 </div>
@@ -187,7 +181,7 @@ export default function ReactNativePage() {
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       Components & UI
                     </h3>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center gap-2">
                       <span className="text-xs px-2 py-1 rounded-full font-medium bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300">
                         Intermediate
                       </span>
@@ -212,7 +206,7 @@ export default function ReactNativePage() {
 
           <Link href="/mobile-development/react-native/navigation" className="block group">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors">
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start flex flex-col gap-4 md:gap-6">
                 <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
                   <Navigation className="w-6 h-6" />
                 </div>
@@ -221,7 +215,7 @@ export default function ReactNativePage() {
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       Navigation
                     </h3>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center gap-2">
                       <span className="text-xs px-2 py-1 rounded-full font-medium bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300">
                         Intermediate
                       </span>
@@ -246,7 +240,7 @@ export default function ReactNativePage() {
 
           <Link href="/mobile-development/react-native/deployment" className="block group">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors">
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start flex flex-col gap-4 md:gap-6">
                 <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
                   <Upload className="w-6 h-6" />
                 </div>
@@ -255,7 +249,7 @@ export default function ReactNativePage() {
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       Deployment
                     </h3>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center gap-2">
                       <span className="text-xs px-2 py-1 rounded-full font-medium bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300">
                         Advanced
                       </span>
@@ -281,7 +275,7 @@ export default function ReactNativePage() {
       </section>
 
       {/* Getting Started */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Quick Start Guide</h2>
         
         <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
@@ -417,7 +411,7 @@ export default App;`}
       </section>
 
       {/* Project Ideas */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           React Native Project Ideas
         </h2>
@@ -427,7 +421,7 @@ export default App;`}
               <h3 className={`font-semibold text-${category.color}-900 dark:text-${category.color}-100 mb-3`}>
                 {category.level === 'Beginner' ? '🟢' : category.level === 'Intermediate' ? '🟡' : '🔴'} {category.level} Projects
               </h3>
-              <ul className={`space-y-2 text-${category.color}-800 dark:text-${category.color}-200 text-sm`}>
+              <ul className={`flex flex-col gap-2 text-${category.color}-800 dark:text-${category.color}-200 text-sm`}>
                 {category.projects.map((project, i) => (
                   <li key={i}>• <strong>{project.split(':')[0]}:</strong> {project.split(':')[1]}</li>
                 ))}
@@ -438,13 +432,13 @@ export default App;`}
       </section>
 
       {/* Popular Libraries */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Popular Libraries & Tools</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Navigation</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• React Navigation</li>
               <li>• React Native Navigation</li>
               <li>• React Router Native</li>
@@ -453,7 +447,7 @@ export default App;`}
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">State Management</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• Redux Toolkit</li>
               <li>• Zustand</li>
               <li>• MobX</li>
@@ -462,7 +456,7 @@ export default App;`}
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">UI Components</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• NativeBase</li>
               <li>• React Native Elements</li>
               <li>• UI Kitten</li>
@@ -471,7 +465,7 @@ export default App;`}
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Networking</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• Axios</li>
               <li>• React Query</li>
               <li>• Apollo GraphQL</li>
@@ -480,7 +474,7 @@ export default App;`}
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Storage</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• AsyncStorage</li>
               <li>• Realm</li>
               <li>• SQLite</li>
@@ -489,7 +483,7 @@ export default App;`}
           
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Testing</h3>
-            <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+            <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
               <li>• Jest</li>
               <li>• Detox</li>
               <li>• React Native Testing Library</li>
@@ -502,14 +496,14 @@ export default App;`}
       <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
         <Link
           href="/mobile-development"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Mobile Development</span>
         </Link>
         <Link
           href="/mobile-development/flutter"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Flutter</span>
           <ArrowRight className="w-4 h-4" />

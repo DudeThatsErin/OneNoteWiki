@@ -78,7 +78,7 @@ const cssFrameworks = [
 
 export default function CSSFrameworksPage() {
   return (
-    <div className="space-y-8">
+    <div className="flex flex-col gap-8 md:gap-12">
       {/* Quick Reference */}
       <div className="bg-pink-50 dark:bg-pink-900/20 rounded-lg p-6 border border-pink-200 dark:border-pink-800">
         <h2 className="text-xl font-semibold text-pink-900 dark:text-pink-100 mb-4 flex items-center">
@@ -88,7 +88,7 @@ export default function CSSFrameworksPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <h3 className="font-semibold text-pink-900 dark:text-pink-100 mb-2">For Custom Designs:</h3>
-            <ul className="text-pink-800 dark:text-pink-200 text-sm space-y-1">
+            <ul className="text-pink-800 dark:text-pink-200 text-sm [&>li]:mb-1">
               <li>• <strong>Tailwind CSS:</strong> Utility-first approach</li>
               <li>• <strong>Styled Components:</strong> CSS-in-JS</li>
               <li>• <strong>Emotion:</strong> Performant CSS-in-JS</li>
@@ -96,7 +96,7 @@ export default function CSSFrameworksPage() {
           </div>
           <div>
             <h3 className="font-semibold text-pink-900 dark:text-pink-100 mb-2">For Rapid Development:</h3>
-            <ul className="text-pink-800 dark:text-pink-200 text-sm space-y-1">
+            <ul className="text-pink-800 dark:text-pink-200 text-sm [&>li]:mb-1">
               <li>• <strong>Bootstrap:</strong> Pre-built components</li>
               <li>• <strong>Bulma:</strong> Modern CSS framework</li>
               <li>• <strong>Foundation:</strong> Professional framework</li>
@@ -104,7 +104,7 @@ export default function CSSFrameworksPage() {
           </div>
           <div>
             <h3 className="font-semibold text-pink-900 dark:text-pink-100 mb-2">For React Projects:</h3>
-            <ul className="text-pink-800 dark:text-pink-200 text-sm space-y-1">
+            <ul className="text-pink-800 dark:text-pink-200 text-sm [&>li]:mb-1">
               <li>• <strong>Material-UI:</strong> Material Design</li>
               <li>• <strong>Chakra UI:</strong> Simple and accessible</li>
               <li>• <strong>Ant Design:</strong> Enterprise components</li>
@@ -114,10 +114,10 @@ export default function CSSFrameworksPage() {
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center gap-2">
         <Link
           href="/frameworks"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
+          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Frameworks</span>
@@ -125,15 +125,15 @@ export default function CSSFrameworksPage() {
       </div>
 
       {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
+      <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex items-center gap-3">
           <div className="text-4xl">🎨</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">CSS Frameworks</h1>
-            <p className="text-gray-600 dark:text-gray-300">Styling solutions for modern web development</p>
+            <p className="text-gray-600 dark:text-grflex flex-col gap-300">Styling solutions for modern web development</p>
           </div>
         </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
+        <p className="text-lg text-gray-600 dark:text-grflex flex-col gap-300">
           CSS frameworks provide pre-written CSS code to help you build responsive, consistent, and 
           visually appealing websites faster. Choose based on your design needs, customization 
           requirements, and development approach.
@@ -141,7 +141,7 @@ export default function CSSFrameworksPage() {
       </div>
 
       {/* Framework Types */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Framework Types</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -150,7 +150,7 @@ export default function CSSFrameworksPage() {
             <p className="text-blue-800 dark:text-blue-200 text-sm mb-3">
               Provide low-level utility classes to build custom designs directly in HTML.
             </p>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>• Tailwind CSS</li>
               <li>• Tachyons</li>
               <li>• Atomic CSS</li>
@@ -162,7 +162,7 @@ export default function CSSFrameworksPage() {
             <p className="text-green-800 dark:text-green-200 text-sm mb-3">
               Offer pre-built components and design systems for rapid development.
             </p>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-1">
+            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
               <li>• Bootstrap</li>
               <li>• Bulma</li>
               <li>• Foundation</li>
@@ -174,7 +174,7 @@ export default function CSSFrameworksPage() {
             <p className="text-purple-800 dark:text-purple-200 text-sm mb-3">
               Built for specific JavaScript frameworks with component libraries.
             </p>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm space-y-1">
+            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
               <li>• Material-UI (React)</li>
               <li>• Chakra UI (React)</li>
               <li>• Vuetify (Vue)</li>
@@ -184,7 +184,7 @@ export default function CSSFrameworksPage() {
       </section>
 
       {/* Framework Comparison */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Popular CSS Frameworks</h2>
         
         <div className="grid grid-cols-1 gap-8">
@@ -192,14 +192,14 @@ export default function CSSFrameworksPage() {
             <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center gap-3">
                     <span className="text-3xl">{framework.icon}</span>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{framework.name}</h3>
                       <p className="text-sm text-gray-500 dark:text-gray-400">{framework.type}</p>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center gap-2">
                     <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                       framework.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                       framework.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -218,12 +218,12 @@ export default function CSSFrameworksPage() {
                   </div>
                 </div>
                 
-                <p className="text-gray-600 dark:text-gray-300 mb-6">{framework.description}</p>
+                <p className="text-gray-600 dark:text-grflex flex-col gap-300 mb-6">{framework.description}</p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features</h4>
-                    <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <ul className="text-gray-600 dark:text-grflex flex-col gap-300 text-sm [&>li]:mb-1">
                       {framework.features.map((feature, i) => (
                         <li key={i}>• {feature}</li>
                       ))}
@@ -232,7 +232,7 @@ export default function CSSFrameworksPage() {
                   
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Best For</h4>
-                    <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <ul className="text-gray-600 dark:text-grflex flex-col gap-300 text-sm [&>li]:mb-1">
                       {framework.useCases.map((useCase, i) => (
                         <li key={i}>• {useCase}</li>
                       ))}
@@ -241,7 +241,7 @@ export default function CSSFrameworksPage() {
                   
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Pros</h4>
-                    <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <ul className="text-gray-600 dark:text-grflex flex-col gap-300 text-sm [&>li]:mb-1">
                       {framework.pros.map((pro, i) => (
                         <li key={i}>• {pro}</li>
                       ))}
@@ -250,7 +250,7 @@ export default function CSSFrameworksPage() {
                   
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Cons</h4>
-                    <ul className="text-gray-600 dark:text-gray-300 text-sm space-y-1">
+                    <ul className="text-gray-600 dark:text-grflex flex-col gap-300 text-sm [&>li]:mb-1">
                       {framework.cons.map((con, i) => (
                         <li key={i}>• {con}</li>
                       ))}
@@ -264,13 +264,13 @@ export default function CSSFrameworksPage() {
       </section>
 
       {/* Learning Resources */}
-      <section className="space-y-6">
+      <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Learning Resources</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Utility-First</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-2">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</a></li>
               <li>• <a href="https://tachyons.io/" className="hover:underline">Tachyons</a></li>
               <li>• <a href="https://windicss.org/" className="hover:underline">Windi CSS</a></li>
@@ -279,7 +279,7 @@ export default function CSSFrameworksPage() {
           
           <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Component-Based</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-2">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://getbootstrap.com/" className="hover:underline">Bootstrap</a></li>
               <li>• <a href="https://bulma.io/" className="hover:underline">Bulma</a></li>
               <li>• <a href="https://get.foundation/" className="hover:underline">Foundation</a></li>
@@ -288,7 +288,7 @@ export default function CSSFrameworksPage() {
           
           <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">React Libraries</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-2">
+            <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://mui.com/" className="hover:underline">Material-UI</a></li>
               <li>• <a href="https://chakra-ui.com/" className="hover:underline">Chakra UI</a></li>
               <li>• <a href="https://ant.design/" className="hover:underline">Ant Design</a></li>
