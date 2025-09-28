@@ -119,11 +119,10 @@ export default function FAQPage() {
     <PageLayout
       title="Frequently Asked Questions"
       description="Find answers to the most common questions about programming, learning to code, and using this wiki effectively."
-      icon={<div className="text-4xl">❓</div>}
     >
 
       {/* FAQ Items */}
-      <div className="flex flex-col gap-4 md:gap-6 mb-8 md:mb-12">
+      <div className="flex flex-col gap-4 md:gap-6 mb-6">
         {faqs.map((faq, index) => (
           <FAQItem 
             key={faq.id} 
@@ -135,7 +134,7 @@ export default function FAQPage() {
       </div>
 
       {/* Still Have Questions */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800 mb-6">
         <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
           Still Have Questions?
         </h3>
