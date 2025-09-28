@@ -173,64 +173,45 @@ export default function LanguagesPage() {
         </div>
       </div>
 
-      {/* Languages Grid */}
+
+      {/* Programming Resources */}
       <div className="py-4">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-          Popular Programming Languages
+          Programming Resources
         </h2>
-        <div className="flex flex-col gap-6 md:gap-8">
-          {languages.map((language, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+              All Programming Languages
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Explore our comprehensive database of programming languages with detailed comparisons, 
+              use cases, difficulty levels, and more.
+            </p>
             <Link
-              key={language.href}
-              href={language.href}
-              className="block bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all"
+              href="/resources/programming-languages"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
             >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
-                    <span className="text-lg">{language.icon}</span>
-                  </div>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                      {language.name}
-                    </h3>
-                    <ArrowRight className="w-5 h-5 text-gray-400" />
-                  </div>
-                  <div className="flex items-center gap-2 mt-1 mb-2">
-                    <span className={`text-xs px-2 py-1 rounded-full font-medium ${
-                      language.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
-                      language.difficulty === 'Intermediate' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300' :
-                      'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300'
-                    }`}>
-                      {language.difficulty}
-                    </span>
-                    <span className={`text-xs px-2 py-1 rounded-full font-medium ${
-                      language.popularity === 'Very High' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300' :
-                      language.popularity === 'High' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300' :
-                      'bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300'
-                    }`}>
-                      {language.popularity}
-                    </span>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-300 mt-1 mb-3">
-                    {language.description}
-                  </p>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Common Use Cases:</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {language.useCases.map((useCase, i) => (
-                        <span key={i} className="text-xs px-2 py-1 bg-gray-50 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300">
-                          {useCase}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <span>View Languages Database</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
-          ))}
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+              Development Tools & IDEs
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Discover essential development tools, IDEs, and software with features, 
+              pricing, platform support, and download links.
+            </p>
+            <Link
+              href="/resources/development-tools"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors"
+            >
+              <span>View Tools Database</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </div>
 

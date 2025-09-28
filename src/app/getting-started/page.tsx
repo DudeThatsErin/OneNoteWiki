@@ -54,24 +54,24 @@ export default function GettingStartedPage() {
             <Link
               key={step.href}
               href={step.href}
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all hover:border-blue-300 dark:hover:border-blue-600"
+              className="block p-6 transition-all hover:opacity-80"
             >
-              <div className="flex items-start flex flex-col gap-8 md:gap-124">
+              <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
-                    <span className="text-blue-600 dark:text-blue-400 font-semibold text-sm">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center">
+                    <span className="text-blue-600 dark:text-blue-400 font-bold text-lg">
                       {index + 1}
                     </span>
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                       {step.title}
                     </h3>
                     <ArrowRight className="w-5 h-5 text-gray-400" />
                   </div>
-                  <p className="text-gray-600 dark:text-gray-300 mt-1">
+                  <p className="text-gray-600 dark:text-gray-300 mt-2">
                     {step.description}
                   </p>
                 </div>

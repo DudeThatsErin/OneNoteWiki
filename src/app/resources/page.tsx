@@ -1,38 +1,48 @@
 import Link from 'next/link';
-import { Lightbulb, ArrowRight, BookOpen, Users, Code, HelpCircle, Search, Target } from 'lucide-react';
+import { Lightbulb, ArrowRight, BookOpen, Users, Code, HelpCircle, Search, Target, Database, Settings } from 'lucide-react';
 
-const resourceCategories = [
+const resourceDatabases = [
   {
-    title: 'Learning Platforms',
-    description: 'Interactive coding courses and structured learning paths',
-    examples: ['freeCodeCamp', 'Codecademy', 'Coursera', 'Udemy'],
-    href: '/resources/platforms',
-    icon: <BookOpen className="w-6 h-6" />,
-    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
+    title: 'Programming Languages',
+    description: 'Comprehensive database of programming languages with difficulty, popularity, and use cases',
+    examples: ['Python', 'JavaScript', 'Java', 'C++', 'Go', 'Rust'],
+    href: '/resources/programming-languages',
+    icon: <Code className="w-6 h-6" />,
   },
   {
-    title: 'Books & Documentation',
-    description: 'Comprehensive guides, references, and official documentation',
-    examples: ['MDN Docs', 'Programming Books', 'API References', 'Tutorials'],
+    title: 'Development Tools',
+    description: 'Essential tools and IDEs for programming with features and download links',
+    examples: ['VS Code', 'IntelliJ', 'Git', 'Docker', 'Postman', 'Figma'],
+    href: '/resources/development-tools',
+    icon: <Settings className="w-6 h-6" />,
+  },
+  {
+    title: 'Programming Books',
+    description: 'Curated collection of programming books with ratings, prices, and purchase links',
+    examples: ['Clean Code', 'Python for Dummies', 'You Don\'t Know JS', 'Design Patterns'],
     href: '/resources/books',
     icon: <BookOpen className="w-6 h-6" />,
-    color: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
   },
   {
-    title: 'Practice Problems',
-    description: 'Coding challenges and exercises to sharpen your skills',
-    examples: ['LeetCode', 'HackerRank', 'Codewars', 'Project Euler'],
-    href: '/resources/practice',
-    icon: <Code className="w-6 h-6" />,
-    color: 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800'
+    title: 'Learning Platforms',
+    description: 'Online learning platforms with pricing, features, and course information',
+    examples: ['freeCodeCamp', 'Codecademy', 'Coursera', 'Udemy', 'Pluralsight'],
+    href: '/resources/learning-platforms',
+    icon: <Target className="w-6 h-6" />,
+  },
+  {
+    title: 'Practice Platforms',
+    description: 'Coding challenge platforms for interview prep and skill development',
+    examples: ['LeetCode', 'HackerRank', 'Codewars', 'AtCoder', 'Codeforces'],
+    href: '/resources/practice-platforms',
+    icon: <Database className="w-6 h-6" />,
   },
   {
     title: 'Communities',
-    description: 'Connect with other developers and get help when you need it',
-    examples: ['Stack Overflow', 'Reddit', 'Discord', 'GitHub'],
+    description: 'Developer communities and forums for networking and getting help',
+    examples: ['Stack Overflow', 'Reddit', 'Discord', 'GitHub', 'Dev.to'],
     href: '/resources/communities',
     icon: <Users className="w-6 h-6" />,
-    color: 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800'
   }
 ];
 
@@ -42,21 +52,18 @@ const additionalResources = [
     description: 'Comprehensive guides on learning styles and study techniques',
     href: '/resources/learning-guides',
     icon: <Target className="w-6 h-6" />,
-    color: 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800'
   },
   {
     title: 'Getting Help',
     description: 'How to ask questions effectively and find solutions online',
     href: '/resources/getting-help',
     icon: <HelpCircle className="w-6 h-6" />,
-    color: 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800'
   },
   {
     title: 'Search Tips',
     description: 'Master the art of googling programming problems',
     href: '/resources/search-tips',
     icon: <Search className="w-6 h-6" />,
-    color: 'bg-indigo-50 dark:bg-indigo-900/20 border-indigo-200 dark:border-indigo-800'
   }
 ];
 
@@ -66,34 +73,34 @@ export default function ResourcesPage() {
       {/* Header */}
       <div className="flex flex-col gap-4 md:gap-6">
         <div className="flex items-center gap-3">
-          <Lightbulb className="w-8 h-8 text-yellow-600" />
+          <Database className="w-8 h-8 text-blue-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Learning Resources
+            Programming Resource Databases
           </h1>
         </div>
         <p className="text-lg text-gray-600 dark:text-gray-300">
-          Discover the best resources to accelerate your programming journey. From interactive 
-          platforms to practice problems and supportive communities.
+          Comprehensive, searchable databases of programming resources. Find languages, tools, books, 
+          learning platforms, practice sites, and communities with detailed comparisons and direct links.
         </p>
       </div>
 
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">50+</div>
-          <div className="text-sm text-gray-600 dark:text-gray-300">Platforms</div>
+          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">12+</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">Languages</div>
         </div>
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
-          <div className="text-2xl font-bold text-green-600 dark:text-green-400">100+</div>
+          <div className="text-2xl font-bold text-gray-600 dark:text-gray-400">12+</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">Dev Tools</div>
+        </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+          <div className="text-2xl font-bold text-green-600 dark:text-green-400">45+</div>
           <div className="text-sm text-gray-600 dark:text-gray-300">Books</div>
         </div>
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
-          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">20+</div>
-          <div className="text-sm text-gray-600 dark:text-gray-300">Practice Sites</div>
-        </div>
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
-          <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">15+</div>
-          <div className="text-sm text-gray-600 dark:text-gray-300">Communities</div>
+          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">24+</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">Platforms</div>
         </div>
       </div>
 
@@ -103,28 +110,28 @@ export default function ResourcesPage() {
           Main Categories
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {resourceCategories.map((category, index) => (
+          {resourceDatabases.map((category, index) => (
             <Link
               key={category.href}
               href={category.href}
-              className={`block p-6 rounded-lg border-2 transition-all hover:shadow-lg hover:scale-105 ${category.color}`}
+              className="block p-6 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 transition-all hover:shadow-lg hover:scale-105"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="text-gray-700 dark:text-gray-300">{category.icon}</div>
                 <ArrowRight className="w-5 h-5 text-gray-400" />
               </div>
               
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 {category.title}
               </h3>
               
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
                 {category.description}
               </p>
               
-              <div className="flex flex-wrap gap-1">
+              <div className="flex flex-wrap gap-2">
                 {category.examples.map((example, i) => (
-                  <span key={i} className="text-xs px-2 py-1 bg-white dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-600">
+                  <span key={i} className="text-gray-600 dark:text-gray-300">
                     {example}
                   </span>
                 ))}
@@ -144,18 +151,18 @@ export default function ResourcesPage() {
             <Link
               key={resource.href}
               href={resource.href}
-              className={`block p-6 rounded-lg border-2 transition-all hover:shadow-lg hover:scale-105 ${resource.color}`}
+              className="block p-6 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 transition-all hover:shadow-lg hover:scale-105"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="text-gray-700 dark:text-gray-300">{resource.icon}</div>
                 <ArrowRight className="w-5 h-5 text-gray-400" />
               </div>
               
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 {resource.title}
               </h3>
               
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
+              <p className="text-gray-600 dark:text-gray-300">
                 {resource.description}
               </p>
             </Link>

@@ -115,10 +115,12 @@ const sidebarItems: SidebarItem[] = [
     href: '/resources',
     icon: <Package size={18} />,
     children: [
-      { title: 'Learning Platforms', href: '/resources/platforms', icon: <ChevronRight size={16} /> },
-      { title: 'Books & Documentation', href: '/resources/books', icon: <ChevronRight size={16} /> },
-      { title: 'Communities', href: '/resources/communities', icon: <ChevronRight size={16} /> },
-      { title: 'Practice & Challenges', href: '/resources/practice', icon: <ChevronRight size={16} /> }
+      { title: 'Programming Languages', href: '/resources/programming-languages', icon: <ChevronRight size={16} /> },
+      { title: 'Development Tools', href: '/resources/development-tools', icon: <ChevronRight size={16} /> },
+      { title: 'Programming Books', href: '/resources/books', icon: <ChevronRight size={16} /> },
+      { title: 'Learning Platforms', href: '/resources/learning-platforms', icon: <ChevronRight size={16} /> },
+      { title: 'Practice Platforms', href: '/resources/practice-platforms', icon: <ChevronRight size={16} /> },
+      { title: 'Communities', href: '/resources/communities', icon: <ChevronRight size={16} /> }
     ]
   },
   {

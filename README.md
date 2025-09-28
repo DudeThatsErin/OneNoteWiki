@@ -12,12 +12,15 @@ A comprehensive wiki for learning programming and software development, created 
 - 📱 **Responsive Design** - Works perfectly on desktop, tablet, and mobile devices
 - 🧭 **Intuitive Navigation** - Sidebar navigation with expandable sections
 - 📚 **Comprehensive Content** - Covers programming fundamentals to advanced topics
+- 🗄️ **Interactive Resource Databases** - 5 searchable databases with 100+ entries
+- 🔍 **Advanced Search & Filtering** - Sort, filter, and search across all database fields
+- 📊 **Professional DataTable Component** - Fullscreen mode, keyboard navigation, accessibility
 - 🎨 **Modern UI** - Clean, accessible design built with Tailwind CSS
 - ⚡ **Fast Performance** - Built with Next.js 14 and optimized for speed
 - 🔍 **SEO Optimized** - Proper meta tags and structured content
-- 🏗️ **Professional Component Architecture** - 12 reusable components with folder-based structure
+- 🏗️ **Professional Component Architecture** - 13 reusable components with folder-based structure
 - 📊 **Interactive Statistics** - Dynamic QuickStats with icons across all sections
-- ♿ **Accessibility Enhanced** - Semantic HTML with proper list styling (`list-disc list-inside`)
+- ♿ **Accessibility Enhanced** - Full keyboard navigation, screen reader support, ARIA labels
 - 🎨 **Modern Layout Patterns** - `flex flex-col gap-*` system replacing space utilities
 - 🔒 **Type-Safe Development** - Complete TypeScript integration with component-specific types
 - ✅ **100% Build Success** - Enterprise-grade setup with comprehensive testing
@@ -27,7 +30,8 @@ A comprehensive wiki for learning programming and software development, created 
 - **Framework:** Next.js 14 with TypeScript
 - **Styling:** Tailwind CSS with modern layout patterns
 - **Icons:** Lucide React & FontAwesome
-- **Components:** Professional folder-based architecture (12 components)
+- **Components:** Professional folder-based architecture (13 components)
+- **Database:** Interactive DataTable with advanced filtering and search
 - **Testing:** Jest with comprehensive component test coverage
 - **Linting:** ESLint with professional code quality rules
 - **Deployment:** Vercel with optimized static generation
@@ -70,6 +74,50 @@ yarn dev
 npm run build
 npm run start
 ```
+
+## Resource Databases
+
+The wiki features 5 comprehensive, searchable databases with over 100+ entries:
+
+### 🗄️ Database Features
+- **Advanced Search** - Search across multiple fields simultaneously
+- **Column Sorting** - Click any header to sort by that column
+- **Fullscreen Mode** - Toggle fullscreen for detailed viewing
+- **Keyboard Navigation** - Full keyboard accessibility support
+- **External Links** - Direct links to official sites, documentation, and downloads
+- **Responsive Design** - Perfect on all screen sizes
+
+### 📊 Available Databases
+
+#### 1. Programming Languages Database (`/resources/programming-languages`)
+- **12+ Languages** including Python, JavaScript, Java, C++, Go, Rust
+- **Comprehensive Data**: Difficulty, popularity, paradigms, use cases, companies
+- **Direct Links**: Official sites, documentation, GitHub repos
+- **Smart Filtering**: Search by name, paradigm, use cases, companies
+
+#### 2. Development Tools Database (`/resources/development-tools`)
+- **12+ Essential Tools** including IDEs, DevOps, design tools
+- **Detailed Specs**: Platforms, languages, features, pricing
+- **Download Links**: Direct links to official download pages
+- **Categories**: IDE/Editor, Version Control, API Testing, Design, Communication
+
+#### 3. Programming Books Database (`/resources/books`)
+- **45+ Essential Books** including "For Dummies" series and classics
+- **Complete Data**: ISBN, prices, ratings, Amazon/Goodreads links
+- **Learning Info**: Difficulty levels, key topics, target audience
+- **Format Options**: Paperback, Kindle, Audiobook, Free online versions
+
+#### 4. Learning Platforms Database (`/resources/learning-platforms`)
+- **12+ Major Platforms** from free to premium
+- **Comparison Data**: Pricing, features, community size, certificates
+- **Specialization Info**: Languages taught, course counts, best use cases
+- **Quality Metrics**: Ratings, user base, founded dates
+
+#### 5. Practice Platforms Database (`/resources/practice-platforms`)
+- **12+ Coding Practice Sites** for all skill levels
+- **Contest Information**: Which platforms offer competitions
+- **Problem Data**: Problem counts, difficulty systems, language support
+- **Career Prep**: Interview preparation and company-specific questions
 
 ### Testing
 
@@ -129,7 +177,7 @@ src/
 
 ## Professional Component Architecture
 
-The wiki features a complete professional component system with 12 reusable components:
+The wiki features a complete professional component system with 13 reusable components:
 
 ### Core Layout Components
 - **PageLayout** - Universal wrapper with navigation, headers, and footers (70+ implementations)
@@ -143,6 +191,7 @@ The wiki features a complete professional component system with 12 reusable comp
 - **CodeBlock** - Syntax highlighting with copy functionality
 - **ComparisonTable** - Framework/language comparison tables
 - **GettingStartedSection** - Step-by-step tutorial guides
+- **DataTable** - Advanced searchable tables with sorting, filtering, and fullscreen mode
 
 ### UI Enhancement Components
 - **Tag** - Flexible tagging system with variants
@@ -206,7 +255,13 @@ The wiki is organized into the following main sections:
 - **DevOps & Tools** - Development tools, version control, and deployment 
 - **AI & Machine Learning** - AI concepts, tools, and applications
 - **Project Ideas** - Coding project suggestions by language 
-- **Resources** - Learning platforms, books, and practice problems 
+- **Resource Databases** - 5 searchable databases with 130+ programming resources
+  - Programming Languages Database (12+ languages)
+  - Development Tools Database (12+ tools)
+  - Programming Books Database (45+ books including "For Dummies" series and classics)
+  - Learning Platforms Database (12+ platforms)
+  - Practice Platforms Database (12+ coding challenge sites)
+- **Communities** - Developer communities and forums
 - **FAQ** - Common questions and answers 
 - **Bot Commands** - Discord bot command reference 
 
