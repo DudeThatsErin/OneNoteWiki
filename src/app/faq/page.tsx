@@ -123,7 +123,7 @@ export default function FAQPage() {
     >
 
       {/* FAQ Items */}
-      <div className="flex flex-col gap-4 md:gap-6">
+      <div className="flex flex-col gap-4 md:gap-6 mb-8 md:mb-12">
         {faqs.map((faq, index) => (
           <FAQItem 
             key={faq.id} 
