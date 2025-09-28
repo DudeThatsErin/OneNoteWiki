@@ -1,5 +1,9 @@
 import Link from 'next/link';
-import { Code, ArrowRight, Star, TrendingUp, Users, Zap } from 'lucide-react';
+import { Code, Users, Star, Zap, Globe, Brain, ArrowRight, ExternalLink } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const languages = [
   {
@@ -97,27 +101,21 @@ const languages = [
 const languageStats = [
   { label: 'Most Popular', value: 'JavaScript', icon: <Star className="w-4 h-4" suppressHydrationWarning /> },
   { label: 'Best for Beginners', value: 'Python', icon: <Users className="w-4 h-4" suppressHydrationWarning /> },
-  { label: 'Fastest Growing', value: 'Rust', icon: <TrendingUp className="w-4 h-4" suppressHydrationWarning /> },
+  { label: 'Fastest Growing', value: 'Rust', icon: <Globe className="w-4 h-4" suppressHydrationWarning /> },
   { label: 'Highest Performance', value: 'C++', icon: <Zap className="w-4 h-4" suppressHydrationWarning /> }
 ];
 
 export default function LanguagesPage() {
   return (
-    <>
-      {/* Header */}
-      <div className="flex flex-col items-start p-4">
-        <div className="flex items-center gap-3">
-          <Code className="w-8 h-8 text-blue-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white pb-2">
-            Programming Languages
-          </h1>
-        </div>
-        <p className="pt-4 text-lg text-gray-600 dark:text-gray-300">
-          Explore popular programming languages and find the right one for your goals. 
-          Each language has its strengths and is suited for different types of projects.
-        </p>
-      </div>
-
+    <PageLayout
+      title="Programming Languages"
+      description="Explore different programming languages, their strengths, use cases, and learning paths. Choose the right language for your projects and career goals."
+      icon={<Code className="w-8 h-8 text-blue-600" />}
+      nextLink={{
+        href: "/languages/python",
+        label: "Start: Python"
+      }}
+    >
       {/* Quick Stats */}
       <div className="py-4">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white pb-4">
@@ -264,6 +262,6 @@ export default function LanguagesPage() {
           </div>
         </div>
       </div>
-    </>
+    </PageLayout>
   );
 }

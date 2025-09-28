@@ -1,5 +1,9 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Table, Database, Search, Lock } from 'lucide-react';
+import { Database, Code, Users, Star, Table, Search, ArrowRight, ExternalLink, Lock, Shield, Server, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const sqlConcepts = [
   {
@@ -51,40 +55,21 @@ const popularDatabases = [
   }
 ];
 
-export default function SQLBasicsPage() {
+export default function SQLPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/data-databases"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Data & Databases</span>
-        </Link>
-        <Link
-          href="/data-databases/nosql"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: NoSQL Databases</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <Table className="w-8 h-8 text-blue-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            SQL Basics
-          </h1>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Learn Structured Query Language (SQL) to work with relational databases. 
-          Master data retrieval, manipulation, and database design fundamentals.
-        </p>
-      </div>
+    <PageLayout
+      title="SQL Databases"
+      description="SQL (Structured Query Language) is the standard language for managing and manipulating relational databases. Learn to design, query, and optimize SQL databases."
+      icon={<div className="text-4xl">📊</div>}
+      previousLink={{
+        href: "/data-databases",
+        label: "Back to Data & Databases"
+      }}
+      nextLink={{
+        href: "/data-databases/nosql",
+        label: "Next: NoSQL Databases"
+      }}
+    >
 
       {/* What is SQL */}
       <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
@@ -351,6 +336,6 @@ WHERE id IN (
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

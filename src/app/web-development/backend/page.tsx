@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Server, Database, Shield, Zap } from 'lucide-react';
+import { Server, Database, Shield, Code, Users, Star, ArrowRight, ExternalLink } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
 
 const backendLanguages = [
   {
@@ -55,45 +57,25 @@ const backendConcepts = [
   {
     title: 'Performance & Scaling',
     description: 'Caching, load balancing, microservices, and optimization techniques',
-    icon: <Zap className="w-5 h-5" />
+    icon: <Code className="w-5 h-5" />
   }
 ];
 
-export default function BackendPage() {
+export default function BackendDevelopmentPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/web-development/frontend"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Frontend Frameworks</span>
-        </Link>
-        <Link
-          href="/web-development/fullstack"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Full Stack Development</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <Server className="w-8 h-8 text-purple-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Backend Development
-          </h1>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Learn server-side programming to build APIs, handle databases, manage user authentication, 
-          and create the backbone that powers modern web applications.
-        </p>
-      </div>
-
+    <PageLayout
+      title="Backend Development"
+      description="Backend development involves creating the server-side logic, databases, and infrastructure that power web applications behind the scenes."
+      icon={<div className="text-4xl">💾</div>}
+      previousLink={{
+        href: "/web-development/frontend",
+        label: "Previous: Frontend Development"
+      }}
+      nextLink={{
+        href: "/web-development",
+        label: "Back to Web Development"
+      }}
+    >
       {/* What is Backend Development */}
       <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
         <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
@@ -396,23 +378,6 @@ app.listen(3000, () => {
         </div>
       </div>
 
-      {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/web-development/frontend"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Frontend Frameworks</span>
-        </Link>
-        <Link
-          href="/web-development/fullstack"
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-        >
-          <span>Next: Full Stack Development</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

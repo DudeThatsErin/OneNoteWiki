@@ -1,11 +1,15 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Layers, Smartphone, Palette, Layout } from 'lucide-react';
+import { Smartphone, Code, Users, Star, Layers, ArrowRight, ExternalLink, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const coreComponents = [
   {
     name: 'View',
     description: 'The fundamental component for building UI, similar to div in web',
-    icon: <Layout className="w-5 h-5" />,
+    icon: <Layers className="w-5 h-5" />,
     props: ['style', 'onLayout', 'pointerEvents', 'testID'],
     example: `<View style={styles.container}>
   <Text>Hello World!</Text>
@@ -85,7 +89,7 @@ const styles = StyleSheet.create({
   {
     name: 'TouchableOpacity',
     description: 'Touchable component that reduces opacity when pressed',
-    icon: <Palette className="w-5 h-5" />,
+    icon: <Layers className="w-5 h-5" />,
     props: ['onPress', 'disabled', 'activeOpacity', 'style'],
     example: `<TouchableOpacity 
   style={styles.button} 
@@ -230,128 +234,100 @@ const styles = StyleSheet.create({
 
 export default function ReactNativeComponentsPage() {
   return (
-    <div className="space-y-8">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/mobile-development/react-native/setup"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Setup & Environment</span>
-        </Link>
-        <Link
-          href="/mobile-development/react-native/navigation"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Navigation</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
-          <div className="text-4xl">🧩</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">React Native Components & UI</h1>
-            <p className="text-gray-600 dark:text-gray-300">Master the building blocks of React Native apps</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          React Native provides a rich set of components for building mobile user interfaces. 
-          Learn about core components, styling with Flexbox, and creating responsive layouts 
-          that work across different screen sizes and platforms.
-        </p>
-      </div>
-
-      {/* Core Components */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          Core Components
-        </h2>
-        
-        <div className="space-y-6">
-          {coreComponents.map((component, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
-              <div className="p-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="text-blue-600">{component.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{component.name}</h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm">{component.description}</p>
+    <PageLayout
+      title="React Native Components"
+      description="Learn about React Native's core components and how to build custom components for creating beautiful and functional mobile applications."
+      icon={<div className="text-4xl">📱</div>}
+      previousLink={{
+        href: "/mobile-development/react-native",
+        label: "Back to React Native"
+      }}
+      nextLink={{
+        href: "/mobile-development/react-native/navigation",
+        label: "Next: Navigation"
+      }}
+    >
+      <div className="flex flex-col gap-8 md:gap-12">
+        {/* Core Components */}
+        <section className="flex flex-col gap-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+            Core Components
+          </h2>
+          
+          <div className="flex flex-col gap-6">
+            {coreComponents.map((component, index) => (
+              <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="text-blue-600">{component.icon}</div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{component.name}</h3>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm">{component.description}</p>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Common Props:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {component.props.map((prop, i) => (
-                      <span key={i} className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">
-                        {prop}
-                      </span>
-                    ))}
+                  
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Common Props:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {component.props.map((prop, i) => (
+                        <span key={i} className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">
+                          {prop}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Example:</h4>
-                  <pre className="text-sm text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-900 p-4 rounded-lg overflow-x-auto">
-                    {component.example}
-                  </pre>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
 
-      {/* List Components */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          List Components
-        </h2>
-        
-        <div className="space-y-6">
-          {listComponents.map((component, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{component.name}</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{component.description}</p>
-              <pre className="text-sm text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-900 p-4 rounded-lg overflow-x-auto">
-                {component.example}
-              </pre>
-            </div>
-          ))}
-        </div>
-      </section>
+        {/* List Components */}
+        <section className="flex flex-col gap-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+            List Components
+          </h2>
+          
+          <div className="flex flex-col gap-6">
+            {listComponents.map((component, index) => (
+              <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{component.name}</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{component.description}</p>
+                <pre className="text-sm text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-900 p-4 rounded-lg overflow-x-auto">
+                  {component.example}
+                </pre>
+              </div>
+            ))}
+          </div>
+        </section>
 
-      {/* Styling & Layout */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          Styling & Layout
-        </h2>
-        
-        <div className="space-y-6">
-          {stylingConcepts.map((concept, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{concept.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{concept.description}</p>
-              <pre className="text-sm text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-900 p-4 rounded-lg overflow-x-auto">
-                {concept.example}
-              </pre>
-            </div>
-          ))}
-        </div>
-      </section>
+        {/* Styling & Layout */}
+        <section className="flex flex-col gap-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+            Styling & Layout
+          </h2>
+          
+          <div className="flex flex-col gap-6">
+            {stylingConcepts.map((concept, index) => (
+              <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{concept.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{concept.description}</p>
+                <pre className="text-sm text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-900 p-4 rounded-lg overflow-x-auto">
+                  {concept.example}
+                </pre>
+              </div>
+            ))}
+          </div>
+        </section>
 
-      {/* Complete Example */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          Complete Example: User Profile Screen
-        </h2>
-        
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-          <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
+        {/* Complete Example */}
+        <section className="flex flex-col gap-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+            Complete Example: User Profile Screen
+          </h2>
+          
+          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`import React, { useState } from 'react';
 import {
   View,
@@ -515,56 +491,57 @@ export default UserProfileScreen;`}
         </div>
       </section>
 
-      {/* Best Practices */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          Best Practices
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">✅ Do's</h3>
-            <ul className="text-green-800 dark:text-green-200 text-sm space-y-2">
-              <li>• Use StyleSheet.create() for better performance</li>
-              <li>• Implement proper key props for list items</li>
-              <li>• Use Flexbox for responsive layouts</li>
-              <li>• Test on both iOS and Android devices</li>
-              <li>• Use platform-specific styles when needed</li>
-              <li>• Optimize images and use appropriate formats</li>
-            </ul>
-          </div>
+        {/* Best Practices */}
+        <section className="flex flex-col gap-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+            Best Practices
+          </h2>
           
-          <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
-            <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">❌ Don'ts</h3>
-            <ul className="text-red-800 dark:text-red-200 text-sm space-y-2">
-              <li>• Don't use inline styles for complex styling</li>
-              <li>• Avoid deep nesting of components</li>
-              <li>• Don't ignore accessibility props</li>
-              <li>• Avoid using ScrollView for large lists</li>
-              <li>• Don't hardcode dimensions for different screens</li>
-              <li>• Avoid blocking the main thread with heavy operations</li>
-            </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+              <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">✅ Do's</h3>
+              <ul className="list-disc list-inside text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
+                <li>Use StyleSheet.create() for better performance</li>
+                <li>Implement proper key props for list items</li>
+                <li>Use Flexbox for responsive layouts</li>
+                <li>Test on both iOS and Android devices</li>
+                <li>Use platform-specific styles when needed</li>
+                <li>Optimize images and use appropriate formats</li>
+              </ul>
+            </div>
+            
+            <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
+              <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">❌ Don'ts</h3>
+              <ul className="list-disc list-inside text-red-800 dark:text-red-200 text-sm [&>li]:mb-1">
+                <li>Don't use inline styles for complex styling</li>
+                <li>Avoid deep nesting of components</li>
+                <li>Don't ignore accessibility props</li>
+                <li>Avoid using ScrollView for large lists</li>
+                <li>Don't hardcode dimensions for different screens</li>
+                <li>Avoid blocking the main thread with heavy operations</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/mobile-development/react-native/setup"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Setup & Environment</span>
-        </Link>
-        <Link
-          href="/mobile-development/react-native/navigation"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-        >
-          <span>Next: Navigation</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
+        {/* Navigation */}
+        <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
+          <Link
+            href="/mobile-development/react-native/setup"
+            className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Previous: Setup & Environment</span>
+          </Link>
+          <Link
+            href="/mobile-development/react-native/navigation"
+            className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+          >
+            <span>Next: Navigation</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
-    </div>
+    </PageLayout>
   );
 }

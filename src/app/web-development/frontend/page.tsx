@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Zap, Component, Layers, Smartphone } from 'lucide-react';
+import { Code, Layers, Globe, Users, Star, Zap, ArrowRight, ExternalLink } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
 
 const frameworks = [
   {
@@ -37,46 +39,27 @@ const frameworks = [
 ];
 
 const concepts = [
-  { title: 'Components', description: 'Reusable UI building blocks', icon: <Component className="w-5 h-5" /> },
+  { title: 'Components', description: 'Reusable UI building blocks', icon: <Code className="w-5 h-5" /> },
   { title: 'State Management', description: 'Managing application data and UI state', icon: <Layers className="w-5 h-5" /> },
-  { title: 'Routing', description: 'Navigation between different views/pages', icon: <Smartphone className="w-5 h-5" /> },
+  { title: 'Routing', description: 'Navigation between different views/pages', icon: <Globe className="w-5 h-5" /> },
   { title: 'Lifecycle Methods', description: 'Hooks into component creation, updates, and destruction', icon: <Zap className="w-5 h-5" /> }
 ];
 
-export default function FrontendPage() {
+export default function FrontendDevelopmentPage() {
   return (
-    <div className="space-y-8">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/web-development/html-css"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: HTML & CSS</span>
-        </Link>
-        <Link
-          href="/web-development/backend"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Backend Development</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
-          <Zap className="w-8 h-8 text-blue-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Frontend Frameworks
-          </h1>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Master modern JavaScript frameworks and libraries to build dynamic, interactive 
-          web applications with component-based architecture and reactive data flow.
-        </p>
-      </div>
+    <PageLayout
+      title="Frontend Development"
+      description="Frontend development focuses on creating the visual and interactive parts of web applications that users see and interact with directly in their browsers."
+      icon={<div className="text-4xl">🎨</div>}
+      previousLink={{
+        href: "/web-development",
+        label: "Back to Web Development"
+      }}
+      nextLink={{
+        href: "/web-development/backend",
+        label: "Next: Backend Development"
+      }}
+    >
 
       {/* Why Use Frameworks */}
       <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
@@ -284,23 +267,6 @@ export default function FrontendPage() {
         </div>
       </div>
 
-      {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/web-development/html-css"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: HTML & CSS</span>
-        </Link>
-        <Link
-          href="/web-development/backend"
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-        >
-          <span>Next: Backend Development</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

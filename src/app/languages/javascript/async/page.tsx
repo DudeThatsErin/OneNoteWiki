@@ -1,27 +1,22 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Clock, Zap, Globe } from 'lucide-react';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
 
 export default function JavaScriptAsyncPage() {
   return (
-    <div className="space-y-8">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/languages/javascript/frameworks"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Frameworks</span>
-        </Link>
-        <Link
-          href="/languages/javascript"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Back to JavaScript</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
+    <PageLayout
+      title="Asynchronous JavaScript"
+      description="Learn how to handle asynchronous operations in JavaScript using callbacks, promises, and async/await syntax for better performance and user experience."
+      icon={<div className="text-4xl">⏰</div>}
+      previousLink={{
+        href: "/languages/javascript/fundamentals",
+        label: "Previous: JavaScript Fundamentals"
+      }}
+      nextLink={{
+        href: "/languages/javascript/frameworks",
+        label: "Next: JavaScript Frameworks"
+      }}
+    >
       {/* Header */}
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
@@ -507,6 +502,6 @@ Promise.resolve().then(() => console.log('micro 2'));
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

@@ -1,12 +1,16 @@
 import Link from 'next/link';
-import { ArrowLeft, Smartphone, Code, Zap, Globe } from 'lucide-react';
+import { Smartphone, Code, Users, Star, Zap, ArrowRight, ExternalLink, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const androidFeatures = [
   {
     title: 'Kotlin-First',
     description: 'Google\'s preferred language for Android development',
-    icon: <Code className="w-5 h-5" />,
-    details: 'Modern, concise, and fully interoperable with Java'
+    icon: <Smartphone className="w-5 h-5" />,
+    details: 'Full access to Android device features and hardware'
   },
   {
     title: 'Jetpack Compose',
@@ -17,38 +21,32 @@ const androidFeatures = [
   {
     title: 'Open Ecosystem',
     description: 'Flexible platform with multiple distribution channels',
-    icon: <Globe className="w-5 h-5" />,
+    icon: <ExternalLink className="w-5 h-5" />,
     details: 'Deploy through Google Play Store, Amazon Appstore, or direct APK'
   },
   {
     title: 'Rich Hardware Access',
     description: 'Access to cameras, sensors, and device capabilities',
-    icon: <Smartphone className="w-5 h-5" />,
-    details: 'Full access to Android device features and hardware'
+    icon: <Code className="w-5 h-5" />,
+    details: 'Modern, concise, and fully interoperable with Java'
   }
 ];
 
-export default function NativeAndroidPage() {
+export default function AndroidDevelopmentPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/mobile-development/ios"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Native iOS</span>
-        </Link>
-        <Link
-          href="/mobile-development"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Back to Mobile Development</span>
-        </Link>
-      </div>
-
-      {/* Header */}
+    <PageLayout
+      title="Android Development"
+      description="Android development involves creating applications for Android devices using Kotlin or Java. Learn to build native Android apps with Android Studio and the Android SDK."
+      icon={<div className="text-4xl">🤖</div>}
+      previousLink={{
+        href: "/mobile-development/ios",
+        label: "Previous: iOS Development"
+      }}
+      nextLink={{
+        href: "/mobile-development/java-android",
+        label: "Next: Java Android"
+      }}
+    >
       <div className="flex flex-col gap-4 md:gap-6">
         <div className="flex items-center gap-3">
           <div className="text-4xl">🤖</div>
@@ -333,6 +331,6 @@ fun CounterScreenPreview() {
           <span>Back to Mobile Development</span>
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

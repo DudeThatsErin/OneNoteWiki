@@ -1,5 +1,9 @@
 import Link from 'next/link';
-import { ArrowLeft, Layers, Code, Server, Database, Globe, Zap } from 'lucide-react';
+import { Globe, Code, Users, Star, Layers, Zap, ArrowRight, ExternalLink, Server, Database, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const fullstackStacks = [
   {
@@ -63,26 +67,21 @@ const fullstackConcepts = [
   }
 ];
 
-export default function FullStackPage() {
+export default function FullStackDevelopmentPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/web-development/backend"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Backend Development</span>
-        </Link>
-        <Link
-          href="/web-development"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Back to Web Development</span>
-        </Link>
-      </div>
-
+    <PageLayout
+      title="Full-Stack Development"
+      description="Full-stack development involves working with both frontend and backend technologies to build complete web applications from start to finish."
+      icon={<div className="text-4xl">🌍</div>}
+      previousLink={{
+        href: "/web-development/backend",
+        label: "Previous: Backend Development"
+      }}
+      nextLink={{
+        href: "/web-development",
+        label: "Back to Web Development"
+      }}
+    >
       {/* Header */}
       <div className="flex flex-col gap-4 md:gap-6">
         <div className="flex items-center gap-3">
@@ -418,6 +417,6 @@ export default function FullStackPage() {
           <span>Back to Web Development</span>
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

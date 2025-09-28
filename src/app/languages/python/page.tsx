@@ -1,5 +1,10 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Code, Database, Brain, Zap, Star, ExternalLink, BookOpen, Users, Globe } from 'lucide-react';
+import { Code, Database, Brain, Zap, Star, ExternalLink, BookOpen, Users, Globe } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
+import { ContentList } from '@/components/ContentList';
 
 const pythonFeatures = [
   {
@@ -81,75 +86,54 @@ const pythonUseCases = [
 
 export default function PythonPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-        <Link
-          href="/languages"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" suppressHydrationWarning />
-          <span>Back to Languages</span>
-        </Link>
-        <Link
-          href="/languages/javascript"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: JavaScript</span>
-          <ArrowRight className="w-4 h-4" suppressHydrationWarning />
-        </Link>
-      </div>
+    <PageLayout
+      title="Python"
+      description="Python is a high-level, interpreted programming language known for its simplicity and readability. It's perfect for beginners and powerful enough for complex applications in web development, data science, artificial intelligence, and more."
+      previousLink={{
+        href: "/languages",
+        label: "Back to Languages"
+      }}
+      nextLink={{
+        href: "/languages/javascript",
+        label: "Next: JavaScript"
+      }}
+    >
 
-      {/* Header */}
-      <div className="flex flex-col items-start py-2">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          Python
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 pb-4">
-          Python is a high-level, interpreted programming language known for its simplicity and readability. 
-          It's perfect for beginners and powerful enough for complex applications in web development, 
-          data science, artificial intelligence, and more.
-        </p>
-      </div>
+      <QuickStats stats={[
+        { value: "1991", label: "First Released" },
+        { value: "Beginner", label: "Difficulty Level" },
+        { value: "Very High", label: "Popularity" },
+        { value: "Multi-Purpose", label: "Use Cases" }
+      ]} />
 
-      {/* Quick Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">1991</div>
-          <div className="text-sm text-gray-600 dark:text-gray-300">First Released</div>
-        </div>
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">Beginner</div>
-          <div className="text-sm text-gray-600 dark:text-gray-300">Difficulty Level</div>
-        </div>
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">#1</div>
-          <div className="text-sm text-gray-600 dark:text-gray-300">TIOBE Index</div>
-        </div>
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">15.7M+</div>
-          <div className="text-sm text-gray-600 dark:text-gray-300">Developers</div>
-        </div>
-      </div>
-
-      {/* Key Features */}
-      <section className="flex flex-col gap-6 md:gap-8">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          Why Choose Python?
-        </h2>
+      <InfoCard title="🐍 Why Choose Python?" variant="blue" icon={<Code className="w-5 h-5" />}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {pythonFeatures.map((feature, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="text-blue-600">{feature.icon}</div>
-                <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{feature.description}</p>
-              <p className="text-gray-500 dark:text-gray-400 text-xs">{feature.details}</p>
-            </div>
-          ))}
+          <div>
+            <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Perfect for Beginners:</h4>
+            <ContentList items={[
+              "Simple, readable syntax",
+              "No complex setup required", 
+              "Extensive documentation",
+              "Large, helpful community"
+            ]} className="text-blue-800 dark:text-blue-200" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Versatile Applications:</h4>
+            <ContentList items={[
+              "Web development (Django, Flask)",
+              "Data science and AI/ML",
+              "Automation and scripting",
+              "Desktop applications"
+            ]} className="text-blue-800 dark:text-blue-200" />
+          </div>
         </div>
-      </section>
+      </InfoCard>
+
+      <FeatureList 
+        features={pythonFeatures} 
+        title="Key Python Features" 
+        columns={2} 
+      />
 
       {/* Use Cases */}
       <section className="flex flex-col gap-6 md:gap-8">
@@ -338,23 +322,6 @@ print(message)`}
         </div>
       </div>
 
-      {/* Navigation */}
-      <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/languages"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline pb-2"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Languages</span>
-        </Link>
-        <Link
-          href="/languages/javascript"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: JavaScript</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

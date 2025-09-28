@@ -1,5 +1,9 @@
 import Link from 'next/link';
-import { Code, Lightbulb, ArrowRight, Users, Zap, Trophy, Smartphone, Apple } from 'lucide-react';
+import { Lightbulb, Code, Users, Star, Zap, Layers, ArrowRight, ExternalLink, Apple, Smartphone } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const languages = [
   {
@@ -93,7 +97,7 @@ const projectCategories = [
   },
   {
     level: 'Advanced',
-    icon: <Trophy className="w-6 h-6" suppressHydrationWarning />,
+    icon: <Layers className="w-6 h-6" suppressHydrationWarning />,
     color: 'red',
     description: 'Complex projects for experienced developers',
     examples: ['Distributed Systems', 'Machine Learning', 'Compilers', 'Game Engines']
@@ -102,22 +106,20 @@ const projectCategories = [
 
 export default function ProjectIdeasPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">💡</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Project Ideas</h1>
-            <p className="text-gray-600 dark:text-gray-300">Hands-on projects to build your programming skills</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Learning programming is best done through building real projects. Explore our curated collection 
-          of project ideas organized by programming language and difficulty level. Each language page contains 
-          30 carefully selected projects: 10 for beginners, 10 for intermediate developers, and 10 for advanced programmers.
-        </p>
-      </div>
+    <PageLayout
+      title="Project Ideas"
+      description="Build your skills with hands-on projects. From beginner-friendly exercises to advanced challenges across different programming languages and domains."
+      icon={<Lightbulb className="w-8 h-8 text-blue-600" />}
+      nextLink={{
+        href: "/project-ideas/python",
+        label: "Start: Python Projects"
+      }}
+    >
+      <p className="text-lg text-gray-600 dark:text-gray-300">
+        Learning programming is best done through building real projects. Explore our curated collection 
+        of project ideas organized by programming language and difficulty level. Each language page contains 
+        30 carefully selected projects: 10 for beginners, 10 for intermediate developers, and 10 for advanced programmers.
+      </p>
 
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -365,6 +367,6 @@ export default function ProjectIdeasPage() {
           </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 }

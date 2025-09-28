@@ -1,38 +1,22 @@
 import Link from 'next/link';
-import { ArrowLeft, Lightbulb, Cpu, Code, ArrowRight } from 'lucide-react';
+import { Code, Lightbulb, Users, Target, ArrowRight, Cpu } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
 
 export default function WhatIsProgrammingPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-        <Link
-          href="/getting-started"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" suppressHydrationWarning />
-          <span>Back to Getting Started</span>
-        </Link>
-        <Link
-          href="/getting-started/choosing-language"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Choosing Your First Language</span>
-          <ArrowRight className="w-4 h-4" suppressHydrationWarning />
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="flex flex-col items-start py-2">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          What is Programming?
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 pb-4">
-          Understanding the fundamentals of programming and how computers work.
-        </p>
-      </div>
-
-      {/* Main Content */}
+    <PageLayout
+      title="What is Programming?"
+      description="Programming is the process of creating instructions for computers to follow. Think of it as writing a recipe that a computer can understand and execute."
+      icon={<div className="text-4xl">💡</div>}
+      previousLink={{
+        href: "/getting-started",
+        label: "Back to Getting Started"
+      }}
+      nextLink={{
+        href: "/getting-started/choosing-language",
+        label: "Next: Choosing a Language"
+      }}
+    >
       <div className="prose prose-gray dark:prose-invert max-w-none">
         <div className="flex flex-col gap-6 md:gap-8">
           {/* Introduction */}
@@ -184,24 +168,6 @@ export default function WhatIsProgrammingPage() {
           </section>
         </div>
       </div>
-
-      {/* Navigation */}
-      <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/getting-started"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Getting Started</span>
-        </Link>
-        <Link
-          href="/getting-started/choosing-language"
-          className="flex items-center gap-2 px-4 py-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Choosing Your First Language</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

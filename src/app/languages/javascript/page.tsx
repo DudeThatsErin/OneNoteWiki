@@ -1,5 +1,10 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Globe, Smartphone, Server, Zap, Code, Users, Layers, BookOpen, Clock } from 'lucide-react';
+import { Globe, Smartphone, Server, Zap, Code, Users, Layers, BookOpen, Clock, ArrowRight, Star } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
+import { ContentList } from '@/components/ContentList';
 
 const jsFeatures = [
   {
@@ -107,60 +112,41 @@ const jsSections = [
 
 export default function JavaScriptPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/languages/python"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Python</span>
-        </Link>
-        <Link
-          href="/languages/java"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Java</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
+    <PageLayout
+      title="JavaScript"
+      description="JavaScript is the programming language of the web. Originally created for browsers, it now powers servers, mobile apps, desktop applications, and more. It's versatile, beginner-friendly, and essential for modern web development."
+      previousLink={{
+        href: "/languages/python",
+        label: "Previous: Python"
+      }}
+      nextLink={{
+        href: "/languages/java",
+        label: "Next: Java"
+      }}
+    >
 
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">🟨</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">JavaScript</h1>
-            <p className="text-gray-600 dark:text-gray-300">The language of the web - and much more</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          JavaScript is a high-level, dynamic programming language that's essential for web development. 
-          Originally created for browsers in 1995, it has evolved into a versatile language used for 
-          frontend, backend, mobile, and desktop development.
-        </p>
-      </div>
-
-      {/* Quick Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800">
-          <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">1995</div>
-          <div className="text-sm text-yellow-700 dark:text-yellow-300">First Released</div>
-        </div>
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800">
-          <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">Beginner</div>
-          <div className="text-sm text-yellow-700 dark:text-yellow-300">Difficulty Level</div>
-        </div>
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800">
-          <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">#1</div>
-          <div className="text-sm text-yellow-700 dark:text-yellow-300">Most Used Language</div>
-        </div>
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800">
-          <div className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">17M+</div>
-          <div className="text-sm text-yellow-700 dark:text-yellow-300">Developers</div>
-        </div>
-      </div>
+      <QuickStats stats={[
+        { 
+          value: "1995", 
+          label: "First Released",
+          icon: <Code className="w-5 h-5" />
+        },
+        { 
+          value: "Beginner", 
+          label: "Difficulty Level",
+          icon: <Users className="w-5 h-5" />
+        },
+        { 
+          value: "Very High", 
+          label: "Popularity",
+          icon: <Star className="w-5 h-5" />
+        },
+        { 
+          value: "Everywhere", 
+          label: "Platform",
+          icon: <Globe className="w-5 h-5" />
+        }
+      ]} />
 
       {/* Learning Sections */}
       <section className="flex flex-col gap-6 md:gap-8">
@@ -369,22 +355,6 @@ export default function JavaScriptPage() {
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/languages/python"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Python</span>
-        </Link>
-        <Link
-          href="/languages/java"
-          className="flex items-center gap-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg font-medium transition-colors"
-        >
-          <span>Next: Java</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

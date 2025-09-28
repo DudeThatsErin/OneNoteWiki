@@ -240,12 +240,12 @@ export default function AIDosAndDontsPage() {
       <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
           <CheckCircle className="w-6 h-6 text-green-600" />
-          <span>What TO DO</span>
+          <span>What To Do</span>
         </h2>
         
         <div className="flex flex-col gap-6 md:gap-8">
           {aiDos.map((category, index) => (
-            <div key={index} className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
+            <div key={index}>
               <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
                 {category.category}
               </h3>
@@ -257,7 +257,7 @@ export default function AIDosAndDontsPage() {
                       <span>{item.title}</span>
                     </h4>
                     <p className="text-green-800 dark:text-green-200 text-sm mb-2">{item.description}</p>
-                    <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded text-xs">
+                    <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded text-xs text-black dark:text-white">
                       <strong>Example:</strong> {item.example}
                     </div>
                   </div>
@@ -272,12 +272,12 @@ export default function AIDosAndDontsPage() {
       <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
           <XCircle className="w-6 h-6 text-red-600" />
-          <span>What NOT TO DO</span>
+          <span>What Not To Do</span>
         </h2>
         
         <div className="flex flex-col gap-6 md:gap-8">
           {aiDonts.map((category, index) => (
-            <div key={index} className="bg-red-50 dark:bg-red-900/20 rounded-lg p-6 border border-red-200 dark:border-red-800">
+            <div key={index}>
               <h3 className="text-lg font-semibold text-red-900 dark:text-red-100 mb-4">
                 {category.category}
               </h3>
@@ -289,7 +289,7 @@ export default function AIDosAndDontsPage() {
                       <span>{item.title}</span>
                     </h4>
                     <p className="text-red-800 dark:text-red-200 text-sm mb-2">{item.description}</p>
-                    <div className="bg-red-100 dark:bg-red-900/30 p-2 rounded text-xs">
+                    <div className="bg-red-100 dark:bg-red-900/30 p-2 rounded text-xs text-black dark:text-white">
                       <strong>⚠️ Warning:</strong> {item.warning}
                     </div>
                   </div>

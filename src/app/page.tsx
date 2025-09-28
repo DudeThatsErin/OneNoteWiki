@@ -1,5 +1,8 @@
 import Link from 'next/link';
-import { BookOpen, Code, Globe, Smartphone, Database, Layers, Lightbulb, HelpCircle, MessageCircle, Bot } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, Code, Zap, Star, Globe, Brain, Database, Settings, Lightbulb, HelpCircle, MessageCircle, Bot } from 'lucide-react';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const quickStartCards = [
   {
@@ -27,7 +30,7 @@ const quickStartCards = [
     title: 'Mobile Development',
     description: 'Create mobile apps for iOS and Android using various frameworks.',
     href: '/mobile-development',
-    icon: <Smartphone className="w-8 h-8 text-orange-600" />,
+    icon: <Brain className="w-8 h-8 text-orange-600" />,
     color: 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800'
   },
   {
@@ -41,7 +44,7 @@ const quickStartCards = [
     title: 'DevOps & Tools',
     description: 'Master the tools and practices that make development more efficient.',
     href: '/devops-tools',
-    icon: <Layers className="w-8 h-8 text-red-600" />,
+    icon: <Settings className="w-8 h-8 text-red-600" />,
     color: 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800'
   },
   {
@@ -64,37 +67,32 @@ export default function HomePage() {
   return (
     <div className="flex flex-col gap-8 md:gap-12">
       {/* Hero Section */}
-      <div className="text-center flex flex-col gap-4 md:gap-6">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
-          Welcome to CodingHelp Wiki
+      <div className="text-center py-12 md:py-20">
+        <div className="flex justify-center mb-6">
+          <div className="text-6xl md:text-8xl">📚</div>
+        </div>
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+          CodingHelp Wiki
         </h1>
-        <p className="pt-2 pb-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          Your comprehensive guide to learning programming and software development. 
-          Created by the CodingHelp community to help aspiring developers on their coding journey.
+        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+          Your comprehensive guide to programming. From beginner tutorials to advanced concepts, 
+          we've got everything you need to become a better developer.
         </p>
-        <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center pb-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/getting-started"
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
           >
-            Start Learning
+            <BookOpen className="w-5 h-5 mr-2" />
+            Get Started
           </Link>
-            <a
-              href="https://discord.gg/geQEUBm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg font-medium transition-colors"
-            >
-              Join Discord
-            </a>
-            <a
-              href="https://reddit.com/r/CodingHelp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg font-medium transition-colors"
-            >
-              Visit Subreddit
-            </a>
+          <Link
+            href="/languages"
+            className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-lg transition-colors"
+          >
+            <Code className="w-5 h-5 mr-2" />
+            Browse Languages
+          </Link>
         </div>
       </div>
 

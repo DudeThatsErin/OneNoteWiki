@@ -1,27 +1,25 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Code, Zap, BookOpen, Cpu } from 'lucide-react';
+import { Zap, Code, BookOpen, Cpu, Users, Star, ArrowRight, ExternalLink, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 export default function CppFundamentalsPage() {
   return (
-    <div className="space-y-8">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/languages/cpp"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to C++</span>
-        </Link>
-        <Link
-          href="/languages/cpp/oop"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: OOP & Classes</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
+    <PageLayout
+      title="C++ Fundamentals"
+      description="Master the fundamental concepts of C++ including syntax, data types, control structures, functions, and basic object-oriented programming."
+      icon={<div className="text-4xl">⚡</div>}
+      previousLink={{
+        href: "/languages/cpp",
+        label: "Back to C++"
+      }}
+      nextLink={{
+        href: "/languages/cpp/advanced",
+        label: "Next: Advanced C++"
+      }}
+    >
       {/* Header */}
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
@@ -646,6 +644,6 @@ public:
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

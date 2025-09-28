@@ -1,5 +1,9 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Smartphone, Code, Zap, Settings } from 'lucide-react';
+import { Smartphone, Code, Users, Star, Zap, Coffee, ArrowRight, ExternalLink, ArrowLeft, Settings } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const javaAndroidFeatures = [
   {
@@ -30,32 +34,30 @@ const javaAndroidFeatures = [
 
 export default function JavaAndroidPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/mobile-development/flutter"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Flutter</span>
-        </Link>
-        <Link
-          href="/mobile-development/ios"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Native iOS</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
+    <PageLayout
+      title="Java Android Development"
+      description="Learn Android development using Java, the traditional language for Android apps. While Kotlin is now preferred, Java remains widely used and supported."
+      icon={<div className="text-4xl">☕</div>}
+      previousLink={{
+        href: "/mobile-development/android",
+        label: "Previous: Native Android"
+      }}
+      nextLink={{
+        href: "/mobile-development/ios",
+        label: "Next: iOS Development"
+      }}
+    >
       {/* Header */}
       <div className="flex flex-col gap-4 md:gap-6">
         <div className="flex items-center gap-3">
           <div className="text-4xl">☕</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Java Android Development</h1>
-            <p className="text-gray-600 dark:text-gray-300">Build native Android apps with Java</p>
+            <p className="text-gray-600 dark:text-gray-300">
+              Java has been the traditional language for Android development, offering robust object-oriented 
+              programming capabilities and access to the full Android SDK. While Kotlin is now Google's 
+              preferred language, Java remains widely used and fully supported.
+            </p>
           </div>
         </div>
         <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -323,6 +325,6 @@ public class MainActivity extends AppCompatActivity {
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { Database, ArrowRight, BarChart, Table, FileText } from 'lucide-react';
+import { Database, Code, Users, Star, Shield, Layers, ArrowRight, ExternalLink, Table, BarChart } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
 
 const databaseCategories = [
   {
@@ -39,20 +41,25 @@ const databaseTypes = [
 
 export default function DataDatabasesPage() {
   return (
-    <>
-      {/* Header */}
-      <div className="flex flex-col items-start p-4">
-        <div className="flex items-center gap-[1rem]">
-          <Database className="w-8 h-8 text-blue-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white pb-2">
-            Data & Databases
-          </h1>
-        </div>
-        <p className="pt-4 text-lg text-gray-600 dark:text-gray-300">
-          Master data storage, retrieval, and analysis. From SQL databases to 
-          NoSQL solutions and data science fundamentals.
-        </p>
-      </div>
+    <PageLayout
+      title="Data & Databases"
+      description="Learn how to store, retrieve, and manage data effectively. From SQL databases to NoSQL solutions and data modeling best practices."
+      icon={<Database className="w-8 h-8 text-blue-600" />}
+      nextLink={{
+        href: "/data-databases/sql",
+        label: "Start: SQL Databases"
+      }}
+    >
+
+      <QuickStats 
+        title="Data & Databases Overview"
+        stats={[
+          { value: "2.5 Quintillion", label: "Bytes Created Daily" },
+          { value: "90%", label: "Data Created in Last 2 Years" },
+          { value: "328.77M", label: "Terabytes by 2025" },
+          { value: "High Demand", label: "Job Market" }
+        ]} 
+      />
 
       {/* Why Data & Databases Matter */}
       <div className="py-4">
@@ -299,6 +306,6 @@ export default function DataDatabasesPage() {
           </div>
         </div>
       </div>
-    </>
+    </PageLayout>
   );
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Lightbulb, ArrowRight, BookOpen, Users, Code } from 'lucide-react';
+import { Lightbulb, ArrowRight, BookOpen, Users, Code, HelpCircle, Search, Target } from 'lucide-react';
 
 const resourceCategories = [
   {
@@ -8,7 +8,7 @@ const resourceCategories = [
     examples: ['freeCodeCamp', 'Codecademy', 'Coursera', 'Udemy'],
     href: '/resources/platforms',
     icon: <BookOpen className="w-6 h-6" />,
-    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700'
+    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
   },
   {
     title: 'Books & Documentation',
@@ -16,7 +16,7 @@ const resourceCategories = [
     examples: ['MDN Docs', 'Programming Books', 'API References', 'Tutorials'],
     href: '/resources/books',
     icon: <BookOpen className="w-6 h-6" />,
-    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700'
+    color: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
   },
   {
     title: 'Practice Problems',
@@ -24,7 +24,7 @@ const resourceCategories = [
     examples: ['LeetCode', 'HackerRank', 'Codewars', 'Project Euler'],
     href: '/resources/practice',
     icon: <Code className="w-6 h-6" />,
-    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700'
+    color: 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800'
   },
   {
     title: 'Communities',
@@ -32,34 +32,31 @@ const resourceCategories = [
     examples: ['Stack Overflow', 'Reddit', 'Discord', 'GitHub'],
     href: '/resources/communities',
     icon: <Users className="w-6 h-6" />,
-    color: 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700'
+    color: 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800'
   }
 ];
 
-const learningTypes = [
+const additionalResources = [
   {
-    type: 'Visual Learners',
-    description: 'Learn best through diagrams, videos, and visual content',
-    resources: ['YouTube tutorials', 'Interactive diagrams', 'Infographics', 'Video courses'],
-    tips: ['Use mind maps', 'Draw out concepts', 'Watch coding videos', 'Use visual debugging tools']
+    title: 'Learning Guides',
+    description: 'Comprehensive guides on learning styles and study techniques',
+    href: '/resources/learning-guides',
+    icon: <Target className="w-6 h-6" />,
+    color: 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800'
   },
   {
-    type: 'Auditory Learners',
-    description: 'Learn best through listening and discussion',
-    resources: ['Podcasts', 'Audio courses', 'Study groups', 'Verbal explanations'],
-    tips: ['Join coding meetups', 'Explain code out loud', 'Listen to tech podcasts', 'Participate in discussions']
+    title: 'Getting Help',
+    description: 'How to ask questions effectively and find solutions online',
+    href: '/resources/getting-help',
+    icon: <HelpCircle className="w-6 h-6" />,
+    color: 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800'
   },
   {
-    type: 'Kinesthetic Learners',
-    description: 'Learn best through hands-on practice and experimentation',
-    resources: ['Coding challenges', 'Interactive tutorials', 'Project-based learning', 'Hackathons'],
-    tips: ['Code along with tutorials', 'Build projects immediately', 'Experiment with code', 'Take frequent breaks']
-  },
-  {
-    type: 'Reading/Writing Learners',
-    description: 'Learn best through reading and taking notes',
-    resources: ['Technical books', 'Documentation', 'Written tutorials', 'Code comments'],
-    tips: ['Take detailed notes', 'Read documentation thoroughly', 'Write code comments', 'Keep a learning journal']
+    title: 'Search Tips',
+    description: 'Master the art of googling programming problems',
+    href: '/resources/search-tips',
+    icon: <Search className="w-6 h-6" />,
+    color: 'bg-indigo-50 dark:bg-indigo-900/20 border-indigo-200 dark:border-indigo-800'
   }
 ];
 
@@ -80,49 +77,30 @@ export default function ResourcesPage() {
         </p>
       </div>
 
-      {/* Why Resources Matter */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-          🎯 Why Good Resources Matter
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">📈 Accelerated Learning:</h4>
-            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
-              <li>Structured learning paths</li>
-              <li>Expert-curated content</li>
-              <li>Progressive difficulty</li>
-              <li>Immediate feedback</li>
-              <li>Time-tested methods</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🤝 Community Support:</h4>
-            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
-              <li>Get help when stuck</li>
-              <li>Learn from others' mistakes</li>
-              <li>Share your knowledge</li>
-              <li>Find study partners</li>
-              <li>Stay motivated</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🎯 Practical Skills:</h4>
-            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
-              <li>Real-world projects</li>
-              <li>Industry best practices</li>
-              <li>Current technologies</li>
-              <li>Problem-solving skills</li>
-              <li>Portfolio building</li>
-            </ul>
-          </div>
+      {/* Quick Stats */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">50+</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">Platforms</div>
+        </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+          <div className="text-2xl font-bold text-green-600 dark:text-green-400">100+</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">Books</div>
+        </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">20+</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">Practice Sites</div>
+        </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
+          <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">15+</div>
+          <div className="text-sm text-gray-600 dark:text-gray-300">Communities</div>
         </div>
       </div>
 
-      {/* Resource Categories */}
+      {/* Main Resource Categories */}
       <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          Resource Categories
+          Main Categories
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {resourceCategories.map((category, index) => (
@@ -146,7 +124,7 @@ export default function ResourcesPage() {
               
               <div className="flex flex-wrap gap-1">
                 {category.examples.map((example, i) => (
-                  <span key={i} className="text-xs px-2 py-1 bg-white dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-300">
+                  <span key={i} className="text-xs px-2 py-1 bg-white dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-600">
                     {example}
                   </span>
                 ))}
@@ -156,287 +134,60 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Learning Styles */}
+      {/* Additional Resources */}
       <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          Find Your Learning Style
+          Learning Guides & Tips
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {learningTypes.map((style, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {additionalResources.map((resource, index) => (
+            <Link
+              key={resource.href}
+              href={resource.href}
+              className={`block p-6 rounded-lg border-2 transition-all hover:shadow-lg hover:scale-105 ${resource.color}`}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-gray-700 dark:text-gray-300">{resource.icon}</div>
+                <ArrowRight className="w-5 h-5 text-gray-400" />
+              </div>
+              
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                {style.type}
+                {resource.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                {style.description}
+              
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                {resource.description}
               </p>
-              
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Best Resources:</h4>
-                <div className="flex flex-wrap gap-1 mb-3">
-                  {style.resources.map((resource, i) => (
-                    <span key={i} className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full">
-                      {resource}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2 text-sm">Learning Tips:</h4>
-                <ul className="text-gray-600 dark:text-gray-300 text-xs [&>li]:mb-1">
-                  {style.tips.map((tip, i) => (
-                    <li key={i}>• {tip}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
 
-      {/* Getting Help Online - Simplified */}
-      <section className="flex flex-col gap-6 md:gap-8">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          Getting Help Online
-        </h2>
-        
-        <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-            🆘 How to Ask Questions Effectively
-          </h3>
-          <div className="flex flex-col gap-4 md:gap-6">
-            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded border border-gray-200 dark:border-gray-600">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">📋 Before You Ask:</h4>
-              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
-                <li>Search for existing solutions (Google, Stack Overflow, documentation)</li>
-                <li>Try to solve it yourself first - show your attempts</li>
-                <li>Read the error message carefully</li>
-                <li>Create a minimal reproducible example</li>
-              </ul>
-            </div>
-            
-            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded border border-gray-200 dark:border-gray-600">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">✅ When You Ask:</h4>
-              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
-                <li>Be specific about what you're trying to achieve</li>
-                <li>Include relevant code, error messages, and context</li>
-                <li>Mention what you've already tried</li>
-                <li>Use proper formatting (code blocks, etc.)</li>
-                <li>Be patient and respectful</li>
-              </ul>
-            </div>
-            
-            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded border border-gray-200 dark:border-gray-600">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🚫 Don't Ask to Ask!</h4>
-              <p className="text-gray-700 dark:text-gray-300 text-sm mb-2">
-                Instead of "Can someone help me with JavaScript?" or "Is anyone here good with Python?", 
-                just ask your specific question directly.
-              </p>
-              <a
-                href="https://dontasktoask.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
-              >
-                📖 Read "Don't Ask to Ask" →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Code Sharing - Simplified */}
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              💻 Code Sharing Platforms
-            </h3>
-            <div className="flex flex-col gap-3">
-              <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Quick Snippets:</h4>
-                <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
-                  <li>• <a href="https://codepen.io" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">CodePen</a> - HTML, CSS, JS</li>
-                  <li>• <a href="https://jsfiddle.net" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">JSFiddle</a> - Web playground</li>
-                  <li>• <a href="https://replit.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Replit</a> - Full environment</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Full Projects:</h4>
-                <ul className="text-gray-600 dark:text-gray-300 text-sm [&>li]:mb-1">
-                  <li>• <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub</a> - Version control</li>
-                  <li>• <a href="https://pastebin.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Pastebin</a> - Simple sharing</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Google Search Tips */}
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              🔍 How to Google Programming Problems
-            </h3>
-            <div className="flex flex-col gap-4 md:gap-6">
-              <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Search Strategies:</h4>
-                <ul className="text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
-                  <li>• Include the programming language in your search</li>
-                  <li>• Use specific error messages (in quotes)</li>
-                  <li>• Add "stackoverflow" or "github" to your search</li>
-                  <li>• Search for the concept, not just the code</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Example Searches:</h4>
-                <ul className="text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
-                  <li>• <strong>Bad:</strong> "code not working"</li>
-                  <li>• <strong>Good:</strong> "python list comprehension syntax error"</li>
-                  <li>• <strong>Better:</strong> "python 'SyntaxError: invalid syntax' list comprehension"</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Useful Search Operators:</h4>
-                <ul className="text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
-                  <li>• <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded">"exact phrase"</code> - Search exact text</li>
-                  <li>• <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded">site:stackoverflow.com</code> - Search specific site</li>
-                  <li>• <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded">-word</code> - Exclude a word</li>
-                  <li>• <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded">filetype:pdf</code> - Search file types</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Learning Path Recommendations */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-          🗺️ Recommended Learning Path
+      {/* Call to Action */}
+      <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg p-8 border border-blue-200 dark:border-blue-800 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          Ready to Start Learning?
         </h3>
-        <div className="flex flex-col gap-4 md:gap-6">
-          <div className="flex items-start gap-3">
-            <div className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
-            <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white">Choose a Learning Platform</h4>
-              <p className="text-gray-700 dark:text-gray-300 text-sm">Start with structured courses on platforms like freeCodeCamp or Codecademy</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3">
-            <div className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
-            <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white">Supplement with Documentation</h4>
-              <p className="text-gray-700 dark:text-gray-300 text-sm">Read official docs and quality books to deepen understanding</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3">
-            <div className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
-            <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white">Practice Regularly</h4>
-              <p className="text-gray-700 dark:text-gray-300 text-sm">Solve coding challenges on platforms like LeetCode or HackerRank</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3">
-            <div className="w-6 h-6 bg-gray-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
-            <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white">Join Communities</h4>
-              <p className="text-gray-700 dark:text-gray-300 text-sm">Connect with other learners for support, motivation, and knowledge sharing</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Free vs Paid Resources */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-          💰 Free vs Paid Resources
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🆓 Free Resources:</h4>
-            <div className="flex flex-col gap-2 text-gray-700 dark:text-gray-300 text-sm">
-              <p><strong>Pros:</strong> No cost, often high quality, large communities</p>
-              <p><strong>Cons:</strong> Less structured, no certificates, limited support</p>
-              <p><strong>Best for:</strong> Self-motivated learners, exploring new topics</p>
-              <p><strong>Examples:</strong> freeCodeCamp, MDN Docs, YouTube, Stack Overflow</p>
-            </div>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">💳 Paid Resources:</h4>
-            <div className="flex flex-col gap-2 text-gray-700 dark:text-gray-300 text-sm">
-              <p><strong>Pros:</strong> Structured curriculum, certificates, instructor support</p>
-              <p><strong>Cons:</strong> Cost, may become outdated, subscription models</p>
-              <p><strong>Best for:</strong> Career advancement, comprehensive learning paths</p>
-              <p><strong>Examples:</strong> Udemy, Pluralsight, LinkedIn Learning, Coursera</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Success Tips */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-          🏆 Tips for Learning Success
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Study Habits:</h4>
-            <ul className="text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
-              <li>• Set aside dedicated learning time daily</li>
-              <li>• Use the Pomodoro Technique (25-min focused sessions)</li>
-              <li>• Take regular breaks to avoid burnout</li>
-              <li>• Review and practice previous concepts regularly</li>
-              <li>• Set specific, achievable goals</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Active Learning:</h4>
-            <ul className="text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
-              <li>• Code along with tutorials, don't just watch</li>
-              <li>• Explain concepts to others (rubber duck debugging)</li>
-              <li>• Build projects to apply what you learn</li>
-              <li>• Participate in coding challenges and hackathons</li>
-              <li>• Contribute to open source projects</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Staying Motivated:</h4>
-            <ul className="text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
-              <li>• Track your progress and celebrate small wins</li>
-              <li>• Find an accountability partner or study group</li>
-              <li>• Focus on building projects you're passionate about</li>
-              <li>• Don't compare yourself to others</li>
-              <li>• Remember that everyone learns at their own pace</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Problem Solving:</h4>
-            <ul className="text-gray-700 dark:text-gray-300 text-sm [&>li]:mb-1">
-              <li>• Read error messages carefully</li>
-              <li>• Break complex problems into smaller parts</li>
-              <li>• Use debugging tools and print statements</li>
-              <li>• Search for solutions but understand them first</li>
-              <li>• Don't be afraid to ask for help</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Quick Access */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {resourceCategories.map((category, index) => (
+        <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+          Choose a category above to explore curated resources, or dive into our detailed guides 
+          for learning tips, getting help online, and mastering search techniques.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            key={category.href}
-            href={category.href}
-            className="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow"
+            href="/resources/platforms"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
           >
-            <div className="text-gray-600 dark:text-gray-400 mb-2">{category.icon}</div>
-            <span className="text-sm font-medium text-gray-900 dark:text-white text-center">
-              {category.title}
-            </span>
+            <BookOpen className="w-5 h-5 mr-2" />
+            Explore Platforms
           </Link>
-        ))}
+          <Link
+            href="/resources/getting-help"
+            className="inline-flex items-center px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors font-medium"
+          >
+            <HelpCircle className="w-5 h-5 mr-2" />
+            Learn How to Get Help
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,10 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ChevronDown, ChevronRight, Bot, Code, HelpCircle, Users, Settings, Github } from 'lucide-react';
+import { ChevronDown, ChevronRight, Bot, MessageCircle, Hash, Users, Settings, HelpCircle, Github } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
 
 const commandCategories = [
   {
@@ -44,7 +47,7 @@ const commandCategories = [
   {
     id: 'code',
     title: 'Code Utility Commands',
-    icon: <Code className="w-5 h-5" />,
+    icon: <MessageCircle className="w-5 h-5" />,
     description: 'Useful tools for code formatting, analysis, and snippets',
     commands: [
       {
@@ -163,7 +166,11 @@ export default function BotCommandsPage() {
   };
 
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
+    <PageLayout
+      title="Bot Commands"
+      description="Our Discord bot provides helpful commands for getting coding assistance, managing discussions, and accessing community resources."
+      icon={<div className="text-4xl">🤖</div>}
+    >
       {/* Header */}
       <div className="flex flex-col gap-4 md:gap-6">
         <div className="flex items-center gap-3">
@@ -174,7 +181,9 @@ export default function BotCommandsPage() {
               <span className="px-3 py-1 bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300 rounded-full text-sm font-medium">
                 Coming Soon
               </span>
-              <p className="text-gray-600 dark:text-gray-300">CodingHelp Discord Bot command reference</p>
+              <p className="text-gray-600 dark:text-gray-300">
+                CodingHelp Discord Bot command reference
+              </p>
             </div>
           </div>
         </div>
@@ -401,6 +410,6 @@ export default function BotCommandsPage() {
           </Link>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 }

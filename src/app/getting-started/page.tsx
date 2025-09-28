@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { BookOpen, ArrowRight, CheckCircle } from 'lucide-react';
+import { BookOpen, Code, Users, Lightbulb, Target, Star, ArrowRight, CheckCircle } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { GettingStartedSection } from '@/components/GettingStartedSection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faReddit } from '@fortawesome/free-brands-svg-icons';
 
@@ -32,20 +34,15 @@ const gettingStartedSteps = [
 
 export default function GettingStartedPage() {
   return (
-    <>
-      {/* Header */}
-      <div className="flex flex-col items-start p-4">
-        <div className="flex items-center gap-[1rem]">
-          <BookOpen className="w-8 h-8 text-blue-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white pb-2">
-            Getting Started
-          </h1>
-        </div>
-        <p className="pt-4 text-lg text-gray-600 dark:text-gray-300">
-          Welcome to your programming journey! This section will guide you through the basics 
-          of programming, from understanding what programming is to writing your first program.
-        </p>
-      </div>
+    <PageLayout
+      title="Getting Started"
+      description="Welcome to your programming journey! This section will guide you through the basics of programming, from understanding what programming is to writing your first program."
+      icon={<BookOpen className="w-8 h-8 text-blue-600" />}
+      nextLink={{
+        href: "/getting-started/what-is-programming",
+        label: "Start: What is Programming?"
+      }}
+    >
 
       {/* Learning Path */}
       <div className="flex flex-col gap-6 md:gap-8 py-4">
@@ -138,6 +135,6 @@ export default function GettingStartedPage() {
           </a>
         </div>
       </div>
-    </>
+    </PageLayout>
   );
 }

@@ -1,5 +1,9 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Smartphone, Code, Zap, Globe } from 'lucide-react';
+import { Smartphone, Code, Users, Star, Zap, Globe, ArrowRight, ExternalLink, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const flutterFeatures = [
   {
@@ -30,25 +34,19 @@ const flutterFeatures = [
 
 export default function FlutterPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12 mb-1">
-      {/* Navigation */}
-      <div className="flex items-center justify-between mb-1">
-        <Link
-          href="/mobile-development"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline mb-1"
-        >
-          <ArrowLeft className="w-4 h-4 mb-1" />
-          <span>Back to Mobile Development</span>
-        </Link>
-        <Link
-          href="/mobile-development/java-android"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline mb-1"
-        >
-          <span>Next: Java Android</span>
-          <ArrowRight className="w-4 h-4 mb-1" />
-        </Link>
-      </div>
-
+    <PageLayout
+      title="Flutter"
+      description="Flutter is Google's open-source UI software development kit used to develop applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia, and the web from a single codebase."
+      icon={<div className="text-4xl">🐦</div>}
+      previousLink={{
+        href: "/mobile-development/react-native",
+        label: "Previous: React Native"
+      }}
+      nextLink={{
+        href: "/mobile-development/ios",
+        label: "Next: iOS Development"
+      }}
+    >
       {/* Header */}
       <div className="flex flex-col gap-4 md:gap-6 mb-1">
         <div className="flex items-center gap-3 mb-1">
@@ -256,6 +254,6 @@ class _MyHomePageState extends State<MyHomePage> {
           <ArrowRight className="w-4 h-4 mb-1" />
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

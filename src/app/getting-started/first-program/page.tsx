@@ -1,5 +1,9 @@
 import Link from 'next/link';
-import { ArrowLeft, Play, Code, CheckCircle, AlertCircle } from 'lucide-react';
+import { Code, Play, CheckCircle, BookOpen, Lightbulb, ArrowRight, ExternalLink, AlertCircle, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { GettingStartedSection } from '@/components/GettingStartedSection';
 
 const languageExamples = [
   {
@@ -126,35 +130,19 @@ const commonErrors = [
 
 export default function FirstProgramPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-        <Link
-          href="/getting-started/setup"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" suppressHydrationWarning />
-          <span>Previous: Setting Up Environment</span>
-        </Link>
-        <Link
-          href="/languages"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Explore Languages</span>
-          <ArrowLeft className="w-4 h-4 rotate-180" suppressHydrationWarning />
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="flex flex-col items-start py-2">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          Your First Program
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 my-4">
-          Congratulations! You're about to write your first program. We'll start with the traditional 
-          "Hello, World!" program and explore basic programming concepts.
-        </p>
-      </div>
+    <PageLayout
+      title="Your First Program"
+      description="Let's write your first program! We'll start with the classic 'Hello, World!' program in different programming languages to get you familiar with basic syntax."
+      icon={<div className="text-4xl">🎆</div>}
+      previousLink={{
+        href: "/getting-started/setup",
+        label: "Previous: Development Setup"
+      }}
+      nextLink={{
+        href: "/getting-started",
+        label: "Back to Getting Started"
+      }}
+    >
 
       {/* Why Hello World */}
       <div className="py-4">
@@ -381,6 +369,6 @@ export default function FirstProgramPage() {
           <ArrowLeft className="w-4 h-4 rotate-180" suppressHydrationWarning />
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

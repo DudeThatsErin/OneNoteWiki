@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Code, Zap, Globe, Smartphone } from 'lucide-react';
+import { Code, Users, Star, TrendingUp, Zap, ArrowRight, Globe, Smartphone } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
 
 const languageComparisons = [
   {
@@ -81,35 +83,19 @@ const careerPaths = [
 
 export default function ChoosingLanguagePage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-        <Link
-          href="/getting-started/what-is-programming"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: What is Programming?</span>
-        </Link>
-        <Link
-          href="/getting-started/setup"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Setting Up Environment</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="flex flex-col items-start py-2">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white pb2">
-          Choosing Your First Language
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          With hundreds of programming languages available, choosing your first one can feel overwhelming. 
-          This guide will help you make an informed decision based on your goals and interests.
-        </p>
-      </div>
+    <PageLayout
+      title="Choosing Your First Language"
+      description="With hundreds of programming languages available, choosing your first one can feel overwhelming. This guide will help you make an informed decision based on your goals and interests."
+      icon={<div className="text-4xl">🤔</div>}
+      previousLink={{
+        href: "/getting-started/what-is-programming",
+        label: "Previous: What is Programming?"
+      }}
+      nextLink={{
+        href: "/getting-started/setup",
+        label: "Next: Setting Up Environment"
+      }}
+    >
 
       {/* Key Factors */}
       <div className="py-6">
@@ -310,23 +296,6 @@ export default function ChoosingLanguagePage() {
         </div>
       </div>
 
-      {/* Navigation */}
-      <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/getting-started/what-is-programming"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: What is Programming?</span>
-        </Link>
-        <Link
-          href="/getting-started/setup"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Setting Up Environment</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

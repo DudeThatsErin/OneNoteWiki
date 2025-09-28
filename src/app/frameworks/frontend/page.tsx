@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowLeft, Code, Star, TrendingUp, Users, Zap } from 'lucide-react';
+import { Code, Users, Star, TrendingUp, Zap, ArrowRight, ExternalLink } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
 
 const frontendFrameworks = [
   {
@@ -91,28 +92,18 @@ const frameworkStats = [
 
 export default function FrontendFrameworksPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/frameworks"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Frameworks</span>
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="flex flex-col items-start py-2">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          Frontend Frameworks
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 pb-4">
-          Modern JavaScript frameworks and libraries for building interactive user interfaces 
-          and single-page applications.
-        </p>
-      </div>
+    <PageLayout
+      title="Frontend Frameworks"
+      description="Modern JavaScript frameworks and libraries for building interactive user interfaces and single-page applications."
+      previousLink={{
+        href: "/frameworks",
+        label: "Back to Frameworks"
+      }}
+      nextLink={{
+        href: "/frameworks/backend",
+        label: "Next: Backend Frameworks"
+      }}
+    >
 
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -313,16 +304,6 @@ export default function FrontendFrameworksPage() {
         </div>
       </div>
 
-      {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/frameworks"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Frameworks</span>
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

@@ -1,5 +1,9 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Apple, Code, Zap, Shield } from 'lucide-react';
+import { Smartphone, Code, Users, Star, Zap, Apple, ArrowRight, ExternalLink, Shield, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const iosFeatures = [
   {
@@ -28,27 +32,21 @@ const iosFeatures = [
   }
 ];
 
-export default function NativeiOSPage() {
+export default function iOSDevelopmentPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/mobile-development/java-android"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Java Android</span>
-        </Link>
-        <Link
-          href="/mobile-development/android"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Native Android</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
+    <PageLayout
+      title="iOS Development"
+      description="iOS development involves creating applications for Apple's mobile devices using Swift or Objective-C. Learn to build native iOS apps with Xcode and the iOS SDK."
+      icon={<div className="text-4xl">🍎</div>}
+      previousLink={{
+        href: "/mobile-development/flutter",
+        label: "Previous: Flutter"
+      }}
+      nextLink={{
+        href: "/mobile-development/android",
+        label: "Next: Android Development"
+      }}
+    >
       {/* Header */}
       <div className="flex flex-col gap-4 md:gap-6">
         <div className="flex items-center gap-3">
@@ -377,6 +375,6 @@ struct ContentView_Previews: PreviewProvider {
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

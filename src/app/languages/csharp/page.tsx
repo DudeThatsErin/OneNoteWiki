@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Code, BookOpen, Users, Zap, Star, ExternalLink } from 'lucide-react';
+import { Code, Shield, Layers, Globe, Star, Users, Zap, ArrowRight, ExternalLink } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
 
 const csharpFeatures = [
   {
@@ -146,59 +148,42 @@ const csharpFrameworks = [
 
 export default function CSharpPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/languages/cpp"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: C++</span>
-        </Link>
-        <Link
-          href="/languages/go"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Go</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
+    <PageLayout
+      title="C#"
+      description="C# is a modern, type-safe, object-oriented programming language developed by Microsoft. It's designed for building robust applications on the .NET platform."
+      icon={<div className="text-4xl">🔷</div>}
+      previousLink={{
+        href: "/languages/cpp",
+        label: "Previous: C++"
+      }}
+      nextLink={{
+        href: "/languages/go",
+        label: "Next: Go"
+      }}
+    >
 
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">🔷</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">C#</h1>
-            <p className="text-gray-600 dark:text-gray-300">Modern, object-oriented programming language</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          C# is a modern, type-safe, object-oriented programming language developed by Microsoft. 
-          It's designed for building robust applications on the .NET platform.
-        </p>
-      </div>
-
-      {/* Quick Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg border border-indigo-200 dark:border-indigo-800">
-          <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">2000</div>
-          <div className="text-sm text-indigo-700 dark:text-indigo-300">First Released</div>
-        </div>
-        <div className="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg border border-indigo-200 dark:border-indigo-800">
-          <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Intermediate</div>
-          <div className="text-sm text-indigo-700 dark:text-indigo-300">Difficulty Level</div>
-        </div>
-        <div className="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg border border-indigo-200 dark:border-indigo-800">
-          <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">#5</div>
-          <div className="text-sm text-indigo-700 dark:text-indigo-300">TIOBE Index</div>
-        </div>
-        <div className="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg border border-indigo-200 dark:border-indigo-800">
-          <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">6M+</div>
-          <div className="text-sm text-indigo-700 dark:text-indigo-300">Developers</div>
-        </div>
-      </div>
+      <QuickStats stats={[
+        { 
+          value: "2000", 
+          label: "First Released",
+          icon: <Code className="w-5 h-5" />
+        },
+        { 
+          value: "Intermediate", 
+          label: "Difficulty Level",
+          icon: <Users className="w-5 h-5" />
+        },
+        { 
+          value: "High", 
+          label: "Popularity",
+          icon: <Star className="w-5 h-5" />
+        },
+        { 
+          value: "Enterprise", 
+          label: "Primary Use",
+          icon: <Layers className="w-5 h-5" />
+        }
+      ]} />
 
       {/* Key Features */}
       <section className="flex flex-col gap-6 md:gap-8">
@@ -477,23 +462,6 @@ class Program
         </div>
       </div>
 
-      {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/languages/cpp"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: C++</span>
-        </Link>
-        <Link
-          href="/languages/go"
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-        >
-          <span>Next: Go</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

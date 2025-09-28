@@ -1,5 +1,9 @@
 import Link from 'next/link';
-import { Brain, ArrowRight, Zap, Shield, Code, Lightbulb } from 'lucide-react';
+import { Brain, Code, Users, Star, Zap, Database, ArrowRight, ExternalLink, Shield, Lightbulb } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const aiCategories = [
   {
@@ -68,43 +72,57 @@ const skillLevels = [
 
 export default function AIPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Quick Reference */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-        <h2 className="text-xl font-semibold text-purple-900 dark:text-purple-100 mb-4 flex items-center">
-          <Brain className="w-5 h-5 mr-2" />
-          Quick Reference: AI Best Practices
-        </h2>
+    <PageLayout
+      title="AI & Machine Learning"
+      description="Explore artificial intelligence and machine learning concepts, tools, and applications. From basic algorithms to advanced neural networks."
+      icon={<Brain className="w-8 h-8 text-blue-600" />}
+      nextLink={{
+        href: "/ai/languages-tools",
+        label: "Start: AI Languages & Tools"
+      }}
+    >
+
+      <QuickStats 
+        title="AI & Machine Learning Overview"
+        stats={[
+          { value: "$15.7T", label: "AI Market by 2030" },
+          { value: "97M", label: "AI Jobs by 2025" },
+          { value: "37%", label: "Productivity Increase" },
+          { value: "Growing Fast", label: "Adoption Rate" }
+        ]} 
+      />
+
+      <InfoCard title="Quick Reference: AI Best Practices" variant="purple" icon={<Brain className="w-5 h-5" />}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Before Using AI:</h3>
             <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
-              <li>• Define clear requirements</li>
-              <li>• Consider security implications</li>
-              <li>• Check company policies</li>
-              <li>• Plan for testing and review</li>
+              <li>Define clear requirements</li>
+              <li>Consider security implications</li>
+              <li>Check company policies</li>
+              <li>Plan for testing and review</li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">While Using AI:</h3>
             <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
-              <li>• Provide clear, specific prompts</li>
-              <li>• Iterate and refine requests</li>
-              <li>• Ask for explanations</li>
-              <li>• Request multiple approaches</li>
+              <li>Provide clear, specific prompts</li>
+              <li>Iterate and refine requests</li>
+              <li>Ask for explanations</li>
+              <li>Request multiple approaches</li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">After AI Generation:</h3>
             <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
-              <li>• Review and understand code</li>
-              <li>• Test thoroughly</li>
-              <li>• Refactor if needed</li>
-              <li>• Document AI assistance</li>
+              <li>Review and understand code</li>
+              <li>Test thoroughly</li>
+              <li>Refactor if needed</li>
+              <li>Document AI assistance</li>
             </ul>
           </div>
         </div>
-      </div>
+      </InfoCard>
 
       {/* Header */}
       <div className="flex flex-col gap-4 md:gap-6">
@@ -135,28 +153,28 @@ export default function AIPage() {
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">🚀 Accelerate Development:</h4>
               <ul className="text-sm [&>li]:mb-1">
-                <li>• Generate boilerplate code quickly</li>
-                <li>• Get help with complex algorithms</li>
-                <li>• Automate repetitive tasks</li>
-                <li>• Improve code documentation</li>
+                <li>Generate boilerplate code quickly</li>
+                <li>Get help with complex algorithms</li>
+                <li>Automate repetitive tasks</li>
+                <li>Improve code documentation</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">🧠 Enhance Skills:</h4>
               <ul className="text-sm [&>li]:mb-1">
-                <li>• Learn new patterns and techniques</li>
-                <li>• Explore unfamiliar technologies</li>
-                <li>• Get instant code reviews</li>
-                <li>• Debug complex issues faster</li>
+                <li>Learn new patterns and techniques</li>
+                <li>Explore unfamiliar technologies</li>
+                <li>Get instant code reviews</li>
+                <li>Debug complex issues faster</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">🎯 Career Growth:</h4>
               <ul className="text-sm [&>li]:mb-1">
-                <li>• Stay current with AI trends</li>
-                <li>• Build AI-powered applications</li>
-                <li>• Become an AI-savvy developer</li>
-                <li>• Lead AI adoption in your team</li>
+                <li>Stay current with AI trends</li>
+                <li>Build AI-powered applications</li>
+                <li>Become an AI-savvy developer</li>
+                <li>Lead AI adoption in your team</li>
               </ul>
             </div>
           </div>
@@ -384,6 +402,6 @@ export default function AIPage() {
           </Link>
         ))}
       </div>
-    </div>
+    </PageLayout>
   );
 }

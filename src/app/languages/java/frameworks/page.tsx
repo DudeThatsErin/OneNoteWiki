@@ -1,5 +1,9 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Server, Globe, Database, Shield } from 'lucide-react';
+import { Coffee, Code, BookOpen, Layers, Users, Star, ArrowRight, ExternalLink, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const javaFrameworks = [
   {
@@ -10,7 +14,7 @@ const javaFrameworks = [
     cons: ['Learning curve', 'Configuration complexity', 'Can be heavyweight'],
     useCases: ['Enterprise applications', 'Web services', 'Microservices', 'REST APIs'],
     companies: ['Netflix', 'Airbnb', 'Yatra', 'Wix'],
-    icon: '🍃'
+    icon: '☕'
   },
   {
     name: 'Spring Boot',
@@ -46,37 +50,19 @@ const javaFrameworks = [
 
 export default function JavaFrameworksPage() {
   return (
-    <div className="space-y-8">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/languages/java/oop"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: OOP Concepts</span>
-        </Link>
-        <Link
-          href="/languages/java"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Back to Java</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
-          <div className="text-4xl">🛠️</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Java Frameworks & Libraries</h1>
-            <p className="text-gray-600 dark:text-gray-300">Popular tools that accelerate Java development</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Framework Overview */}
+    <PageLayout
+      title="Java Frameworks"
+      description="Explore the most popular Java frameworks for web development, enterprise applications, and microservices including Spring, Spring Boot, and more."
+      icon={<div className="text-4xl">☕</div>}
+      previousLink={{
+        href: "/languages/java/oop",
+        label: "Previous: Java OOP"
+      }}
+      nextLink={{
+        href: "/languages/java",
+        label: "Back to Java"
+      }}
+    >
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Popular Java Frameworks</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -694,6 +680,6 @@ public class BookService {
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

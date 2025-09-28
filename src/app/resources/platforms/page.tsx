@@ -205,7 +205,7 @@ export default function PlatformsPage() {
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">{platform.name}</h3>
-                  <div className="flex items-center flex flex-col gap-31">
+                  <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className={`w-4 h-4 ${i < platform.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
                     ))}

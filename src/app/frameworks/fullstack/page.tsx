@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowLeft, Layers, Code, Zap, Globe } from 'lucide-react';
+import { Layers, Code, Globe, Users, Star, Zap, ArrowRight, ExternalLink } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
 
 const fullStackFrameworks = [
   {
@@ -78,7 +79,20 @@ const fullStackFrameworks = [
 
 export default function FullStackFrameworksPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
+    <PageLayout
+      title="Full-Stack Frameworks"
+      description="Full-stack frameworks provide everything you need to build complete web applications, from frontend user interfaces to backend APIs and database integration."
+      icon={<div className="text-4xl">🚀</div>}
+      previousLink={{
+        href: "/frameworks/css",
+        label: "Previous: CSS Frameworks"
+      }}
+      nextLink={{
+        href: "/frameworks/mobile",
+        label: "Next: Mobile Frameworks"
+      }}
+    >
+
       {/* Quick Reference */}
       <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
         <h2 className="text-xl font-semibold text-purple-900 dark:text-purple-100 mb-4 flex items-center">
@@ -88,56 +102,29 @@ export default function FullStackFrameworksPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">For React Developers:</h3>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
-              <li>• <strong>Next.js:</strong> Most popular, great ecosystem</li>
-              <li>• <strong>Remix:</strong> Web standards focused</li>
-              <li>• <strong>T3 Stack:</strong> Type-safe development</li>
+            <ul className="list-disc list-inside text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+              <li><strong>Next.js:</strong> Most popular, great ecosystem</li>
+              <li><strong>Remix:</strong> Web standards focused</li>
+              <li><strong>T3 Stack:</strong> Type-safe development</li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">For Vue Developers:</h3>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
-              <li>• <strong>Nuxt.js:</strong> Vue.js full-stack solution</li>
-              <li>• <strong>Quasar:</strong> Vue with mobile support</li>
-              <li>• <strong>Gridsome:</strong> Static site generation</li>
+            <ul className="list-disc list-inside text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+              <li><strong>Nuxt.js:</strong> Vue.js full-stack solution</li>
+              <li><strong>Quasar:</strong> Vue with mobile support</li>
+              <li><strong>Gridsome:</strong> Static site generation</li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">For Performance:</h3>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
-              <li>• <strong>SvelteKit:</strong> Minimal bundle size</li>
-              <li>• <strong>Astro:</strong> Static-first approach</li>
-              <li>• <strong>Next.js:</strong> Optimized by default</li>
+            <ul className="list-disc list-inside text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+              <li><strong>SvelteKit:</strong> Minimal bundle size</li>
+              <li><strong>Astro:</strong> Static-first approach</li>
+              <li><strong>Next.js:</strong> Optimized by default</li>
             </ul>
           </div>
         </div>
-      </div>
-
-      {/* Navigation */}
-      <div className="flex items-center gap-2">
-        <Link
-          href="/frameworks"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Frameworks</span>
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">🏗️</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Full-Stack Frameworks</h1>
-            <p className="text-gray-600 dark:text-gray-300">Complete solutions for frontend and backend development</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Full-stack frameworks provide integrated solutions for both client and server-side development. 
-          They typically include routing, server-side rendering, API development, and build tools in a 
-          single cohesive package, enabling rapid development of modern web applications.
-        </p>
       </div>
 
       {/* Framework Comparison */}
@@ -253,6 +240,6 @@ export default function FullStackFrameworksPage() {
           </div>
         </div>
       </section>
-    </div>
+    </PageLayout>
   );
 }

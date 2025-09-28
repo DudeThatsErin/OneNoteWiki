@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { Smartphone, ArrowRight, Globe, Zap, Users, Code } from 'lucide-react';
+import { Smartphone, Code, Users, Star, Globe, Zap, ArrowRight } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
 
 const mobileFrameworks = [
   {
@@ -88,7 +90,15 @@ const mobileFeatures = [
 
 export default function MobileDevelopmentPage() {
   return (
-    <>
+    <PageLayout
+      title="Mobile Development"
+      description="Build native and cross-platform mobile applications for iOS and Android. Learn the tools, frameworks, and best practices for mobile app development."
+      icon={<Smartphone className="w-8 h-8 text-blue-600" />}
+      nextLink={{
+        href: "/mobile-development/react-native",
+        label: "Start: React Native"
+      }}
+    >
       {/* Header */}
       <div className="flex flex-col items-start p-4">
         <div className="flex items-center gap-[1rem]">
@@ -104,30 +114,15 @@ export default function MobileDevelopmentPage() {
         </p>
       </div>
 
-      {/* Quick Stats */}
-      <div className="py-4">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-          Mobile Development Overview
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">6.8B</div>
-            <div className="text-sm text-gray-600 dark:text-gray-300">Mobile Users</div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">3.8M</div>
-            <div className="text-sm text-gray-600 dark:text-gray-300">Apps on Google Play</div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">2.2M</div>
-            <div className="text-sm text-gray-600 dark:text-gray-300">Apps on App Store</div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">88%</div>
-            <div className="text-sm text-gray-600 dark:text-gray-300">Time Spent in Apps</div>
-          </div>
-        </div>
-      </div>
+      <QuickStats 
+        title="Mobile Development Overview"
+        stats={[
+          { value: "6.8B", label: "Mobile Users" },
+          { value: "3.8M", label: "Apps on Google Play" },
+          { value: "2.2M", label: "Apps on App Store" },
+          { value: "$935B", label: "Market Value" }
+        ]} 
+      />
 
       {/* Why Mobile Development */}
       <div className="py-4">
@@ -302,6 +297,6 @@ export default function MobileDevelopmentPage() {
           </div>
         </div>
       </div>
-    </>
+    </PageLayout>
   );
 }

@@ -1,11 +1,15 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Navigation, Layers, Menu, ArrowUpDown } from 'lucide-react';
+import { Smartphone, Code, Users, Star, Navigation, Map, ArrowRight, ExternalLink, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const navigationTypes = [
   {
     name: 'Stack Navigation',
     description: 'Navigate between screens in a stack-like manner',
-    icon: <Layers className="w-5 h-5" />,
+    icon: <Navigation className="w-5 h-5" />,
     useCase: 'Perfect for hierarchical navigation like Settings → Profile → Edit Profile',
     installation: 'npm install @react-navigation/native @react-navigation/native-stack',
     example: `import { NavigationContainer } from '@react-navigation/native';
@@ -35,7 +39,7 @@ function App() {
   {
     name: 'Tab Navigation',
     description: 'Bottom tab navigation for main app sections',
-    icon: <Menu className="w-5 h-5" />,
+    icon: <Map className="w-5 h-5" />,
     useCase: 'Main app navigation like Home, Search, Profile, Settings tabs',
     installation: 'npm install @react-navigation/bottom-tabs',
     example: `import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -69,7 +73,7 @@ function MyTabs() {
   {
     name: 'Drawer Navigation',
     description: 'Side drawer navigation for additional options',
-    icon: <ArrowUpDown className="w-5 h-5" />,
+    icon: <ArrowRight className="w-5 h-5" />,
     useCase: 'Secondary navigation, user menu, or app settings access',
     installation: 'npm install @react-navigation/drawer react-native-gesture-handler react-native-reanimated',
     example: `import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -163,25 +167,19 @@ function ProfileScreen() {
 
 export default function ReactNativeNavigationPage() {
   return (
-    <div className="space-y-8">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/mobile-development/react-native/components"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Components & UI</span>
-        </Link>
-        <Link
-          href="/mobile-development/react-native/deployment"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Deployment</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
+    <PageLayout
+      title="React Native Navigation"
+      description="Learn how to implement navigation in React Native apps using React Navigation, the most popular navigation library for React Native."
+      icon={<div className="text-4xl">🧭</div>}
+      previousLink={{
+        href: "/mobile-development/react-native/components",
+        label: "Previous: Components"
+      }}
+      nextLink={{
+        href: "/mobile-development/react-native/deployment",
+        label: "Next: Deployment"
+      }}
+    >
       {/* Header */}
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
@@ -595,6 +593,6 @@ const styles = StyleSheet.create({
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

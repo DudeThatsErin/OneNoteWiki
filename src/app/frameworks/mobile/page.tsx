@@ -1,5 +1,9 @@
 import Link from 'next/link';
-import { ArrowLeft, Smartphone, Code, Zap, Globe } from 'lucide-react';
+import { Smartphone, Code, Users, Star, Zap, Globe, ArrowRight, ExternalLink } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const mobileFrameworks = [
   {
@@ -84,7 +88,19 @@ const mobileFrameworks = [
 
 export default function MobileFrameworksPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
+    <PageLayout
+      title="Mobile Frameworks"
+      description="Mobile frameworks enable you to create applications for smartphones and tablets. Choose between native development for optimal performance or cross-platform solutions for broader reach."
+      icon={<div className="text-4xl">📱</div>}
+      previousLink={{
+        href: "/frameworks/fullstack",
+        label: "Previous: Full-Stack Frameworks"
+      }}
+      nextLink={{
+        href: "/frameworks",
+        label: "Back to Frameworks"
+      }}
+    >
       {/* Quick Reference */}
       <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
         <h2 className="text-xl font-semibold text-green-900 dark:text-green-100 mb-4 flex items-center">
@@ -117,32 +133,6 @@ export default function MobileFrameworksPage() {
             </ul>
           </div>
         </div>
-      </div>
-
-      {/* Navigation */}
-      <div className="flex items-center gap-2">
-        <Link
-          href="/frameworks"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Frameworks</span>
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">📱</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Mobile Frameworks</h1>
-            <p className="text-gray-600 dark:text-gray-300">Cross-platform solutions for mobile app development</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Mobile frameworks enable developers to build applications for multiple platforms using a single codebase. 
-          Choose based on your team's expertise, performance requirements, and target platforms.
-        </p>
       </div>
 
       {/* Framework Comparison */}
@@ -269,6 +259,6 @@ export default function MobileFrameworksPage() {
           </div>
         </div>
       </section>
-    </div>
+    </PageLayout>
   );
 }

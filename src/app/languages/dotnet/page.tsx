@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Code, Database, Globe, Zap, Server, Users, Layers } from 'lucide-react';
+import { Code, Shield, Layers, Globe, Star, Users, ArrowRight, ExternalLink, Zap, Server } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
 
 const dotnetFeatures = [
   {
@@ -71,60 +73,42 @@ const dotnetUseCases = [
 
 export default function DotNetPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/languages/php"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: PHP</span>
-        </Link>
-        <Link
-          href="/languages"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Back to Languages</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
+    <PageLayout
+      title=".NET"
+      description=".NET is a free, open-source developer platform created by Microsoft for building many different types of applications. With .NET, you can use multiple languages, editors, and libraries to build for web, mobile, desktop, games, IoT, and more."
+      icon={<div className="text-4xl">🔷</div>}
+      previousLink={{
+        href: "/languages/php",
+        label: "Previous: PHP"
+      }}
+      nextLink={{
+        href: "/languages",
+        label: "Back to Languages"
+      }}
+    >
 
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">🔷</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">.NET</h1>
-            <p className="text-gray-600 dark:text-gray-300">Microsoft's powerful, cross-platform development platform</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          .NET is a free, open-source developer platform created by Microsoft for building many different 
-          types of applications. With .NET, you can use multiple languages, editors, and libraries to build 
-          for web, mobile, desktop, games, IoT, and more.
-        </p>
-      </div>
-
-      {/* Quick Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg border border-indigo-200 dark:border-indigo-800">
-          <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">2002</div>
-          <div className="text-sm text-indigo-700 dark:text-indigo-300">First Released</div>
-        </div>
-        <div className="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg border border-indigo-200 dark:border-indigo-800">
-          <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Intermediate</div>
-          <div className="text-sm text-indigo-700 dark:text-indigo-300">Difficulty Level</div>
-        </div>
-        <div className="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg border border-indigo-200 dark:border-indigo-800">
-          <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">#6</div>
-          <div className="text-sm text-indigo-700 dark:text-indigo-300">Stack Overflow Survey</div>
-        </div>
-        <div className="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg border border-indigo-200 dark:border-indigo-800">
-          <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">5M+</div>
-          <div className="text-sm text-indigo-700 dark:text-indigo-300">Developers</div>
-        </div>
-      </div>
+      <QuickStats stats={[
+        { 
+          value: "2002", 
+          label: "First Released",
+          icon: <Code className="w-5 h-5" />
+        },
+        { 
+          value: "Intermediate", 
+          label: "Difficulty Level",
+          icon: <Users className="w-5 h-5" />
+        },
+        { 
+          value: "High", 
+          label: "Popularity",
+          icon: <Star className="w-5 h-5" />
+        },
+        { 
+          value: "Cross-Platform", 
+          label: "Platform Support",
+          icon: <Globe className="w-5 h-5" />
+        }
+      ]} />
 
       {/* Key Features */}
       <section className="flex flex-col gap-6 md:gap-8">
@@ -344,22 +328,6 @@ public class User
         </div>
       </div>
 
-      {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/languages/php"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: PHP</span>
-        </Link>
-        <Link
-          href="/languages"
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-        >
-          <span>Back to Languages</span>
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

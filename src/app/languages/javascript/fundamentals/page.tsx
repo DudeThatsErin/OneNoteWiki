@@ -1,38 +1,22 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Code, Zap, BookOpen } from 'lucide-react';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
 
 export default function JavaScriptFundamentalsPage() {
   return (
-    <div className="space-y-8">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/languages/javascript"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to JavaScript</span>
-        </Link>
-        <Link
-          href="/languages/javascript/frameworks"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Frameworks</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-3">
-          <div className="text-4xl">📚</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">JavaScript Fundamentals</h1>
-            <p className="text-gray-600 dark:text-gray-300">Master the core concepts of JavaScript</p>
-          </div>
-        </div>
-      </div>
-
+    <PageLayout
+      title="JavaScript Fundamentals"
+      description="Learn the fundamental concepts of JavaScript including variables, functions, objects, and control flow that form the foundation of modern web development."
+      icon={<div className="text-4xl">⚡</div>}
+      previousLink={{
+        href: "/languages/javascript",
+        label: "Back to JavaScript"
+      }}
+      nextLink={{
+        href: "/languages/javascript/async",
+        label: "Next: Async JavaScript"
+      }}
+    >
       {/* Variables and Data Types */}
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Variables and Data Types</h2>
@@ -320,6 +304,6 @@ async function fetchData() {
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

@@ -1,27 +1,25 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Shield, Users, Layers, Lock } from 'lucide-react';
+import { Coffee, Code, BookOpen, Layers, Users, Star, ArrowRight, ExternalLink, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 export default function JavaOOPPage() {
   return (
-    <div className="space-y-8">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/languages/java/fundamentals"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Fundamentals</span>
-        </Link>
-        <Link
-          href="/languages/java/frameworks"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Frameworks</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
+    <PageLayout
+      title="Object-Oriented Programming in Java"
+      description="Learn object-oriented programming principles in Java including classes, objects, inheritance, polymorphism, encapsulation, and abstraction."
+      icon={<div className="text-4xl">☕</div>}
+      previousLink={{
+        href: "/languages/java/fundamentals",
+        label: "Previous: Java Fundamentals"
+      }}
+      nextLink={{
+        href: "/languages/java/frameworks",
+        label: "Next: Java Frameworks"
+      }}
+    >
       {/* Header */}
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
@@ -665,6 +663,6 @@ class Calculator {
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

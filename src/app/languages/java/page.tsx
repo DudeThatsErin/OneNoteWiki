@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Code, BookOpen, Users, Zap, Star, ExternalLink, Shield, Layers } from 'lucide-react';
+import { Coffee, Shield, Layers, Globe, Star, Users, Code, Zap, ArrowRight, ExternalLink } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
 
 const javaFeatures = [
   {
@@ -146,59 +148,42 @@ const javaFrameworks = [
 
 export default function JavaPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/languages"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Languages</span>
-        </Link>
-        <Link
-          href="/languages/cpp"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: C++</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
+    <PageLayout
+      title="Java"
+      description="Java is a robust, object-oriented programming language known for its platform independence, security, and scalability. It's the backbone of enterprise applications and Android development."
+      icon={<div className="text-4xl">☕</div>}
+      previousLink={{
+        href: "/languages/javascript",
+        label: "Previous: JavaScript"
+      }}
+      nextLink={{
+        href: "/languages/cpp",
+        label: "Next: C++"
+      }}
+    >
 
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">☕</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Java</h1>
-            <p className="text-gray-600 dark:text-gray-300">Enterprise-grade programming language</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Java is a robust, object-oriented programming language known for its platform independence, 
-          security, and scalability. It's the backbone of enterprise applications and Android development.
-        </p>
-      </div>
-
-      {/* Quick Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
-          <div className="text-2xl font-bold text-red-600 dark:text-red-400">1995</div>
-          <div className="text-sm text-red-700 dark:text-red-300">First Released</div>
-        </div>
-        <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
-          <div className="text-2xl font-bold text-red-600 dark:text-red-400">Intermediate</div>
-          <div className="text-sm text-red-700 dark:text-red-300">Difficulty Level</div>
-        </div>
-        <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
-          <div className="text-2xl font-bold text-red-600 dark:text-red-400">#3</div>
-          <div className="text-sm text-red-700 dark:text-red-300">TIOBE Index</div>
-        </div>
-        <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
-          <div className="text-2xl font-bold text-red-600 dark:text-red-400">9M+</div>
-          <div className="text-sm text-red-700 dark:text-red-300">Developers</div>
-        </div>
-      </div>
+      <QuickStats stats={[
+        { 
+          value: "1995", 
+          label: "First Released",
+          icon: <Coffee className="w-5 h-5" />
+        },
+        { 
+          value: "Intermediate", 
+          label: "Difficulty Level",
+          icon: <Users className="w-5 h-5" />
+        },
+        { 
+          value: "Very High", 
+          label: "Popularity",
+          icon: <Star className="w-5 h-5" />
+        },
+        { 
+          value: "Enterprise", 
+          label: "Primary Use",
+          icon: <Layers className="w-5 h-5" />
+        }
+      ]} />
 
       {/* Key Features */}
       <section className="flex flex-col gap-6 md:gap-8">
@@ -498,23 +483,6 @@ public class Person {
         </div>
       </div>
 
-      {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/languages"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Languages</span>
-        </Link>
-        <Link
-          href="/languages/cpp"
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-        >
-          <span>Next: C++</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

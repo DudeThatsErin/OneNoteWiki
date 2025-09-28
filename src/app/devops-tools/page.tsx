@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { Layers, ArrowRight, GitBranch, Code, TestTube, Rocket } from 'lucide-react';
+import { Settings, Code, Users, Star, Shield, Layers, ArrowRight, ExternalLink, GitBranch, TestTube, Rocket } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
 
 const devopsCategories = [
   {
@@ -49,7 +51,25 @@ const devopsPhases = [
 
 export default function DevOpsToolsPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
+    <PageLayout
+      title="DevOps & Tools"
+      description="Master the tools and practices that streamline development, deployment, and operations. From version control to containerization and CI/CD pipelines."
+      icon={<Settings className="w-8 h-8 text-blue-600" />}
+      nextLink={{
+        href: "/devops-tools/git",
+        label: "Start: Git & Version Control"
+      }}
+    >
+      <QuickStats 
+        title="DevOps & Tools Overview"
+        stats={[
+          { value: "63%", label: "Companies Using DevOps" },
+          { value: "200x", label: "Faster Deployment" },
+          { value: "24x", label: "Faster Recovery" },
+          { value: "3x", label: "Lower Failure Rate" }
+        ]} 
+      />
+
       {/* Header */}
       <div className="flex flex-col gap-4 md:gap-6">
         <div className="flex items-center gap-3">
@@ -311,6 +331,6 @@ export default function DevOpsToolsPage() {
           </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 }

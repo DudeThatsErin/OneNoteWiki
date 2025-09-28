@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Code, BookOpen, Users, Zap, Star, ExternalLink, Shield, Layers, Cpu, Settings, Navigation, Upload, Globe, Package, Smartphone } from 'lucide-react';
+import { Smartphone, Code, Users, Star, Globe, Zap, ArrowRight, ExternalLink, Shield, Layers, Cpu, Settings, Navigation, Upload, Package } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
 
 const reactNativeFeatures = [
   {
@@ -81,36 +83,19 @@ const projectIdeas = [
 
 export default function ReactNativePage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/mobile-development"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Mobile Development</span>
-        </Link>
-        <Link
-          href="/mobile-development/flutter"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Flutter</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="flex flex-col items-start py-2">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          React Native
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 pb-4">
-          React Native lets you build mobile apps using only JavaScript and React. 
-          It uses the same design as React, letting you compose a rich mobile UI from declarative components.
-        </p>
-      </div>
-
+    <PageLayout
+      title="React Native"
+      description="React Native lets you build mobile apps using only JavaScript and React. It uses the same design as React, letting you compose a rich mobile UI from declarative components."
+      icon={<div className="text-4xl">⚙️</div>}
+      previousLink={{
+        href: "/mobile-development",
+        label: "Back to Mobile Development"
+      }}
+      nextLink={{
+        href: "/mobile-development/flutter",
+        label: "Next: Flutter"
+      }}
+    >
       {/* Key Features */}
       <section className="flex flex-col gap-6 md:gap-8">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
@@ -492,23 +477,6 @@ export default App;`}
         </div>
       </section>
 
-      {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/mobile-development"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Mobile Development</span>
-        </Link>
-        <Link
-          href="/mobile-development/flutter"
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-        >
-          <span>Next: Flutter</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

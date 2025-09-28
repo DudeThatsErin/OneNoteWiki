@@ -1,5 +1,9 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Smartphone, Cloud, Zap, Package, Shield, Globe } from 'lucide-react';
+import { Smartphone, Code, Users, Star, Zap, Globe, ArrowRight, ExternalLink, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
 
 const expoFeatures = [
   {
@@ -11,13 +15,13 @@ const expoFeatures = [
   {
     title: 'Over-the-Air Updates',
     description: 'Push updates to your app instantly without app store approval',
-    icon: <Cloud className="w-5 h-5" />,
+    icon: <Globe className="w-5 h-5" />,
     details: 'Update JavaScript code and assets instantly for all users'
   },
   {
     title: 'Rich SDK',
     description: 'Access to camera, location, notifications, and 50+ native APIs',
-    icon: <Package className="w-5 h-5" />,
+    icon: <Code className="w-5 h-5" />,
     details: 'Comprehensive set of APIs for common mobile app functionality'
   },
   {
@@ -29,7 +33,7 @@ const expoFeatures = [
   {
     title: 'EAS Submit',
     description: 'Automated app store submission process',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <ExternalLink className="w-5 h-5" />,
     details: 'Streamlined submission to Apple App Store and Google Play Store'
   },
   {
@@ -81,25 +85,19 @@ const projectIdeas = [
 
 export default function ExpoPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/mobile-development/react-native"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: React Native</span>
-        </Link>
-        <Link
-          href="/mobile-development/flutter"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Flutter</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
+    <PageLayout
+      title="Expo"
+      description="Expo is a platform for making universal native apps for Android, iOS, and the web with JavaScript and React. It provides a set of tools and services built around React Native."
+      icon={<div className="text-4xl">🚀</div>}
+      previousLink={{
+        href: "/mobile-development/react-native",
+        label: "Previous: React Native"
+      }}
+      nextLink={{
+        href: "/mobile-development/flutter",
+        label: "Next: Flutter"
+      }}
+    >
       {/* Header */}
       <div className="flex flex-col gap-4 md:gap-6">
         <div className="flex items-center gap-3">
@@ -456,6 +454,6 @@ eas update --branch preview`}
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

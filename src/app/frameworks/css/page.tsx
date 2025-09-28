@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowLeft, Palette, Code, Zap, Layout } from 'lucide-react';
+import { Palette, Zap, Users, Star, Code, ArrowRight, ExternalLink } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
 
 const cssFrameworks = [
   {
@@ -78,7 +79,20 @@ const cssFrameworks = [
 
 export default function CSSFrameworksPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
+    <PageLayout
+      title="CSS Frameworks"
+      description="CSS frameworks provide pre-written CSS code to help you build responsive, consistent, and visually appealing websites faster. Choose based on your design needs, customization requirements, and development approach."
+      icon={<div className="text-4xl">🎨</div>}
+      previousLink={{
+        href: "/frameworks/backend",
+        label: "Previous: Backend Frameworks"
+      }}
+      nextLink={{
+        href: "/frameworks/fullstack",
+        label: "Next: Full-Stack Frameworks"
+      }}
+    >
+
       {/* Quick Reference */}
       <div className="bg-pink-50 dark:bg-pink-900/20 rounded-lg p-6 border border-pink-200 dark:border-pink-800">
         <h2 className="text-xl font-semibold text-pink-900 dark:text-pink-100 mb-4 flex items-center">
@@ -88,56 +102,29 @@ export default function CSSFrameworksPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <h3 className="font-semibold text-pink-900 dark:text-pink-100 mb-2">For Custom Designs:</h3>
-            <ul className="text-pink-800 dark:text-pink-200 text-sm [&>li]:mb-1">
-              <li>• <strong>Tailwind CSS:</strong> Utility-first approach</li>
-              <li>• <strong>Styled Components:</strong> CSS-in-JS</li>
-              <li>• <strong>Emotion:</strong> Performant CSS-in-JS</li>
+            <ul className="list-disc list-inside text-pink-800 dark:text-pink-200 text-sm [&>li]:mb-1">
+              <li><strong>Tailwind CSS:</strong> Utility-first approach</li>
+              <li><strong>Styled Components:</strong> CSS-in-JS</li>
+              <li><strong>Emotion:</strong> Performant CSS-in-JS</li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-pink-900 dark:text-pink-100 mb-2">For Rapid Development:</h3>
-            <ul className="text-pink-800 dark:text-pink-200 text-sm [&>li]:mb-1">
-              <li>• <strong>Bootstrap:</strong> Pre-built components</li>
-              <li>• <strong>Bulma:</strong> Modern CSS framework</li>
-              <li>• <strong>Foundation:</strong> Professional framework</li>
+            <ul className="list-disc list-inside text-pink-800 dark:text-pink-200 text-sm [&>li]:mb-1">
+              <li><strong>Bootstrap:</strong> Pre-built components</li>
+              <li><strong>Bulma:</strong> Modern CSS framework</li>
+              <li><strong>Foundation:</strong> Professional framework</li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-pink-900 dark:text-pink-100 mb-2">For React Projects:</h3>
-            <ul className="text-pink-800 dark:text-pink-200 text-sm [&>li]:mb-1">
-              <li>• <strong>Material-UI:</strong> Material Design</li>
-              <li>• <strong>Chakra UI:</strong> Simple and accessible</li>
-              <li>• <strong>Ant Design:</strong> Enterprise components</li>
+            <ul className="list-disc list-inside text-pink-800 dark:text-pink-200 text-sm [&>li]:mb-1">
+              <li><strong>Material-UI:</strong> Material Design</li>
+              <li><strong>Chakra UI:</strong> Simple and accessible</li>
+              <li><strong>Ant Design:</strong> Enterprise components</li>
             </ul>
           </div>
         </div>
-      </div>
-
-      {/* Navigation */}
-      <div className="flex items-center gap-2">
-        <Link
-          href="/frameworks"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Frameworks</span>
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">🎨</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">CSS Frameworks</h1>
-            <p className="text-gray-600 dark:text-grflex flex-col gap-300">Styling solutions for modern web development</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-grflex flex-col gap-300">
-          CSS frameworks provide pre-written CSS code to help you build responsive, consistent, and 
-          visually appealing websites faster. Choose based on your design needs, customization 
-          requirements, and development approach.
-        </p>
       </div>
 
       {/* Framework Types */}
@@ -296,6 +283,6 @@ export default function CSSFrameworksPage() {
           </div>
         </div>
       </section>
-    </div>
+    </PageLayout>
   );
 }

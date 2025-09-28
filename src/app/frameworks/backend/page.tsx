@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowLeft, Server, Code, Zap, Shield } from 'lucide-react';
+import { Server, Database, Shield, Globe, Star, Users, ArrowRight, ExternalLink } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
 
 const backendFrameworks = [
   {
@@ -78,7 +79,20 @@ const backendFrameworks = [
 
 export default function BackendFrameworksPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
+    <PageLayout
+      title="Backend Frameworks"
+      description="Backend frameworks provide the foundation for server-side development, handling requests, database interactions, authentication, and business logic. Choose the right framework based on your language preference, project requirements, and team expertise."
+      icon={<div className="text-4xl">🖥️</div>}
+      previousLink={{
+        href: "/frameworks/frontend",
+        label: "Previous: Frontend Frameworks"
+      }}
+      nextLink={{
+        href: "/frameworks/css",
+        label: "Next: CSS Frameworks"
+      }}
+    >
+
       {/* Quick Reference */}
       <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
         <h2 className="text-xl font-semibold text-blue-900 dark:text-blue-100 mb-4 flex items-center">
@@ -88,56 +102,29 @@ export default function BackendFrameworksPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">For Beginners:</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
-              <li>• <strong>Express.js:</strong> Simple and flexible</li>
-              <li>• <strong>FastAPI:</strong> Modern Python with docs</li>
-              <li>• <strong>Flask:</strong> Minimal Python framework</li>
+            <ul className="list-disc list-inside text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
+              <li><strong>Express.js:</strong> Simple and flexible</li>
+              <li><strong>FastAPI:</strong> Modern Python with docs</li>
+              <li><strong>Flask:</strong> Minimal Python framework</li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">For Enterprise:</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
-              <li>• <strong>Spring Boot:</strong> Java enterprise standard</li>
-              <li>• <strong>ASP.NET Core:</strong> Microsoft ecosystem</li>
-              <li>• <strong>Django:</strong> Python with batteries included</li>
+            <ul className="list-disc list-inside text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
+              <li><strong>Spring Boot:</strong> Java enterprise standard</li>
+              <li><strong>ASP.NET Core:</strong> Microsoft ecosystem</li>
+              <li><strong>Django:</strong> Python with batteries included</li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">For Rapid Development:</h3>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
-              <li>• <strong>Ruby on Rails:</strong> Convention over configuration</li>
-              <li>• <strong>Django:</strong> Admin interface included</li>
-              <li>• <strong>Express.js:</strong> Quick API development</li>
+            <ul className="list-disc list-inside text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
+              <li><strong>Ruby on Rails:</strong> Convention over configuration</li>
+              <li><strong>Django:</strong> Admin interface included</li>
+              <li><strong>Express.js:</strong> Quick API development</li>
             </ul>
           </div>
         </div>
-      </div>
-
-      {/* Navigation */}
-      <div className="flex items-center gap-2">
-        <Link
-          href="/frameworks"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Frameworks</span>
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">🖥️</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Backend Frameworks</h1>
-            <p className="text-gray-600 dark:text-gray-300">Server-side frameworks for building APIs and web applications</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Backend frameworks provide the foundation for server-side development, handling requests, 
-          database interactions, authentication, and business logic. Choose the right framework 
-          based on your language preference, project requirements, and team expertise.
-        </p>
       </div>
 
       {/* Framework Comparison */}
@@ -253,6 +240,6 @@ export default function BackendFrameworksPage() {
           </div>
         </div>
       </section>
-    </div>
+    </PageLayout>
   );
 }

@@ -1,31 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Code, Zap, BookOpen, Shield } from 'lucide-react';
+import { Coffee, Code, BookOpen, Zap, Users, Star, ArrowRight, ExternalLink, ArrowLeft } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
+import { FeatureList } from '@/components/FeatureList';
+import { ContentList } from '@/components/ContentList';
 
 export default function JavaFundamentalsPage() {
   return (
-    <div className="space-y-8">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/languages/java"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Java</span>
-        </Link>
-        <Link
-          href="/languages/java/oop"
-          className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: OOP Concepts</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
+    <PageLayout
+      title="Java Fundamentals"
+      description="Learn the fundamental concepts of Java programming including syntax, data types, control structures, and basic object-oriented principles."
+      icon={<div className="text-4xl">☕</div>}
+      previousLink={{
+        href: "/languages/java",
+        label: "Back to Java"
+      }}
+      nextLink={{
+        href: "/languages/java/oop",
+        label: "Next: OOP in Java"
+      }}
+    >
       {/* Header */}
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
-          <div className="text-4xl">📚</div>
+          <div className="text-4xl">☕</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Java Fundamentals</h1>
             <p className="text-gray-600 dark:text-gray-300">Master the core concepts of Java programming</p>
@@ -437,6 +436,6 @@ public class ExceptionHandling {
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
-    </div>
+    </PageLayout>
   );
 }

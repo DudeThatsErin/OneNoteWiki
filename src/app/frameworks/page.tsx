@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Package, ArrowRight, Code, Server, Smartphone, Palette, Layers } from 'lucide-react';
+import { Code, Layers, Globe, Users, Star, Zap, ArrowRight, Server, Smartphone, Palette, Package } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
 
 const frameworkCategories = [
   {
@@ -57,20 +58,11 @@ const popularFrameworks = [
 
 export default function FrameworksPage() {
   return (
-    <>
-      {/* Header */}
-      <div className="flex flex-col items-start p-4">
-        <div className="flex items-center gap-[1rem]">
-          <Package className="w-8 h-8 text-blue-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white pb-2">
-            Frameworks
-          </h1>
-        </div>
-        <p className="pt-4 text-lg text-gray-600 dark:text-gray-300">
-          Discover powerful frameworks that accelerate development and provide 
-          structure to your applications. From frontend to backend, mobile to CSS.
-        </p>
-      </div>
+    <PageLayout
+      title="Frameworks"
+      description="Discover powerful frameworks that accelerate development and provide structure to your applications. From frontend to backend, mobile to CSS."
+      icon={<Package className="w-8 h-8 text-blue-600" />}
+    >
 
       {/* What is a Framework */}
       <div className="py-8">
@@ -294,6 +286,6 @@ export default function FrameworksPage() {
           </Link>
         ))}
       </div>
-    </>
+    </PageLayout>
   );
 }

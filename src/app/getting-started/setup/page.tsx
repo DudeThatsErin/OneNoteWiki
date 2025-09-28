@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Monitor, Download, Settings, CheckCircle } from 'lucide-react';
+import { Download, Code, Settings, CheckCircle, ArrowRight } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
 
 const setupSteps = [
   {
@@ -119,35 +120,19 @@ const languageSetup = [
 
 export default function SetupPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-        <Link
-          href="/getting-started/choosing-language"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Choosing Language</span>
-        </Link>
-        <Link
-          href="/getting-started/first-program"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Your First Program</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div className="flex flex-col items-start py-2">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white pb-2">
-          Setting Up Your Environment
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 pb-4">
-          Before you can start coding, you need to set up your development environment. 
-          This includes installing a code editor, your programming language, and essential tools.
-        </p>
-      </div>
+    <PageLayout
+      title="Setting Up Your Environment"
+      description="Before you can start coding, you need to set up your development environment. This includes installing the necessary software and tools."
+      icon={<div className="text-4xl">⚙️</div>}
+      previousLink={{
+        href: "/getting-started/choosing-language",
+        label: "Previous: Choosing a Language"
+      }}
+      nextLink={{
+        href: "/getting-started/first-program",
+        label: "Next: Your First Program"
+      }}
+    >
 
       {/* Setup Overview */}
       <div className="pb-4">
@@ -364,23 +349,6 @@ export default function SetupPage() {
         </div>
       </div>
 
-      {/* Navigation */}
-      <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/getting-started/choosing-language"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Choosing Language</span>
-        </Link>
-        <Link
-          href="/getting-started/first-program"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Your First Program</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

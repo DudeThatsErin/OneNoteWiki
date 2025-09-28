@@ -1,5 +1,10 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Code, BookOpen, Users, Zap, Star, ExternalLink, Shield, Layers, Cpu } from 'lucide-react';
+import { Zap, Code, Shield, Globe, Star, Users, ArrowRight, ExternalLink, Layers, BookOpen, Cpu } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { FeatureList } from '@/components/FeatureList';
+import { InfoCard } from '@/components/InfoCard';
+import { CodeBlock } from '@/components/CodeBlock';
 
 const cppFeatures = [
   {
@@ -204,60 +209,42 @@ const cppLibraries = [
 
 export default function CppPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/languages/java"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Java</span>
-        </Link>
-        <Link
-          href="/languages/csharp"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: C#</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
+    <PageLayout
+      title="C++"
+      description="C++ is a general-purpose programming language created as an extension of C. Known for its performance, flexibility, and extensive use in system software, game development, and applications requiring high computational efficiency."
+      icon={<div className="text-4xl">🔥</div>}
+      previousLink={{
+        href: "/languages/java",
+        label: "Previous: Java"
+      }}
+      nextLink={{
+        href: "/languages/csharp",
+        label: "Next: C#"
+      }}
+    >
 
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">🔥</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">C++</h1>
-            <p className="text-gray-600 dark:text-gray-300">High-performance systems programming language</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          C++ is a general-purpose programming language created as an extension of C. 
-          Known for its performance, flexibility, and extensive use in system software, 
-          game development, and applications requiring high computational efficiency.
-        </p>
-      </div>
-
-      {/* Quick Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">1985</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">First Released</div>
-        </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">Advanced</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Difficulty Level</div>
-        </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">#4</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">TIOBE Index</div>
-        </div>
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">5.6M+</div>
-          <div className="text-sm text-blue-700 dark:text-blue-300">Developers</div>
-        </div>
-      </div>
+      <QuickStats stats={[
+        { 
+          value: "1985", 
+          label: "First Released",
+          icon: <Code className="w-5 h-5" />
+        },
+        { 
+          value: "Advanced", 
+          label: "Difficulty Level",
+          icon: <Zap className="w-5 h-5" />
+        },
+        { 
+          value: "High", 
+          label: "Popularity",
+          icon: <Star className="w-5 h-5" />
+        },
+        { 
+          value: "Systems", 
+          label: "Primary Use",
+          icon: <Cpu className="w-5 h-5" />
+        }
+      ]} />
 
       {/* Learning Sections */}
       <section className="flex flex-col gap-6 md:gap-8">
@@ -626,23 +613,6 @@ int main() {
         </div>
       </div>
 
-      {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/languages/java"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: Java</span>
-        </Link>
-        <Link
-          href="/languages/csharp"
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-        >
-          <span>Next: C#</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

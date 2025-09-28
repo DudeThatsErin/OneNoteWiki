@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Code, BookOpen, Users, Zap, Star, ExternalLink } from 'lucide-react';
+import { Zap, Code, Globe, Users, Star, Shield, ArrowRight, ExternalLink } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
 
 const goFeatures = [
   {
@@ -146,59 +148,42 @@ const goFrameworks = [
 
 export default function GoPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/languages/csharp"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: C#</span>
-        </Link>
-        <Link
-          href="/languages/rust"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <span>Next: Rust</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
+    <PageLayout
+      title="Go"
+      description="Go is an open source programming language developed by Google that makes it easy to build simple, reliable, and efficient software with built-in concurrency support."
+      icon={<div className="text-4xl">🐹</div>}
+      previousLink={{
+        href: "/languages/csharp",
+        label: "Previous: C#"
+      }}
+      nextLink={{
+        href: "/languages/rust",
+        label: "Next: Rust"
+      }}
+    >
 
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">🐹</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Go</h1>
-            <p className="text-gray-600 dark:text-gray-300">Simple, fast, and reliable programming language</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Go is an open source programming language developed by Google that makes it easy to build 
-          simple, reliable, and efficient software with built-in concurrency support.
-        </p>
-      </div>
-
-      {/* Quick Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-lg border border-cyan-200 dark:border-cyan-800">
-          <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">2009</div>
-          <div className="text-sm text-cyan-700 dark:text-cyan-300">First Released</div>
-        </div>
-        <div className="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-lg border border-cyan-200 dark:border-cyan-800">
-          <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">Beginner</div>
-          <div className="text-sm text-cyan-700 dark:text-cyan-300">Difficulty Level</div>
-        </div>
-        <div className="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-lg border border-cyan-200 dark:border-cyan-800">
-          <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">#13</div>
-          <div className="text-sm text-cyan-700 dark:text-cyan-300">TIOBE Index</div>
-        </div>
-        <div className="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-lg border border-cyan-200 dark:border-cyan-800">
-          <div className="text-2xl font-bold text-cyan-600 dark:text-cyan-400">1.1M+</div>
-          <div className="text-sm text-cyan-700 dark:text-cyan-300">Developers</div>
-        </div>
-      </div>
+      <QuickStats stats={[
+        { 
+          value: "2009", 
+          label: "First Released",
+          icon: <Code className="w-5 h-5" />
+        },
+        { 
+          value: "Intermediate", 
+          label: "Difficulty Level",
+          icon: <Users className="w-5 h-5" />
+        },
+        { 
+          value: "High", 
+          label: "Popularity",
+          icon: <Star className="w-5 h-5" />
+        },
+        { 
+          value: "Cloud/Backend", 
+          label: "Primary Use",
+          icon: <Globe className="w-5 h-5" />
+        }
+      ]} />
 
       {/* Key Features */}
       <section className="flex flex-col gap-6 md:gap-8">
@@ -477,23 +462,6 @@ func main() {
         </div>
       </div>
 
-      {/* Navigation */}
-      <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-        <Link
-          href="/languages/csharp"
-          className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Previous: C#</span>
-        </Link>
-        <Link
-          href="/languages/rust"
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-        >
-          <span>Next: Rust</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </div>
+    </PageLayout>
   );
 }

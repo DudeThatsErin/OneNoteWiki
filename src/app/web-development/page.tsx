@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { Globe, ArrowRight, CheckCircle } from 'lucide-react';
+import { Globe, Code, Users, Star, Layers, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
 
 const webDevPaths = [
   {
@@ -43,7 +45,15 @@ const webDevConcepts = [
 
 export default function WebDevelopmentPage() {
   return (
-    <>
+    <PageLayout
+      title="Web Development"
+      description="Learn to build modern web applications from frontend user interfaces to backend APIs. Master the technologies that power the internet."
+      icon={<Globe className="w-8 h-8 text-blue-600" />}
+      nextLink={{
+        href: "/web-development/html-css",
+        label: "Start: HTML & CSS"
+      }}
+    >
       {/* Header */}
       <div className="flex flex-col items-start p-4">
         <div className="flex items-center gap-3">
@@ -182,6 +192,6 @@ export default function WebDevelopmentPage() {
           </div>
         </div>
       </div>
-    </>
+    </PageLayout>
   );
 }

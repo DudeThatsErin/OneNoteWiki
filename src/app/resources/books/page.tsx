@@ -295,7 +295,7 @@ export default function BooksPage() {
                   <p className="text-gray-600 dark:text-gray-300 text-sm">by {book.author}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="flex items-center flex flex-col gap-31">
+                  <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className={`w-4 h-4 ${i < book.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
                     ))}
@@ -358,7 +358,7 @@ export default function BooksPage() {
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-lg font-bold text-blue-900 dark:text-blue-100">{site.name}</h3>
                 <div className="flex items-center gap-2">
-                  <div className="flex items-center flex flex-col gap-31">
+                  <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className={`w-3 h-3 ${i < site.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} />
                     ))}

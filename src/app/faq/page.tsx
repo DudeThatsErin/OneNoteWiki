@@ -1,7 +1,10 @@
 'use client';
 
-import { HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import { ChevronDown, ChevronRight, HelpCircle, Search, BookOpen, Users, MessageCircle } from 'lucide-react';
+import { PageLayout } from '@/components/PageLayout';
+import { QuickStats } from '@/components/QuickStats';
+import { InfoCard } from '@/components/InfoCard';
 
 const faqs = [
   {
@@ -67,53 +70,46 @@ const faqs = [
 ];
 
 function FAQItem({ faq }: { faq: typeof faqs[0] }) {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div className="border border-gray-200 dark:border-gray-700 rounded-lg">
       <button
-        onClick={() => setIsOpen(!isOpen)}
         className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
       >
         <span className="font-medium text-gray-900 dark:text-white pr-4">
           {faq.question}
         </span>
-        {isOpen ? (
-          <ChevronUp className="w-5 h-5 text-gray-500 flex-shrink-0" />
-        ) : (
-          <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0" />
-        )}
+        <ChevronDown className="w-5 h-5 text-gray-500 flex-shrink-0" />
       </button>
-      {isOpen && (
-        <div className="px-6 pb-4">
-          <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-            {faq.answer}
-          </p>
-        </div>
-      )}
+      <div className="px-6 pb-4">
+        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+          {faq.answer}
+        </p>
+      </div>
     </div>
   );
 }
 
 export default function FAQPage() {
+  const [openItems, setOpenItems] = useState<number[]>([]);
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <HelpCircle className="w-8 h-8 text-blue-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Frequently Asked Questions
-          </h1>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Common questions about learning programming and getting started in software development.
-        </p>
-      </div>
+    <PageLayout
+      title="Frequently Asked Questions"
+      description="Find answers to the most common questions about programming, learning to code, and using this wiki effectively."
+      icon={<div className="text-4xl">❓</div>}
+    >
 
       {/* FAQ Items */}
       <div className="flex flex-col gap-4 md:gap-6">
-        {faqs.map((faq) => (
+        {faqs.map((faq, index) => (
           <FAQItem key={faq.id} faq={faq} />
         ))}
       </div>
@@ -160,6 +156,6 @@ export default function FAQPage() {
           You can suggest improvements by reaching out to us on Discord or Reddit.
         </p>
       </div>
-    </div>
+    </PageLayout>
   );
 }
