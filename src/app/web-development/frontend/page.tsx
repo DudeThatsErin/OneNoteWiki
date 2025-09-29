@@ -10,7 +10,7 @@ const frameworks = [
     pros: ['Large ecosystem', 'Virtual DOM', 'Flexible', 'Great job market'],
     cons: ['Steep learning curve', 'Frequent updates', 'JSX syntax'],
     bestFor: 'Complex applications, SPAs, when you need flexibility',
-    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     name: 'Vue.js',
@@ -18,7 +18,7 @@ const frameworks = [
     pros: ['Easy to learn', 'Great documentation', 'Flexible', 'Small bundle size'],
     cons: ['Smaller ecosystem', 'Less job opportunities', 'Composition API complexity'],
     bestFor: 'Beginners, rapid prototyping, progressive enhancement',
-    color: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     name: 'Angular',
@@ -26,7 +26,7 @@ const frameworks = [
     pros: ['Full framework', 'TypeScript by default', 'Enterprise-ready', 'Powerful CLI'],
     cons: ['Complex', 'Heavy', 'Steep learning curve', 'Verbose'],
     bestFor: 'Large enterprise applications, teams that prefer structure',
-    color: 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     name: 'Svelte',
@@ -34,7 +34,7 @@ const frameworks = [
     pros: ['No virtual DOM', 'Small bundle size', 'Easy to learn', 'Great performance'],
     cons: ['Smaller ecosystem', 'Less tooling', 'Newer framework', 'Limited job market'],
     bestFor: 'Performance-critical apps, developers who want simplicity',
-    color: 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800'
+    color: 'bg-gray-800 border-gray-700'
   }
 ];
 
@@ -62,14 +62,14 @@ export default function FrontendDevelopmentPage() {
     >
 
       {/* Why Use Frameworks */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🤔 Why Use Frontend Frameworks?
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Benefits:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+            <h4 className="font-semibold text-white dark:text-white mb-2">Benefits:</h4>
+            <ul className="text-white dark:text-white text-sm space-y-1">
               <li>• Component-based architecture for reusability</li>
               <li>• Reactive data binding and state management</li>
               <li>• Virtual DOM for better performance</li>
@@ -78,8 +78,8 @@ export default function FrontendDevelopmentPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">When to Use:</h4>
-            <ul className="text-blue-800 dark:text-blue-200 text-sm space-y-1">
+            <h4 className="font-semibold text-white dark:text-white mb-2">When to Use:</h4>
+            <ul className="text-white dark:text-white text-sm space-y-1">
               <li>• Building Single Page Applications (SPAs)</li>
               <li>• Complex user interfaces with lots of interactivity</li>
               <li>• Applications that need real-time updates</li>
@@ -120,9 +120,6 @@ export default function FrontendDevelopmentPage() {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   {framework.name}
                 </h3>
-                <span className="text-sm px-3 py-1 bg-white dark:bg-gray-800 rounded-full font-medium">
-                  #{index + 1}
-                </span>
               </div>
               
               <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -164,7 +161,7 @@ export default function FrontendDevelopmentPage() {
           Getting Started
         </h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
             🚀 Recommended Learning Path
           </h3>
@@ -241,8 +238,8 @@ export default function FrontendDevelopmentPage() {
       </section>
 
       {/* Practice Projects */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-        <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           💡 Practice Project Ideas
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

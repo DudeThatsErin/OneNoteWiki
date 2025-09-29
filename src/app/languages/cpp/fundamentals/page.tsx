@@ -35,7 +35,7 @@ export default function CppFundamentalsPage() {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Basic Syntax and Structure</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Hello World and Basic Structure</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`#include <iostream>  // Preprocessor directive
@@ -88,11 +88,11 @@ void greetUser(const string& name) {
           </pre>
         </div>
 
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-          <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">💡 C++ Key Concepts</h3>
-          <ul className="space-y-2 text-blue-800 dark:text-blue-200 text-sm">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <h3 className="font-semibold text-white mb-3">💡 C++ Key Concepts</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
             <li>• <strong>Compiled Language:</strong> C++ code is compiled to machine code for fast execution</li>
-            <li>• <strong>Header Files:</strong> Use <code className="bg-blue-100 dark:bg-blue-900/30 px-1 rounded">#include</code> to include libraries and declarations</li>
+            <li>• <strong>Header Files:</strong> Use <code className="bg-gray-700 px-1 rounded">#include</code> to include libraries and declarations</li>
             <li>• <strong>Namespaces:</strong> Organize code and avoid naming conflicts</li>
             <li>• <strong>Strong Typing:</strong> Variables must be declared with specific types</li>
           </ul>
@@ -103,7 +103,7 @@ void greetUser(const string& name) {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Data Types and Variables</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Fundamental Data Types</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`#include <iostream>
@@ -162,7 +162,7 @@ int main() {
           </pre>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Arrays and Pointers</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`#include <iostream>
@@ -242,7 +242,7 @@ int main() {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Control Flow</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Conditionals and Loops</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`#include <iostream>
@@ -345,7 +345,7 @@ int main() {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Functions</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Function Declaration and Definition</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`#include <iostream>
@@ -474,7 +474,7 @@ void greet(const string& name, const string& greeting) {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Memory Management</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Dynamic Memory Allocation</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`#include <iostream>
@@ -615,9 +615,9 @@ public:
           </pre>
         </div>
 
-        <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">⚠️ Memory Management Best Practices</h3>
-          <ul className="space-y-2 text-red-800 dark:text-red-200 text-sm">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <h3 className="font-semibold text-white mb-3">⚠️ Memory Management Best Practices</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
             <li>• <strong>Prefer smart pointers</strong> over raw pointers for dynamic allocation</li>
             <li>• <strong>Follow RAII principle</strong> - resources managed by constructors/destructors</li>
             <li>• <strong>Every new must have a delete</strong> (if not using smart pointers)</li>

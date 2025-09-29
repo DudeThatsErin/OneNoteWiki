@@ -3,34 +3,34 @@ import { Globe, Code, Users, Star, Layers, Zap, ArrowRight, CheckCircle } from '
 import { PageLayout } from '@/components/PageLayout';
 import { QuickStats } from '@/components/QuickStats';
 
-const webDevPaths = [
+const learningPaths = [
   {
     title: 'HTML & CSS',
     description: 'Learn the building blocks of web development - structure and styling.',
     href: '/web-development/html-css',
     difficulty: 'Beginner',
-    color: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     title: 'Frontend Frameworks',
     description: 'Master modern JavaScript frameworks like React, Vue, and Angular.',
     href: '/web-development/frontend',
     difficulty: 'Intermediate',
-    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     title: 'Backend Development',
     description: 'Build server-side applications, APIs, and databases.',
     href: '/web-development/backend',
     difficulty: 'Intermediate',
-    color: 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     title: 'Full Stack',
     description: 'Combine frontend and backend skills to build complete web applications.',
     href: '/web-development/fullstack',
     difficulty: 'Advanced',
-    color: 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800'
+    color: 'bg-gray-800 border-gray-700'
   }
 ];
 
@@ -74,16 +74,16 @@ export default function WebDevelopmentPage() {
           Learning Paths
         </h2>
         <div className="flex flex-col gap-4">
-          {webDevPaths.map((path, index) => (
+          {learningPaths.map((path, index) => (
             <Link
               key={path.href}
               href={path.href}
-              className={`block p-6 rounded-lg border-2 transition-all hover:shadow-lg hover:scale-105 ${path.color}`}
+              className={`block p-6 rounded-lg border transition-all hover:border-gray-600 ${path.color}`}
             >
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-sm">
-                    <span className="text-purple-600 font-semibold text-sm">
+                  <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
+                    <span className="text-white font-semibold text-sm">
                       {index + 1}
                     </span>
                   </div>
@@ -105,7 +105,7 @@ export default function WebDevelopmentPage() {
       </div>
 
       {/* Key Concepts */}
-      <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🎯 Key Web Development Concepts
         </h3>
@@ -120,8 +120,8 @@ export default function WebDevelopmentPage() {
       </div>
 
       {/* Getting Started */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-        <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🚀 Getting Started with Web Development
         </h3>
         <div className="flex flex-col gap-3 text-purple-800 dark:text-purple-200">
@@ -141,57 +141,13 @@ export default function WebDevelopmentPage() {
         <div className="mt-4">
           <Link
             href="/web-development/html-css"
-            className="inline-flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-colors"
+            className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
           >
             Start with HTML & CSS →
           </Link>
         </div>
       </div>
 
-      {/* Tools & Technologies */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-          Popular Tools & Technologies
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Frontend</h4>
-            <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
-              <li>React / Next.js</li>
-              <li>Vue / Nuxt.js</li>
-              <li>Angular</li>
-              <li>Svelte</li>
-            </ul>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Backend</h4>
-            <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
-              <li>Node.js / Express</li>
-              <li>Python / Django</li>
-              <li>PHP / Laravel</li>
-              <li>Ruby / Rails</li>
-            </ul>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Databases</h4>
-            <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
-              <li>PostgreSQL</li>
-              <li>MongoDB</li>
-              <li>MySQL</li>
-              <li>Redis</li>
-            </ul>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Tools</h4>
-            <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 [&>li]:mb-1">
-              <li>VS Code</li>
-              <li>Git / GitHub</li>
-              <li>Webpack / Vite</li>
-              <li>Docker</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </PageLayout>
   );
 }

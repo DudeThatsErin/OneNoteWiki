@@ -35,7 +35,7 @@ export default function JavaOOPPage() {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Classes and Objects</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Creating Classes and Objects</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Student.java - A simple class definition
@@ -171,9 +171,9 @@ public class StudentDemo {
           </pre>
         </div>
 
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-          <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">🔑 Key OOP Concepts</h3>
-          <ul className="space-y-2 text-blue-800 dark:text-blue-200 text-sm">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <h3 className="font-semibold text-white mb-3">🔑 Key OOP Concepts</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
             <li>• <strong>Class:</strong> Blueprint or template for creating objects</li>
             <li>• <strong>Object:</strong> Instance of a class with specific values</li>
             <li>• <strong>Constructor:</strong> Special method to initialize objects</li>
@@ -187,7 +187,7 @@ public class StudentDemo {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Encapsulation</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Access Modifiers and Data Hiding</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`public class BankAccount {
@@ -288,19 +288,19 @@ public class BankDemo {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800">
-            <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2 text-sm">Access Modifiers</h4>
-            <ul className="space-y-1 text-green-800 dark:text-green-200 text-xs">
-              <li>• <code className="bg-green-100 dark:bg-green-900/30 px-1 rounded">public</code>: Accessible everywhere</li>
-              <li>• <code className="bg-green-100 dark:bg-green-900/30 px-1 rounded">protected</code>: Same package + subclasses</li>
-              <li>• <code className="bg-green-100 dark:bg-green-900/30 px-1 rounded">default</code>: Same package only</li>
-              <li>• <code className="bg-green-100 dark:bg-green-900/30 px-1 rounded">private</code>: Same class only</li>
+          <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
+            <h4 className="font-semibold text-white mb-2 text-sm">Access Modifiers</h4>
+            <ul className="space-y-1 text-gray-300 text-xs">
+              <li>• <code className="bg-gray-700 px-1 rounded">public</code>: Accessible everywhere</li>
+              <li>• <code className="bg-gray-700 px-1 rounded">protected</code>: Same package + subclasses</li>
+              <li>• <code className="bg-gray-700 px-1 rounded">default</code>: Same package only</li>
+              <li>• <code className="bg-gray-700 px-1 rounded">private</code>: Same class only</li>
             </ul>
           </div>
           
-          <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg border border-purple-200 dark:border-purple-800">
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2 text-sm">Benefits of Encapsulation</h4>
-            <ul className="space-y-1 text-purple-800 dark:text-purple-200 text-xs">
+          <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
+            <h4 className="font-semibold text-white mb-2 text-sm">Benefits of Encapsulation</h4>
+            <ul className="space-y-1 text-gray-300 text-xs">
               <li>• Data protection and validation</li>
               <li>• Controlled access to class members</li>
               <li>• Easier maintenance and debugging</li>
@@ -314,7 +314,7 @@ public class BankDemo {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Inheritance</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Extending Classes</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Base class (Parent/Superclass)
@@ -465,7 +465,7 @@ public class InheritanceDemo {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Polymorphism</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Method Overriding and Dynamic Binding</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Abstract base class
@@ -635,9 +635,9 @@ class Calculator {
           </pre>
         </div>
 
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
-          <h3 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-3">🔄 Types of Polymorphism</h3>
-          <ul className="space-y-2 text-yellow-800 dark:text-yellow-200 text-sm">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <h3 className="font-semibold text-white mb-3">🔄 Types of Polymorphism</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
             <li>• <strong>Compile-time Polymorphism:</strong> Method overloading, operator overloading</li>
             <li>• <strong>Runtime Polymorphism:</strong> Method overriding, dynamic method dispatch</li>
             <li>• <strong>Interface Polymorphism:</strong> Multiple classes implementing same interface</li>
@@ -657,7 +657,7 @@ class Calculator {
         </Link>
         <Link
           href="/languages/java/frameworks"
-          className="flex items-center space-x-2 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: Frameworks</span>
           <ArrowRight className="w-4 h-4" />

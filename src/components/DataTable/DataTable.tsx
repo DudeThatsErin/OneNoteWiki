@@ -13,7 +13,7 @@ export function DataTable<T extends Record<string, any>>({
   description
 }: DataTableProps<T>) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortConfig, setSortConfig] = useState<SortConfig>({
+  const [sortConfig, setSortConfig] = useState<SortConfig<T>>({
     key: defaultSortColumn || (columns[0]?.key as keyof T),
     direction: 'asc'
   });
@@ -23,8 +23,8 @@ export function DataTable<T extends Record<string, any>>({
   const filteredData = useMemo(() => {
     if (!searchTerm) return data;
     
-    return data.filter(item =>
-      searchableColumns.some(column =>
+    return data.filter((item: T) =>
+      searchableColumns.some((column: keyof T) =>
         String(item[column]).toLowerCase().includes(searchTerm.toLowerCase())
       )
     );
@@ -49,7 +49,7 @@ export function DataTable<T extends Record<string, any>>({
   }, [filteredData, sortConfig]);
 
   const handleSort = (key: keyof T) => {
-    setSortConfig(prev => ({
+    setSortConfig((prev: SortConfig<T>) => ({
       key,
       direction: prev.key === key && prev.direction === 'asc' ? 'desc' : 'asc'
     }));
@@ -79,7 +79,7 @@ export function DataTable<T extends Record<string, any>>({
     if (column.type === 'tags' && Array.isArray(value)) {
       return (
         <div className="flex flex-wrap gap-1">
-          {value.map((tag, index) => (
+          {value.map((tag: string, index: number) => (
             <span
               key={index}
               className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full"
@@ -173,7 +173,7 @@ export function DataTable<T extends Record<string, any>>({
         >
           <thead className="bg-gray-50 dark:bg-gray-700 sticky top-0">
             <tr role="row">
-              {columns.map((column) => (
+              {columns.map((column: Column<T>) => (
                 <th
                   key={String(column.key)}
                   className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors focus:bg-gray-100 dark:focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
@@ -210,13 +210,13 @@ export function DataTable<T extends Record<string, any>>({
             </tr>
           </thead>
           <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
-            {sortedData.map((item, index) => (
+            {sortedData.map((item: T, index: number) => (
               <tr
                 key={index}
                 className="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors focus-within:bg-gray-50 dark:focus-within:bg-gray-700"
                 role="row"
               >
-                {columns.map((column) => (
+                {columns.map((column: Column<T>) => (
                   <td
                     key={String(column.key)}
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100"

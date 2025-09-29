@@ -21,7 +21,7 @@ export function QuickStats({
           {title}
         </h2>
       )}
-      <div className={`grid ${gridCols[columns]} gap-4`}>
+      <div className={`grid ${gridCols[columns]} gap-6`}>
         {stats.map((stat, index) => (
           <div 
             key={index} 

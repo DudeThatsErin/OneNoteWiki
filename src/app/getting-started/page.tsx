@@ -54,7 +54,7 @@ export default function GettingStartedPage() {
             <Link
               key={step.href}
               href={step.href}
-              className="block p-6 transition-all hover:opacity-80"
+              className="block p-6 bg-gray-800 rounded-lg border border-gray-700 transition-all hover:border-gray-600"
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">

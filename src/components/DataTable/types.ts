@@ -6,8 +6,8 @@ export interface Column<T> {
   sortable?: boolean;
 }
 
-export interface SortConfig {
-  key: string | number | symbol;
+export interface SortConfig<T = any> {
+  key: keyof T;
   direction: 'asc' | 'desc';
 }
 

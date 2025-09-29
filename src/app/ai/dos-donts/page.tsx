@@ -210,8 +210,8 @@ export default function AIDosAndDontsPage() {
       </div>
 
       {/* Key Principles */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🎯 Core Principles for Mid-Level Developers
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -251,7 +251,7 @@ export default function AIDosAndDontsPage() {
               </h3>
               <div className="flex flex-col gap-4 md:gap-6">
                 {category.items.map((item, i) => (
-                  <div key={i} className="bg-white dark:bg-gray-800 p-4 rounded border border-green-200 dark:border-green-700">
+                  <div key={i} className="bg-gray-800 p-4 rounded border border-gray-700">
                     <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2 flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-600" />
                       <span>{item.title}</span>
@@ -283,7 +283,7 @@ export default function AIDosAndDontsPage() {
               </h3>
               <div className="flex flex-col gap-4 md:gap-6">
                 {category.items.map((item, i) => (
-                  <div key={i} className="bg-white dark:bg-gray-800 p-4 rounded border border-red-200 dark:border-red-700">
+                  <div key={i} className="bg-gray-800 p-4 rounded border border-gray-700">
                     <h4 className="font-semibold text-red-900 dark:text-red-100 mb-2 flex items-center gap-2">
                       <XCircle className="w-4 h-4 text-red-600" />
                       <span>{item.title}</span>
@@ -327,15 +327,15 @@ export default function AIDosAndDontsPage() {
         </h2>
         <div className="flex flex-col gap-4 md:gap-6">
           {commonMistakes.map((mistake, index) => (
-            <div key={index} className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800">
+            <div key={index} className="bg-gray-800 p-4 rounded-lg border border-gray-700">
               <div className="flex items-start gap-3">
-                <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
+                <AlertTriangle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                 <div className="flex-1">
-                  <h4 className="font-semibold text-yellow-900 dark:text-yellow-100">{mistake.mistake}</h4>
-                  <p className="text-yellow-800 dark:text-yellow-200 text-sm mb-2">
+                  <h4 className="font-semibold text-blue-900 dark:text-blue-100">{mistake.mistake}</h4>
+                  <p className="text-blue-800 dark:text-blue-200 text-sm mb-2">
                     <strong>Consequence:</strong> {mistake.consequence}
                   </p>
-                  <p className="text-yellow-700 dark:text-yellow-300 text-sm">
+                  <p className="text-blue-700 dark:text-blue-300 text-sm">
                     <strong>Solution:</strong> {mistake.solution}
                   </p>
                 </div>
@@ -346,14 +346,14 @@ export default function AIDosAndDontsPage() {
       </section>
 
       {/* Best Practices Summary */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-        <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           📋 Quick Reference: AI Best Practices
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Before Using AI:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Before Using AI:</h4>
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>• Define clear requirements</li>
               <li>• Consider security implications</li>
               <li>• Check company policies</li>
@@ -361,8 +361,8 @@ export default function AIDosAndDontsPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">While Using AI:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">While Using AI:</h4>
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>• Provide clear, specific prompts</li>
               <li>• Iterate and refine requests</li>
               <li>• Ask for explanations</li>
@@ -370,8 +370,8 @@ export default function AIDosAndDontsPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">After AI Generation:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">After AI Generation:</h4>
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>• Review and understand code</li>
               <li>• Test thoroughly</li>
               <li>• Refactor if needed</li>

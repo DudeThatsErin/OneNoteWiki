@@ -10,7 +10,7 @@ const backendLanguages = [
     pros: ['Same language as frontend', 'Large ecosystem (npm)', 'Great for real-time apps', 'Fast development'],
     cons: ['Single-threaded', 'CPU-intensive tasks', 'Callback complexity'],
     frameworks: ['Express.js', 'Fastify', 'Koa.js', 'NestJS'],
-    color: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     name: 'Python',
@@ -18,7 +18,7 @@ const backendLanguages = [
     pros: ['Easy to learn', 'Rich libraries', 'Great for AI/ML', 'Clean syntax'],
     cons: ['Slower execution', 'GIL limitations', 'Mobile development'],
     frameworks: ['Django', 'Flask', 'FastAPI', 'Pyramid'],
-    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     name: 'Java',
@@ -26,7 +26,7 @@ const backendLanguages = [
     pros: ['Platform independent', 'Strong typing', 'Enterprise ready', 'Great performance'],
     cons: ['Verbose syntax', 'Slow startup', 'Memory usage'],
     frameworks: ['Spring Boot', 'Quarkus', 'Micronaut', 'Play Framework'],
-    color: 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     name: 'Go',
@@ -34,7 +34,7 @@ const backendLanguages = [
     pros: ['Fast compilation', 'Built-in concurrency', 'Simple syntax', 'Great performance'],
     cons: ['Limited generics', 'Smaller ecosystem', 'Learning curve'],
     frameworks: ['Gin', 'Echo', 'Fiber', 'Chi'],
-    color: 'bg-cyan-50 dark:bg-cyan-900/20 border-cyan-200 dark:border-cyan-800'
+    color: 'bg-gray-800 border-gray-700'
   }
 ];
 
@@ -77,14 +77,14 @@ export default function BackendDevelopmentPage() {
       }}
     >
       {/* What is Backend Development */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-        <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🖥️ What is Backend Development?
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Backend Responsibilities:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-white dark:text-white mb-2">Backend Responsibilities:</h4>
+            <ul className="text-white dark:text-white text-sm [&>li]:mb-1">
               <li>• Server-side logic and business rules</li>
               <li>• Database operations and data management</li>
               <li>• API development and integration</li>
@@ -94,8 +94,8 @@ export default function BackendDevelopmentPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Key Technologies:</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-white dark:text-white mb-2">Key Technologies:</h4>
+            <ul className="text-white dark:text-white text-sm [&>li]:mb-1">
               <li>• Programming languages (Node.js, Python, Java, Go)</li>
               <li>• Web frameworks (Express, Django, Spring)</li>
               <li>• Databases (PostgreSQL, MongoDB, Redis)</li>
@@ -182,7 +182,7 @@ export default function BackendDevelopmentPage() {
           API Development
         </h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
             🔗 RESTful API Example (Express.js)
           </h3>
@@ -280,8 +280,8 @@ app.listen(3000, () => {
           Authentication & Security
         </h2>
         
-        <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-6 border border-red-200 dark:border-red-800">
-          <h3 className="text-lg font-semibold text-red-900 dark:text-red-100 mb-4">
+        <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+          <h3 className="text-lg font-semibold text-white mb-4">
             🔒 Security Best Practices
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -308,8 +308,8 @@ app.listen(3000, () => {
       </section>
 
       {/* Learning Path */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🎯 Backend Learning Path
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">
@@ -352,8 +352,8 @@ app.listen(3000, () => {
       </div>
 
       {/* Practice Projects */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           💡 Backend Project Ideas
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

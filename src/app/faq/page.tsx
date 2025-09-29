@@ -79,11 +79,11 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: { id: string; question: strin
   const buttonId = `faq-button-${faq.id}`;
 
   return (
-    <div className="flex flex-col gap-4 md:gap-6 border border-gray-200 dark:border-gray-700 rounded-lg">
+    <div className="flex flex-col gap-4 md:gap-6">
       <button
         id={buttonId}
         onClick={onToggle}
-        className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset rounded-lg"
+        className="w-full px-6 py-4 text-left flex items-center justify-between bg-gray-800 border border-gray-700 hover:border-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset rounded-lg"
         aria-expanded={isOpen}
         aria-controls={contentId}
         aria-describedby={contentId}
@@ -144,7 +144,7 @@ export default function FAQPage() {
           ))}
 
         {/* Still Have Questions */}
-        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+        <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
           <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
             Still Have Questions?
           </h3>
@@ -157,7 +157,7 @@ export default function FAQPage() {
               href="https://discord.gg/geQEUBm"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors"
+              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
             >
               💬 Ask on Discord
             </a>
@@ -165,7 +165,7 @@ export default function FAQPage() {
               href="https://reddit.com/r/CodingHelp"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors"
+              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
             >
               🤝 Post on Reddit
             </a>
@@ -173,7 +173,7 @@ export default function FAQPage() {
         </div>
 
         {/* Contributing */}
-        <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+        <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             Help Improve This FAQ
           </h3>

@@ -28,11 +28,95 @@ export default function JavaScriptAsyncPage() {
         </div>
       </div>
 
+      {/* Try This First Tutorial */}
+      <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <h3 className="font-semibold text-white mb-4">🎯 Try This First: Async Step-by-Step</h3>
+        <div className="flex flex-col gap-6 text-gray-300">
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
+              <h4 className="font-semibold text-white text-sm">Start with a simple delay</h4>
+            </div>
+            <p className="text-sm mb-3">See how JavaScript handles time delays:</p>
+            <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`console.log("Start")
+setTimeout(() => {
+  console.log("This runs after 2 seconds")
+}, 2000)
+console.log("End")`}</pre>
+          </div>
+
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
+              <h4 className="font-semibold text-white text-sm">Create a Promise</h4>
+            </div>
+            <p className="text-sm mb-3">Promises handle success and failure:</p>
+            <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`const myPromise = new Promise((resolve, reject) => {
+  const success = Math.random() > 0.5
+  setTimeout(() => {
+    if (success) {
+      resolve("Success! 🎉")
+    } else {
+      reject("Failed 😞")
+    }
+  }, 1000)
+})
+
+myPromise
+  .then(result => console.log(result))
+  .catch(error => console.log(error))`}</pre>
+          </div>
+
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold">3</span>
+              <h4 className="font-semibold text-white text-sm">Use async/await (cleaner syntax)</h4>
+            </div>
+            <p className="text-sm mb-3">Modern way to handle promises:</p>
+            <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`async function testAsync() {
+  try {
+    console.log("Starting...")
+    const result = await myPromise
+    console.log("Got:", result)
+  } catch (error) {
+    console.log("Error:", error)
+  }
+}
+
+testAsync()`}</pre>
+          </div>
+
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold">4</span>
+              <h4 className="font-semibold text-white text-sm">Fetch real data from an API</h4>
+            </div>
+            <p className="text-sm mb-3">Get data from the internet:</p>
+            <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`async function getUser() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users/1')
+    const user = await response.json()
+    console.log("User name:", user.name)
+    console.log("User email:", user.email)
+  } catch (error) {
+    console.log("Failed to fetch user:", error)
+  }
+}
+
+getUser()`}</pre>
+          </div>
+
+          <div className="text-xs text-gray-400 mt-4">
+            💡 Notice how async/await makes the code read like normal, step-by-step instructions!
+          </div>
+        </div>
+      </div>
+
       {/* Callbacks */}
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Callbacks</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Understanding Callbacks</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Basic Callback Example
@@ -82,9 +166,9 @@ function readFile(filename, callback) {
           </pre>
         </div>
 
-        <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">⚠️ Callback Hell Problems</h3>
-          <ul className="space-y-2 text-red-800 dark:text-red-200 text-sm">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <h3 className="font-semibold text-white mb-3">⚠️ Callback Hell Problems</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
             <li>• Deeply nested code that's hard to read</li>
             <li>• Difficult error handling</li>
             <li>• Hard to maintain and debug</li>
@@ -97,7 +181,7 @@ function readFile(filename, callback) {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Promises</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Promise Basics</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Creating a Promise
@@ -177,7 +261,7 @@ Promise.race([
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Async/Await</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Modern Async Syntax</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Basic Async/Await
@@ -285,7 +369,7 @@ async function processAllUsers() {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Fetch API</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Modern HTTP Requests</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// Basic GET Request
@@ -413,9 +497,9 @@ async function fetchWithRetry(url, options = {}, maxRetries = 3) {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Understanding the Event Loop</h2>
         
-        <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-          <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-4">💡 How JavaScript Handles Async</h3>
-          <div className="space-y-3 text-blue-800 dark:text-blue-200 text-sm">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <h3 className="font-semibold text-white mb-4">💡 How JavaScript Handles Async</h3>
+          <div className="space-y-3 text-gray-300 text-sm">
             <p><strong>Call Stack:</strong> Where function calls are executed</p>
             <p><strong>Web APIs:</strong> Browser APIs (setTimeout, fetch, DOM events)</p>
             <p><strong>Callback Queue:</strong> Where callbacks wait to be executed</p>
@@ -423,7 +507,7 @@ async function fetchWithRetry(url, options = {}, maxRetries = 3) {
           </div>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Event Loop Example</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`console.log('1'); // Synchronous
@@ -461,9 +545,9 @@ Promise.resolve().then(() => console.log('micro 2'));
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Async Best Practices</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">✅ Do</h3>
-            <ul className="space-y-2 text-green-800 dark:text-green-200 text-sm">
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">✅ Do</h3>
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li>• Use async/await for cleaner code</li>
               <li>• Handle errors with try/catch</li>
               <li>• Use Promise.all for parallel execution</li>
@@ -472,9 +556,9 @@ Promise.resolve().then(() => console.log('micro 2'));
             </ul>
           </div>
           
-          <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
-            <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">❌ Don't</h3>
-            <ul className="space-y-2 text-red-800 dark:text-red-200 text-sm">
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">❌ Don't</h3>
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li>• Forget to handle promise rejections</li>
               <li>• Use async/await in loops unnecessarily</li>
               <li>• Mix callbacks and promises</li>
@@ -496,7 +580,7 @@ Promise.resolve().then(() => console.log('micro 2'));
         </Link>
         <Link
           href="/languages/javascript"
-          className="flex items-center space-x-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Back to JavaScript</span>
           <ArrowRight className="w-4 h-4" />

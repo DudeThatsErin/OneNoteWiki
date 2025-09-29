@@ -116,23 +116,6 @@ export default function LanguagesPage() {
         label: "Start: Python"
       }}
     >
-      {/* Quick Stats */}
-      <div className="py-4">
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white pb-4">
-          Language Overview
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {languageStats.map((stat, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="text-blue-600">{stat.icon}</div>
-                <span className="text-xs font-medium text-gray-600 dark:text-gray-300">{stat.label}</span>
-              </div>
-              <p className="font-semibold text-sm text-gray-900 dark:text-white">{stat.value}</p>
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* How to Choose */}
       <div className="py-4">
@@ -206,7 +189,7 @@ export default function LanguagesPage() {
             </p>
             <Link
               href="/resources/development-tools"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
             >
               <span>View Tools Database</span>
               <ArrowRight className="w-4 h-4" />

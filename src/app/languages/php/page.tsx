@@ -88,7 +88,7 @@ export default function PHPPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           PHP Code Example
         </h2>
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
             🚀 Basic PHP Web Application
           </h3>
@@ -138,8 +138,8 @@ foreach ($users as $user) {
       </section>
 
       {/* Getting Started */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🚀 Getting Started with PHP
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">

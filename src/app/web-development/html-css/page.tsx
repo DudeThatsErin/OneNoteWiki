@@ -38,19 +38,19 @@ export default function HTMLCSSPage() {
     >
 
       {/* What You'll Learn */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           📚 What You'll Learn
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <Layout className="w-5 h-5 text-green-600" />
-              <h4 className="font-semibold text-green-900 dark:text-green-100">HTML Fundamentals</h4>
+              <Layout className="w-5 h-5 text-blue-600" />
+              <h4 className="font-semibold text-white">HTML Fundamentals</h4>
             </div>
             <ul className="flex flex-col gap-2">
               {htmlBasics.map((item, index) => (
-                <li key={index} className="text-green-800 dark:text-green-200 text-sm">
+                <li key={index} className="text-gray-300 text-sm">
                   <strong>{item.title}:</strong> {item.description}
                 </li>
               ))}
@@ -58,12 +58,12 @@ export default function HTMLCSSPage() {
           </div>
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <Palette className="w-5 h-5 text-green-600" />
-              <h4 className="font-semibold text-green-900 dark:text-green-100">CSS Fundamentals</h4>
+              <Palette className="w-5 h-5 text-blue-600" />
+              <h4 className="font-semibold text-white">CSS Fundamentals</h4>
             </div>
             <ul className="flex flex-col gap-2">
               {cssBasics.map((item, index) => (
-                <li key={index} className="text-green-800 dark:text-green-200 text-sm">
+                <li key={index} className="text-gray-300 text-sm">
                   <strong>{item.title}:</strong> {item.description}
                 </li>
               ))}
@@ -71,6 +71,213 @@ export default function HTMLCSSPage() {
           </div>
         </div>
       </div>
+
+      {/* Hands-on Tutorial */}
+      <section className="flex flex-col gap-6 md:gap-8">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg">🎨</div>
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Hands-on Tutorial: Build Your First Web Page</h2>
+        </div>
+        
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <div className="flex flex-col gap-6 text-gray-300">
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                <h4 className="font-semibold text-white">Create a basic HTML file</h4>
+              </div>
+              <p className="text-sm mb-3">Create a file called <code className="bg-gray-700 px-1 rounded">index.html</code> and add this structure:</p>
+              <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is my first web page.</p>
+</body>
+</html>`}</pre>
+            </div>
+
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
+                <h4 className="font-semibold text-white">Add semantic HTML structure</h4>
+              </div>
+              <p className="text-sm mb-3">Expand your HTML with proper semantic elements:</p>
+              <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`<body>
+    <header>
+        <h1>Welcome to My Site</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm learning web development!</p>
+            <ul>
+                <li>HTML for structure</li>
+                <li>CSS for styling</li>
+                <li>JavaScript for interactivity</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+</body>`}</pre>
+            </div>
+
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">3</span>
+                <h4 className="font-semibold text-white">Add CSS styling</h4>
+              </div>
+              <p className="text-sm mb-3">Create a <code className="bg-gray-700 px-1 rounded">style.css</code> file and link it in your HTML head:</p>
+              <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`/* In your HTML head: */
+<link rel="stylesheet" href="style.css">
+
+/* In style.css: */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #34495e;
+}`}</pre>
+            </div>
+
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">4</span>
+                <h4 className="font-semibold text-white">Style the main content</h4>
+              </div>
+              <p className="text-sm mb-3">Add styling for the main content area:</p>
+              <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #34495e;
+    color: white;
+    margin-top: 2rem;
+}`}</pre>
+            </div>
+
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">5</span>
+                <h4 className="font-semibold text-white">Make it responsive</h4>
+              </div>
+              <p className="text-sm mb-3">Add responsive design with CSS media queries:</p>
+              <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    header, footer {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+}`}</pre>
+            </div>
+
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">6</span>
+                <h4 className="font-semibold text-white">Test and view your page</h4>
+              </div>
+              <p className="text-sm mb-3">Open your <code className="bg-gray-700 px-1 rounded">index.html</code> file in a web browser to see your creation!</p>
+              <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border-l-4 border-blue-500 mt-3">
+                <p className="text-blue-800 dark:text-blue-200 text-sm">
+                  💡 <strong>Pro tips:</strong> Right-click → "Inspect Element" to see the HTML structure, try resizing your browser window to test responsiveness, and experiment with different colors and fonts!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* HTML Section */}
       <section className="flex flex-col gap-6 md:gap-8">
@@ -237,8 +444,8 @@ nav a:hover {
       </section>
 
       {/* Learning Resources */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           📖 Recommended Learning Resources
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -266,7 +473,7 @@ nav a:hover {
       </div>
 
       {/* Next Steps */}
-      <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🚀 Next Steps
         </h3>

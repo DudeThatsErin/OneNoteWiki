@@ -11,7 +11,7 @@ const mobileFrameworks = [
     popularity: 'Very High',
     useCases: ['Cross-platform apps', 'Social media', 'E-commerce', 'Productivity'],
     href: '/mobile-development/react-native',
-    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800',
+    color: 'bg-gray-800 border-gray-700',
     icon: '⚛️',
     companies: ['Facebook', 'Instagram', 'Uber', 'Discord']
   },
@@ -22,7 +22,7 @@ const mobileFrameworks = [
     popularity: 'High',
     useCases: ['Rapid prototyping', 'Startups', 'MVPs', 'Over-the-air updates'],
     href: '/mobile-development/expo',
-    color: 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800',
+    color: 'bg-gray-800 border-gray-700',
     icon: '🚀',
     companies: ['Expo', 'Many startups', 'Indie developers']
   },
@@ -33,7 +33,7 @@ const mobileFrameworks = [
     popularity: 'High',
     useCases: ['Cross-platform apps', 'High-performance UI', 'Custom designs'],
     href: '/mobile-development/flutter',
-    color: 'bg-cyan-50 dark:bg-cyan-900/20 border-cyan-200 dark:border-cyan-800',
+    color: 'bg-gray-800 border-gray-700',
     icon: '🐦',
     companies: ['Google', 'Alibaba', 'BMW', 'eBay']
   },
@@ -44,7 +44,7 @@ const mobileFrameworks = [
     popularity: 'High',
     useCases: ['iOS-only apps', 'Performance-critical', 'Platform-specific features'],
     href: '/mobile-development/ios',
-    color: 'bg-gray-50 dark:bg-gray-900/20 border-gray-200 dark:border-gray-800',
+    color: 'bg-gray-800 border-gray-700',
     icon: '🍎',
     companies: ['Apple', 'Most iOS apps']
   },
@@ -55,7 +55,7 @@ const mobileFrameworks = [
     popularity: 'High',
     useCases: ['Android-only apps', 'Performance-critical', 'Platform-specific features'],
     href: '/mobile-development/android',
-    color: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800',
+    color: 'bg-gray-800 border-gray-700',
     icon: '🤖',
     companies: ['Google', 'Most Android apps']
   }
@@ -114,15 +114,6 @@ export default function MobileDevelopmentPage() {
         </p>
       </div>
 
-      <QuickStats 
-        title="Mobile Development Overview"
-        stats={[
-          { value: "6.8B", label: "Mobile Users" },
-          { value: "3.8M", label: "Apps on Google Play" },
-          { value: "2.2M", label: "Apps on App Store" },
-          { value: "$935B", label: "Market Value" }
-        ]} 
-      />
 
       {/* Why Mobile Development */}
       <div className="py-4">
@@ -131,7 +122,7 @@ export default function MobileDevelopmentPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {mobileFeatures.map((feature, index) => (
-            <div key={index} className="p-6">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-blue-600">{feature.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
@@ -148,7 +139,7 @@ export default function MobileDevelopmentPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Choose Your Mobile Framework</h2>
         <div className="flex flex-col gap-4">
           {mobileFrameworks.map((framework, index) => (
-            <Link key={index} href={framework.href} className="block p-4 md:p-6 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+            <Link key={index} href={framework.href} className="block bg-gray-800 p-4 md:p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-all">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">

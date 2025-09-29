@@ -210,9 +210,9 @@ export default function GoPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {goUseCases.map((useCase, index) => (
-            <div key={index} className="bg-cyan-50 dark:bg-cyan-900/20 p-6 rounded-lg border border-cyan-200 dark:border-cyan-800">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="font-semibold text-cyan-900 dark:text-cyan-100">{useCase.category}</h3>
+                <h3 className="font-semibold text-white">{useCase.category}</h3>
                 <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                   useCase.popularity === 'Very High' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                   useCase.popularity === 'High' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -239,7 +239,7 @@ export default function GoPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           Go Code Example
         </h2>
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
             Hello World & Concurrency Example
           </h3>
@@ -400,8 +400,8 @@ func main() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {goResources.map((category, index) => (
-            <div key={index} className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-              <h3 className="text-lg font-bold text-blue-900 dark:text-blue-100 mb-4">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-bold text-white mb-4">
                 {category.category}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -426,8 +426,8 @@ func main() {
       </section>
 
       {/* Getting Started */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🚀 Getting Started with Go
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">

@@ -86,21 +86,21 @@ export default function ResourcesPage() {
 
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">12+</div>
-          <div className="text-sm text-gray-600 dark:text-gray-300">Languages</div>
+        <div className="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center">
+          <div className="text-2xl font-bold text-white">12+</div>
+          <div className="text-sm text-gray-300">Languages</div>
         </div>
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
-          <div className="text-2xl font-bold text-gray-600 dark:text-gray-400">12+</div>
-          <div className="text-sm text-gray-600 dark:text-gray-300">Dev Tools</div>
+        <div className="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center">
+          <div className="text-2xl font-bold text-white">12+</div>
+          <div className="text-sm text-gray-300">Dev Tools</div>
         </div>
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
-          <div className="text-2xl font-bold text-green-600 dark:text-green-400">45+</div>
-          <div className="text-sm text-gray-600 dark:text-gray-300">Books</div>
+        <div className="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center">
+          <div className="text-2xl font-bold text-white">45+</div>
+          <div className="text-sm text-gray-300">Books</div>
         </div>
-        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 text-center">
-          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">24+</div>
-          <div className="text-sm text-gray-600 dark:text-gray-300">Platforms</div>
+        <div className="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center">
+          <div className="text-2xl font-bold text-white">24+</div>
+          <div className="text-sm text-gray-300">Platforms</div>
         </div>
       </div>
 
@@ -114,7 +114,7 @@ export default function ResourcesPage() {
             <Link
               key={category.href}
               href={category.href}
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 transition-all hover:shadow-lg hover:scale-105"
+              className="block p-6 bg-gray-800 rounded-lg border border-gray-700 transition-all hover:border-gray-600"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="text-gray-700 dark:text-gray-300">{category.icon}</div>
@@ -151,7 +151,7 @@ export default function ResourcesPage() {
             <Link
               key={resource.href}
               href={resource.href}
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 transition-all hover:shadow-lg hover:scale-105"
+              className="block p-6 bg-gray-800 rounded-lg border border-gray-700 transition-all hover:border-gray-600"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="text-gray-700 dark:text-gray-300">{resource.icon}</div>
@@ -171,11 +171,11 @@ export default function ResourcesPage() {
       </section>
 
       {/* Call to Action */}
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg p-8 border border-blue-200 dark:border-blue-800 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+      <div className="bg-gray-800 rounded-lg p-8 border border-gray-700 text-center">
+        <h3 className="text-2xl font-bold text-white mb-4">
           Ready to Start Learning?
         </h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+        <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
           Choose a category above to explore curated resources, or dive into our detailed guides 
           for learning tips, getting help online, and mastering search techniques.
         </p>
@@ -189,7 +189,7 @@ export default function ResourcesPage() {
           </Link>
           <Link
             href="/resources/getting-help"
-            className="inline-flex items-center px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors font-medium"
+            className="inline-flex items-center px-6 py-3 bg-gray-700 text-white border border-gray-600 rounded-lg hover:bg-gray-600 transition-colors font-medium"
           >
             <HelpCircle className="w-5 h-5 mr-2" />
             Learn How to Get Help

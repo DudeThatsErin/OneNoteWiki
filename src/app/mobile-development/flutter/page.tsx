@@ -186,8 +186,8 @@ class _MyHomePageState extends State<MyHomePage> {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-1">Learning Resources</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-1">
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800 mb-1">
-            <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3 mb-1">Official Resources</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 mb-1">
+            <h3 className="font-semibold text-white mb-3 mb-1">Official Resources</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2 mb-1">
               <li>• <a href="https://flutter.dev/" className="hover:underline mb-1">Flutter Official Site</a></li>
               <li>• <a href="https://flutter.dev/docs" className="hover:underline mb-1">Flutter Documentation</a></li>
@@ -196,8 +196,8 @@ class _MyHomePageState extends State<MyHomePage> {
             </ul>
           </div>
           
-          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800 mb-1">
-            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3 mb-1">Popular Packages</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 mb-1">
+            <h3 className="font-semibold text-white mb-3 mb-1">Popular Packages</h3>
             <ul className="text-green-800 dark:text-green-200 text-sm flex flex-col gap-2 mb-1">
               <li>• <a href="https://pub.dev/packages/http" className="hover:underline mb-1">HTTP (Networking)</a></li>
               <li>• <a href="https://pub.dev/packages/provider" className="hover:underline mb-1">Provider (State Management)</a></li>

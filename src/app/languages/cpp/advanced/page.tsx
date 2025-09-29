@@ -35,7 +35,7 @@ export default function CppAdvancedPage() {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Templates and Generic Programming</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Function and Class Templates</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`#include <iostream>
@@ -152,7 +152,7 @@ int main() {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Standard Template Library (STL)</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Containers, Iterators, and Algorithms</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`#include <iostream>
@@ -223,7 +223,7 @@ int main() {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Modern C++ Features (C++11/14/17/20)</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Lambda Functions, Auto, and More</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`#include <iostream>
@@ -287,9 +287,9 @@ int main() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Performance Optimization</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">✅ Best Practices</h3>
-            <ul className="space-y-2 text-green-800 dark:text-green-200 text-sm">
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">✅ Best Practices</h3>
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li>• Use const references for large objects</li>
               <li>• Prefer smart pointers over raw pointers</li>
               <li>• Use move semantics for expensive operations</li>
@@ -299,9 +299,9 @@ int main() {
             </ul>
           </div>
           
-          <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
-            <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">❌ Avoid</h3>
-            <ul className="space-y-2 text-red-800 dark:text-red-200 text-sm">
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">❌ Avoid</h3>
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li>• Unnecessary copying of large objects</li>
               <li>• Memory leaks with raw pointers</li>
               <li>• Premature optimization</li>

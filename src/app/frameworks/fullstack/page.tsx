@@ -94,8 +94,8 @@ export default function FullStackFrameworksPage() {
     >
 
       {/* Quick Reference */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-        <h2 className="text-xl font-semibold text-purple-900 dark:text-purple-100 mb-4 flex items-center">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
           <Layers className="w-5 h-5 mr-2" />
           Quick Reference: Full-Stack Framework Selection
         </h2>
@@ -212,8 +212,8 @@ export default function FullStackFrameworksPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Learning Resources</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">React-Based</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">React-Based</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://nextjs.org/" className="hover:underline">Next.js Official</a></li>
               <li>• <a href="https://remix.run/" className="hover:underline">Remix Framework</a></li>
@@ -221,8 +221,8 @@ export default function FullStackFrameworksPage() {
             </ul>
           </div>
           
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Vue-Based</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">Vue-Based</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://nuxtjs.org/" className="hover:underline">Nuxt.js</a></li>
               <li>• <a href="https://quasar.dev/" className="hover:underline">Quasar Framework</a></li>
@@ -230,8 +230,8 @@ export default function FullStackFrameworksPage() {
             </ul>
           </div>
           
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Other</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">Other</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://kit.svelte.dev/" className="hover:underline">SvelteKit</a></li>
               <li>• <a href="https://astro.build/" className="hover:underline">Astro</a></li>

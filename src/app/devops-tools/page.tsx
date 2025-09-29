@@ -10,7 +10,7 @@ const devopsCategories = [
     examples: ['Git', 'GitHub', 'GitLab', 'Bitbucket'],
     href: '/devops-tools/git',
     icon: <GitBranch className="w-6 h-6" />,
-    color: 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     title: 'IDEs & Editors',
@@ -18,7 +18,7 @@ const devopsCategories = [
     examples: ['VS Code', 'IntelliJ', 'Vim', 'Sublime Text'],
     href: '/devops-tools/editors',
     icon: <Code className="w-6 h-6" />,
-    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     title: 'Testing',
@@ -26,7 +26,7 @@ const devopsCategories = [
     examples: ['Jest', 'Pytest', 'JUnit', 'Cypress'],
     href: '/devops-tools/testing',
     icon: <TestTube className="w-6 h-6" />,
-    color: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     title: 'Deployment',
@@ -34,7 +34,7 @@ const devopsCategories = [
     examples: ['Docker', 'Kubernetes', 'AWS', 'Vercel'],
     href: '/devops-tools/deployment',
     icon: <Rocket className="w-6 h-6" />,
-    color: 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800'
+    color: 'bg-gray-800 border-gray-700'
   }
 ];
 
@@ -85,8 +85,8 @@ export default function DevOpsToolsPage() {
       </div>
 
       {/* What is DevOps */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-        <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🔄 What is DevOps?
         </h3>
         <div className="flex flex-col gap-4 md:gap-6 text-purple-800 dark:text-purple-200">
@@ -215,8 +215,8 @@ export default function DevOpsToolsPage() {
       </section>
 
       {/* Getting Started */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🚀 Getting Started with DevOps
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">
@@ -252,8 +252,8 @@ export default function DevOpsToolsPage() {
       </div>
 
       {/* Popular Tool Combinations */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🛠️ Popular Tool Combinations
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -297,8 +297,8 @@ export default function DevOpsToolsPage() {
       </div>
 
       {/* Career Paths */}
-      <div className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-6 border border-orange-200 dark:border-orange-800">
-        <h3 className="text-lg font-semibold text-orange-900 dark:text-orange-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           💼 DevOps Career Paths
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

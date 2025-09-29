@@ -20,7 +20,7 @@ export default function WhatIsProgrammingPage() {
       <div className="prose prose-gray dark:prose-invert max-w-none">
         <div className="flex flex-col gap-6 md:gap-8">
           {/* Introduction */}
-          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800 mb-7">
+          <div className="bg-gray-800 rounded-lg p-6 border border-gray-700 mb-7">
             <div className="flex items-start gap-3">
               <Lightbulb className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
               <div>
@@ -61,25 +61,25 @@ export default function WhatIsProgrammingPage() {
               Programming allows us to:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-4">
-              <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+              <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🌐 Create Websites</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
                   Build interactive websites and web applications that millions of people can use.
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+              <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">📱 Build Mobile Apps</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
                   Develop apps for smartphones and tablets that solve real-world problems.
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+              <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🎮 Make Games</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
                   Create entertaining games from simple puzzles to complex 3D worlds.
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+              <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">🤖 Automate Tasks</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
                   Write programs that handle repetitive tasks automatically.
@@ -138,7 +138,7 @@ export default function WhatIsProgrammingPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="text-center p-4">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">💼</span>
                 </div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Career Opportunities</h4>
@@ -147,7 +147,7 @@ export default function WhatIsProgrammingPage() {
                 </p>
               </div>
               <div className="text-center p-4">
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">🧠</span>
                 </div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Problem Solving</h4>
@@ -156,7 +156,7 @@ export default function WhatIsProgrammingPage() {
                 </p>
               </div>
               <div className="text-center p-4">
-                <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">🚀</span>
                 </div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Create & Innovate</h4>

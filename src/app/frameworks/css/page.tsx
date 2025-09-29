@@ -94,8 +94,8 @@ export default function CSSFrameworksPage() {
     >
 
       {/* Quick Reference */}
-      <div className="bg-pink-50 dark:bg-pink-900/20 rounded-lg p-6 border border-pink-200 dark:border-pink-800">
-        <h2 className="text-xl font-semibold text-pink-900 dark:text-pink-100 mb-4 flex items-center">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h2 className="text-xl font-semibold text-white mb-4 flex items-center">
           <Palette className="w-5 h-5 mr-2" />
           Quick Reference: CSS Framework Selection
         </h2>
@@ -132,9 +132,9 @@ export default function CSSFrameworksPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Framework Types</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Utility-First</h3>
-            <p className="text-blue-800 dark:text-blue-200 text-sm mb-3">
+            <p className="text-gray-300 text-sm mb-3">
               Provide low-level utility classes to build custom designs directly in HTML.
             </p>
             <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
@@ -144,9 +144,9 @@ export default function CSSFrameworksPage() {
             </ul>
           </div>
           
-          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">Component-Based</h3>
-            <p className="text-green-800 dark:text-green-200 text-sm mb-3">
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">Component-Based</h3>
+            <p className="text-gray-300 text-sm mb-3">
               Offer pre-built components and design systems for rapid development.
             </p>
             <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
@@ -156,9 +156,9 @@ export default function CSSFrameworksPage() {
             </ul>
           </div>
           
-          <div className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
-            <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-3">Framework-Specific</h3>
-            <p className="text-purple-800 dark:text-purple-200 text-sm mb-3">
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">Framework-Specific</h3>
+            <p className="text-gray-300 text-sm mb-3">
               Built for specific JavaScript frameworks with component libraries.
             </p>
             <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
@@ -255,7 +255,7 @@ export default function CSSFrameworksPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Learning Resources</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Utility-First</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</a></li>
@@ -264,8 +264,8 @@ export default function CSSFrameworksPage() {
             </ul>
           </div>
           
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">Component-Based</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">Component-Based</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://getbootstrap.com/" className="hover:underline">Bootstrap</a></li>
               <li>• <a href="https://bulma.io/" className="hover:underline">Bulma</a></li>
@@ -273,8 +273,8 @@ export default function CSSFrameworksPage() {
             </ul>
           </div>
           
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-            <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-3">React Libraries</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">React Libraries</h3>
             <ul className="text-blue-800 dark:text-blue-200 text-sm flex flex-col gap-2">
               <li>• <a href="https://mui.com/" className="hover:underline">Material-UI</a></li>
               <li>• <a href="https://chakra-ui.com/" className="hover:underline">Chakra UI</a></li>

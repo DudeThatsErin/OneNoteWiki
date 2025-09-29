@@ -179,7 +179,8 @@ const gitResources = [
 
 export default function GitPage() {
   return (
-    <div className="flex flex-col gap-8 md:gap-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col gap-8 md:gap-12">
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <Link
@@ -639,6 +640,7 @@ git pull origin main`}
           <span>Next: IDEs & Editors</span>
           <ArrowRight className="w-4 h-4" />
         </Link>
+      </div>
       </div>
     </div>
   );

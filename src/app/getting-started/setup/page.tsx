@@ -791,7 +791,6 @@ export default function SetupPage() {
           data={developmentToolsData} 
           columns={columns}
           title="Development Tools"
-          searchPlaceholder="Search development tools..."
         />
       </section>
 
@@ -802,7 +801,7 @@ export default function SetupPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {languageSetup.map((lang, index) => (
-            <div key={index} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-2xl">{lang.icon}</span>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
@@ -823,7 +822,7 @@ export default function SetupPage() {
                   ))}
                 </ol>
                 
-                <div className="bg-gray-100 dark:bg-gray-900 p-3 rounded mt-4">
+                <div className="bg-gray-700 p-3 rounded mt-4">
                   <h5 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">Verify Installation:</h5>
                   <code className="text-sm text-gray-700 dark:text-gray-300">{lang.verifyCommand}</code>
                 </div>
@@ -902,8 +901,8 @@ export default function SetupPage() {
       </div>
 
       {/* Troubleshooting */}
-      <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-6 border border-yellow-200 dark:border-yellow-800">
-        <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           Common Setup Issues
         </h3>
         <div className="flex flex-col gap-3">

@@ -13,7 +13,7 @@ const languageComparisons = [
     pros: ['Easy to read', 'Versatile', 'Large community', 'Great for beginners'],
     cons: ['Slightly slower execution then other programming languages', 'Mobile development limitations'],
     icon: '🐍',
-    color: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     name: 'JavaScript',
@@ -24,7 +24,7 @@ const languageComparisons = [
     pros: ['Essential for web', 'Versatile', 'Huge ecosystem', 'High demand'],
     cons: ['Can be confusing', 'Rapid changes', 'Might face compatibility issues with older/lesser known browsers'],
     icon: '🟨',
-    color: 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     name: 'Java',
@@ -35,7 +35,7 @@ const languageComparisons = [
     pros: ['Platform independent', 'Strong typing', 'Enterprise standard', 'Stable'],
     cons: ['Verbose syntax', 'Slower development', 'Memory usage'],
     icon: '☕',
-    color: 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     name: 'C#',
@@ -46,7 +46,7 @@ const languageComparisons = [
     pros: ['Microsoft ecosystem', 'Strong typing', 'Good tooling', 'Versatile', 'options for easy ui in the form of winforms'],
     cons: ['Windows-centric', 'Learning curve', 'Microsoft dependency'],
     icon: '🔷',
-    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
+    color: 'bg-gray-800 border-gray-700'
   }
 ];
 
@@ -245,8 +245,8 @@ export default function ChoosingLanguagePage() {
       </div>
 
       {/* Common Mistakes */}
-      <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-6 border border-red-200 dark:border-red-800">
-        <h3 className="text-lg font-semibold text-red-900 dark:text-red-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           ⚠️ Common Mistakes to Avoid
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -274,8 +274,8 @@ export default function ChoosingLanguagePage() {
       </div>
 
       {/* Final Recommendation */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🎯 Our Recommendation
         </h3>
         <div className="text-green-800 dark:text-green-200">

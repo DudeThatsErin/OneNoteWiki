@@ -156,7 +156,7 @@ export default function JavaScriptPage() {
         <div className="flex flex-col gap-6 md:gap-8">
           {jsSections.map((section, index) => (
             <Link key={index} href={section.href} className="block group">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-yellow-300 dark:hover:border-yellow-600 transition-colors">
+              <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors">
                 <div className="flex items-start flex flex-col gap-3">
                   <div className="text-yellow-600 group-hover:text-yellow-700 transition-colors">
                     {section.icon}
@@ -220,9 +220,9 @@ export default function JavaScriptPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {jsUseCases.map((useCase, index) => (
-            <div key={index} className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-xl font-semibold text-yellow-900 dark:text-yellow-100">{useCase.category}</h3>
+                <h3 className="text-xl font-semibold text-white">{useCase.category}</h3>
                 <div className="flex items-center gap-2">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                     useCase.difficulty.includes('Beginner') ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
@@ -277,8 +277,8 @@ export default function JavaScriptPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Beginner Projects */}
-          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">🟢 Beginner Projects</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">🟢 Beginner Projects</h3>
             <ul className="flex flex-col gap-2 text-green-800 dark:text-green-200 text-sm">
               <li>• <strong>To-Do List App:</strong> Add, edit, delete tasks with local storage</li>
               <li>• <strong>Calculator:</strong> Basic arithmetic operations with a clean UI</li>
@@ -290,8 +290,8 @@ export default function JavaScriptPage() {
           </div>
 
           {/* Intermediate Projects */}
-          <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
-            <h3 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-3">🟡 Intermediate Projects</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">🟡 Intermediate Projects</h3>
             <ul className="flex flex-col gap-2 text-yellow-800 dark:text-yellow-200 text-sm">
               <li>• <strong>Expense Tracker:</strong> Track income/expenses with charts</li>
               <li>• <strong>Movie Search App:</strong> Search movies using TMDB API</li>
@@ -303,8 +303,8 @@ export default function JavaScriptPage() {
           </div>
 
           {/* Advanced Projects */}
-          <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
-            <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">🔴 Advanced Projects</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">🔴 Advanced Projects</h3>
             <ul className="flex flex-col gap-2 text-red-800 dark:text-red-200 text-sm">
               <li>• <strong>E-commerce Platform:</strong> Full shopping cart with payments</li>
               <li>• <strong>Social Media Dashboard:</strong> Analytics and post management</li>
@@ -318,8 +318,8 @@ export default function JavaScriptPage() {
       </section>
 
       {/* Quick Start */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🚀 Getting Started with JavaScript
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">

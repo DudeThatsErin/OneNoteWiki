@@ -10,7 +10,7 @@ const databaseCategories = [
     examples: ['PostgreSQL', 'MySQL', 'SQLite', 'SQL Server'],
     href: '/data-databases/sql',
     icon: <Table className="w-6 h-6" />,
-    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     title: 'NoSQL Databases',
@@ -18,7 +18,7 @@ const databaseCategories = [
     examples: ['MongoDB', 'Redis', 'Cassandra', 'DynamoDB'],
     href: '/data-databases/nosql',
     icon: <Database className="w-6 h-6" />,
-    color: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     title: 'Data Analysis',
@@ -26,7 +26,7 @@ const databaseCategories = [
     examples: ['Python/Pandas', 'R', 'Excel', 'Tableau'],
     href: '/data-databases/analysis',
     icon: <BarChart className="w-6 h-6" />,
-    color: 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800'
+    color: 'bg-gray-800 border-gray-700'
   }
 ];
 

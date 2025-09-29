@@ -6,6 +6,7 @@ import { useTheme } from '@/contexts/ThemeContext';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faReddit } from '@fortawesome/free-brands-svg-icons';
+import { SearchButton } from '@/components/SearchButton';
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -59,6 +60,11 @@ export default function Header() {
               FAQ
             </Link>
           </nav>
+
+          {/* Search Button */}
+          <div className="hidden md:block flex-1 max-w-md mx-8">
+            <SearchButton />
+          </div>
 
           {/* Right side - Community links, theme toggle, and mobile menu */}
           <div className="flex items-center space-x-4">

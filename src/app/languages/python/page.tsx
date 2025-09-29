@@ -142,9 +142,9 @@ export default function PythonPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {pythonUseCases.map((useCase, index) => (
-            <div key={index} className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-xl font-semibold text-blue-900 dark:text-blue-100">{useCase.category}</h3>
+                <h3 className="text-xl font-semibold text-white">{useCase.category}</h3>
                 <div className="flex items-center gap-2">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                     useCase.difficulty === 'Beginner' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
@@ -245,8 +245,8 @@ print(message)`}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Beginner Projects */}
-          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">🟢 Beginner Projects</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">🟢 Beginner Projects</h3>
             <ul className="list-disc list-inside text-green-800 dark:text-green-200 text-sm [&>li]:mb-2">
               <li><strong>Password Generator:</strong> Create secure passwords with custom rules</li>
               <li><strong>Number Guessing Game:</strong> Interactive guessing game with hints</li>
@@ -258,8 +258,8 @@ print(message)`}
           </div>
 
           {/* Intermediate Projects */}
-          <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
-            <h3 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-3">🟡 Intermediate Projects</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">🟡 Intermediate Projects</h3>
             <ul className="list-disc list-inside text-yellow-800 dark:text-yellow-200 text-sm [&>li]:mb-2">
               <li><strong>Web Scraper:</strong> Extract data from websites using BeautifulSoup</li>
               <li><strong>Personal Budget Tracker:</strong> Track expenses with data visualization</li>
@@ -271,8 +271,8 @@ print(message)`}
           </div>
 
           {/* Advanced Projects */}
-          <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
-            <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">🔴 Advanced Projects</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">🔴 Advanced Projects</h3>
             <ul className="list-disc list-inside text-red-800 dark:text-red-200 text-sm [&>li]:mb-2">
               <li><strong>Machine Learning Model:</strong> Build predictive models with scikit-learn</li>
               <li><strong>Web Application:</strong> Full-stack app with Django or Flask</li>
@@ -286,8 +286,8 @@ print(message)`}
       </section>
 
       {/* Getting Started */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🚀 Getting Started with Python
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">

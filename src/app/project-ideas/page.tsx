@@ -291,11 +291,6 @@ export default function ProjectIdeasPage() {
                 
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-gray-500 dark:text-gray-400">30 Projects Available</span>
-                  <div className="flex items-center flex flex-col gap-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                  </div>
                 </div>
               </div>
             </Link>

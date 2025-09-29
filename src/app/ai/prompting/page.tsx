@@ -243,8 +243,8 @@ export default function PromptEngineeringPage() {
       </div>
 
       {/* Why Prompt Engineering Matters */}
-      <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-6 border border-yellow-200 dark:border-yellow-800">
-        <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🎯 Why Prompt Engineering Matters for Developers
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -283,11 +283,11 @@ export default function PromptEngineeringPage() {
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{technique.description}</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded border border-red-200 dark:border-red-800">
+                <div className="bg-gray-700 p-3 rounded border border-gray-600">
                   <h4 className="font-semibold text-red-900 dark:text-red-100 text-sm mb-1">❌ Poor Example:</h4>
                   <code className="text-red-800 dark:text-red-200 text-xs">{technique.example.bad}</code>
                 </div>
-                <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded border border-green-200 dark:border-green-800">
+                <div className="bg-gray-700 p-3 rounded border border-gray-600">
                   <h4 className="font-semibold text-green-900 dark:text-green-100 text-sm mb-1">✅ Better Example:</h4>
                   <code className="text-green-800 dark:text-green-200 text-xs">{technique.example.good}</code>
                 </div>
@@ -313,10 +313,10 @@ export default function PromptEngineeringPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {promptTemplates.map((template, index) => (
-            <div key={index} className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
               <div className="flex items-center gap-2 mb-4">
                 <MessageSquare className="w-5 h-5 text-blue-600" />
-                <h3 className="text-lg font-bold text-blue-900 dark:text-blue-100">
+                <h3 className="text-lg font-bold text-white">
                   {template.category}
                 </h3>
               </div>
@@ -376,7 +376,7 @@ export default function PromptEngineeringPage() {
         </h2>
         <div className="flex flex-col gap-4 md:gap-6">
           {commonMistakes.map((mistake, index) => (
-            <div key={index} className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
+            <div key={index} className="bg-gray-800 p-4 rounded-lg border border-gray-700">
               <div className="flex items-start gap-3">
                 <Zap className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
                 <div className="flex-1">
@@ -395,8 +395,8 @@ export default function PromptEngineeringPage() {
       </section>
 
       {/* Practical Exercise */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-        <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🎯 Practice Exercise: Improve These Prompts
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">
@@ -424,7 +424,7 @@ export default function PromptEngineeringPage() {
       </div>
 
       {/* Tool-Specific Tips */}
-      <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           🛠️ Tool-Specific Prompting Tips
         </h3>

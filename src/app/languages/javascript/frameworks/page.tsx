@@ -90,6 +90,101 @@ export default function JavaScriptFrameworksPage() {
         label: "Back to JavaScript"
       }}
     >
+      {/* Try This First Tutorial */}
+      <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+        <h3 className="font-semibold text-white mb-4">🛠️ Try This First: Set Up Your First React Project</h3>
+        <div className="flex flex-col gap-6 text-gray-300">
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
+              <h4 className="font-semibold text-white text-sm">Create a new React project</h4>
+            </div>
+            <p className="text-sm mb-3">Use Vite for a fast, modern setup (requires Node.js):</p>
+            <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`npm create vite@latest my-react-app -- --template react
+cd my-react-app
+npm install
+npm run dev`}</pre>
+          </div>
+
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
+              <h4 className="font-semibold text-white text-sm">Create your first component</h4>
+            </div>
+            <p className="text-sm mb-3">Replace the content in <code className="bg-gray-700 px-1 rounded">src/App.jsx</code>:</p>
+            <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`function App() {
+  const name = "World"
+  
+  return (
+    <div>
+      <h1>Hello, {name}!</h1>
+      <button onClick={() => alert('Button clicked!')}>
+        Click me
+      </button>
+    </div>
+  )
+}
+
+export default App`}</pre>
+          </div>
+
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold">3</span>
+              <h4 className="font-semibold text-white text-sm">Add state to make it interactive</h4>
+            </div>
+            <p className="text-sm mb-3">Use <code className="bg-gray-700 px-1 rounded">useState</code> to track data that changes:</p>
+            <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`import { useState } from 'react'
+
+function App() {
+  const [count, setCount] = useState(0)
+  
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+    </div>
+  )
+}`}</pre>
+          </div>
+
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold">4</span>
+              <h4 className="font-semibold text-white text-sm">Break it into components</h4>
+            </div>
+            <p className="text-sm mb-3">Create reusable pieces:</p>
+            <pre className="text-sm text-gray-300 overflow-x-auto bg-gray-900 p-4 rounded">{`function Counter({ initialValue = 0 }) {
+  const [count, setCount] = useState(initialValue)
+  
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>+</button>
+      <button onClick={() => setCount(count - 1)}>-</button>
+    </div>
+  )
+}
+
+function App() {
+  return (
+    <div>
+      <h1>My Counters</h1>
+      <Counter initialValue={5} />
+      <Counter initialValue={10} />
+    </div>
+  )
+}`}</pre>
+          </div>
+
+          <div className="text-xs text-gray-400 mt-4">
+            💡 Save your files and see the changes instantly in your browser at http://localhost:5173
+          </div>
+        </div>
+      </div>
+
       {/* Framework Statistics */}
       <QuickStats 
         title="JavaScript Framework Ecosystem"

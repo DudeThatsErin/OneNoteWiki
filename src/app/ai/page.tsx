@@ -12,7 +12,7 @@ const aiCategories = [
     examples: ['Ethical considerations', 'Code review practices', 'Learning balance', 'Dependency risks'],
     href: '/ai/dos-donts',
     icon: <Shield className="w-6 h-6" />,
-    color: 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     title: 'Prompt Engineering',
@@ -20,7 +20,7 @@ const aiCategories = [
     examples: ['Clear instructions', 'Context setting', 'Iterative refinement', 'Output formatting'],
     href: '/ai/prompting',
     icon: <Lightbulb className="w-6 h-6" />,
-    color: 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     title: 'Building Your Own AI',
@@ -28,7 +28,7 @@ const aiCategories = [
     examples: ['ML fundamentals', 'Model training', 'API integration', 'Deployment strategies'],
     href: '/ai/build-ai',
     icon: <Code className="w-6 h-6" />,
-    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
+    color: 'bg-gray-800 border-gray-700'
   },
   {
     title: 'AI Languages & Tools',
@@ -36,7 +36,7 @@ const aiCategories = [
     examples: ['Python ecosystem', 'JavaScript AI', 'Cloud platforms', 'Development tools'],
     href: '/ai/languages-tools',
     icon: <Zap className="w-6 h-6" />,
-    color: 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800'
+    color: 'bg-gray-800 border-gray-700'
   }
 ];
 
@@ -92,11 +92,11 @@ export default function AIPage() {
         ]} 
       />
 
-      <InfoCard title="Quick Reference: AI Best Practices" variant="purple" icon={<Brain className="w-5 h-5" />}>
+      <InfoCard title="Quick Reference: AI Best Practices" variant="blue" icon={<Brain className="w-5 h-5" />}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
-            <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">Before Using AI:</h3>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+            <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Before Using AI:</h3>
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>Define clear requirements</li>
               <li>Consider security implications</li>
               <li>Check company policies</li>
@@ -104,8 +104,8 @@ export default function AIPage() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">While Using AI:</h3>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+            <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">While Using AI:</h3>
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>Provide clear, specific prompts</li>
               <li>Iterate and refine requests</li>
               <li>Ask for explanations</li>
@@ -113,8 +113,8 @@ export default function AIPage() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">After AI Generation:</h3>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+            <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">After AI Generation:</h3>
+            <ul className="text-blue-800 dark:text-blue-200 text-sm [&>li]:mb-1">
               <li>Review and understand code</li>
               <li>Test thoroughly</li>
               <li>Refactor if needed</li>
@@ -127,7 +127,7 @@ export default function AIPage() {
       {/* Header */}
       <div className="flex flex-col gap-4 md:gap-6">
         <div className="flex items-center gap-3">
-          <Brain className="w-8 h-8 text-purple-600" />
+          <Brain className="w-8 h-8 text-blue-600" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             AI & Machine Learning
           </h1>
@@ -139,11 +139,11 @@ export default function AIPage() {
       </div>
 
       {/* AI for Mid-Level Programmers */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-        <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🎯 AI for Mid-Level Programmers
         </h3>
-        <div className="flex flex-col gap-4 md:gap-6 text-purple-800 dark:text-purple-200">
+        <div className="flex flex-col gap-4 md:gap-6 text-blue-800 dark:text-blue-200">
           <p>
             As a mid-level programmer, you're in the perfect position to leverage AI effectively. 
             You have enough experience to understand code quality and architecture, but can benefit 
@@ -151,7 +151,7 @@ export default function AIPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">🚀 Accelerate Development:</h4>
+              <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">🚀 Accelerate Development:</h4>
               <ul className="text-sm [&>li]:mb-1">
                 <li>Generate boilerplate code quickly</li>
                 <li>Get help with complex algorithms</li>
@@ -160,7 +160,7 @@ export default function AIPage() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">🧠 Enhance Skills:</h4>
+              <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">🧠 Enhance Skills:</h4>
               <ul className="text-sm [&>li]:mb-1">
                 <li>Learn new patterns and techniques</li>
                 <li>Explore unfamiliar technologies</li>
@@ -169,7 +169,7 @@ export default function AIPage() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-2">🎯 Career Growth:</h4>
+              <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">🎯 Career Growth:</h4>
               <ul className="text-sm [&>li]:mb-1">
                 <li>Stay current with AI trends</li>
                 <li>Build AI-powered applications</li>
@@ -312,8 +312,8 @@ export default function AIPage() {
       </section>
 
       {/* Getting Started */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🚀 Getting Started with AI
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">
@@ -349,8 +349,8 @@ export default function AIPage() {
       </div>
 
       {/* Current AI Landscape */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🌍 Current AI Landscape (2024)
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

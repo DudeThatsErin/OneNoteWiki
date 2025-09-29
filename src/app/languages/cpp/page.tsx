@@ -254,7 +254,7 @@ export default function CppPage() {
         <div className="flex flex-col gap-6 md:gap-8">
           {cppSections.map((section, index) => (
             <Link key={index} href={section.href} className="block group">
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors">
+              <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors">
                 <div className="flex items-start flex flex-col gap-3">
                   <div className="text-blue-600 group-hover:text-blue-700 transition-colors">
                     {section.icon}
@@ -319,9 +319,9 @@ export default function CppPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {cppUseCases.map((useCase, index) => (
-            <div key={index} className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="font-semibold text-purple-900 dark:text-purple-100">{useCase.category}</h3>
+                <h3 className="font-semibold text-white">{useCase.category}</h3>
                 <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                   useCase.popularity === 'Very High' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                   useCase.popularity === 'High' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -348,7 +348,7 @@ export default function CppPage() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
           C++ Code Example
         </h2>
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
             Hello World & Basic Class Example
           </h3>
@@ -504,8 +504,8 @@ int main() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {cppResources.map((category, index) => (
-            <div key={index} className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-              <h3 className="text-lg font-bold text-blue-900 dark:text-blue-100 mb-4">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-bold text-white mb-4">
                 {category.category}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

@@ -36,7 +36,7 @@ export default function JavaFundamentalsPage() {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Java Basics</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Hello World and Basic Structure</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`// HelloWorld.java - Every Java program starts with a class
@@ -67,13 +67,13 @@ public class HelloWorld {
           </pre>
         </div>
 
-        <div className="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg border border-orange-200 dark:border-orange-800">
-          <h3 className="font-semibold text-orange-900 dark:text-orange-100 mb-3">💡 Java Key Concepts</h3>
-          <ul className="space-y-2 text-orange-800 dark:text-orange-200 text-sm">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <h3 className="font-semibold text-white mb-3">💡 Java Key Concepts</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
             <li>• <strong>Class-based:</strong> Everything is inside a class</li>
             <li>• <strong>Compiled:</strong> Java code is compiled to bytecode, then interpreted by JVM</li>
             <li>• <strong>Strongly typed:</strong> Variables must be declared with specific types</li>
-            <li>• <strong>Case sensitive:</strong> <code className="bg-orange-100 dark:bg-orange-900/30 px-1 rounded">myVariable</code> and <code className="bg-orange-100 dark:bg-orange-900/30 px-1 rounded">MyVariable</code> are different</li>
+            <li>• <strong>Case sensitive:</strong> <code className="bg-gray-700 px-1 rounded">myVariable</code> and <code className="bg-gray-700 px-1 rounded">MyVariable</code> are different</li>
           </ul>
         </div>
       </section>
@@ -82,7 +82,7 @@ public class HelloWorld {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Data Types and Variables</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Primitive Data Types</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`public class DataTypes {
@@ -122,7 +122,7 @@ public class HelloWorld {
           </pre>
         </div>
 
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Arrays</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`public class Arrays {
@@ -168,7 +168,7 @@ public class HelloWorld {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Control Flow</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Conditionals and Loops</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`public class ControlFlow {
@@ -248,7 +248,7 @@ public class HelloWorld {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Methods</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Method Declaration and Usage</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`public class Methods {
@@ -333,7 +333,7 @@ public class HelloWorld {
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Exception Handling</h2>
         
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Try-Catch and Exception Types</h3>
           <pre className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto bg-white dark:bg-gray-900 p-4 rounded">
 {`import java.util.Scanner;
@@ -409,9 +409,9 @@ public class ExceptionHandling {
           </pre>
         </div>
 
-        <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">🚨 Exception Types</h3>
-          <ul className="space-y-2 text-red-800 dark:text-red-200 text-sm">
+        <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+          <h3 className="font-semibold text-white mb-3">🚨 Exception Types</h3>
+          <ul className="space-y-2 text-gray-300 text-sm">
             <li>• <strong>Checked Exceptions:</strong> Must be handled or declared (IOException, SQLException)</li>
             <li>• <strong>Unchecked Exceptions:</strong> Runtime exceptions (NullPointerException, ArrayIndexOutOfBoundsException)</li>
             <li>• <strong>Errors:</strong> Serious problems that applications shouldn't catch (OutOfMemoryError)</li>
@@ -430,7 +430,7 @@ public class ExceptionHandling {
         </Link>
         <Link
           href="/languages/java/oop"
-          className="flex items-center space-x-2 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors"
+          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
         >
           <span>Next: OOP Concepts</span>
           <ArrowRight className="w-4 h-4" />

@@ -1095,8 +1095,8 @@ export default function BooksPage() {
       icon={<BookOpen className="w-8 h-8 text-blue-600" />}
     >
       {/* Why Books Matter */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800 mb-8">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700 mb-8">
+        <h3 className="text-lg font-semibold text-white mb-4">
           📚 Why Programming Books Still Matter
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

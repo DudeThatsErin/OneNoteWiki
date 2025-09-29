@@ -210,9 +210,9 @@ export default function JavaPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {javaUseCases.map((useCase, index) => (
-            <div key={index} className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="font-semibold text-red-900 dark:text-red-100">{useCase.category}</h3>
+                <h3 className="font-semibold text-white">{useCase.category}</h3>
                 <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                   useCase.popularity === 'Very High' ? 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300' :
                   useCase.popularity === 'High' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -374,8 +374,8 @@ public class Person {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {javaResources.map((category, index) => (
-            <div key={index} className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-              <h3 className="text-lg font-bold text-blue-900 dark:text-blue-100 mb-4">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-bold text-white mb-4">
                 {category.category}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -406,8 +406,8 @@ public class Person {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Beginner Projects */}
-          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-            <h3 className="font-semibold text-green-900 dark:text-green-100 mb-3">🟢 Beginner Projects</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">🟢 Beginner Projects</h3>
             <ul className="flex flex-col gap-2 text-green-800 dark:text-green-200 text-sm">
               <li>• <strong>Student Management System:</strong> CRUD operations with file storage</li>
               <li>• <strong>Banking System:</strong> Account management with basic transactions</li>
@@ -419,8 +419,8 @@ public class Person {
           </div>
 
           {/* Intermediate Projects */}
-          <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800">
-            <h3 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-3">🟡 Intermediate Projects</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">🟡 Intermediate Projects</h3>
             <ul className="flex flex-col gap-2 text-yellow-800 dark:text-yellow-200 text-sm">
               <li>• <strong>E-commerce Backend:</strong> REST API with Spring Boot and JPA</li>
               <li>• <strong>Chat Application:</strong> Multi-client chat using sockets</li>
@@ -432,8 +432,8 @@ public class Person {
           </div>
 
           {/* Advanced Projects */}
-          <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-800">
-            <h3 className="font-semibold text-red-900 dark:text-red-100 mb-3">🔴 Advanced Projects</h3>
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 className="font-semibold text-white mb-3">🔴 Advanced Projects</h3>
             <ul className="flex flex-col gap-2 text-red-800 dark:text-red-200 text-sm">
               <li>• <strong>Microservices Architecture:</strong> Distributed system with Spring Cloud</li>
               <li>• <strong>Real-time Trading System:</strong> High-frequency trading platform</li>
@@ -447,8 +447,8 @@ public class Person {
       </section>
 
       {/* Getting Started */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🚀 Getting Started with Java
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">

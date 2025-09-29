@@ -13,7 +13,7 @@ const fullstackStacks = [
     pros: ['Single language', 'Large community', 'Fast development', 'JSON everywhere'],
     cons: ['JavaScript fatigue', 'Rapid changes', 'Callback complexity'],
     bestFor: 'Startups, rapid prototyping, real-time applications',
-    color: 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
   },
   {
     name: 'MEAN Stack',
@@ -22,7 +22,7 @@ const fullstackStacks = [
     pros: ['TypeScript support', 'Enterprise features', 'Structured approach', 'Google backing'],
     cons: ['Complex setup', 'Steep learning curve', 'Heavy framework'],
     bestFor: 'Large applications, enterprise projects, teams preferring structure',
-    color: 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800'
+    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
   },
   {
     name: 'Django + React',
@@ -40,7 +40,7 @@ const fullstackStacks = [
     pros: ['Single framework', 'SSR/SSG', 'API routes', 'Great DX', 'Vercel deployment'],
     cons: ['Vendor lock-in', 'Learning curve', 'File-based routing'],
     bestFor: 'Modern web apps, SEO-important sites, developer experience',
-    color: 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800'
+    color: 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
   }
 ];
 
@@ -82,51 +82,36 @@ export default function FullStackDevelopmentPage() {
         label: "Back to Web Development"
       }}
     >
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <Layers className="w-8 h-8 text-orange-600" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Full Stack Development
-          </h1>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Master both frontend and backend development to build complete web applications 
-          from database to user interface. Learn popular technology stacks and how to 
-          integrate all the pieces together.
-        </p>
-      </div>
-
       {/* What is Full Stack */}
-      <div className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-6 border border-orange-200 dark:border-orange-800">
-        <h3 className="text-lg font-semibold text-orange-900 dark:text-orange-100 mb-4">
+      <div className="bg-gray-800 dark:bg-gray-800 rounded-lg p-6 border border-gray-700 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🎯 What is Full Stack Development?
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="text-center">
-            <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-3">
-              <Code className="w-6 h-6 text-orange-600" />
+            <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+              <Code className="w-6 h-6 text-blue-600 [&>svg]:text-blue-600" />
             </div>
-            <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2">Frontend</h4>
-            <p className="text-orange-800 dark:text-orange-200 text-sm">
+            <h4 className="font-semibold text-white mb-2">Frontend</h4>
+            <p className="text-gray-300 text-sm">
               User interface, user experience, client-side logic, and responsive design
             </p>
           </div>
           <div className="text-center">
-            <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-3">
-              <Server className="w-6 h-6 text-orange-600" />
+            <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+              <Server className="w-6 h-6 text-blue-600 [&>svg]:text-blue-600" />
             </div>
-            <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2">Backend</h4>
-            <p className="text-orange-800 dark:text-orange-200 text-sm">
+            <h4 className="font-semibold text-white mb-2">Backend</h4>
+            <p className="text-gray-300 text-sm">
               Server logic, APIs, authentication, security, and business rules
             </p>
           </div>
           <div className="text-center">
-            <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-3">
-              <Database className="w-6 h-6 text-orange-600" />
+            <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+              <Database className="w-6 h-6 text-blue-600 [&>svg]:text-blue-600" />
             </div>
-            <h4 className="font-semibold text-orange-900 dark:text-orange-100 mb-2">Database</h4>
-            <p className="text-orange-800 dark:text-orange-200 text-sm">
+            <h4 className="font-semibold text-white mb-2">Database</h4>
+            <p className="text-gray-300 text-sm">
               Data storage, retrieval, relationships, and optimization
             </p>
           </div>
@@ -142,7 +127,7 @@ export default function FullStackDevelopmentPage() {
           {fullstackConcepts.map((concept, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
               <div className="flex items-center gap-3 mb-3">
-                <div className="text-orange-600">{concept.icon}</div>
+                <div className="text-blue-600 [&>svg]:text-blue-600">{concept.icon}</div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{concept.title}</h3>
               </div>
               <p className="text-gray-600 dark:text-gray-300 text-sm">{concept.description}</p>
@@ -159,13 +144,10 @@ export default function FullStackDevelopmentPage() {
         <div className="flex flex-col gap-6 md:gap-8">
           {fullstackStacks.map((stack, index) => (
             <div key={index} className={`p-6 rounded-lg border-2 ${stack.color}`}>
-              <div className="flex items-center justify-between mb-4">
+              <div className="mb-4">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   {stack.name}
                 </h3>
-                <span className="text-sm px-3 py-1 bg-white dark:bg-gray-800 rounded-full font-medium">
-                  Popular Stack
-                </span>
               </div>
               
               <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -299,14 +281,14 @@ export default function FullStackDevelopmentPage() {
       </section>
 
       {/* Learning Path */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-800">
-        <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
+      <div className="bg-gray-800 dark:bg-gray-800 rounded-lg p-6 border border-gray-700 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🎯 Full Stack Learning Path
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-3">Phase 1: Foundations (2-3 months)</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-white mb-3">Phase 1: Foundations (2-3 months)</h4>
+            <ul className="text-gray-300 text-sm [&>li]:mb-1">
               <li>• HTML, CSS, JavaScript fundamentals</li>
               <li>• Basic backend concepts (Node.js or Python)</li>
               <li>• Database basics (SQL or MongoDB)</li>
@@ -314,8 +296,8 @@ export default function FullStackDevelopmentPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-3">Phase 2: Specialization (3-4 months)</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-white mb-3">Phase 2: Specialization (3-4 months)</h4>
+            <ul className="text-gray-300 text-sm [&>li]:mb-1">
               <li>• Choose and master a frontend framework</li>
               <li>• Learn a backend framework thoroughly</li>
               <li>• Build REST APIs and integrate with frontend</li>
@@ -323,8 +305,8 @@ export default function FullStackDevelopmentPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-3">Phase 3: Integration (2-3 months)</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-white mb-3">Phase 3: Integration (2-3 months)</h4>
+            <ul className="text-gray-300 text-sm [&>li]:mb-1">
               <li>• Build complete full stack applications</li>
               <li>• Learn deployment and DevOps basics</li>
               <li>• Testing strategies (unit, integration, e2e)</li>
@@ -332,8 +314,8 @@ export default function FullStackDevelopmentPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-3">Phase 4: Advanced (Ongoing)</h4>
-            <ul className="text-purple-800 dark:text-purple-200 text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-white mb-3">Phase 4: Advanced (Ongoing)</h4>
+            <ul className="text-gray-300 text-sm [&>li]:mb-1">
               <li>• Microservices architecture</li>
               <li>• Advanced deployment (Docker, Kubernetes)</li>
               <li>• Real-time features (WebSockets, SSE)</li>
@@ -344,14 +326,14 @@ export default function FullStackDevelopmentPage() {
       </div>
 
       {/* Project Ideas */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-gray-800 dark:bg-gray-800 rounded-lg p-6 border border-gray-700 dark:border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           💡 Full Stack Project Ideas
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Beginner Projects:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-white mb-2">Beginner Projects:</h4>
+            <ul className="text-gray-300 text-sm [&>li]:mb-1">
               <li>• Personal blog with admin panel</li>
               <li>• Todo app with user accounts</li>
               <li>• Recipe sharing platform</li>
@@ -360,8 +342,8 @@ export default function FullStackDevelopmentPage() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-green-900 dark:text-green-100 mb-2">Advanced Projects:</h4>
-            <ul className="text-green-800 dark:text-green-200 text-sm [&>li]:mb-1">
+            <h4 className="font-semibold text-white mb-2">Advanced Projects:</h4>
+            <ul className="text-gray-300 text-sm [&>li]:mb-1">
               <li>• Social media platform</li>
               <li>• Real-time collaboration tool</li>
               <li>• Marketplace with payments</li>

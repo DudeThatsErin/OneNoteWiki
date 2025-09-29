@@ -135,9 +135,9 @@ export default function DotNetPage() {
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
           {dotnetUseCases.map((useCase, index) => (
-            <div key={index} className="bg-indigo-50 dark:bg-indigo-900/20 p-6 rounded-lg border border-indigo-200 dark:border-indigo-800">
+            <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-xl font-semibold text-indigo-900 dark:text-indigo-100">{useCase.category}</h3>
+                <h3 className="text-xl font-semibold text-white">{useCase.category}</h3>
                 <div className="flex items-center gap-2">
                   <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                     useCase.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300' :
@@ -159,7 +159,7 @@ export default function DotNetPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <h4 className="font-semibold text-indigo-900 dark:text-indigo-100 mb-2 text-sm">Real-World Examples:</h4>
+                  <h4 className="font-semibold text-white mb-2 text-sm">Real-World Examples:</h4>
                   <div className="flex flex-wrap gap-1">
                     {useCase.examples.map((example, i) => (
                       <span key={i} className="text-xs px-2 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full">
@@ -169,7 +169,7 @@ export default function DotNetPage() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-indigo-900 dark:text-indigo-100 mb-2 text-sm">Popular Frameworks:</h4>
+                  <h4 className="font-semibold text-white mb-2 text-sm">Popular Frameworks:</h4>
                   <div className="flex flex-wrap gap-1">
                     {useCase.frameworks.map((framework, i) => (
                       <span key={i} className="text-xs px-2 py-1 bg-indigo-200 dark:bg-indigo-800/30 text-indigo-800 dark:text-indigo-200 rounded-full">
@@ -190,7 +190,7 @@ export default function DotNetPage() {
           .NET Code Examples
         </h2>
         <div className="flex flex-col gap-6 md:gap-8">
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
               🚀 C# Console Application
             </h3>
@@ -236,7 +236,7 @@ namespace HelloDotNet
             </pre>
           </div>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+          <div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
               🌐 ASP.NET Core Web API
             </h3>
@@ -292,8 +292,8 @@ public class User
       </section>
 
       {/* Getting Started */}
-      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+      <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
+        <h3 className="text-lg font-semibold text-white mb-4">
           🚀 Getting Started with .NET
         </h3>
         <div className="flex flex-col gap-4 md:gap-6">
