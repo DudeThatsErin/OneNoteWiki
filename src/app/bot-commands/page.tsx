@@ -12,72 +12,69 @@ const commandCategories = [
     id: 'help',
     title: 'Help & Support Commands',
     icon: <HelpCircle className="w-5 h-5" />,
-    description: 'Get help with coding questions and find resources',
+    description: 'Get help with OneNote questions and find resources',
     commands: [
       {
         name: '/ask',
-        description: 'Ask a coding question and get help from the community',
-        usage: '/ask [language] [question]',
-        example: '/ask javascript How do I create a function?',
+        description: 'Ask a OneNote question and get help from the community',
+        usage: '/ask [category] [question]',
+        example: '/ask organization How do I structure my notebooks?',
         parameters: [
-          { name: 'language', type: 'string', required: true, description: 'Programming language (javascript, python, java, etc.)' },
-          { name: 'question', type: 'string', required: true, description: 'Your coding question' }
+          { name: 'category', type: 'string', required: true, description: 'OneNote category (organization, features, sync, mobile, etc.)' },
+          { name: 'question', type: 'string', required: true, description: 'Your OneNote question' }
         ]
       },
       {
         name: '/resources',
-        description: 'Get learning resources for a specific programming language',
-        usage: '/resources [language]',
-        example: '/resources python',
+        description: 'Get OneNote resources and tutorials for specific topics',
+        usage: '/resources [topic]',
+        example: '/resources templates',
         parameters: [
-          { name: 'language', type: 'string', required: true, description: 'Programming language' }
+          { name: 'topic', type: 'string', required: true, description: 'OneNote topic (templates, organization, mobile, etc.)' }
         ]
       },
       {
         name: '/docs',
-        description: 'Get official documentation links for programming languages and frameworks',
-        usage: '/docs [technology]',
-        example: '/docs react',
+        description: 'Get official Microsoft OneNote documentation links',
+        usage: '/docs [feature]',
+        example: '/docs handwriting',
         parameters: [
-          { name: 'technology', type: 'string', required: true, description: 'Technology or framework name' }
+          { name: 'feature', type: 'string', required: true, description: 'OneNote feature or topic' }
         ]
       }
     ]
   },
   {
-    id: 'code',
-    title: 'Code Utility Commands',
+    id: 'onenote',
+    title: 'OneNote Utility Commands',
     icon: <MessageCircle className="w-5 h-5" />,
-    description: 'Useful tools for code formatting, analysis, and snippets',
+    description: 'Useful tools for OneNote tips, templates, and organization',
     commands: [
       {
-        name: '/format',
-        description: 'Format and beautify code snippets',
-        usage: '/format [language] [code]',
-        example: '/format javascript const x=1;console.log(x);',
+        name: '/template',
+        description: 'Get OneNote templates for various use cases',
+        usage: '/template [category]',
+        example: '/template meeting',
         parameters: [
-          { name: 'language', type: 'string', required: true, description: 'Programming language for syntax highlighting' },
-          { name: 'code', type: 'string', required: true, description: 'Code to format' }
+          { name: 'category', type: 'string', required: true, description: 'Template category (meeting, academic, personal, etc.)' },
         ]
       },
       {
-        name: '/explain',
-        description: 'Get an explanation of what a code snippet does',
-        usage: '/explain [language] [code]',
-        example: '/explain python def fibonacci(n): return n if n <= 1 else fibonacci(n-1) + fibonacci(n-2)',
+        name: '/tips',
+        description: 'Get OneNote tips and best practices',
+        usage: '/tips [topic]',
+        example: '/tips organization',
         parameters: [
-          { name: 'language', type: 'string', required: true, description: 'Programming language' },
-          { name: 'code', type: 'string', required: true, description: 'Code snippet to explain' }
+          { name: 'topic', type: 'string', required: true, description: 'OneNote topic for tips' }
         ]
       },
       {
-        name: '/snippet',
-        description: 'Get common code snippets for various tasks',
-        usage: '/snippet [language] [task]',
-        example: '/snippet javascript array sort',
+        name: '/shortcuts',
+        description: 'Get keyboard shortcuts for OneNote',
+        usage: '/shortcuts [platform]',
+        example: '/shortcuts windows',
         parameters: [
-          { name: 'language', type: 'string', required: true, description: 'Programming language' },
-          { name: 'task', type: 'string', required: true, description: 'What you want to accomplish' }
+          { name: 'platform', type: 'string', required: false, description: 'Platform: windows, mac, mobile' }
         ]
       }
     ]
@@ -90,9 +87,9 @@ const commandCategories = [
     commands: [
       {
         name: '/profile',
-        description: 'View or update your coding profile',
+        description: 'View or update your OneNote user profile',
         usage: '/profile [action] [details]',
-        example: '/profile set languages javascript,python,java',
+        example: '/profile set experience advanced',
         parameters: [
           { name: 'action', type: 'string', required: true, description: 'Action: view, set, or update' },
           { name: 'details', type: 'string', required: false, description: 'Profile details to update' }
@@ -100,7 +97,7 @@ const commandCategories = [
       },
       {
         name: '/leaderboard',
-        description: 'View community leaderboards for helpful members',
+        description: 'View community leaderboards for helpful OneNote users',
         usage: '/leaderboard [type]',
         example: '/leaderboard weekly',
         parameters: [
@@ -109,9 +106,9 @@ const commandCategories = [
       },
       {
         name: '/thanks',
-        description: 'Thank someone for their help',
+        description: 'Thank someone for their OneNote help',
         usage: '/thanks @user [message]',
-        example: '/thanks @helper Thanks for the JavaScript help!',
+        example: '/thanks @helper Thanks for the organization tips!',
         parameters: [
           { name: 'user', type: 'user', required: true, description: 'User to thank' },
           { name: 'message', type: 'string', required: false, description: 'Optional thank you message' }
@@ -143,9 +140,9 @@ const commandCategories = [
       },
       {
         name: '/suggest',
-        description: 'Suggest new features or improvements for the bot',
+        description: 'Suggest new features or improvements for the OneNote bot',
         usage: '/suggest [suggestion]',
-        example: '/suggest Add support for Rust programming language',
+        example: '/suggest Add more OneNote template categories',
         parameters: [
           { name: 'suggestion', type: 'string', required: true, description: 'Your suggestion or feature request' }
         ]
@@ -168,7 +165,7 @@ export default function BotCommandsPage() {
   return (
     <PageLayout
       title="Bot Commands"
-      description="Our Discord bot provides helpful commands for getting coding assistance, managing discussions, and accessing community resources."
+      description="Our Discord bot provides helpful commands for getting OneNote assistance, templates, tips, and accessing community resources."
       icon={<div className="text-4xl">🤖</div>}
     >
       {/* Header */}
@@ -182,14 +179,14 @@ export default function BotCommandsPage() {
                 Coming Soon
               </span>
               <p className="text-gray-600 dark:text-gray-300">
-                CodingHelp Discord Bot command reference
+                OneNote Discord Bot command reference
               </p>
             </div>
           </div>
         </div>
         <p className="text-lg text-gray-600 dark:text-gray-300">
-          The CodingHelp Discord Bot is currently in development! Here's a preview of the commands 
-          that will be available to help you with coding questions, resources, and community interaction.
+          The OneNote Discord Bot is currently in development! Here's a preview of the commands 
+          that will be available to help you with OneNote questions, templates, tips, and community interaction.
         </p>
       </div>
 

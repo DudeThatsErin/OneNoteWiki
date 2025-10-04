@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, Users, Code, Zap, Star, Globe, Brain, Database, Settings, Lightbulb, HelpCircle, MessageCircle, Bot } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, FileText, Zap, Star, Smartphone, PenTool, Settings, Lightbulb, HelpCircle, MessageCircle, Bot, Search, Share2, Layers } from 'lucide-react';
 import { QuickStats } from '@/components/QuickStats';
 import { InfoCard } from '@/components/InfoCard';
 import { FeatureList } from '@/components/FeatureList';
@@ -7,58 +7,58 @@ import { FeatureList } from '@/components/FeatureList';
 const quickStartCards = [
   {
     title: 'Getting Started',
-    description: 'New to programming? Start here to learn the basics and choose your first language.',
+    description: 'New to OneNote? Learn the basics and create your first notebook.',
     href: '/getting-started',
     icon: <BookOpen className="w-8 h-8 text-white" />,
     color: 'bg-gray-800 border-gray-700'
   },
   {
-    title: 'Programming Languages',
-    description: 'Explore different programming languages and find the one that suits your goals.',
-    href: '/languages',
-    icon: <Code className="w-8 h-8 text-white" />,
+    title: 'Notebooks & Organization',
+    description: 'Master notebook creation, sections, pages, and organization strategies.',
+    href: '/notebooks',
+    icon: <FileText className="w-8 h-8 text-white" />,
     color: 'bg-gray-800 border-gray-700'
   },
   {
-    title: 'Web Development',
-    description: 'Learn to build websites and web applications with modern technologies.',
-    href: '/web-development',
-    icon: <Globe className="w-8 h-8 text-white" />,
+    title: 'Note-Taking Features',
+    description: 'Discover text formatting, drawing, handwriting, and advanced features.',
+    href: '/features',
+    icon: <PenTool className="w-8 h-8 text-white" />,
     color: 'bg-gray-800 border-gray-700'
   },
   {
-    title: 'Mobile Development',
-    description: 'Create mobile apps for iOS and Android using various frameworks.',
-    href: '/mobile-development',
-    icon: <Brain className="w-8 h-8 text-white" />,
+    title: 'Mobile OneNote',
+    description: 'Use OneNote on iOS and Android devices with mobile-specific tips.',
+    href: '/mobile',
+    icon: <Smartphone className="w-8 h-8 text-white" />,
     color: 'bg-gray-800 border-gray-700'
   },
   {
-    title: 'Data & Databases',
-    description: 'Learn about data storage, databases, and data analysis techniques.',
-    href: '/data-databases',
-    icon: <Database className="w-8 h-8 text-white" />,
+    title: 'Media & Attachments',
+    description: 'Add images, audio, video, and file attachments to your notes.',
+    href: '/media',
+    icon: <Layers className="w-8 h-8 text-white" />,
     color: 'bg-gray-800 border-gray-700'
   },
   {
-    title: 'DevOps & Tools',
-    description: 'Master the tools and practices that make development more efficient.',
-    href: '/devops-tools',
+    title: 'Sharing & Collaboration',
+    description: 'Share notebooks and collaborate with others in real-time.',
+    href: '/sharing',
+    icon: <Share2 className="w-8 h-8 text-white" />,
+    color: 'bg-gray-800 border-gray-700'
+  },
+  {
+    title: 'Search & Organization',
+    description: 'Find your notes quickly with powerful search and OCR features.',
+    href: '/search',
+    icon: <Search className="w-8 h-8 text-white" />,
+    color: 'bg-gray-800 border-gray-700'
+  },
+  {
+    title: 'Settings & Customization',
+    description: 'Configure OneNote settings, sync, backup, and customization options.',
+    href: '/settings',
     icon: <Settings className="w-8 h-8 text-white" />,
-    color: 'bg-gray-800 border-gray-700'
-  },
-  {
-    title: 'Resources',
-    description: 'Find learning platforms, books, practice problems, and communities.',
-    href: '/resources',
-    icon: <Lightbulb className="w-8 h-8 text-white" />,
-    color: 'bg-gray-800 border-gray-700'
-  },
-  {
-    title: 'FAQ',
-    description: 'Get answers to frequently asked questions about programming.',
-    href: '/faq',
-    icon: <HelpCircle className="w-8 h-8 text-white" />,
     color: 'bg-gray-800 border-gray-700'
   }
 ];
@@ -70,29 +70,29 @@ export default function HomePage() {
       {/* Hero Section */}
       <div className="text-center py-12 md:py-20">
         <div className="flex justify-center mb-6">
-          <div className="text-6xl md:text-8xl">📚</div>
+          <div className="text-6xl md:text-8xl">📝</div>
         </div>
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-          CodingHelp Wiki
+          OneNote Wiki
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-          Your comprehensive guide to programming. From beginner tutorials to advanced concepts, 
-          we've got everything you need to become a better developer.
+          Your comprehensive guide to Microsoft OneNote. From basic note-taking to advanced organization, 
+          master the art of digital note-taking and boost your productivity.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/getting-started"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors"
           >
             <BookOpen className="w-5 h-5 mr-2" />
             Get Started
           </Link>
           <Link
-            href="/languages"
-            className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 font-medium rounded-lg transition-colors"
+            href="/features"
+            className="inline-flex items-center px-6 py-3 border border-purple-300 dark:border-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20 text-purple-700 dark:text-purple-300 font-medium rounded-lg transition-colors"
           >
-            <Code className="w-5 h-5 mr-2" />
-            Browse Languages
+            <FileText className="w-5 h-5 mr-2" />
+            Browse Features
           </Link>
         </div>
       </div>
@@ -133,27 +133,27 @@ export default function HomePage() {
           Join Our Community
         </h2>
         <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Connect with fellow developers, get help with your coding questions, and share your knowledge 
-          with others in our supportive community.
+          Connect with fellow OneNote users, get help with your note-taking questions, and share your 
+          organization tips with others in our supportive community.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center pt-2 md:pt-4">
           <a
-            href="https://discord.gg/geQEUBm"
+            href="https://discord.gg/5kv4bDUkpc"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+            className="flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-colors"
           >
             <MessageCircle className="w-5 h-5" />
             <span>Join Discord Server</span>
           </a>
           <a
-            href="https://reddit.com/r/CodingHelp"
+            href="https://www.reddit.com/r/OneNote/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+            className="flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-colors"
           >
             <Bot className="w-5 h-5" />
-            <span>Visit r/CodingHelp</span>
+            <span>Visit r/OneNote</span>
           </a>
         </div>
       </div>
@@ -169,25 +169,25 @@ export default function HomePage() {
               🚀 Getting Started Guide
             </h3>
             <p className="text-gray-300 text-sm mb-4">
-              Complete beginner's guide to programming with step-by-step instructions.
+              Complete beginner's guide to OneNote with step-by-step instructions and screenshots.
             </p>
             <Link
               href="/getting-started"
-              className="text-blue-400 hover:underline text-sm font-medium"
+              className="text-purple-400 hover:underline text-sm font-medium"
             >
               Read More →
             </Link>
           </div>
           <div className="bg-gray-800 rounded-lg border border-gray-700 p-6">
             <h3 className="font-semibold text-white mb-2">
-              💡 Best Practices
+              💡 Organization Tips
             </h3>
             <p className="text-gray-300 text-sm mb-4">
-              Learn industry best practices and coding standards for clean, maintainable code.
+              Learn best practices for organizing your notes, notebooks, and maximizing productivity.
             </p>
             <Link
               href="/resources"
-              className="text-blue-400 hover:underline text-sm font-medium"
+              className="text-purple-400 hover:underline text-sm font-medium"
             >
               Explore Resources →
             </Link>

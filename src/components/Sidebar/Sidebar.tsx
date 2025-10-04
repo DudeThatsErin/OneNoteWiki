@@ -4,17 +4,18 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
   BookOpen, 
-  Code, 
+  FileText, 
   Lightbulb, 
   HelpCircle, 
   ChevronRight,
   Home,
   Layers,
-  Database,
-  Globe,
+  Settings,
   Smartphone,
   Package,
-  Brain
+  PenTool,
+  Search,
+  Share2
 } from 'lucide-react';
 import { SidebarProps } from './types';
 
@@ -36,90 +37,104 @@ const sidebarItems: SidebarItem[] = [
     href: '/getting-started',
     icon: <BookOpen size={18} />,
     children: [
-      { title: 'What is Programming?', href: '/getting-started/what-is-programming', icon: <ChevronRight size={16} /> },
-      { title: 'Choosing Your First Language', href: '/getting-started/choosing-language', icon: <ChevronRight size={16} /> },
-      { title: 'Setting Up Your Environment', href: '/getting-started/setup', icon: <ChevronRight size={16} /> },
-      { title: 'Your First Program', href: '/getting-started/first-program', icon: <ChevronRight size={16} /> }
+      { title: 'What is OneNote?', href: '/getting-started/what-is-onenote', icon: <ChevronRight size={16} /> },
+      { title: 'Installation & Setup', href: '/getting-started/installation', icon: <ChevronRight size={16} /> },
+      { title: 'Creating Your First Notebook', href: '/getting-started/first-notebook', icon: <ChevronRight size={16} /> },
+      { title: 'Basic Navigation', href: '/getting-started/navigation', icon: <ChevronRight size={16} /> }
     ]
   },
   {
-    title: 'Programming Languages',
-    href: '/languages',
-    icon: <Code size={18} />,
+    title: 'Notebooks & Organization',
+    href: '/notebooks',
+    icon: <FileText size={18} />,
     children: [
-      { title: 'Python', href: '/languages/python', icon: <ChevronRight size={16} /> },
-      { title: 'JavaScript', href: '/languages/javascript', icon: <ChevronRight size={16} /> },
-      { title: 'Java', href: '/languages/java', icon: <ChevronRight size={16} /> },
-      { title: 'C++', href: '/languages/cpp', icon: <ChevronRight size={16} /> },
-      { title: 'C#', href: '/languages/csharp', icon: <ChevronRight size={16} /> },
-      { title: 'Go', href: '/languages/go', icon: <ChevronRight size={16} /> },
-      { title: 'Rust', href: '/languages/rust', icon: <ChevronRight size={16} /> },
-      { title: 'TypeScript', href: '/languages/typescript', icon: <ChevronRight size={16} /> }
+      { title: 'Creating Notebooks', href: '/notebooks/creating', icon: <ChevronRight size={16} /> },
+      { title: 'Sections & Pages', href: '/notebooks/sections-pages', icon: <ChevronRight size={16} /> },
+      { title: 'Organization Tips', href: '/notebooks/organization', icon: <ChevronRight size={16} /> },
+      { title: 'Templates', href: '/notebooks/templates', icon: <ChevronRight size={16} /> }
     ]
   },
   {
-    title: 'Web Development',
-    href: '/web-development',
-    icon: <Globe size={18} />,
+    title: 'Note-Taking Features',
+    href: '/features',
+    icon: <PenTool size={18} />,
     children: [
-      { title: 'HTML & CSS', href: '/web-development/html-css', icon: <ChevronRight size={16} /> },
-      { title: 'Frontend Frameworks', href: '/web-development/frontend', icon: <ChevronRight size={16} /> },
-      { title: 'Backend Development', href: '/web-development/backend', icon: <ChevronRight size={16} /> },
-      { title: 'Full-Stack Development', href: '/web-development/fullstack', icon: <ChevronRight size={16} /> }
+      { title: 'Text Formatting', href: '/features/text-formatting', icon: <ChevronRight size={16} /> },
+      { title: 'Drawing & Handwriting', href: '/features/drawing', icon: <ChevronRight size={16} /> },
+      { title: 'Tables & Lists', href: '/features/tables-lists', icon: <ChevronRight size={16} /> },
+      { title: 'Tags & Labels', href: '/features/tags', icon: <ChevronRight size={16} /> }
     ]
   },
   {
-    title: 'Mobile Development',
-    href: '/mobile-development',
-    icon: <Smartphone size={18} />,
-    children: [
-      { title: 'iOS Development', href: '/mobile-development/ios', icon: <ChevronRight size={16} /> },
-      { title: 'Android Development', href: '/mobile-development/android', icon: <ChevronRight size={16} /> },
-      { title: 'Cross-Platform', href: '/mobile-development/cross-platform', icon: <ChevronRight size={16} /> }
-    ]
-  },
-  {
-    title: 'Data & Databases',
-    href: '/data-databases',
-    icon: <Database size={18} />,
-    children: [
-      { title: 'SQL Databases', href: '/data-databases/sql', icon: <ChevronRight size={16} /> },
-      { title: 'NoSQL Databases', href: '/data-databases/nosql', icon: <ChevronRight size={16} /> }
-    ]
-  },
-  {
-    title: 'Frameworks & Libraries',
-    href: '/frameworks',
+    title: 'Media & Attachments',
+    href: '/media',
     icon: <Layers size={18} />,
     children: [
-      { title: 'React', href: '/frameworks/react', icon: <ChevronRight size={16} /> },
-      { title: 'Vue.js', href: '/frameworks/vue', icon: <ChevronRight size={16} /> },
-      { title: 'Angular', href: '/frameworks/angular', icon: <ChevronRight size={16} /> },
-      { title: 'Node.js', href: '/frameworks/nodejs', icon: <ChevronRight size={16} /> },
-      { title: 'Django', href: '/frameworks/django', icon: <ChevronRight size={16} /> },
-      { title: 'Spring Boot', href: '/frameworks/spring-boot', icon: <ChevronRight size={16} /> }
+      { title: 'Images & Screenshots', href: '/media/images', icon: <ChevronRight size={16} /> },
+      { title: 'Audio & Video', href: '/media/audio-video', icon: <ChevronRight size={16} /> },
+      { title: 'File Attachments', href: '/media/attachments', icon: <ChevronRight size={16} /> },
+      { title: 'Web Clipping', href: '/media/web-clipping', icon: <ChevronRight size={16} /> }
     ]
   },
   {
-    title: 'AI & Machine Learning',
-    href: '/ai',
-    icon: <Brain size={18} />
+    title: 'Mobile OneNote',
+    href: '/mobile',
+    icon: <Smartphone size={18} />,
+    children: [
+      { title: 'iOS App', href: '/mobile/ios', icon: <ChevronRight size={16} /> },
+      { title: 'Android App', href: '/mobile/android', icon: <ChevronRight size={16} /> },
+      { title: 'Mobile Tips', href: '/mobile/tips', icon: <ChevronRight size={16} /> }
+    ]
   },
   {
-    title: 'Project Ideas',
-    href: '/project-ideas',
-    icon: <Lightbulb size={18} />
+    title: 'Sharing & Collaboration',
+    href: '/sharing',
+    icon: <Share2 size={18} />,
+    children: [
+      { title: 'Sharing Notebooks', href: '/sharing/notebooks', icon: <ChevronRight size={16} /> },
+      { title: 'Real-time Collaboration', href: '/sharing/collaboration', icon: <ChevronRight size={16} /> },
+      { title: 'Permissions & Access', href: '/sharing/permissions', icon: <ChevronRight size={16} /> }
+    ]
+  },
+  {
+    title: 'Search & Organization',
+    href: '/search',
+    icon: <Search size={18} />,
+    children: [
+      { title: 'Search Features', href: '/search/features', icon: <ChevronRight size={16} /> },
+      { title: 'OCR & Handwriting Search', href: '/search/ocr', icon: <ChevronRight size={16} /> },
+      { title: 'Advanced Search Tips', href: '/search/advanced', icon: <ChevronRight size={16} /> }
+    ]
+  },
+  {
+    title: 'Settings & Customization',
+    href: '/settings',
+    icon: <Settings size={18} />,
+    children: [
+      { title: 'Account Settings', href: '/settings/account', icon: <ChevronRight size={16} /> },
+      { title: 'Sync Settings', href: '/settings/sync', icon: <ChevronRight size={16} /> },
+      { title: 'Backup & Recovery', href: '/settings/backup', icon: <ChevronRight size={16} /> }
+    ]
+  },
+  {
+    title: 'Templates',
+    href: '/templates',
+    icon: <Lightbulb size={18} />,
+    children: [
+      { title: 'Academic Templates', href: '/templates/academic', icon: <ChevronRight size={16} /> },
+      { title: 'Business Templates', href: '/templates/business', icon: <ChevronRight size={16} /> },
+      { title: 'Personal Templates', href: '/templates/personal', icon: <ChevronRight size={16} /> },
+      { title: 'Custom Templates', href: '/templates/custom', icon: <ChevronRight size={16} /> }
+    ]
   },
   {
     title: 'Resources',
     href: '/resources',
     icon: <Package size={18} />,
     children: [
-      { title: 'Programming Languages', href: '/resources/programming-languages', icon: <ChevronRight size={16} /> },
-      { title: 'Development Tools', href: '/resources/development-tools', icon: <ChevronRight size={16} /> },
-      { title: 'Programming Books', href: '/resources/books', icon: <ChevronRight size={16} /> },
-      { title: 'Learning Platforms', href: '/resources/learning-platforms', icon: <ChevronRight size={16} /> },
-      { title: 'Practice Platforms', href: '/resources/practice-platforms', icon: <ChevronRight size={16} /> },
+      { title: 'OneNote Versions', href: '/resources/versions', icon: <ChevronRight size={16} /> },
+      { title: 'Keyboard Shortcuts', href: '/resources/shortcuts', icon: <ChevronRight size={16} /> },
+      { title: 'Third-party Tools', href: '/resources/tools', icon: <ChevronRight size={16} /> },
       { title: 'Communities', href: '/resources/communities', icon: <ChevronRight size={16} /> }
     ]
   },
@@ -155,7 +170,7 @@ export function Sidebar({ children, className = '' }: SidebarProps) {
                 href={item.href}
                 className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   isActive(item.href) || hasActiveChild(item)
-                    ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300'
+                    ? 'bg-purple-50 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300'
                     : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
                 }`}
               >
@@ -171,7 +186,7 @@ export function Sidebar({ children, className = '' }: SidebarProps) {
                         href={child.href}
                         className={`flex items-center space-x-2 px-3 py-1.5 rounded-md text-sm transition-colors ${
                           isActive(child.href)
-                            ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300'
+                            ? 'bg-purple-50 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300'
                             : 'text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-800/50'
                         }`}
                       >

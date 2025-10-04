@@ -2,14 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    /* OneNote Purple Color Palette */
+    --onenote-purple-50: #f5f3ff;
+    --onenote-purple-100: #ede9fe;
+    --onenote-purple-200: #ddd6fe;
+    --onenote-purple-300: #c4b5fd;
+    --onenote-purple-400: #a78bfa;
+    --onenote-purple-500: #8b5cf6;
+    --onenote-purple-600: #7c3aed;
+    --onenote-purple-700: #6d28d9;
+    --onenote-purple-800: #5b21b6;
+    --onenote-purple-900: #4c1d95;
+    --onenote-purple-950: #2e1065;
+  }
+}
+
 @layer components {
   /* Custom list marker colors - can't be done with Tailwind classes */
   .content-list.marker-blue > li::marker {
-    color: rgb(37 99 235); /* blue-600 */
+    color: var(--onenote-purple-600);
   }
   
   .content-list.marker-green > li::marker {
     color: rgb(34 197 94); /* green-500 */
+  }
+  
+  .content-list.marker-purple > li::marker {
+    color: var(--onenote-purple-600);
   }
 
   /* Line clamp utilities */

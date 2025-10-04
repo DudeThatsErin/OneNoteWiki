@@ -9,38 +9,38 @@ import { InfoCard } from '@/components/InfoCard';
 const faqData = [
   {
     id: '1',
-    question: "What programming language should I learn first?",
-    answer: "For complete beginners, we recommend starting with Python. It has simple, readable syntax and is used in many fields including web development, data science, and automation. JavaScript is also a great choice if you're interested in web development specifically."
+    question: "Is OneNote really free to use?",
+    answer: "Yes! OneNote is completely free with a Microsoft account. You get 5GB of free OneDrive storage, which is typically enough for thousands of pages of notes. Premium features are available with Microsoft 365 subscriptions, but the core functionality is free forever."
   },
   {
     id: '2',
-    question: "How long does it take to learn programming?",
-    answer: "This varies greatly depending on your goals and how much time you dedicate. You can write simple programs within a few weeks, but becoming proficient typically takes 6-12 months of consistent practice. Mastering programming is a lifelong journey as technology constantly evolves."
+    question: "Can I use OneNote offline?",
+    answer: "Absolutely! OneNote works offline and automatically syncs your changes when you reconnect to the internet. You can create, edit, and organize notes without an internet connection. Some features like real-time collaboration require connectivity."
   },
   {
     id: '3',
-    question: "Do I need a computer science degree to become a programmer?",
-    answer: "No, a computer science degree is not required to become a programmer. Many successful developers are self-taught or have completed coding bootcamps. What matters most is your ability to solve problems and write clean, functional code."
+    question: "What's the difference between OneNote versions?",
+    answer: "There are several OneNote versions: OneNote for Windows 10/11 (modern app), OneNote 2016 (desktop version), OneNote for Mac, mobile apps (iOS/Android), and OneNote for the web. All versions sync to the same notebooks, but have slightly different features and interfaces."
   },
   {
     id: '4',
-    question: "What's the difference between programming and coding?",
-    answer: "The terms are often used interchangeably, but programming typically refers to the entire process of creating software (planning, designing, coding, testing), while coding specifically refers to writing the actual code instructions."
+    question: "How do I organize my OneNote notebooks effectively?",
+    answer: "Use the three-level hierarchy: Notebooks for major topics/projects, Sections for categories within those topics, and Pages for individual notes. Create consistent naming conventions, use tags for important items, and consider separate notebooks for different areas of your life (work, personal, projects)."
   },
   {
     id: '5',
-    question: "Can I learn programming for free?",
-    answer: "Absolutely! There are many free resources available including online tutorials, documentation, YouTube videos, and platforms like freeCodeCamp, Codecademy (free tier), and Khan Academy. Our community also provides free help and support."
+    question: "Can I share my OneNote notebooks with others?",
+    answer: "Yes! You can share entire notebooks or individual sections with others. Recipients can view, edit, or have full control depending on the permissions you set. Shared notebooks support real-time collaboration, so multiple people can work on the same notes simultaneously."
   },
   {
     id: '6',
-    question: "What equipment do I need to start programming?",
-    answer: "You just need a computer (Windows, Mac, or Linux) and an internet connection. Most programming tools and editors are free. You don't need an expensive or powerful computer to start learning - even basic laptops work fine for beginners."
+    question: "How do I backup my OneNote data?",
+    answer: "OneNote automatically backs up your data to OneDrive cloud storage. For additional security, you can export notebooks to PDF format or use the File > Export feature to save local copies. Your notes are also cached locally on each device for offline access."
   },
   {
     id: '7',
-    question: "Is programming difficult to learn?",
-    answer: "Programming can be challenging, especially at first, but it's definitely learnable with patience and practice. The key is to start with basics, practice regularly, and not get discouraged by initial difficulties. Everyone struggles at first - it's part of the learning process."
+    question: "Can I import notes from other apps into OneNote?",
+    answer: "Yes! OneNote can import from many sources including Evernote (using the OneNote Importer tool), PDF files, Word documents, PowerPoint presentations, and more. You can also copy and paste content from most applications directly into OneNote pages."
   },
   {
     id: '8',

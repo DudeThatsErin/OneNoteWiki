@@ -15,64 +15,76 @@ interface SearchResult {
 // Sample search data - in a real app, this would come from an API or search index
 const searchData: SearchResult[] = [
   {
-    title: 'Getting Started with Programming',
-    path: '/getting-started/what-is-programming',
-    excerpt: 'Learn the fundamentals of programming and how to get started with your coding journey. Programming is the process of creating instructions for computers to follow.',
+    title: 'What is OneNote?',
+    path: '/getting-started/what-is-onenote',
+    excerpt: 'Learn what OneNote is and how it can transform your note-taking. OneNote is a digital notebook that helps you organize information across all your devices.',
     category: 'Getting Started'
   },
   {
-    title: 'JavaScript Fundamentals',
-    path: '/languages/javascript/fundamentals',
-    excerpt: 'Master the basics of JavaScript including variables, functions, objects, and control flow. JavaScript is a versatile programming language used for web development.',
-    category: 'Languages'
+    title: 'Creating Your First Notebook',
+    path: '/getting-started/first-notebook',
+    excerpt: 'Step-by-step guide to creating your first OneNote notebook. Learn the hierarchy of notebooks, sections, and pages for effective organization.',
+    category: 'Getting Started'
   },
   {
-    title: 'Python Programming',
-    path: '/languages/python',
-    excerpt: 'Python is a high-level, interpreted programming language known for its simplicity and readability. Perfect for beginners and powerful for experts.',
-    category: 'Languages'
+    title: 'Installation & Setup',
+    path: '/getting-started/installation',
+    excerpt: 'Download OneNote and set up your Microsoft account for syncing across devices. Get started with OneNote on Windows, Mac, iOS, and Android.',
+    category: 'Getting Started'
   },
   {
-    title: 'React Framework',
-    path: '/frameworks/frontend',
-    excerpt: 'React is a popular JavaScript library for building user interfaces. Learn how to create interactive web applications with component-based architecture.',
-    category: 'Frameworks'
+    title: 'Basic Navigation',
+    path: '/getting-started/navigation',
+    excerpt: 'Master the OneNote interface and learn essential navigation skills. Understand how to move between notebooks, sections, and pages efficiently.',
+    category: 'Getting Started'
   },
   {
-    title: 'HTML & CSS Basics',
-    path: '/web-development/html-css',
-    excerpt: 'HTML and CSS are the fundamental technologies for building web pages. Learn to structure content with HTML and style it beautifully with CSS.',
-    category: 'Web Development'
+    title: 'Notebooks & Organization',
+    path: '/notebooks',
+    excerpt: 'Learn how to organize your OneNote content with notebooks, sections, and pages. Discover best practices for structuring your digital notes.',
+    category: 'Organization'
   },
   {
-    title: 'Full-Stack Development',
-    path: '/web-development/fullstack',
-    excerpt: 'Full-stack development involves working with both frontend and backend technologies to build complete web applications from start to finish.',
-    category: 'Web Development'
+    title: 'Note-Taking Features',
+    path: '/features',
+    excerpt: 'Explore OneNote\'s powerful note-taking features including text formatting, drawing tools, handwriting recognition, and multimedia support.',
+    category: 'Features'
   },
   {
-    title: 'Mobile Development with React Native',
-    path: '/mobile-development/react-native',
-    excerpt: 'Build native mobile apps for iOS and Android using React Native. Learn how to create cross-platform mobile applications with JavaScript.',
-    category: 'Mobile Development'
+    title: 'Mobile OneNote',
+    path: '/mobile',
+    excerpt: 'Master OneNote on your mobile devices. Learn about mobile-specific features, offline capabilities, and tips for productive note-taking on the go.',
+    category: 'Mobile'
   },
   {
-    title: 'Git Version Control',
-    path: '/devops-tools/git',
-    excerpt: 'Git is a distributed version control system that tracks changes in source code during software development. Essential tool for all developers.',
-    category: 'DevOps Tools'
+    title: 'Media & Attachments',
+    path: '/media',
+    excerpt: 'Work with images, audio, video, and file attachments in OneNote. Learn how to create rich, multimedia notes with various media types.',
+    category: 'Media'
   },
   {
-    title: 'SQL Databases',
-    path: '/data-databases/sql',
-    excerpt: 'Structured Query Language (SQL) is used to communicate with databases. Learn how to store, retrieve, and manipulate data efficiently.',
-    category: 'Data & Databases'
+    title: 'Search & Organization',
+    path: '/search',
+    excerpt: 'Master OneNote\'s powerful search capabilities including OCR, handwriting recognition, and audio transcription to find information quickly.',
+    category: 'Search'
   },
   {
-    title: 'AI and Machine Learning',
-    path: '/ai',
-    excerpt: 'Explore artificial intelligence and machine learning concepts. Learn how to build intelligent applications and understand AI fundamentals.',
-    category: 'AI & ML'
+    title: 'Sharing & Collaboration',
+    path: '/sharing',
+    excerpt: 'Learn how to share OneNote notebooks and collaborate in real-time. Master permission settings, team workflows, and collaborative strategies.',
+    category: 'Collaboration'
+  },
+  {
+    title: 'Settings & Configuration',
+    path: '/settings',
+    excerpt: 'Configure OneNote to work perfectly for your needs. Learn about account settings, sync options, backup strategies, and customization features.',
+    category: 'Settings'
+  },
+  {
+    title: 'OneNote Templates',
+    path: '/templates',
+    excerpt: 'Discover and use OneNote templates to streamline your note-taking. Find templates for meetings, projects, education, and personal organization.',
+    category: 'Templates'
   }
 ];
 

@@ -11,22 +11,22 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://coding-help.vercel.app'),
-  title: 'CodingHelp Wiki - Learn to Code',
-  description: 'A comprehensive wiki for learning programming and coding, created by the CodingHelp community.',
-  keywords: 'programming, coding, tutorial, learn to code, web development, software development',
-  authors: [{ name: 'CodingHelp Community' }],
+  metadataBase: new URL('https://onenote.vercel.app'),
+  title: 'OneNote Wiki - Master Digital Note-Taking',
+  description: 'A comprehensive wiki for mastering Microsoft OneNote, created by the OneNote community.',
+  keywords: 'OneNote, Microsoft OneNote, digital notes, note-taking, productivity, organization, notebooks',
+  authors: [{ name: 'OneNote Community' }],
   openGraph: {
-    title: 'CodingHelp Wiki - Learn to Code',
-    description: 'A comprehensive wiki for learning programming and coding, created by the CodingHelp community.',
-    url: 'https://coding-help.vercel.app',
-    siteName: 'CodingHelp Wiki',
+    title: 'OneNote Wiki - Master Digital Note-Taking',
+    description: 'A comprehensive wiki for mastering Microsoft OneNote, created by the OneNote community.',
+    url: 'https://onenote.vercel.app',
+    siteName: 'OneNote Wiki',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CodingHelp Wiki - Learn to Code',
-    description: 'A comprehensive wiki for learning programming and coding, created by the CodingHelp community.',
+    title: 'OneNote Wiki - Master Digital Note-Taking',
+    description: 'A comprehensive wiki for mastering Microsoft OneNote, created by the OneNote community.',
   },
 };
 
@@ -38,8 +38,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="https://cdn.discordapp.com/avatars/1017655436704481290/5603c2d1480875125ca4ba708eb35c46.png" />
-        <link rel="apple-touch-icon" href="https://cdn.discordapp.com/avatars/1017655436704481290/5603c2d1480875125ca4ba708eb35c46.png" />
+        <link rel="icon" href="https://download.logo.wine/logo/Microsoft_OneNote/Microsoft_OneNote-Logo.wine.png" />
+        <link rel="apple-touch-icon" href="https://download.logo.wine/logo/Microsoft_OneNote/Microsoft_OneNote-Logo.wine.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

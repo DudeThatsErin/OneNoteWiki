@@ -20,12 +20,12 @@ export function Header({ children, className = '' }: HeaderProps) {
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-2">
               <img 
-                src="https://cdn.discordapp.com/avatars/1017655436704481290/5603c2d1480875125ca4ba708eb35c46.png" 
-                alt="CodingHelp Logo" 
+                src="https://download.logo.wine/logo/Microsoft_OneNote/Microsoft_OneNote-Logo.wine.png" 
+                alt="OneNote Logo" 
                 className="w-8 h-8 rounded-lg"
               />
               <span className="font-bold text-xl text-gray-900 dark:text-white">
-                CodingHelp Wiki
+                OneNote Wiki
               </span>
             </Link>
           </div>
@@ -33,10 +33,10 @@ export function Header({ children, className = '' }: HeaderProps) {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
             <Link 
-              href="/project-ideas" 
+              href="/templates" 
               className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
             >
-              Project Ideas
+              Templates
             </Link>
             <Link 
               href="/bot-commands" 
@@ -57,7 +57,7 @@ export function Header({ children, className = '' }: HeaderProps) {
             {/* Social Links */}
             <div className="flex items-center space-x-3 border-l border-gray-200 dark:border-gray-700 pl-6">
               <a
-                href="https://discord.gg/codinghelp"
+                href="https://discord.gg/5kv4bDUkpc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
@@ -66,7 +66,7 @@ export function Header({ children, className = '' }: HeaderProps) {
                 <FontAwesomeIcon icon={faDiscord} className="w-5 h-5" />
               </a>
               <a
-                href="https://reddit.com/r/CodingHelp"
+                href="https://www.reddit.com/r/OneNote/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-orange-600 dark:text-gray-300 dark:hover:text-orange-400 transition-colors"
@@ -121,11 +121,11 @@ export function Header({ children, className = '' }: HeaderProps) {
           <div className="lg:hidden border-t border-gray-200 dark:border-gray-700 py-4">
             <nav className="flex flex-col space-y-4">
               <Link 
-                href="/project-ideas"
+                href="/templates"
                 className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Project Ideas
+                Templates
               </Link>
               <Link 
                 href="/bot-commands"
@@ -148,7 +148,7 @@ export function Header({ children, className = '' }: HeaderProps) {
               {/* Mobile Social Links */}
               <div className="flex items-center space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                 <a
-                  href="https://discord.gg/codinghelp"
+                  href="https://discord.gg/5kv4bDUkpc"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
@@ -157,7 +157,7 @@ export function Header({ children, className = '' }: HeaderProps) {
                   <FontAwesomeIcon icon={faDiscord} className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://reddit.com/r/CodingHelp"
+                  href="https://www.reddit.com/r/OneNote/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-orange-600 dark:text-gray-300 dark:hover:text-orange-400 transition-colors"

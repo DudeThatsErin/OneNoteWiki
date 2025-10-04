@@ -1,29 +1,32 @@
-# CodingHelp Wiki
+# OneNote Wiki
 
-A comprehensive wiki for learning programming and software development, created by the CodingHelp community. 
+A comprehensive wiki for mastering Microsoft OneNote, created by the OneNote community. 
 
-🌐 **Live Site:** [https://coding-help.vercel.app](https://coding-help.vercel.app)  
-💬 **Discord:** [https://discord.gg/geQEUBm](https://discord.gg/geQEUBm)  
-🤝 **Reddit:** [https://reddit.com/r/CodingHelp](https://reddit.com/r/CodingHelp)
+🌐 **Live Site:** [https://onenote.vercel.app](https://onenote.vercel.app)  
+💬 **Discord:** [https://discord.gg/5kv4bDUkpc](https://discord.gg/5kv4bDUkpc)  
+🤝 **Reddit:** [https://www.reddit.com/r/OneNote/](https://www.reddit.com/r/OneNote/)  
+🤖 **OneNote Bot:** [https://github.com/DudeThatsErin/OneNoteBot](https://github.com/DudeThatsErin/OneNoteBot)
 
 ## Features
 
 - 🌙 **Dark/Light Mode Toggle** - Seamless theme switching with system preference detection
 - 📱 **Responsive Design** - Works perfectly on desktop, tablet, and mobile devices
 - 🧭 **Intuitive Navigation** - Sidebar navigation with expandable sections
-- 📚 **Comprehensive Content** - Covers programming fundamentals to advanced topics
-- 🗄️ **Interactive Resource Databases** - 5 searchable databases with 100+ entries
-- 🔍 **Advanced Search & Filtering** - Sort, filter, and search across all database fields
-- 📊 **Professional DataTable Component** - Fullscreen mode, keyboard navigation, accessibility
+- 📚 **Comprehensive OneNote Guide** - From basics to advanced features and organization
+- 📸 **Screenshot-Rich Tutorials** - Visual step-by-step guides with detailed screenshots
+- 🔍 **Advanced Search Tips** - Master OneNote's powerful search and OCR capabilities
+- 📊 **Professional Component Architecture** - 12 reusable components with folder-based structure
 - 🎨 **Modern UI** - Clean, accessible design built with Tailwind CSS
 - ⚡ **Fast Performance** - Built with Next.js 14 and optimized for speed
 - 🔍 **SEO Optimized** - Proper meta tags and structured content
-- 🏗️ **Professional Component Architecture** - 13 reusable components with folder-based structure
 - 📊 **Interactive Statistics** - Dynamic QuickStats with icons across all sections
 - ♿ **Accessibility Enhanced** - Full keyboard navigation, screen reader support, ARIA labels
-- 🎨 **Modern Layout Patterns** - `flex flex-col gap-*` system replacing space utilities
+- 🎨 **Modern Layout Patterns** - `flex flex-col gap-*` system for consistent spacing
 - 🔒 **Type-Safe Development** - Complete TypeScript integration with component-specific types
 - ✅ **100% Build Success** - Enterprise-grade setup with comprehensive testing
+- 📱 **Mobile OneNote Coverage** - iOS and Android app guides with platform-specific tips
+- 🤝 **Collaboration Features** - Real-time sharing and teamwork guides
+- 🎨 **Template Library** - Ready-to-use templates for various use cases
 
 ## Tech Stack
 
@@ -48,8 +51,8 @@ A comprehensive wiki for learning programming and software development, created 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/DudeThatsErin/CodingHelp.git
-cd CodingHelp
+git clone https://github.com/DudeThatsErin/OneNoteWiki.git
+cd OneNoteWiki
 ```
 
 2. Install dependencies:
@@ -246,24 +249,18 @@ export default function ExamplePage() {
 
 The wiki is organized into the following main sections:
 
-- **Getting Started** - Programming fundamentals for beginners 
-- **Programming Languages** - Language-specific guides and tutorials 
-- **Frameworks** - Framework guides and comparisons 
-- **Web Development** - Frontend, backend, and full-stack development 
-- **Mobile Development** - iOS, Android, and cross-platform development 
-- **Data & Databases** - Database design, SQL, and data analysis 
-- **DevOps & Tools** - Development tools, version control, and deployment 
-- **AI & Machine Learning** - AI concepts, tools, and applications
-- **Project Ideas** - Coding project suggestions by language 
-- **Resource Databases** - 5 searchable databases with 130+ programming resources
-  - Programming Languages Database (12+ languages)
-  - Development Tools Database (12+ tools)
-  - Programming Books Database (45+ books including "For Dummies" series and classics)
-  - Learning Platforms Database (12+ platforms)
-  - Practice Platforms Database (12+ coding challenge sites)
-- **Communities** - Developer communities and forums
-- **FAQ** - Common questions and answers 
-- **Bot Commands** - Discord bot command reference 
+- **Getting Started** - OneNote fundamentals for beginners with screenshot guides
+- **Notebooks & Organization** - Master notebook creation, sections, pages, and organization strategies
+- **Note-Taking Features** - Text formatting, drawing, handwriting, tables, and advanced tools
+- **Mobile OneNote** - iOS and Android app guides with platform-specific tips
+- **Media & Attachments** - Images, screenshots, audio, video, and file management
+- **Sharing & Collaboration** - Real-time sharing, permissions, and teamwork features
+- **Search & Organization** - Powerful search, OCR, handwriting recognition, and organization tips
+- **Settings & Customization** - Account settings, sync configuration, backup, and recovery
+- **Templates** - Ready-to-use templates for academic, business, and personal use
+- **Resources** - OneNote versions, keyboard shortcuts, third-party tools, and communities
+- **Help & Support** - Troubleshooting, FAQ, and community resources
+- **Bot Commands** - OneNote Discord bot command reference 
 
 
 ## Contributing
@@ -295,11 +292,12 @@ We welcome contributions from the community! Here's how you can help:
 
 ## Community
 
-Join our vibrant community of developers:
+Join our vibrant community of OneNote users:
 
-- **Discord Server:** Real-time chat, help, and discussions
-- **Reddit Community:** Long-form discussions and Q&A
+- **Discord Server:** Real-time chat, OneNote tips, and discussions
+- **Reddit Community:** Long-form discussions and OneNote Q&A
 - **GitHub Issues:** Bug reports and feature requests
+- **OneNote Bot:** Automated help and commands for Discord
 
 ## Deployment
 
@@ -320,17 +318,18 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-- Built by the CodingHelp community
+- Built by the OneNote community
 - Icons by [Lucide](https://lucide.dev/)
 - Styled with [Tailwind CSS](https://tailwindcss.com/)
 - Powered by [Next.js](https://nextjs.org/) & [Vercel](https://vercel.com/)
+- Special thanks to Microsoft for creating OneNote
 
 ---
 
-**Happy Coding!** 🚀
+**Happy Note-Taking!** 📝
 
 If you find this resource helpful, please consider:
 - ⭐ Starring the repository
 - 💬 Joining our Discord community
 - 🤝 Contributing to the project
-- 📢 Sharing with other developers
+- 📢 Sharing with other OneNote users
