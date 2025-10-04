@@ -2,7 +2,7 @@
 
 A comprehensive wiki for mastering Microsoft OneNote, created by the OneNote community. 
 
-🌐 **Live Site:** [https://onenote.vercel.app](https://onenote.vercel.app)  
+🌐 **Live Site:** [https://onenote-wiki.vercel.app](https://onenote.vercel.app)  
 💬 **Discord:** [https://discord.gg/5kv4bDUkpc](https://discord.gg/5kv4bDUkpc)  
 🤝 **Reddit:** [https://www.reddit.com/r/OneNote/](https://www.reddit.com/r/OneNote/)  
 🤖 **OneNote Bot:** [https://github.com/DudeThatsErin/OneNoteBot](https://github.com/DudeThatsErin/OneNoteBot)
