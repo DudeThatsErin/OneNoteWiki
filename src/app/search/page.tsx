@@ -43,6 +43,8 @@ export default function SearchPage() {
           </h3>
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-6">
             <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <strong>SCREENSHOT HERE OF:</strong> OneNote search interface showing different search options
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -98,9 +100,8 @@ export default function SearchPage() {
           </h3>
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-6">
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              <strong>SCREENSHOT HERE OF:</strong> OneNote search interface showing different search options
+              <strong>SCREENSHOT HERE OF:</strong> Advanced search filters and operators in action
             </p>
-            <img src="/screenshot-search-options.png" alt="OneNote search interface" className="w-full h-auto mb-4" />
           </div>
 
           <FeatureList

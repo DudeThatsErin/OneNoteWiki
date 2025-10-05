@@ -1,0 +1,343 @@
+{
+    "prefix_commands": {
+      "Admin Commands": {
+        "description": "Administrative commands for server management",
+        "icon": "settings",
+        "commands": [
+          {
+            "name": "bot-status",
+            "description": "Pushes an embed to display in the channel about a bot update.",
+            "aliases": [],
+            "usage": "--bot-status <message>",
+            "example": "--bot-status Fixed a bug in the help command"
+          },
+          {
+            "name": "createcommands",
+            "description": "Allows Erin to create the Slash Commands.",
+            "aliases": ["startslash", "create-commands", "cc"],
+            "usage": "--createcommands",
+            "example": "--createcommands"
+          },
+          {
+            "name": "deletecommands",
+            "description": "Allows Erin to delete the Slash Commands.",
+            "aliases": ["endslash", "delete-commands", "dc"],
+            "usage": "--deletecommands",
+            "example": "--deletecommands"
+          },
+          {
+            "name": "server-status",
+            "description": "Pushes an embed to display in the channel about a server update.",
+            "aliases": [],
+            "usage": "--server-status <message>",
+            "example": "--server-status New channels added for discussions"
+          },
+          {
+            "name": "subreddit-status",
+            "description": "Pushes an embed to display in the channel about a subreddit update.",
+            "aliases": [],
+            "usage": "--subreddit-status <message>",
+            "example": "--subreddit-status New rules added to the subreddit"
+          }
+        ]
+      }
+    },
+    "slash_commands": {
+      "Admin Commands": {
+        "description": "Administrative commands for server management",
+        "icon": "settings",
+        "commands": [
+        {
+          "name": "access",
+          "description": "Gives users access to the server by assigning roles.",
+          "aliases": [],
+          "usage": "/access",
+          "example": "/access"
+        },
+        {
+          "name": "access2",
+          "description": "Alternative access command for server role assignment.",
+          "aliases": [],
+          "usage": "/access2",
+          "example": "/access2"
+        },
+        {
+          "name": "clear-suggs",
+          "description": "Clears suggestions from the database.",
+          "aliases": [],
+          "usage": "/clear-suggs",
+          "example": "/clear-suggs"
+        },
+        {
+          "name": "dm",
+          "description": "Sends a direct message to a user.",
+          "aliases": [],
+          "usage": "/dm <user> <message>",
+          "example": "/dm @user Please follow the server rules"
+        },
+        {
+          "name": "server-rules",
+          "description": "Displays or manages server rules.",
+          "aliases": [],
+          "usage": "/server-rules",
+          "example": "/server-rules"
+        },
+        {
+          "name": "welcome",
+          "description": "Manages welcome messages for new members.",
+          "aliases": [],
+          "usage": "/welcome",
+          "example": "/welcome"
+        }
+        ]
+      },
+      "Fun Commands": {
+        "description": "Fun and entertainment commands",
+        "icon": "smile",
+        "commands": [
+        {
+          "name": "8ball",
+          "description": "Ask the magic 8-ball a question!",
+          "aliases": [],
+          "usage": "/8ball [question]",
+          "example": "/8ball Will it rain tomorrow?"
+        },
+        {
+          "name": "choose",
+          "description": "Can't decide? Let me choose for you!",
+          "aliases": [],
+          "usage": "/choose [options separated by commas]",
+          "example": "/choose pizza, burgers, tacos"
+        },
+        {
+          "name": "compliment",
+          "description": "Gives you a nice compliment!",
+          "aliases": [],
+          "usage": "/compliment",
+          "example": "/compliment"
+        },
+        {
+          "name": "dice",
+          "description": "Roll a dice with specified number of sides.",
+          "aliases": [],
+          "usage": "/dice [sides]",
+          "example": "/dice 6"
+        },
+        {
+          "name": "fact",
+          "description": "Get a random interesting fact!",
+          "aliases": [],
+          "usage": "/fact",
+          "example": "/fact"
+        },
+        {
+          "name": "flip",
+          "description": "Flip a coin!",
+          "aliases": [],
+          "usage": "/flip",
+          "example": "/flip"
+        },
+        {
+          "name": "joke",
+          "description": "Get a random joke!",
+          "aliases": [],
+          "usage": "/joke",
+          "example": "/joke"
+        },
+        {
+          "name": "learn",
+          "description": "Learn something new!",
+          "aliases": [],
+          "usage": "/learn",
+          "example": "/learn"
+        },
+        {
+          "name": "meme",
+          "description": "Get a random meme!",
+          "aliases": [],
+          "usage": "/meme",
+          "example": "/meme"
+        },
+        {
+          "name": "quote",
+          "description": "Get an inspirational quote!",
+          "aliases": [],
+          "usage": "/quote",
+          "example": "/quote"
+        },
+        {
+          "name": "riddle",
+          "description": "Get a riddle to solve!",
+          "aliases": [],
+          "usage": "/riddle",
+          "example": "/riddle"
+        },
+        {
+          "name": "roast",
+          "description": "Get a playful roast!",
+          "aliases": [],
+          "usage": "/roast",
+          "example": "/roast"
+        },
+        {
+          "name": "rps",
+          "description": "Play rock, paper, scissors!",
+          "aliases": [],
+          "usage": "/rps [choice]",
+          "example": "/rps rock"
+        },
+        {
+          "name": "spongebob",
+          "description": "Convert text to SpongeBob mocking case!",
+          "aliases": [],
+          "usage": "/spongebob [text]",
+          "example": "/spongebob this is a test"
+        },
+        {
+          "name": "trivia",
+          "description": "Get a trivia question!",
+          "aliases": [],
+          "usage": "/trivia",
+          "example": "/trivia"
+        }
+        ]
+      },
+      "Social Commands": {
+        "description": "Social interaction and community commands",
+        "icon": "heart",
+        "commands": [
+        {
+          "name": "thanks",
+          "description": "Allows our users to thank other members for their help.",
+          "aliases": [],
+          "usage": "/thanks <@username or ID>",
+          "example": "/thanks @username"
+        },
+        {
+          "name": "thanks-leaderboard",
+          "description": "Shows the thanks leaderboard.",
+          "aliases": [],
+          "usage": "/thanks-leaderboard",
+          "example": "/thanks-leaderboard"
+        },
+        {
+          "name": "unthanks",
+          "description": "Remove thanks from a user.",
+          "aliases": [],
+          "usage": "/unthanks <@username or ID>",
+          "example": "/unthanks @username"
+        }
+        ]
+      },
+      "Suggestion Commands": {
+        "description": "Suggestion management commands",
+        "icon": "message-circle",
+        "commands": [
+        {
+          "name": "completed-sugg",
+          "description": "Mark a suggestion as completed.",
+          "aliases": [],
+          "usage": "/completed-sugg [suggestion ID]",
+          "example": "/completed-sugg 123456789"
+        },
+        {
+          "name": "denied-sugg",
+          "description": "Mark a suggestion as denied.",
+          "aliases": [],
+          "usage": "/denied-sugg [suggestion ID]",
+          "example": "/denied-sugg 123456789"
+        },
+        {
+          "name": "edit-sugg",
+          "description": "Edit a suggestion.",
+          "aliases": [],
+          "usage": "/edit-sugg [suggestion ID] [new text]",
+          "example": "/edit-sugg 123456789 Updated suggestion text"
+        },
+        {
+          "name": "prog-sugg",
+          "description": "Mark a suggestion as in progress.",
+          "aliases": [],
+          "usage": "/prog-sugg [suggestion ID]",
+          "example": "/prog-sugg 123456789"
+        },
+        {
+          "name": "status-sugg",
+          "description": "Check the status of a suggestion.",
+          "aliases": [],
+          "usage": "/status-sugg [suggestion ID]",
+          "example": "/status-sugg 123456789"
+        },
+        {
+          "name": "suggestions",
+          "description": "Creates a suggestion!",
+          "aliases": [],
+          "usage": "/suggestions [suggestion here]",
+          "example": "/suggestions I want pudding!"
+        }
+        ]
+      },
+      "Utility Commands": {
+        "description": "Utility and information commands",
+        "icon": "zap",
+        "commands": [
+        {
+          "name": "about",
+          "description": "Information about the bot.",
+          "aliases": [],
+          "usage": "/about",
+          "example": "/about"
+        },
+        {
+          "name": "about-dev",
+          "description": "Information about the bot developer.",
+          "aliases": [],
+          "usage": "/about-dev",
+          "example": "/about-dev"
+        },
+        {
+          "name": "avatar",
+          "description": "Get a user's avatar.",
+          "aliases": [],
+          "usage": "/avatar [user]",
+          "example": "/avatar @username"
+        },
+        {
+          "name": "botinvite",
+          "description": "Provides an invite link for the bot.",
+          "aliases": [],
+          "usage": "/botinvite",
+          "example": "/botinvite"
+        },
+        {
+          "name": "help",
+          "description": "This allows users to find out more information on all of our commands.",
+          "aliases": [],
+          "usage": "/help or /help [command name here]",
+          "example": "/help or /help 8ball"
+        },
+        {
+          "name": "invite",
+          "description": "Get an invite link for the bot.",
+          "aliases": [],
+          "usage": "/invite",
+          "example": "/invite"
+        },
+        {
+          "name": "ping",
+          "description": "Check the bot's latency.",
+          "aliases": [],
+          "usage": "/ping",
+          "example": "/ping"
+        },
+        {
+          "name": "wiki",
+          "description": "Links to our wiki",
+          "aliases": [],
+          "usage": "/wiki",
+          "example": "/wiki"
+        }
+        ]
+      }
+    }
+}

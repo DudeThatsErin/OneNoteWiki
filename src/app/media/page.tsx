@@ -27,28 +27,32 @@ export default function MediaPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <InfoCard
             title="Images & Pictures"
-            description="Insert photos, screenshots, and drawings"
             icon={<Image className="w-6 h-6" />}
             variant="purple"
-          />
+          >
+            Insert photos, screenshots, and drawings
+          </InfoCard>
           <InfoCard
             title="Audio Recordings"
-            description="Record voice notes and audio clips"
             icon={<Mic className="w-6 h-6" />}
             variant="blue"
-          />
+          >
+            Record voice notes and audio clips
+          </InfoCard>
           <InfoCard
             title="Video Content"
-            description="Embed videos and screen recordings"
             icon={<Video className="w-6 h-6" />}
             variant="green"
-          />
+          >
+            Embed videos and screen recordings
+          </InfoCard>
           <InfoCard
             title="File Attachments"
-            description="Attach documents, PDFs, and other files"
             icon={<FileText className="w-6 h-6" />}
             variant="orange"
-          />
+          >
+            Attach documents, PDFs, and other files
+          </InfoCard>
         </div>
 
         {/* Working with Images */}
@@ -65,12 +69,12 @@ export default function MediaPage() {
           <FeatureList
             title="Image Features"
             features={[
-              "Insert images from files, web, or camera",
-              "Drag and drop images directly into pages",
-              "Resize and position images anywhere on the page",
-              "Add alt text for accessibility",
-              "Extract text from images (OCR)",
-              "Copy text from pictures"
+              { title: "Insert images from files, web, or camera", description: "Multiple ways to add images to your notes" },
+              { title: "Drag and drop images directly into pages", description: "Simple drag-and-drop functionality" },
+              { title: "Resize and position images anywhere on the page", description: "Full control over image placement" },
+              { title: "Add alt text for accessibility", description: "Make your notes accessible to all users" },
+              { title: "Extract text from images (OCR)", description: "Built-in optical character recognition" },
+              { title: "Copy text from pictures", description: "Extract text content from any image" }
             ]}
           />
 
@@ -93,12 +97,12 @@ export default function MediaPage() {
           <FeatureList
             title="Audio Capabilities"
             features={[
-              "Record audio directly in OneNote",
-              "Sync audio with typed notes",
-              "Playback controls with timestamps",
-              "Search within audio transcriptions",
-              "Export audio recordings",
-              "Link audio to specific text sections"
+              { title: "Record audio directly in OneNote", description: "Built-in recording functionality" },
+              { title: "Sync audio with typed notes", description: "Audio syncs with your written content" },
+              { title: "Playback controls with timestamps", description: "Navigate audio with precise timing" },
+              { title: "Search within audio transcriptions", description: "Find content in audio recordings" },
+              { title: "Export audio recordings", description: "Save audio files for external use" },
+              { title: "Link audio to specific text sections", description: "Connect audio to relevant notes" }
             ]}
           />
 
@@ -121,12 +125,12 @@ export default function MediaPage() {
           <FeatureList
             title="Supported File Types"
             features={[
-              "Microsoft Office documents (Word, Excel, PowerPoint)",
-              "PDF files with preview and annotation",
-              "Text files and code snippets",
-              "Spreadsheets with live data",
-              "Presentations and slide decks",
-              "Archive files (ZIP, RAR)"
+              { title: "Microsoft Office documents (Word, Excel, PowerPoint)", description: "Full support for Office file formats" },
+              { title: "PDF files with preview and annotation", description: "View and annotate PDF documents" },
+              { title: "Text files and code snippets", description: "Plain text and source code files" },
+              { title: "Spreadsheets with live data", description: "Interactive Excel spreadsheets" },
+              { title: "Presentations and slide decks", description: "PowerPoint and other presentation formats" },
+              { title: "Archive files (ZIP, RAR)", description: "Compressed file archives" }
             ]}
           />
 

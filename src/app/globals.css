@@ -26,7 +26,7 @@
   }
   
   .content-list.marker-green > li::marker {
-    color: rgb(34 197 94); /* green-500 */
+    color: var(--onenote-purple-600);
   }
   
   .content-list.marker-purple > li::marker {
@@ -42,9 +42,23 @@
   }
 }
 
-/* Custom font family - needs to be global */
+/* Custom font family and default text colors - needs to be global */
 body {
   font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  @apply text-gray-900 dark:text-white;
+}
+
+/* Default text color classes for consistent usage */
+.text-default {
+  @apply text-gray-900 dark:text-white;
+}
+
+.text-muted {
+  @apply text-gray-600 dark:text-gray-300;
+}
+
+.text-subtle {
+  @apply text-gray-500 dark:text-gray-400;
 }
 
 /* Custom scrollbar - can't be done with Tailwind classes */
@@ -62,4 +76,90 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-400 dark:bg-gray-500;
+}
+
+@layer utilities {
+  /* OneNote Purple Text Colors */
+  .text-onenote-50 { color: var(--onenote-purple-50); }
+  .text-onenote-100 { color: var(--onenote-purple-100); }
+  .text-onenote-200 { color: var(--onenote-purple-200); }
+  .text-onenote-300 { color: var(--onenote-purple-300); }
+  .text-onenote-400 { color: var(--onenote-purple-400); }
+  .text-onenote-500 { color: var(--onenote-purple-500); }
+  .text-onenote-600 { color: var(--onenote-purple-600); }
+  .text-onenote-700 { color: var(--onenote-purple-700); }
+  .text-onenote-800 { color: var(--onenote-purple-800); }
+  .text-onenote-900 { color: var(--onenote-purple-900); }
+  .text-onenote-950 { color: var(--onenote-purple-950); }
+
+  .color-dark-purple { color: rgba(24, 3, 60, 0.846); }
+  .border-dark-purple { border-color: rgba(24, 3, 60, 0.846); }
+
+  /* OneNote Purple Background Colors */
+  .bg-dark-purple { background-color: rgba(24, 3, 60, 0.846); }
+  .bg-almost-black-purple { background-color: #1a142b; }
+  .bg-onenote-50 { background-color: var(--onenote-purple-50); }
+  .bg-onenote-100 { background-color: var(--onenote-purple-100); }
+  .bg-onenote-200 { background-color: var(--onenote-purple-200); }
+  .bg-onenote-300 { background-color: var(--onenote-purple-300); }
+  .bg-onenote-400 { background-color: var(--onenote-purple-400); }
+  .bg-onenote-500 { background-color: var(--onenote-purple-500); }
+  .bg-onenote-600 { background-color: var(--onenote-purple-600); }
+  .bg-onenote-700 { background-color: var(--onenote-purple-700); }
+  .bg-onenote-800 { background-color: var(--onenote-purple-800); }
+  .bg-onenote-900 { background-color: var(--onenote-purple-900); }
+  .bg-onenote-950 { background-color: var(--onenote-purple-950); }
+
+  /* OneNote Purple Border Colors */
+  .border-onenote-50 { border-color: var(--onenote-purple-50); }
+  .border-onenote-100 { border-color: var(--onenote-purple-100); }
+  .border-onenote-200 { border-color: var(--onenote-purple-200); }
+  .border-onenote-300 { border-color: var(--onenote-purple-300); }
+  .border-onenote-400 { border-color: var(--onenote-purple-400); }
+  .border-onenote-500 { border-color: var(--onenote-purple-500); }
+  .border-onenote-600 { border-color: var(--onenote-purple-600); }
+  .border-onenote-700 { border-color: var(--onenote-purple-700); }
+  .border-onenote-800 { border-color: var(--onenote-purple-800); }
+  .border-onenote-900 { border-color: var(--onenote-purple-900); }
+  .border-onenote-950 { border-color: var(--onenote-purple-950); }
+
+  /* OneNote Purple Ring Colors */
+  .ring-onenote-50 { --tw-ring-color: var(--onenote-purple-50); }
+  .ring-onenote-100 { --tw-ring-color: var(--onenote-purple-100); }
+  .ring-onenote-200 { --tw-ring-color: var(--onenote-purple-200); }
+  .ring-onenote-300 { --tw-ring-color: var(--onenote-purple-300); }
+  .ring-onenote-400 { --tw-ring-color: var(--onenote-purple-400); }
+  .ring-onenote-500 { --tw-ring-color: var(--onenote-purple-500); }
+  .ring-onenote-600 { --tw-ring-color: var(--onenote-purple-600); }
+  .ring-onenote-700 { --tw-ring-color: var(--onenote-purple-700); }
+  .ring-onenote-800 { --tw-ring-color: var(--onenote-purple-800); }
+  .ring-onenote-900 { --tw-ring-color: var(--onenote-purple-900); }
+  .ring-onenote-950 { --tw-ring-color: var(--onenote-purple-950); }
+
+  /* Dark Mode Responsive OneNote Colors */
+  .text-onenote-light { @apply text-onenote-600 dark:text-onenote-400; }
+  .text-onenote-primary { @apply text-onenote-700 dark:text-onenote-300; }
+  .text-onenote-secondary { @apply text-onenote-600 dark:text-onenote-400; }
+  .text-onenote-muted { @apply text-onenote-500 dark:text-onenote-500; }
+
+  .bg-onenote-light { @apply bg-onenote-50 dark:bg-onenote-900 dark:bg-opacity-20; }
+  .bg-onenote-primary { @apply bg-onenote-100 dark:bg-onenote-800 dark:bg-opacity-30; }
+  .bg-onenote-secondary { @apply bg-onenote-200 dark:bg-onenote-700 dark:bg-opacity-40; }
+
+  .border-onenote-light { @apply border-onenote-200 dark:border-onenote-700; }
+  .border-onenote-primary { @apply border-onenote-300 dark:border-onenote-600; }
+
+  /* Hover States */
+  .hover\:text-onenote-light:hover { @apply text-onenote-700 dark:text-onenote-300; }
+  .hover\:bg-onenote-light:hover { @apply bg-onenote-100 dark:bg-onenote-800 dark:bg-opacity-40; }
+  .hover\:border-onenote-light:hover { @apply border-onenote-300 dark:border-onenote-600; }
+
+  /* Purple accent utilities for strategic use */
+  .accent-purple {
+    @apply text-onenote-600 dark:text-onenote-400;
+  }
+  
+  .accent-purple-bg {
+    @apply bg-onenote-50 dark:bg-onenote-900 dark:bg-opacity-20 border-onenote-200 dark:border-onenote-800;
+  }
 }

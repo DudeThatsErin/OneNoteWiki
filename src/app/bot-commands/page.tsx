@@ -1,158 +1,137 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, ChevronRight, Bot, MessageCircle, Hash, Users, Settings, HelpCircle, Github } from 'lucide-react';
+import { ChevronDown, ChevronRight, Bot, MessageCircle, Hash, Users, Settings, HelpCircle, Github, Zap, Smile, Heart } from 'lucide-react';
 import { PageLayout } from '@/components/PageLayout';
 import { QuickStats } from '@/components/QuickStats';
 import { InfoCard } from '@/components/InfoCard';
 
-const commandCategories = [
-  {
-    id: 'help',
-    title: 'Help & Support Commands',
-    icon: <HelpCircle className="w-5 h-5" />,
-    description: 'Get help with OneNote questions and find resources',
-    commands: [
-      {
-        name: '/ask',
-        description: 'Ask a OneNote question and get help from the community',
-        usage: '/ask [category] [question]',
-        example: '/ask organization How do I structure my notebooks?',
-        parameters: [
-          { name: 'category', type: 'string', required: true, description: 'OneNote category (organization, features, sync, mobile, etc.)' },
-          { name: 'question', type: 'string', required: true, description: 'Your OneNote question' }
-        ]
-      },
-      {
-        name: '/resources',
-        description: 'Get OneNote resources and tutorials for specific topics',
-        usage: '/resources [topic]',
-        example: '/resources templates',
-        parameters: [
-          { name: 'topic', type: 'string', required: true, description: 'OneNote topic (templates, organization, mobile, etc.)' }
-        ]
-      },
-      {
-        name: '/docs',
-        description: 'Get official Microsoft OneNote documentation links',
-        usage: '/docs [feature]',
-        example: '/docs handwriting',
-        parameters: [
-          { name: 'feature', type: 'string', required: true, description: 'OneNote feature or topic' }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'onenote',
-    title: 'OneNote Utility Commands',
-    icon: <MessageCircle className="w-5 h-5" />,
-    description: 'Useful tools for OneNote tips, templates, and organization',
-    commands: [
-      {
-        name: '/template',
-        description: 'Get OneNote templates for various use cases',
-        usage: '/template [category]',
-        example: '/template meeting',
-        parameters: [
-          { name: 'category', type: 'string', required: true, description: 'Template category (meeting, academic, personal, etc.)' },
-        ]
-      },
-      {
-        name: '/tips',
-        description: 'Get OneNote tips and best practices',
-        usage: '/tips [topic]',
-        example: '/tips organization',
-        parameters: [
-          { name: 'topic', type: 'string', required: true, description: 'OneNote topic for tips' }
-        ]
-      },
-      {
-        name: '/shortcuts',
-        description: 'Get keyboard shortcuts for OneNote',
-        usage: '/shortcuts [platform]',
-        example: '/shortcuts windows',
-        parameters: [
-          { name: 'platform', type: 'string', required: false, description: 'Platform: windows, mac, mobile' }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'community',
-    title: 'Community Commands',
-    icon: <Users className="w-5 h-5" />,
-    description: 'Interact with the community and manage your profile',
-    commands: [
-      {
-        name: '/profile',
-        description: 'View or update your OneNote user profile',
-        usage: '/profile [action] [details]',
-        example: '/profile set experience advanced',
-        parameters: [
-          { name: 'action', type: 'string', required: true, description: 'Action: view, set, or update' },
-          { name: 'details', type: 'string', required: false, description: 'Profile details to update' }
-        ]
-      },
-      {
-        name: '/leaderboard',
-        description: 'View community leaderboards for helpful OneNote users',
-        usage: '/leaderboard [type]',
-        example: '/leaderboard weekly',
-        parameters: [
-          { name: 'type', type: 'string', required: false, description: 'Leaderboard type: daily, weekly, monthly, all-time' }
-        ]
-      },
-      {
-        name: '/thanks',
-        description: 'Thank someone for their OneNote help',
-        usage: '/thanks @user [message]',
-        example: '/thanks @helper Thanks for the organization tips!',
-        parameters: [
-          { name: 'user', type: 'user', required: true, description: 'User to thank' },
-          { name: 'message', type: 'string', required: false, description: 'Optional thank you message' }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'utility',
-    title: 'Utility Commands',
-    icon: <Settings className="w-5 h-5" />,
-    description: 'General utility commands for server management and information',
-    commands: [
-      {
-        name: '/ping',
-        description: 'Check bot response time and status',
-        usage: '/ping',
-        example: '/ping',
-        parameters: []
-      },
-      {
-        name: '/stats',
-        description: 'View server statistics and bot information',
-        usage: '/stats [type]',
-        example: '/stats server',
-        parameters: [
-          { name: 'type', type: 'string', required: false, description: 'Stats type: server, bot, or user' }
-        ]
-      },
-      {
-        name: '/suggest',
-        description: 'Suggest new features or improvements for the OneNote bot',
-        usage: '/suggest [suggestion]',
-        example: '/suggest Add more OneNote template categories',
-        parameters: [
-          { name: 'suggestion', type: 'string', required: true, description: 'Your suggestion or feature request' }
-        ]
-      }
-    ]
+interface BotCommand {
+  name: string;
+  description: string;
+  aliases: string[];
+  usage: string;
+  example: string;
+}
+
+interface CategoryData {
+  description: string;
+  icon: string;
+  commands: BotCommand[];
+}
+
+interface CommandData {
+  prefix_commands: {
+    [category: string]: CategoryData;
+  };
+  slash_commands: {
+    [category: string]: CategoryData;
+  };
+}
+
+interface CommandCategory {
+  id: string;
+  title: string;
+  icon: JSX.Element;
+  description: string;
+  commands: BotCommand[];
+  type: 'prefix' | 'slash';
+}
+
+// Function to get icon for category
+const getCategoryIcon = (iconName: string, type: 'prefix' | 'slash'): JSX.Element => {
+  const name = iconName?.toLowerCase() || '';
+  
+  switch (name) {
+    case 'settings':
+      return <Settings className="w-5 h-5" />;
+    case 'smile':
+      return <Smile className="w-5 h-5" />;
+    case 'heart':
+      return <Heart className="w-5 h-5" />;
+    case 'message-circle':
+      return <MessageCircle className="w-5 h-5" />;
+    case 'zap':
+      return <Zap className="w-5 h-5" />;
+    default:
+      return type === 'prefix' ? <Hash className="w-5 h-5" /> : <Bot className="w-5 h-5" />;
   }
-];
+};
+
+
+// Function to process command data into categories
+const processCommandData = (data: CommandData): CommandCategory[] => {
+  const categories: CommandCategory[] = [];
+  
+  // Validate data structure
+  if (!data || typeof data !== 'object') {
+    return categories;
+  }
+  
+  // Process prefix commands
+  if (data.prefix_commands && typeof data.prefix_commands === 'object') {
+    Object.entries(data.prefix_commands).forEach(([categoryName, categoryData]) => {
+      if (categoryData && categoryData.commands && Array.isArray(categoryData.commands)) {
+        categories.push({
+          id: `prefix-${categoryName.toLowerCase().replace(/\s+/g, '-')}`,
+          title: `${categoryName} (Prefix Commands)`,
+          icon: getCategoryIcon(categoryData.icon, 'prefix'),
+          description: categoryData.description || 'No description available',
+          commands: categoryData.commands,
+          type: 'prefix'
+        });
+      }
+    });
+  }
+  
+  // Process slash commands
+  if (data.slash_commands && typeof data.slash_commands === 'object') {
+    Object.entries(data.slash_commands).forEach(([categoryName, categoryData]) => {
+      if (categoryData && categoryData.commands && Array.isArray(categoryData.commands)) {
+        categories.push({
+          id: `slash-${categoryName.toLowerCase().replace(/\s+/g, '-')}`,
+          title: `${categoryName} (Slash Commands)`,
+          icon: getCategoryIcon(categoryData.icon, 'slash'),
+          description: categoryData.description || 'No description available',
+          commands: categoryData.commands,
+          type: 'slash'
+        });
+      }
+    });
+  }
+  
+  return categories;
+};
 
 export default function BotCommandsPage() {
+  const [commandData, setCommandData] = useState<CommandData | null>(null);
+  const [categories, setCategories] = useState<CommandCategory[]>([]);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadCommands = async () => {
+      try {
+        const response = await fetch('/command-list.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setCommandData(data);
+        const processedCategories = processCommandData(data);
+        setCategories(processedCategories);
+      } catch (error) {
+        console.error('Failed to load bot commands:', error);
+        // Set empty categories to show the error state
+        setCategories([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadCommands();
+  }, []);
 
   const toggleCategory = (categoryId: string) => {
     setExpandedCategories(prev => 
@@ -174,19 +153,14 @@ export default function BotCommandsPage() {
           <div className="text-4xl">🤖</div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Discord Bot Commands</h1>
-            <div className="flex items-center gap-2">
-              <span className="px-3 py-1 bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300 rounded-full text-sm font-medium">
-                Coming Soon
-              </span>
-              <p className="text-gray-600 dark:text-gray-300">
-                OneNote Discord Bot command reference
-              </p>
-            </div>
+            <p className="text-gray-600 dark:text-gray-300">
+              OneNote Discord Bot command reference
+            </p>
           </div>
         </div>
         <p className="text-lg text-gray-600 dark:text-gray-300">
-          The OneNote Discord Bot is currently in development! Here's a preview of the commands 
-          that will be available to help you with OneNote questions, templates, tips, and community interaction.
+          Our OneNote Discord Bot provides helpful commands for server management, fun activities, 
+          social interaction, suggestions, and utility functions. Browse the categories below to find the commands you need.
         </p>
       </div>
 
@@ -196,16 +170,16 @@ export default function BotCommandsPage() {
           <Bot className="w-8 h-8 text-blue-600 mt-1" />
           <div className="flex-1">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              About CodingHelp Bot
+              About OneNote Bot
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Our Discord bot is designed to enhance the coding help experience by providing instant access to 
-              resources, code formatting, explanations, and community features. Built with modern Discord.js 
-              and integrated with our wiki content.
+              Our Discord bot is designed to enhance the OneNote community experience by providing instant access to 
+              OneNote resources, templates, tips, and community features. Built with modern Discord.js 
+              and integrated with our OneNote wiki content.
             </p>
             <div className="flex items-center space-x-4">
               <a
-                href="https://github.com/DudeThatsErin/CodingHelpBot"
+                href="https://github.com/DudeThatsErin/OneNoteBot"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
@@ -227,8 +201,25 @@ export default function BotCommandsPage() {
           Command Categories
         </h2>
         
-        <div className="flex flex-col gap-4 md:gap-6">
-          {commandCategories.map((category) => {
+        {loading ? (
+          <div className="text-center py-8">
+            <p className="text-gray-600 dark:text-gray-300">Loading commands...</p>
+          </div>
+        ) : categories.length === 0 ? (
+          <div className="text-center py-8">
+            <p className="text-red-600 dark:text-red-400">Failed to load bot commands. Please check the console for errors.</p>
+            {commandData && (
+              <details className="mt-4 text-left">
+                <summary className="cursor-pointer text-blue-600 dark:text-blue-400">Show raw data</summary>
+                <pre className="mt-2 p-4 bg-gray-100 dark:bg-gray-800 rounded text-xs overflow-auto">
+                  {JSON.stringify(commandData, null, 2)}
+                </pre>
+              </details>
+            )}
+          </div>
+        ) : (
+          <div className="flex flex-col gap-4 md:gap-6">
+            {categories.map((category) => {
             const isExpanded = expandedCategories.includes(category.id);
             
             return (
@@ -239,7 +230,7 @@ export default function BotCommandsPage() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="text-blue-600">{category.icon}</div>
+                      <div className="text-gray-700 dark:text-gray-300" suppressHydrationWarning>{category.icon}</div>
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           {category.title}
@@ -300,28 +291,16 @@ export default function BotCommandsPage() {
                               </code>
                             </div>
                             
-                            {command.parameters.length > 0 && (
+                            {command.aliases && command.aliases.length > 0 && (
                               <div>
                                 <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">
-                                  Parameters:
+                                  Aliases:
                                 </h4>
-                                <div className="flex flex-col gap-2">
-                                  {command.parameters.map((param, paramIndex) => (
-                                    <div key={paramIndex} className="flex items-start gap-3 text-sm">
-                                      <code className="text-blue-600 dark:text-blue-400 font-mono">
-                                        {param.name}
-                                      </code>
-                                      <span className={`px-2 py-0.5 rounded text-xs font-medium ${
-                                        param.required 
-                                          ? 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300'
-                                          : 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
-                                      }`}>
-                                        {param.required ? 'required' : 'optional'}
-                                      </span>
-                                      <span className="text-gray-600 dark:text-gray-300">
-                                        {param.description}
-                                      </span>
-                                    </div>
+                                <div className="flex flex-wrap gap-2">
+                                  {command.aliases.map((alias, aliasIndex) => (
+                                    <code key={aliasIndex} className="text-xs bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-gray-800 dark:text-gray-200">
+                                      {alias}
+                                    </code>
                                   ))}
                                 </div>
                               </div>
@@ -335,7 +314,8 @@ export default function BotCommandsPage() {
               </div>
             );
           })}
-        </div>
+          </div>
+        )}
       </section>
 
       {/* Development Status */}
@@ -344,8 +324,8 @@ export default function BotCommandsPage() {
           🚧 Development Status
         </h3>
         <p className="text-yellow-800 dark:text-yellow-200 mb-4">
-          The CodingHelp Discord Bot is currently under active development. We're working hard to bring 
-          these features to the community as soon as possible!
+          The OneNote Discord Bot is currently under active development. We're working hard to bring 
+          these features to the OneNote community as soon as possible!
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -365,7 +345,7 @@ export default function BotCommandsPage() {
             </h4>
             <ul className="text-yellow-800 dark:text-yellow-200 text-sm [&>li]:mb-1">
               <li>• Help and resource commands</li>
-              <li>• Code formatting and explanation</li>
+              <li>• OneNote template generation</li>
               <li>• Community interaction features</li>
               <li>• Beta testing with community</li>
             </ul>
@@ -379,11 +359,11 @@ export default function BotCommandsPage() {
           🤝 Get Involved
         </h3>
         <p className="text-gray-600 dark:text-gray-300 mb-4">
-          Want to help shape the CodingHelp Discord Bot? We welcome contributions and feedback from the community!
+          Want to help shape the OneNote Discord Bot? We welcome contributions and feedback from the community!
         </p>
         <div className="flex flex-wrap gap-3">
           <a
-            href="https://github.com/DudeThatsErin/CodingHelpBot"
+            href="https://github.com/DudeThatsErin/OneNoteBot"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
@@ -392,7 +372,7 @@ export default function BotCommandsPage() {
             <span>Contribute on GitHub</span>
           </a>
           <a
-            href="https://discord.gg/geQEUBm"
+            href="https://discord.gg/5kv4bDUkpc"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"

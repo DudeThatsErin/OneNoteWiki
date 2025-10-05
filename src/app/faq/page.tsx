@@ -145,27 +145,27 @@ export default function FAQPage() {
 
         {/* Still Have Questions */}
         <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
+          <h3 className="text-lg font-semibold text-purple-900 dark:text-purple-100 mb-4">
             Still Have Questions?
           </h3>
-          <p className="text-blue-800 dark:text-blue-200 mb-4">
+          <p className="text-purple-800 dark:text-purple-200 mb-4">
             Can't find the answer you're looking for? Our community is here to help! 
-            Join our Discord server or visit our subreddit to get personalized help from experienced developers.
+            Join our Discord server or visit our subreddit to get personalized help from OneNote experts.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="https://discord.gg/geQEUBm"
+              href="https://discord.gg/5kv4bDUkpc"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+              className="inline-flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-colors"
             >
               💬 Ask on Discord
             </a>
             <a
-              href="https://reddit.com/r/CodingHelp"
+              href="https://reddit.com/r/OneNote"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+              className="inline-flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-colors"
             >
               🤝 Post on Reddit
             </a>

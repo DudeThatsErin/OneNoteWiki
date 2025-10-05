@@ -6,6 +6,7 @@ import { useTheme } from '@/contexts/ThemeContext';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faReddit } from '@fortawesome/free-brands-svg-icons';
+import { SearchButton } from '@/components/SearchButton';
 import { HeaderProps } from './types';
 
 export function Header({ children, className = '' }: HeaderProps) {
@@ -43,9 +44,6 @@ export function Header({ children, className = '' }: HeaderProps) {
               className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors flex items-center space-x-1"
             >
               <span>Bot Commands</span>
-              <span className="text-xs px-2 py-0.5 bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300 rounded-full">
-                Soon
-              </span>
             </Link>
             <Link 
               href="/resources" 
@@ -53,6 +51,11 @@ export function Header({ children, className = '' }: HeaderProps) {
             >
               Resources
             </Link>
+            
+            {/* Search */}
+            <div className="flex items-center">
+              <SearchButton />
+            </div>
             
             {/* Social Links */}
             <div className="flex items-center space-x-3 border-l border-gray-200 dark:border-gray-700 pl-6">
@@ -144,6 +147,11 @@ export function Header({ children, className = '' }: HeaderProps) {
               >
                 Resources
               </Link>
+              
+              {/* Mobile Search */}
+              <div className="pt-2">
+                <SearchButton />
+              </div>
               
               {/* Mobile Social Links */}
               <div className="flex items-center space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700">

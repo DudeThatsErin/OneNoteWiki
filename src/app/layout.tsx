@@ -4,9 +4,9 @@ import './globals.css';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import { SearchProvider } from '@/contexts/SearchContext';
 import { SearchModal } from '@/components/SearchModal';
-import Header from '@/components/Header';
-import Sidebar from '@/components/Sidebar';
-import Footer from '@/components/Footer';
+import { Header } from '@/components/Header';
+import { Sidebar } from '@/components/Sidebar';
+import { Footer } from '@/components/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -66,15 +66,17 @@ export default function RootLayout({
         <SpeedInsights />
         <ThemeProvider>
           <SearchProvider>
-            <div className="min-h-screen bg-white dark:bg-gray-900 flex flex-col">
-              <Header />
-              <div className="flex flex-1">
-                <Sidebar />
-                <main className="flex-1 p-2 sm:p-4 lg:p-6 overflow-y-auto">
+            <div className="min-h-screen bg-white dark:bg-almost-black-purple flex">
+              <div className="w-64 bg-white dark:bg-dark-purple border-r border-dark-purple dark:border-dark-purple">
+                <Sidebar className='fixed top-0 left-0 w-64 overflow-y-auto' />
+              </div>
+              <div className="flex-1 flex flex-col">
+                <Header />
+                <main className="flex-1 p-2 sm:p-4 lg:p-6 overflow-auto">
                   {children}
                 </main>
+                <Footer />
               </div>
-              <Footer />
             </div>
             <SearchModal />
           </SearchProvider>
