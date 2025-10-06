@@ -2,12 +2,14 @@ import { PageLayout } from '@/components/PageLayout';
 import { QuickStats } from '@/components/QuickStats';
 import { InfoCard } from '@/components/InfoCard';
 import { FeatureList } from '@/components/FeatureList';
+import { FileText } from 'lucide-react';
 
 export default function TemplatesPage() {
   return (
     <PageLayout
       title="OneNote Templates"
       description="Discover and use professional templates to jumpstart your note-taking for academic, business, and personal use."
+      icon={<FileText className="w-8 h-8 text-purple-600" />}
     >
       <div className="flex flex-col gap-8">
         {/* Hero Section */}

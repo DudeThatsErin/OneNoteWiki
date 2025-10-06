@@ -157,12 +157,12 @@ export default function SharingPage() {
           <FeatureList
             title="Collaboration Capabilities"
             features={[
-              "See who's currently viewing or editing pages",
-              "Real-time cursor tracking and user presence",
-              "Automatic conflict resolution for simultaneous edits",
-              "Live typing indicators and user avatars",
-              "Instant synchronization across all devices",
-              "Version history with author attribution"
+              { title: "See who's currently viewing or editing pages", description: "Track active collaborators in real-time" },
+              { title: "Real-time cursor tracking and user presence", description: "See where others are working" },
+              { title: "Automatic conflict resolution for simultaneous edits", description: "Seamless handling of concurrent changes" },
+              { title: "Live typing indicators and user avatars", description: "Visual feedback for active collaboration" },
+              { title: "Instant synchronization across all devices", description: "Changes appear immediately everywhere" },
+              { title: "Version history with author attribution", description: "Track who made what changes and when" }
             ]}
           />
 
@@ -265,12 +265,12 @@ export default function SharingPage() {
           <FeatureList
             title="Security Features"
             features={[
-              "Password protection for sensitive sections",
-              "Expiring share links with time limits",
-              "Organization-only sharing restrictions",
-              "Audit logs for access and changes",
-              "Data encryption in transit and at rest",
-              "Compliance with enterprise security policies"
+              { title: "Password protection for sensitive sections", description: "Secure sensitive content with passwords" },
+              { title: "Expiring share links with time limits", description: "Control access duration with automatic expiration" },
+              { title: "Organization-only sharing restrictions", description: "Limit sharing to your organization members" },
+              { title: "Audit logs for access and changes", description: "Track who accessed and modified content" },
+              { title: "Data encryption in transit and at rest", description: "Enterprise-grade security for all data" },
+              { title: "Compliance with enterprise security policies", description: "Meet organizational security requirements" }
             ]}
           />
 

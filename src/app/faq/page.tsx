@@ -132,6 +132,7 @@ export default function FAQPage() {
     <PageLayout
       title="Frequently Asked Questions"
       description="Find answers to the most common questions about programming, learning to code, and using this wiki effectively."
+      icon={<HelpCircle className="w-8 h-8 text-purple-600" />}
     >
         {/* FAQ Items */}
           {faqData.map((faq, index) => (

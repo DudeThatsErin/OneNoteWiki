@@ -1,21 +1,23 @@
 import { PageLayout } from '@/components/PageLayout';
 import { QuickStats } from '@/components/QuickStats';
 import { InfoCard } from '@/components/InfoCard';
+import { BookOpen } from 'lucide-react';
 
 export default function NotebooksPage() {
   return (
     <PageLayout
       title="Notebooks & Organization"
-      description="Master the art of organizing your digital notes with OneNote's powerful notebook structure."
+      description="Learn how to create, organize, and manage your OneNote notebooks for maximum productivity."
+      icon={<BookOpen className="w-8 h-8 text-purple-600" />}
     >
       <div className="flex flex-col gap-8">
         {/* Hero Section */}
         <div className="text-center py-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Notebooks & Organization
+            Notebooks & Organisation
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Learn how to create, organize, and manage your OneNote notebooks for maximum productivity.
+            Learn how to create, organise, and manage your OneNote notebooks for maximum productivity.
           </p>
         </div>
 

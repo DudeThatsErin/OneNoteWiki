@@ -1,12 +1,14 @@
 import { PageLayout } from '@/components/PageLayout';
 import { InfoCard } from '@/components/InfoCard';
 import { Callout } from '@/components/Callout';
+import { HelpCircle } from 'lucide-react';
 
 export default function HelpPage() {
   return (
     <PageLayout
       title="Help & Support"
       description="Get help with OneNote, find answers to common questions, and connect with the OneNote community."
+      icon={<HelpCircle className="w-8 h-8 text-purple-600" />}
     >
       <div className="flex flex-col gap-8">
         <div className="prose prose-lg dark:prose-invert max-w-none">

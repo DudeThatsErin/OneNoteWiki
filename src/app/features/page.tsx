@@ -1,12 +1,14 @@
 import { PageLayout } from '@/components/PageLayout';
 import { QuickStats } from '@/components/QuickStats';
 import { FeatureList } from '@/components/FeatureList';
+import { PenTool } from 'lucide-react';
 
 export default function FeaturesPage() {
   return (
     <PageLayout
       title="Note-Taking Features"
-      description="Discover OneNote's powerful features for creating rich, interactive notes with text, drawings, and multimedia content."
+      description="Discover OneNote's powerful features for text formatting, drawing, handwriting recognition, and advanced note-taking capabilities."
+      icon={<PenTool className="w-8 h-8 text-purple-600" />}
     >
       <div className="flex flex-col gap-8">
         {/* Hero Section */}

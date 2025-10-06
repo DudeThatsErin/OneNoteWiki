@@ -3,12 +3,14 @@ import { QuickStats } from '@/components/QuickStats';
 import { InfoCard } from '@/components/InfoCard';
 import { FeatureList } from '@/components/FeatureList';
 import { Callout } from '@/components/Callout';
+import { FileText } from 'lucide-react';
 
 export default function WhatIsOneNotePage() {
   return (
     <PageLayout
       title="What is OneNote?"
       description="Learn about Microsoft OneNote, the digital note-taking application that helps you organize your thoughts, ideas, and information."
+      icon={<FileText className="w-8 h-8 text-purple-600" />}
     >
       <div className="flex flex-col gap-8">
         {/* Hero Section */}
@@ -48,9 +50,8 @@ export default function WhatIsOneNotePage() {
             </p>
           </div>
 
-          <h2>Key Features</h2>
-          
           <FeatureList
+            title="Key Features"
             features={[
               {
                 title: 'Free-form Canvas',
@@ -91,27 +92,29 @@ export default function WhatIsOneNotePage() {
             <InfoCard
               title="Traditional Notes"
               color="red"
-              items={[
-                'Limited to paper or basic text',
-                'Easy to lose or damage',
-                'Difficult to search through',
-                'Hard to share with others',
-                'No backup or sync',
-                'Limited organization options'
-              ]}
-            />
+            >
+              <ul className="list-disc list-inside space-y-1">
+                <li>Limited to paper or basic text</li>
+                <li>Easy to lose or damage</li>
+                <li>Difficult to search through</li>
+                <li>Hard to share with others</li>
+                <li>No backup or sync</li>
+                <li>Limited organization options</li>
+              </ul>
+            </InfoCard>
             <InfoCard
               title="OneNote Digital Notes"
               color="green"
-              items={[
-                'Rich media: text, images, audio, video',
-                'Automatically saved and backed up',
-                'Powerful search across all content',
-                'Easy sharing and collaboration',
-                'Syncs across all devices',
-                'Flexible organization system'
-              ]}
-            />
+            >
+              <ul className="list-disc list-inside space-y-1">
+                <li>Rich media: text, images, audio, video</li>
+                <li>Automatically saved and backed up</li>
+                <li>Powerful search across all content</li>
+                <li>Easy sharing and collaboration</li>
+                <li>Syncs across all devices</li>
+                <li>Flexible organization system</li>
+              </ul>
+            </InfoCard>
           </div>
 
           <h2>Who Uses OneNote?</h2>
@@ -120,36 +123,39 @@ export default function WhatIsOneNotePage() {
             <InfoCard
               title="Students"
               color="blue"
-              items={[
-                'Class notes and lectures',
-                'Research organization',
-                'Study guides and flashcards',
-                'Group project collaboration',
-                'Assignment tracking'
-              ]}
-            />
+            >
+              <ul className="list-disc list-inside space-y-1">
+                <li>Class notes and lectures</li>
+                <li>Research organization</li>
+                <li>Study guides and flashcards</li>
+                <li>Group project collaboration</li>
+                <li>Assignment tracking</li>
+              </ul>
+            </InfoCard>
             <InfoCard
               title="Professionals"
               color="purple"
-              items={[
-                'Meeting notes and minutes',
-                'Project planning and tracking',
-                'Client information management',
-                'Team collaboration',
-                'Knowledge base creation'
-              ]}
-            />
+            >
+              <ul className="list-disc list-inside space-y-1">
+                <li>Meeting notes and minutes</li>
+                <li>Project planning and tracking</li>
+                <li>Client information management</li>
+                <li>Team collaboration</li>
+                <li>Knowledge base creation</li>
+              </ul>
+            </InfoCard>
             <InfoCard
               title="Personal Users"
               color="green"
-              items={[
-                'Personal journaling',
-                'Recipe collections',
-                'Travel planning',
-                'Hobby documentation',
-                'Family information sharing'
-              ]}
-            />
+            >
+              <ul className="list-disc list-inside space-y-1">
+                <li>Personal journaling</li>
+                <li>Recipe collections</li>
+                <li>Travel planning</li>
+                <li>Hobby documentation</li>
+                <li>Family information sharing</li>
+              </ul>
+            </InfoCard>
           </div>
 
           <Callout type="tip">

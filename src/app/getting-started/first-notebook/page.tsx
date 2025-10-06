@@ -3,12 +3,14 @@ import { QuickStats } from '@/components/QuickStats';
 import { InfoCard } from '@/components/InfoCard';
 import { GettingStartedSection } from '@/components/GettingStartedSection';
 import { Callout } from '@/components/Callout';
+import { BookOpen } from 'lucide-react';
 
 export default function FirstNotebookPage() {
   return (
     <PageLayout
       title="Creating Your First Notebook"
       description="Learn how to create and set up your first OneNote notebook with step-by-step instructions and best practices."
+      icon={<BookOpen className="w-8 h-8 text-purple-600" />}
     >
       <div className="flex flex-col gap-8">
         {/* Hero Section */}
@@ -43,7 +45,7 @@ export default function FirstNotebookPage() {
 
           <div className="my-8 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
             <p className="text-center text-sm text-gray-600 dark:text-gray-400 mb-2">
-              <strong>SCREENSHOT HERE OF OneNote interface showing the notebook hierarchy: Notebook > Section > Page structure in the navigation pane</strong>
+              <strong>SCREENSHOT HERE OF OneNote interface showing the notebook hierarchy: Notebook &gt; Section &gt; Page structure in the navigation pane</strong>
             </p>
           </div>
 
@@ -116,27 +118,29 @@ export default function FirstNotebookPage() {
             <InfoCard
               title="Good Notebook Names"
               color="green"
-              items={[
-                'Work Projects 2024',
-                'Personal Journal',
-                'Marketing Campaign Notes',
-                'Study Notes - Biology',
-                'Home Renovation Planning',
-                'Meeting Notes - Team Alpha'
-              ]}
-            />
+            >
+              <ul className="list-disc list-inside space-y-1">
+                <li>Work Projects 2024</li>
+                <li>Personal Journal</li>
+                <li>Marketing Campaign Notes</li>
+                <li>Study Notes - Biology</li>
+                <li>Home Renovation Planning</li>
+                <li>Meeting Notes - Team Alpha</li>
+              </ul>
+            </InfoCard>
             <InfoCard
               title="Avoid These Names"
               color="red"
-              items={[
-                'Notebook1, Notebook2',
-                'Notes (too generic)',
-                'Untitled',
-                'asdfgh (random characters)',
-                'New Notebook',
-                'Temporary'
-              ]}
-            />
+            >
+              <ul className="list-disc list-inside space-y-1">
+                <li>Notebook1, Notebook2</li>
+                <li>Notes (too generic)</li>
+                <li>Untitled</li>
+                <li>asdfgh (random characters)</li>
+                <li>New Notebook</li>
+                <li>Temporary</li>
+              </ul>
+            </InfoCard>
           </div>
 
           <Callout type="tip">
@@ -189,36 +193,39 @@ export default function FirstNotebookPage() {
             <InfoCard
               title="Work Notebook"
               color="blue"
-              items={[
-                'Daily Notes',
-                'Meeting Minutes',
-                'Project Planning',
-                'Ideas & Brainstorming',
-                'Reference Materials'
-              ]}
-            />
+            >
+              <ul className="list-disc list-inside space-y-1">
+                <li>Daily Notes</li>
+                <li>Meeting Minutes</li>
+                <li>Project Planning</li>
+                <li>Ideas & Brainstorming</li>
+                <li>Reference Materials</li>
+              </ul>
+            </InfoCard>
             <InfoCard
               title="Student Notebook"
               color="purple"
-              items={[
-                'Lecture Notes',
-                'Assignments',
-                'Study Guides',
-                'Research',
-                'Class Schedule'
-              ]}
-            />
+            >
+              <ul className="list-disc list-inside space-y-1">
+                <li>Lecture Notes</li>
+                <li>Assignments</li>
+                <li>Study Guides</li>
+                <li>Research</li>
+                <li>Class Schedule</li>
+              </ul>
+            </InfoCard>
             <InfoCard
               title="Personal Notebook"
               color="green"
-              items={[
-                'Daily Journal',
-                'Goals & Plans',
-                'Recipes',
-                'Travel Planning',
-                'Health & Fitness'
-              ]}
-            />
+            >
+              <ul className="list-disc list-inside space-y-1">
+                <li>Daily Journal</li>
+                <li>Goals & Plans</li>
+                <li>Recipes</li>
+                <li>Travel Planning</li>
+                <li>Health & Fitness</li>
+              </ul>
+            </InfoCard>
           </div>
 
           <h2>Adding Your First Section</h2>

@@ -101,12 +101,12 @@ export default function MobilePage() {
           <FeatureList
             title="Camera Capabilities"
             features={[
-              "Document scanning with automatic edge detection",
-              "Whiteboard capture with enhancement",
-              "Business card scanning and contact extraction",
-              "Photo insertion with automatic optimization",
-              "Multi-page document scanning",
-              "Text extraction from captured images (OCR)"
+              { title: "Document scanning with automatic edge detection", description: "Professional document capture with smart cropping" },
+              { title: "Whiteboard capture with enhancement", description: "Clear whiteboard photos with automatic enhancement" },
+              { title: "Business card scanning and contact extraction", description: "Automatically extract contact information" },
+              { title: "Photo insertion with automatic optimization", description: "Smart photo processing for better quality" },
+              { title: "Multi-page document scanning", description: "Scan multiple pages into a single note" },
+              { title: "Text extraction from captured images (OCR)", description: "Make text in images searchable" }
             ]}
           />
 
@@ -187,12 +187,12 @@ export default function MobilePage() {
           <FeatureList
             title="What Works Offline"
             features={[
-              "View and edit recently accessed notebooks",
-              "Create new pages and sections",
-              "Add text, drawings, and voice recordings",
-              "Search within cached content",
-              "Take photos and add to notes",
-              "Automatic sync when connection returns"
+              { title: "View and edit recently accessed notebooks", description: "Access your most recent content without internet" },
+              { title: "Create new pages and sections", description: "Continue organizing your notes offline" },
+              { title: "Add text, drawings, and voice recordings", description: "Full note-taking capabilities offline" },
+              { title: "Search within cached content", description: "Find information in downloaded notebooks" },
+              { title: "Take photos and add to notes", description: "Capture and attach images offline" },
+              { title: "Automatic sync when connection returns", description: "Seamless synchronization when back online" }
             ]}
           />
 
