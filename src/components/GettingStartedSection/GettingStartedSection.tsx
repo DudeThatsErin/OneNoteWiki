@@ -42,8 +42,8 @@ export function GettingStartedSection({
                 {step.description}
               </p>
               {step.code && (
-                <div className="bg-gray-800 dark:bg-gray-950 rounded-md p-3 overflow-x-auto border border-gray-300 dark:border-gray-700">
-                  <code className="text-gray-100 text-sm">
+                <div className="group bg-gray-800 dark:bg-gray-950 rounded-md p-3 overflow-x-auto border border-gray-300 dark:border-gray-700 relative">
+                  <code className="text-gray-100 text-sm block">
                     {step.code}
                   </code>
                 </div>

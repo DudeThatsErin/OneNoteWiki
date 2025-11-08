@@ -9,6 +9,7 @@ import { Sidebar } from '@/components/Sidebar';
 import { Footer } from '@/components/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { CopyCodeInitializer } from '@/components/CopyCodeInitializer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://onenote.vercel.app'),
@@ -79,6 +80,7 @@ export default function RootLayout({
               </div>
             </div>
             <SearchModal />
+            <CopyCodeInitializer />
           </SearchProvider>
         </ThemeProvider>
       </body>

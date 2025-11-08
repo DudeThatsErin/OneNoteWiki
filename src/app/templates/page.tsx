@@ -2,6 +2,7 @@ import { PageLayout } from '@/components/PageLayout';
 import { QuickStats } from '@/components/QuickStats';
 import { InfoCard } from '@/components/InfoCard';
 import { FeatureList } from '@/components/FeatureList';
+import { CodeBlock } from '@/components/CodeBlock';
 import { FileText } from 'lucide-react';
 
 export default function TemplatesPage() {
@@ -12,39 +13,19 @@ export default function TemplatesPage() {
       icon={<FileText className="w-8 h-8 text-purple-600" />}
     >
       <div className="flex flex-col gap-8">
-        {/* Hero Section */}
-        <div className="text-center py-8">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            OneNote Templates
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Save time and maintain consistency with professionally designed templates for every use case.
-          </p>
-        </div>
-
-        {/* Quick Stats */}
-        <QuickStats
-          stats={[
-            { label: 'Built-in Templates', value: '50+', icon: '📋' },
-            { label: 'Template Categories', value: '10+', icon: '📂' },
-            { label: 'Custom Templates', value: 'Unlimited', icon: '🎨' },
-            { label: 'Template Sharing', value: 'Yes', icon: '🤝' }
-          ]}
-        />
-
         <div className="prose prose-lg dark:prose-invert max-w-none">
-          <h2>What are OneNote Templates?</h2>
+          <h2 suppressHydrationWarning>What are OneNote Templates?</h2>
           <p>
             OneNote templates are pre-designed page layouts that provide structure and formatting for specific types of notes. They help you maintain consistency and save time by providing ready-made formats for common note-taking scenarios.
           </p>
 
           <div className="my-8 p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg">
             <p className="text-center text-sm text-gray-600 dark:text-gray-400 mb-2">
-              <strong>SCREENSHOT HERE OF OneNote's template gallery showing various template categories and preview thumbnails</strong>
+              <img src="/screenshots/onenote_template_gallery.png" alt="OneNote Template Gallery" />
             </p>
           </div>
 
-          <h2>Template Categories</h2>
+          <h2 suppressHydrationWarning>Template Categories</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
             <InfoCard
@@ -66,6 +47,8 @@ export default function TemplatesPage() {
               variant="purple"
             >
               <ul className="list-disc list-inside space-y-2">
+
+
                 <li>Meeting Minutes</li>
                 <li>Project Planning</li>
                 <li>Status Reports</li>
@@ -90,19 +73,10 @@ export default function TemplatesPage() {
             </InfoCard>
           </div>
 
-          <h2>Using Built-in Templates</h2>
-          <p>
-            OneNote comes with dozens of professionally designed templates that you can use immediately.
-          </p>
-
-          <div className="my-8 p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg">
-            <p className="text-center text-sm text-gray-600 dark:text-gray-400 mb-2">
-              <strong>SCREENSHOT HERE OF the process of inserting a template: Insert tab &gt; Page Templates &gt; choosing a template from the gallery</strong>
-            </p>
-          </div>
 
           <FeatureList
             title="How to Apply Templates"
+            columns={3}
             features={[
               {
                 title: 'Insert Tab Method',
@@ -119,22 +93,12 @@ export default function TemplatesPage() {
                 description: 'Search for specific template types using keywords',
                 icon: '🔍'
               },
-              {
-                title: 'Template Preview',
-                description: 'Preview templates before applying to see the layout',
-                icon: '👁️'
-              }
             ]}
           />
 
-          <h2>Creating Custom Templates</h2>
-          <p>
-            Design your own templates to match your specific needs and workflow requirements.
-          </p>
+          <h2 suppressHydrationWarning>Steps to Create a Custom Template</h2>
 
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg my-6">
-            <h3 className="text-lg font-semibold mb-4">Steps to Create a Custom Template</h3>
-            <ol className="list-decimal list-inside space-y-2">
+            <ol className="list-decimal list-inside ml-4 space-y-2">
               <li>Create a new page with your desired layout and formatting</li>
               <li>Add placeholder text, tables, or other elements</li>
               <li>Go to Insert &gt; Page Templates &gt; "Save current page as template"</li>
@@ -142,48 +106,49 @@ export default function TemplatesPage() {
               <li>Choose whether to make it available to all notebooks</li>
               <li>Your template is now available in the template gallery</li>
             </ol>
-          </div>
 
           <div className="my-8 p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg">
             <p className="text-center text-sm text-gray-600 dark:text-gray-400 mb-2">
-              <strong>SCREENSHOT HERE OF the "Save as Template" dialog showing name field, description, and scope options</strong>
+              <img src="/screenshots/onenote_current_page_template.png" alt="OneNote Save Template" />
             </p>
           </div>
 
-          <h2>Popular Template Examples</h2>
+          <h2 suppressHydrationWarning>Popular Template Examples</h2>
           
           <div className="space-y-6 my-8">
             <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
               <h3 className="font-semibold text-lg mb-3">📝 Meeting Minutes Template</h3>
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded font-mono text-sm">
-                <div>Meeting: [Meeting Name]</div>
-                <div>Date: [Date]</div>
-                <div>Attendees: [Names]</div>
-                <div>Agenda Items:</div>
-                <div>• [Item 1]</div>
-                <div>• [Item 2]</div>
-                <div>Action Items:</div>
-                <div>□ [Task] - [Owner] - [Due Date]</div>
-              </div>
+              <CodeBlock
+                code={`Meeting: [Meeting Name]
+Date: [Date]
+Attendees: [Names]
+Agenda Items:
+• [Item 1]
+• [Item 2]
+Action Items:
+□ [Task] - [Owner] - [Due Date]`}
+                language="text"
+              />
             </div>
 
             <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
               <h3 className="font-semibold text-lg mb-3">📚 Lecture Notes Template</h3>
-              <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded font-mono text-sm">
-                <div>Course: [Course Name]</div>
-                <div>Date: [Date]</div>
-                <div>Topic: [Lecture Topic]</div>
-                <div>Key Points:</div>
-                <div>• [Point 1]</div>
-                <div>• [Point 2]</div>
-                <div>Questions:</div>
-                <div>? [Question 1]</div>
-                <div>Follow-up: [Action items]</div>
-              </div>
+              <CodeBlock
+                code={`Course: [Course Name]
+Date: [Date]
+Topic: [Lecture Topic]
+Key Points:
+• [Point 1]
+• [Point 2]
+Questions:
+? [Question 1]
+Follow-up: [Action items]`}
+                language="text"
+              />
             </div>
           </div>
 
-          <h2>Template Best Practices</h2>
+          <h2 suppressHydrationWarning>Template Best Practices</h2>
           <ul className="list-disc list-inside space-y-2">
             <li><strong>Keep it Simple:</strong> Don't overcomplicate templates with too many elements</li>
             <li><strong>Use Placeholders:</strong> Include [bracketed] placeholder text for easy replacement</li>

@@ -54,6 +54,8 @@ const getCategoryIcon = (iconName: string, type: 'prefix' | 'slash'): JSX.Elemen
       return <MessageCircle className="w-5 h-5" />;
     case 'zap':
       return <Zap className="w-5 h-5" />;
+    case 'help-circle':
+      return <HelpCircle className="w-5 h-5" />;
     default:
       return type === 'prefix' ? <Hash className="w-5 h-5" /> : <Bot className="w-5 h-5" />;
   }
@@ -108,9 +110,10 @@ export default function BotCommandsPage() {
   const [commandData, setCommandData] = useState<CommandData | null>(null);
   const [categories, setCategories] = useState<CommandCategory[]>([]);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const loadCommands = async () => {
       try {
         const response = await fetch('/command-list.json');
@@ -119,14 +122,10 @@ export default function BotCommandsPage() {
         }
         const data = await response.json();
         setCommandData(data);
-        const processedCategories = processCommandData(data);
-        setCategories(processedCategories);
+        setCategories(processCommandData(data));
       } catch (error) {
         console.error('Failed to load bot commands:', error);
-        // Set empty categories to show the error state
         setCategories([]);
-      } finally {
-        setLoading(false);
       }
     };
 
@@ -144,56 +143,9 @@ export default function BotCommandsPage() {
   return (
     <PageLayout
       title="Bot Commands"
-      description="Our Discord bot provides helpful commands for getting OneNote assistance, templates, tips, and accessing community resources."
+      description="Our OneNote Discord Bot provides helpful commands for server management, fun activities, social interaction, suggestions, and utility functions. Browse the categories below to find the commands you need."
       icon={<div className="text-4xl">🤖</div>}
     >
-      {/* Header */}
-      <div className="flex flex-col gap-4 md:gap-6">
-        <div className="flex items-center gap-3">
-          <div className="text-4xl">🤖</div>
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Discord Bot Commands</h1>
-            <p className="text-gray-600 dark:text-gray-300">
-              OneNote Discord Bot command reference
-            </p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Our OneNote Discord Bot provides helpful commands for server management, fun activities, 
-          social interaction, suggestions, and utility functions. Browse the categories below to find the commands you need.
-        </p>
-      </div>
-
-      {/* Bot Info */}
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-        <div className="flex items-start space-x-4">
-          <Bot className="w-8 h-8 text-blue-600 mt-1" />
-          <div className="flex-1">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              About OneNote Bot
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Our Discord bot is designed to enhance the OneNote community experience by providing instant access to 
-              OneNote resources, templates, tips, and community features. Built with modern Discord.js 
-              and integrated with our OneNote wiki content.
-            </p>
-            <div className="flex items-center space-x-4">
-              <a
-                href="https://github.com/DudeThatsErin/OneNoteBot"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
-              >
-                <Github className="w-4 h-4" />
-                <span>View Source Code</span>
-              </a>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                Open source and community-driven
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Command Categories */}
       <section className="flex flex-col gap-6 md:gap-8">
@@ -201,7 +153,7 @@ export default function BotCommandsPage() {
           Command Categories
         </h2>
         
-        {loading ? (
+        {!isMounted ? (
           <div className="text-center py-8">
             <p className="text-gray-600 dark:text-gray-300">Loading commands...</p>
           </div>
@@ -230,7 +182,9 @@ export default function BotCommandsPage() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="text-gray-700 dark:text-gray-300" suppressHydrationWarning>{category.icon}</div>
+                      <div className="text-gray-700 dark:text-gray-300" suppressHydrationWarning>
+                        {isMounted ? category.icon : <Bot className="w-5 h-5" />}
+                      </div>
                       <div>
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           {category.title}
@@ -244,16 +198,18 @@ export default function BotCommandsPage() {
                       <span className="text-sm text-gray-500 dark:text-gray-400">
                         {category.commands.length} commands
                       </span>
-                      {isExpanded ? (
-                        <ChevronDown className="w-5 h-5 text-gray-400" />
-                      ) : (
-                        <ChevronRight className="w-5 h-5 text-gray-400" />
-                      )}
+                      <div suppressHydrationWarning>
+                        {isMounted && isExpanded ? (
+                          <ChevronDown className="w-5 h-5 text-gray-400" />
+                        ) : (
+                          <ChevronRight className="w-5 h-5 text-gray-400" />
+                        )}
+                      </div>
                     </div>
                   </div>
                 </button>
                 
-                {isExpanded && (
+                {isMounted && isExpanded && (
                   <div className="border-t border-gray-200 dark:border-gray-700 p-6 bg-gray-50 dark:bg-gray-700/50">
                     <div className="flex flex-col gap-6 md:gap-8">
                       {category.commands.map((command, index) => (
@@ -318,43 +274,8 @@ export default function BotCommandsPage() {
         )}
       </section>
 
-      {/* Development Status */}
-      <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-6 border border-yellow-200 dark:border-yellow-800">
-        <h3 className="text-lg font-semibold text-yellow-900 dark:text-yellow-100 mb-3">
-          🚧 Development Status
-        </h3>
-        <p className="text-yellow-800 dark:text-yellow-200 mb-4">
-          The OneNote Discord Bot is currently under active development. We're working hard to bring 
-          these features to the OneNote community as soon as possible!
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2">
-              What's Ready:
-            </h4>
-            <ul className="text-yellow-800 dark:text-yellow-200 text-sm [&>li]:mb-1">
-              <li>• Bot architecture and framework</li>
-              <li>• Command structure design</li>
-              <li>• Database integration planning</li>
-              <li>• Discord.js setup and configuration</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-yellow-900 dark:text-yellow-100 mb-2">
-              Coming Next:
-            </h4>
-            <ul className="text-yellow-800 dark:text-yellow-200 text-sm [&>li]:mb-1">
-              <li>• Help and resource commands</li>
-              <li>• OneNote template generation</li>
-              <li>• Community interaction features</li>
-              <li>• Beta testing with community</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
       {/* Get Involved */}
-      <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
+      <div className="mt-12 p-6 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
           🤝 Get Involved
         </h3>

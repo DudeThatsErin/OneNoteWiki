@@ -1,343 +1,336 @@
 {
-    "prefix_commands": {
-      "Admin Commands": {
-        "description": "Administrative commands for server management",
-        "icon": "settings",
-        "commands": [
-          {
-            "name": "bot-status",
-            "description": "Pushes an embed to display in the channel about a bot update.",
-            "aliases": [],
-            "usage": "--bot-status <message>",
-            "example": "--bot-status Fixed a bug in the help command"
-          },
-          {
-            "name": "createcommands",
-            "description": "Allows Erin to create the Slash Commands.",
-            "aliases": ["startslash", "create-commands", "cc"],
-            "usage": "--createcommands",
-            "example": "--createcommands"
-          },
-          {
-            "name": "deletecommands",
-            "description": "Allows Erin to delete the Slash Commands.",
-            "aliases": ["endslash", "delete-commands", "dc"],
-            "usage": "--deletecommands",
-            "example": "--deletecommands"
-          },
-          {
-            "name": "server-status",
-            "description": "Pushes an embed to display in the channel about a server update.",
-            "aliases": [],
-            "usage": "--server-status <message>",
-            "example": "--server-status New channels added for discussions"
-          },
-          {
-            "name": "subreddit-status",
-            "description": "Pushes an embed to display in the channel about a subreddit update.",
-            "aliases": [],
-            "usage": "--subreddit-status <message>",
-            "example": "--subreddit-status New rules added to the subreddit"
-          }
-        ]
-      }
-    },
-    "slash_commands": {
-      "Admin Commands": {
-        "description": "Administrative commands for server management",
-        "icon": "settings",
-        "commands": [
-        {
-          "name": "access",
-          "description": "Gives users access to the server by assigning roles.",
-          "aliases": [],
-          "usage": "/access",
-          "example": "/access"
-        },
-        {
-          "name": "access2",
-          "description": "Alternative access command for server role assignment.",
-          "aliases": [],
-          "usage": "/access2",
-          "example": "/access2"
-        },
-        {
-          "name": "clear-suggs",
-          "description": "Clears suggestions from the database.",
-          "aliases": [],
-          "usage": "/clear-suggs",
-          "example": "/clear-suggs"
-        },
-        {
-          "name": "dm",
-          "description": "Sends a direct message to a user.",
-          "aliases": [],
-          "usage": "/dm <user> <message>",
-          "example": "/dm @user Please follow the server rules"
-        },
-        {
-          "name": "server-rules",
-          "description": "Displays or manages server rules.",
-          "aliases": [],
-          "usage": "/server-rules",
-          "example": "/server-rules"
-        },
-        {
-          "name": "welcome",
-          "description": "Manages welcome messages for new members.",
-          "aliases": [],
-          "usage": "/welcome",
-          "example": "/welcome"
-        }
-        ]
-      },
-      "Fun Commands": {
-        "description": "Fun and entertainment commands",
-        "icon": "smile",
-        "commands": [
-        {
-          "name": "8ball",
-          "description": "Ask the magic 8-ball a question!",
-          "aliases": [],
-          "usage": "/8ball [question]",
-          "example": "/8ball Will it rain tomorrow?"
-        },
-        {
-          "name": "choose",
-          "description": "Can't decide? Let me choose for you!",
-          "aliases": [],
-          "usage": "/choose [options separated by commas]",
-          "example": "/choose pizza, burgers, tacos"
-        },
-        {
-          "name": "compliment",
-          "description": "Gives you a nice compliment!",
-          "aliases": [],
-          "usage": "/compliment",
-          "example": "/compliment"
-        },
-        {
-          "name": "dice",
-          "description": "Roll a dice with specified number of sides.",
-          "aliases": [],
-          "usage": "/dice [sides]",
-          "example": "/dice 6"
-        },
-        {
-          "name": "fact",
-          "description": "Get a random interesting fact!",
-          "aliases": [],
-          "usage": "/fact",
-          "example": "/fact"
-        },
-        {
-          "name": "flip",
-          "description": "Flip a coin!",
-          "aliases": [],
-          "usage": "/flip",
-          "example": "/flip"
-        },
-        {
-          "name": "joke",
-          "description": "Get a random joke!",
-          "aliases": [],
-          "usage": "/joke",
-          "example": "/joke"
-        },
-        {
-          "name": "learn",
-          "description": "Learn something new!",
-          "aliases": [],
-          "usage": "/learn",
-          "example": "/learn"
-        },
-        {
-          "name": "meme",
-          "description": "Get a random meme!",
-          "aliases": [],
-          "usage": "/meme",
-          "example": "/meme"
-        },
-        {
-          "name": "quote",
-          "description": "Get an inspirational quote!",
-          "aliases": [],
-          "usage": "/quote",
-          "example": "/quote"
-        },
-        {
-          "name": "riddle",
-          "description": "Get a riddle to solve!",
-          "aliases": [],
-          "usage": "/riddle",
-          "example": "/riddle"
-        },
-        {
-          "name": "roast",
-          "description": "Get a playful roast!",
-          "aliases": [],
-          "usage": "/roast",
-          "example": "/roast"
-        },
-        {
-          "name": "rps",
-          "description": "Play rock, paper, scissors!",
-          "aliases": [],
-          "usage": "/rps [choice]",
-          "example": "/rps rock"
-        },
-        {
-          "name": "spongebob",
-          "description": "Convert text to SpongeBob mocking case!",
-          "aliases": [],
-          "usage": "/spongebob [text]",
-          "example": "/spongebob this is a test"
-        },
-        {
-          "name": "trivia",
-          "description": "Get a trivia question!",
-          "aliases": [],
-          "usage": "/trivia",
-          "example": "/trivia"
-        }
-        ]
-      },
-      "Social Commands": {
-        "description": "Social interaction and community commands",
-        "icon": "heart",
-        "commands": [
-        {
-          "name": "thanks",
-          "description": "Allows our users to thank other members for their help.",
-          "aliases": [],
-          "usage": "/thanks <@username or ID>",
-          "example": "/thanks @username"
-        },
-        {
-          "name": "thanks-leaderboard",
-          "description": "Shows the thanks leaderboard.",
-          "aliases": [],
-          "usage": "/thanks-leaderboard",
-          "example": "/thanks-leaderboard"
-        },
-        {
-          "name": "unthanks",
-          "description": "Remove thanks from a user.",
-          "aliases": [],
-          "usage": "/unthanks <@username or ID>",
-          "example": "/unthanks @username"
-        }
-        ]
-      },
-      "Suggestion Commands": {
-        "description": "Suggestion management commands",
-        "icon": "message-circle",
-        "commands": [
-        {
-          "name": "completed-sugg",
-          "description": "Mark a suggestion as completed.",
-          "aliases": [],
-          "usage": "/completed-sugg [suggestion ID]",
-          "example": "/completed-sugg 123456789"
-        },
-        {
-          "name": "denied-sugg",
-          "description": "Mark a suggestion as denied.",
-          "aliases": [],
-          "usage": "/denied-sugg [suggestion ID]",
-          "example": "/denied-sugg 123456789"
-        },
-        {
-          "name": "edit-sugg",
-          "description": "Edit a suggestion.",
-          "aliases": [],
-          "usage": "/edit-sugg [suggestion ID] [new text]",
-          "example": "/edit-sugg 123456789 Updated suggestion text"
-        },
-        {
-          "name": "prog-sugg",
-          "description": "Mark a suggestion as in progress.",
-          "aliases": [],
-          "usage": "/prog-sugg [suggestion ID]",
-          "example": "/prog-sugg 123456789"
-        },
-        {
-          "name": "status-sugg",
-          "description": "Check the status of a suggestion.",
-          "aliases": [],
-          "usage": "/status-sugg [suggestion ID]",
-          "example": "/status-sugg 123456789"
-        },
-        {
-          "name": "suggestions",
-          "description": "Creates a suggestion!",
-          "aliases": [],
-          "usage": "/suggestions [suggestion here]",
-          "example": "/suggestions I want pudding!"
-        }
-        ]
-      },
-      "Utility Commands": {
-        "description": "Utility and information commands",
-        "icon": "zap",
-        "commands": [
-        {
-          "name": "about",
-          "description": "Information about the bot.",
-          "aliases": [],
-          "usage": "/about",
-          "example": "/about"
-        },
-        {
-          "name": "about-dev",
-          "description": "Information about the bot developer.",
-          "aliases": [],
-          "usage": "/about-dev",
-          "example": "/about-dev"
-        },
-        {
-          "name": "avatar",
-          "description": "Get a user's avatar.",
-          "aliases": [],
-          "usage": "/avatar [user]",
-          "example": "/avatar @username"
-        },
-        {
-          "name": "botinvite",
-          "description": "Provides an invite link for the bot.",
-          "aliases": [],
-          "usage": "/botinvite",
-          "example": "/botinvite"
-        },
+  "prefix_commands": {},
+  "slash_commands": {
+    "General Commands": {
+      "description": "Basic commands for getting help and information about the bot.",
+      "icon": "help-circle",
+      "commands": [
         {
           "name": "help",
           "description": "This allows users to find out more information on all of our commands.",
           "aliases": [],
           "usage": "/help or /help [command name here]",
-          "example": "/help or /help 8ball"
-        },
-        {
-          "name": "invite",
-          "description": "Get an invite link for the bot.",
-          "aliases": [],
-          "usage": "/invite",
-          "example": "/invite"
-        },
-        {
-          "name": "ping",
-          "description": "Check the bot's latency.",
-          "aliases": [],
-          "usage": "/ping",
-          "example": "/ping"
-        },
-        {
-          "name": "wiki",
-          "description": "Links to our wiki",
-          "aliases": [],
-          "usage": "/wiki",
-          "example": "/wiki"
+          "example": "/help or /help ping"
         }
-        ]
+      ]
+    },
+    "Admin Commands": {
+      "description": "Administrative commands for server management and bot system control.",
+      "icon": "settings",
+      "commands": [
+      {
+        "name": "bot-status",
+        "description": "Pushes an embed to display in the channel about a bot update",
+        "aliases": [],
+        "usage": "/bot-status <message>",
+        "example": "/bot-status Fixed a bug in the help command"
+      },
+      {
+        "name": "disable-system",
+        "description": "Disables a bot system (suggestions, reports, thanks)",
+        "aliases": [],
+        "usage": "/disable-system <system>",
+        "example": "/disable-system suggestions"
+      },
+      {
+        "name": "dm",
+        "description": "Sends an official DM to a specified user",
+        "aliases": [],
+        "usage": "/dm <user> <message>",
+        "example": "/dm @user Please follow the server rules"
+      },
+      {
+        "name": "enable-system",
+        "description": "Enables a bot system (suggestions, reports, thanks)",
+        "aliases": [],
+        "usage": "/enable-system <system>",
+        "example": "/enable-system suggestions"
+      },
+      {
+        "name": "server-status",
+        "description": "Pushes an embed to display in the channel about a server update",
+        "aliases": [],
+        "usage": "/server-status <message>",
+        "example": "/server-status New channels added for Python discussions"
+      },
+      {
+        "name": "site-status",
+        "description": "Pushes an embed to display in the channel about a website update",
+        "aliases": [],
+        "usage": "/site-status <message>",
+        "example": "/site-status Website maintenance scheduled for tonight"
+      },
+      {
+        "name": "sub-status",
+        "description": "Pushes an embed to display in the channel about a subreddit update",
+        "aliases": [],
+        "usage": "/sub-status <message>",
+        "example": "/sub-status New rules added to the subreddit"
+      },
+      {
+        "name": "system-status",
+        "description": "Shows the status of all bot systems",
+        "aliases": [],
+        "usage": "/system-status",
+        "example": "/system-status"
       }
+      ]
+    },
+    "Information Commands": {
+      "description": "Commands that provide helpful information and resources for developers.",
+      "icon": "message-circle",
+      "commands": [
+      {
+        "name": "career",
+        "description": "Allows users to get information on how to get careers in the IT field.",
+        "aliases": [],
+        "usage": "/career",
+        "example": "/career"
+      },
+      {
+        "name": "djs",
+        "description": "Sends an invite link to the Discord.js Discord Server",
+        "aliases": [],
+        "usage": "/djs",
+        "example": "/djs"
+      },
+      {
+        "name": "ddev",
+        "description": "Sends a link to join the Discord Developers Discord Server",
+        "aliases": [],
+        "usage": "/ddev",
+        "example": "/ddev"
+      },
+      {
+        "name": "djslangfirst",
+        "description": "Asks users to learn JavaScript before trying to learn Discord.js",
+        "aliases": [],
+        "usage": "/djslangfirst",
+        "example": "/djslangfirst"
+      },
+      {
+        "name": "dom-listening",
+        "description": "Sends information about why not to use dom listening attributes/properties.",
+        "aliases": [],
+        "usage": "/dom-listening",
+        "example": "/dom-listening"
+      },
+      {
+        "name": "dpy",
+        "description": "Sends an invite link to the Discord.py Discord Server.",
+        "aliases": [],
+        "usage": "/dpy",
+        "example": "/dpy"
+      },
+      {
+        "name": "editors",
+        "description": "Sends information on commonly used IDEs or Text Editors.",
+        "aliases": [],
+        "usage": "/editors",
+        "example": "/editors"
+      },
+      {
+        "name": "freelance",
+        "description": "Allows users to get information on how to self employment or freelancing.",
+        "aliases": [],
+        "usage": "/freelance",
+        "example": "/freelance"
+      },
+      {
+        "name": "largehosting",
+        "description": "Sends information about hosting providers.",
+        "aliases": [],
+        "usage": "/largehosting",
+        "example": "/largehosting"
+      },
+      {
+        "name": "nojquery",
+        "description": "Sends information on why JQuery isn't used and is bad to use.",
+        "aliases": [],
+        "usage": "/nojquery",
+        "example": "/nojquery"
+      },
+      {
+        "name": "noscreens",
+        "description": "Sends information on why it is best to avoid sending screenshots of your code.",
+        "aliases": [],
+        "usage": "/noscreens",
+        "example": "/noscreens"
+      },
+      {
+        "name": "react",
+        "description": "Sends an invite link to the Reactiflux Discord Server",
+        "aliases": [],
+        "usage": "/react",
+        "example": "/react"
+      },
+      {
+        "name": "smallhosting",
+        "description": "This is a small snippet from our `/largehosting` command.",
+        "aliases": [],
+        "usage": "/smallhosting",
+        "example": "/smallhosting"
+      },
+      {
+        "name": "vla",
+        "description": "Sends info on what a VLA is and why is it bad?",
+        "aliases": [],
+        "usage": "/vla",
+        "example": "/vla"
+      },
+      {
+        "name": "w3c",
+        "description": "Informs our users why they should avoid w3schools like the plague.",
+        "aliases": [],
+        "usage": "/w3c",
+        "example": "/w3c"
+      },
+      {
+        "name": "webassembly",
+        "description": "Sends an invite link to the Web Assembly Discord Server.",
+        "aliases": [],
+        "usage": "/webassembly",
+        "example": "/webassembly"
+      }
+      ]
+    },
+    "Message Issue Commands": {
+      "description": "Commands to help with common message formatting and communication issues.",
+      "icon": "zap",
+      "commands": [
+      {
+        "name": "bin",
+        "description": "Tells people a few places they could go to share long pieces of code.",
+        "aliases": [],
+        "usage": "/bin",
+        "example": "/bin"
+      },
+      {
+        "name": "elaborate",
+        "description": "Asks people to elaborate by including code or by including more information.",
+        "aliases": [],
+        "usage": "/elaborate @username or user ID",
+        "example": "/elaborate @DudeThatsErin"
+      },
+      {
+        "name": "error",
+        "description": "Tells people to post the full stack trace.",
+        "aliases": [],
+        "usage": "/error",
+        "example": "/error"
+      },
+      {
+        "name": "faq",
+        "description": "Tells users to check out our FAQ channel and docs to get their simple questions answered.",
+        "aliases": [],
+        "usage": "/faq @username or user ID",
+        "example": "/faq @user"
+      },
+      {
+        "name": "format",
+        "description": "Asks people to format their code with backticks or by sharing their code on places like pastebin.com",
+        "aliases": [],
+        "usage": "/format @username or user ID",
+        "example": "/format @DudeThatsErin"
+      },
+      {
+        "name": "gettinganswers",
+        "description": "Sends information on how to ask better questions.",
+        "aliases": [],
+        "usage": "/gettinganswers",
+        "example": "/gettinganswers"
+      },
+      {
+        "name": "hire",
+        "description": "Refers people to the request-coders channel to hire someone.",
+        "aliases": [],
+        "usage": "/hire @username or user ID",
+        "example": "/hire @DudeThatsErin"
+      },
+      {
+        "name": "rules",
+        "description": "Asks users to make sure they are following the rules.",
+        "aliases": [],
+        "usage": "/rules @username or user ID rule number[1-5] or /rules @username or ID all",
+        "example": "/rules @DudeThatsErin#8736 4 or /rules @DudeThatsErin#8736 all"
+      }
+      ]
+    },
+    "Utility Commands": {
+      "description": "General utility commands for server interaction and bot functionality.",
+      "icon": "heart",
+      "commands": [
+      {
+        "name": "afk",
+        "description": "Set yourself as AFK with an optional message and duration. Your nickname will show (AFK) while away.",
+        "aliases": [],
+        "usage": "/afk [message] [duration]",
+        "example": "/afk \"Working on a project\" 2h"
+      },
+      {
+        "name": "afk-remove",
+        "description": "Manually remove your AFK status and restore your nickname.",
+        "aliases": [],
+        "usage": "/afk-remove",
+        "example": "/afk-remove"
+      },
+      {
+        "name": "about",
+        "description": "Shows information about the bot including version and features.",
+        "aliases": [],
+        "usage": "/about",
+        "example": "/about"
+      },
+      {
+        "name": "avatar",
+        "description": "Shows a user's avatar in full size.",
+        "aliases": [],
+        "usage": "/avatar [user]",
+        "example": "/avatar @DudeThatsErin"
+      },
+      {
+        "name": "flip",
+        "description": "Flips a coin and returns heads or tails.",
+        "aliases": [],
+        "usage": "/flip",
+        "example": "/flip"
+      },
+      {
+        "name": "invite",
+        "description": "Get an invite link to add this bot to your server.",
+        "aliases": [],
+        "usage": "/invite",
+        "example": "/invite"
+      },
+      {
+        "name": "ping",
+        "description": "Shows the bot's latency and API response time.",
+        "aliases": [],
+        "usage": "/ping",
+        "example": "/ping"
+      },
+      {
+        "name": "reddit",
+        "description": "Get a link to the r/OneNote subreddit.",
+        "aliases": [],
+        "usage": "/reddit",
+        "example": "/reddit"
+      },
+      {
+        "name": "tech",
+        "description": "Shows the technology stack used by this bot.",
+        "aliases": [],
+        "usage": "/tech",
+        "example": "/tech"
+      },
+      {
+        "name": "wiki",
+        "description": "Get a link to the OneNote documentation and wiki.",
+        "aliases": [],
+        "usage": "/wiki",
+        "example": "/wiki"
+      }
+      ]
     }
+  }
 }
