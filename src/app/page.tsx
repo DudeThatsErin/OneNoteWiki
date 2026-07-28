@@ -10,56 +10,56 @@ const quickStartCards = [
     description: 'New to OneNote? Learn the basics and create your first notebook.',
     href: '/getting-started',
     icon: <BookOpen className="w-8 h-8 text-white" />,
-    color: 'bg-[#6d6770] border-[#57525c]'
+    color: 'bg-purple-950/40 border-purple-800/50'
   },
   {
     title: 'Notebooks & Organization',
     description: 'Master notebook creation, sections, pages, and organization strategies.',
     href: '/notebooks',
     icon: <FileText className="w-8 h-8 text-white" />,
-    color: 'bg-[#6d6770] border-[#57525c]'
+    color: 'bg-purple-950/40 border-purple-800/50'
   },
   {
     title: 'Note-Taking Features',
     description: 'Discover text formatting, drawing, handwriting, and advanced features.',
     href: '/features',
     icon: <PenTool className="w-8 h-8 text-white" />,
-    color: 'bg-[#6d6770] border-[#57525c]'
+    color: 'bg-purple-950/40 border-purple-800/50'
   },
   {
     title: 'Mobile OneNote',
     description: 'Use OneNote on iOS and Android devices with mobile-specific tips.',
     href: '/mobile',
     icon: <Smartphone className="w-8 h-8 text-white" />,
-    color: 'bg-[#6d6770] border-[#57525c]'
+    color: 'bg-purple-950/40 border-purple-800/50'
   },
   {
     title: 'Media & Attachments',
     description: 'Add images, audio, video, and file attachments to your notes.',
     href: '/media',
     icon: <Layers className="w-8 h-8 text-white" />,
-    color: 'bg-[#6d6770] border-[#57525c]'
+    color: 'bg-purple-950/40 border-purple-800/50'
   },
   {
     title: 'Sharing & Collaboration',
     description: 'Share notebooks and collaborate with others in real-time.',
     href: '/sharing',
     icon: <Share2 className="w-8 h-8 text-white" />,
-    color: 'bg-[#6d6770] border-[#57525c]'
+    color: 'bg-purple-950/40 border-purple-800/50'
   },
   {
     title: 'Search & Organization',
     description: 'Find your notes quickly with powerful search and OCR features.',
     href: '/search',
     icon: <Search className="w-8 h-8 text-white" />,
-    color: 'bg-[#6d6770] border-[#57525c]'
+    color: 'bg-purple-950/40 border-purple-800/50'
   },
   {
     title: 'Settings & Customization',
     description: 'Configure OneNote settings, sync, backup, and customization options.',
     href: '/settings',
     icon: <Settings className="w-8 h-8 text-white" />,
-    color: 'bg-[#6d6770] border-[#57525c]'
+    color: 'bg-purple-950/40 border-purple-800/50'
   }
 ];
 
@@ -107,7 +107,7 @@ export default function HomePage() {
             <Link
               key={card.href}
               href={card.href}
-              className={`p-6 rounded-lg border transition-all hover:border-[#8b8592] ${card.color}`}
+              className={`p-6 rounded-lg border transition-all hover:border-teal-600 ${card.color}`}
             >
               <div className="flex flex-col gap-3 md:gap-4">
                 <div className="flex items-center gap-3 xl:flex-col xl:items-start xl:gap-2">
@@ -128,7 +128,7 @@ export default function HomePage() {
       </div>
 
       {/* Community Section */}
-      <div className="bg-[#6d6770] rounded-lg p-6 md:p-8 text-center flex flex-col gap-4 md:gap-6 border border-[#57525c]">
+      <div className="bg-purple-950/40 rounded-lg p-6 md:p-8 text-center flex flex-col gap-4 md:gap-6 border border-purple-800/50">
         <h2 className="text-xl md:text-2xl font-bold text-white">
           Join Our Community
         </h2>
@@ -164,7 +164,7 @@ export default function HomePage() {
           Featured Content
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <div className="bg-[#6d6770] rounded-lg border border-[#57525c] p-6">
+          <div className="bg-purple-950/40 rounded-lg border border-purple-800/50 p-6">
             <h3 className="font-semibold text-white mb-2">
               🚀 Getting Started Guide
             </h3>
@@ -178,7 +178,7 @@ export default function HomePage() {
               Read More →
             </Link>
           </div>
-          <div className="bg-[#6d6770] rounded-lg border border-[#57525c] p-6">
+          <div className="bg-purple-950/40 rounded-lg border border-purple-800/50 p-6">
             <h3 className="font-semibold text-white mb-2">
               💡 Organization Tips
             </h3>

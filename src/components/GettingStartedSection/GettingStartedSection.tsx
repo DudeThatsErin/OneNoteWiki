@@ -7,7 +7,7 @@ export function GettingStartedSection({
   className = ""
 }: GettingStartedSectionProps) {
   return (
-    <div className={`bg-[#6d6770] rounded-lg p-6 border border-[#57525c] ${className}`}>
+    <div className={`bg-purple-950/40 rounded-lg p-6 border border-purple-800/50 ${className}`}>
       <div className="mb-6">
         <h3 className="text-lg font-semibold text-white mb-2">
           {title}

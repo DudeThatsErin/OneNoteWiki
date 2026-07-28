@@ -8,19 +8,52 @@
 
 @layer base {
   :root {
-    /* OneNote Purple Color Palette */
-    --onenote-purple-50: #f5f3ff;
-    --onenote-purple-100: #ede9fe;
-    --onenote-purple-200: #ddd6fe;
-    --onenote-purple-300: #c4b5fd;
-    --onenote-purple-400: #a78bfa;
-    --onenote-purple-500: #8b5cf6;
-    --onenote-purple-600: #7c3aed;
-    --onenote-purple-700: #6d28d9;
-    --onenote-purple-800: #5b21b6;
-    --onenote-purple-900: #4c1d95;
-    --onenote-purple-950: #2e1065;
+    /* OneNote Purple Color Palette, derived from Microsoft's actual OneNote
+       brand purple (#80397B, set exactly at the 600 stop -- the stop most of
+       this codebase already uses for buttons/links) rather than Tailwind's
+       stock violet scale. */
+    --onenote-purple-50: #faf4fa;
+    --onenote-purple-100: #f6eaf5;
+    --onenote-purple-200: #ebd1e9;
+    --onenote-purple-300: #dcadd9;
+    --onenote-purple-400: #c87ec3;
+    --onenote-purple-500: #b24dac;
+    --onenote-purple-600: #80397b;
+    --onenote-purple-700: #6b2e67;
+    --onenote-purple-800: #562552;
+    --onenote-purple-900: #401c3e;
+    --onenote-purple-950: #271126;
+
+    /* Complementary accent (teal, opposite purple on the color wheel) --
+       matches the teal used alongside purple in OneNote's own section-color
+       picker. Used sparingly for hover/accent states. */
+    --onenote-teal-500: #00a68f;
+    --onenote-teal-600: #008272;
+    --onenote-teal-700: #006358;
   }
+}
+
+/* Point Tailwind's built-in purple and teal utilities (bg-purple-600, etc.,
+   used throughout this codebase) at the same brand-accurate values instead
+   of Tailwind's stock palette, so every existing purple/teal utility class
+   site-wide renders as the real OneNote brand color without a per-file
+   rewrite. */
+@theme {
+  --color-purple-50: var(--onenote-purple-50);
+  --color-purple-100: var(--onenote-purple-100);
+  --color-purple-200: var(--onenote-purple-200);
+  --color-purple-300: var(--onenote-purple-300);
+  --color-purple-400: var(--onenote-purple-400);
+  --color-purple-500: var(--onenote-purple-500);
+  --color-purple-600: var(--onenote-purple-600);
+  --color-purple-700: var(--onenote-purple-700);
+  --color-purple-800: var(--onenote-purple-800);
+  --color-purple-900: var(--onenote-purple-900);
+  --color-purple-950: var(--onenote-purple-950);
+
+  --color-teal-500: var(--onenote-teal-500);
+  --color-teal-600: var(--onenote-teal-600);
+  --color-teal-700: var(--onenote-teal-700);
 }
 
 @layer components {
@@ -154,18 +187,18 @@ h3 {
 }
 
 @utility color-dark-purple {
-  color: rgba(24, 3, 60, 0.846);
+  color: var(--onenote-purple-900);
 }
 @utility border-dark-purple {
-  border-color: rgba(24, 3, 60, 0.846);
+  border-color: var(--onenote-purple-900);
 }
 
   /* OneNote Purple Background Colors */
 @utility bg-dark-purple {
-  background-color: rgba(24, 3, 60, 0.846);
+  background-color: var(--onenote-purple-900);
 }
 @utility bg-almost-black-purple {
-  background-color: #1a142b;
+  background-color: var(--onenote-purple-950);
 }
 @utility bg-onenote-50 {
   background-color: var(--onenote-purple-50);

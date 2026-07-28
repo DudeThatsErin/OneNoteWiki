@@ -170,7 +170,7 @@ export function Sidebar({ children, className = '' }: SidebarProps) {
                 href={item.href}
                 className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-base font-medium text-white transition-colors ${
                   isActive(item.href) || hasActiveChild(item)
-                    ? 'bg-[#7d4c9c]'
+                    ? 'bg-purple-600'
                     : 'hover:bg-white/10'
                 }`}
               >
@@ -186,7 +186,7 @@ export function Sidebar({ children, className = '' }: SidebarProps) {
                         href={child.href}
                         className={`flex items-center space-x-2 px-3 py-1.5 rounded-md text-base text-white transition-colors ${
                           isActive(child.href)
-                            ? 'bg-[#7d4c9c]'
+                            ? 'bg-purple-600'
                             : 'hover:bg-white/10'
                         }`}
                       >
