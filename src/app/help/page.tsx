@@ -68,7 +68,7 @@ export default function HelpPage() {
           <h2 className="text-default">Frequently Asked Questions</h2>
           
           <div className="space-y-4">
-            <details className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <details className="accent-purple-bg p-6 rounded-lg border">
               <summary className="text-xl font-extrabold cursor-pointer text-default py-3 px-2">How much does OneNote cost?</summary>
               <p className="mt-4 text-muted px-2">
                 OneNote is completely free to use with a Microsoft account. You get 5GB of free storage with OneDrive, which is typically enough for thousands of pages of notes.
@@ -82,44 +82,26 @@ export default function HelpPage() {
               </p>
             </details>
 
-            <details className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <details className="accent-purple-bg p-6 rounded-lg border">
               <summary className="text-xl font-extrabold cursor-pointer text-default py-3 px-2">What's the difference between OneNote versions?</summary>
               <p className="mt-4 text-muted px-2">
                 There are several OneNote versions: OneNote for Windows 10/11 (modern app), OneNote 2016 (desktop version), OneNote for Mac, mobile apps, and the web version. Each has slightly different features, but all sync to the same notebooks.
               </p>
             </details>
 
-            <details className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <details className="accent-purple-bg p-6 rounded-lg border">
               <summary className="text-xl font-extrabold cursor-pointer text-default py-3 px-2">How do I backup my OneNote data?</summary>
               <p className="mt-4 text-muted px-2">
                 OneNote automatically backs up your data to OneDrive. For additional backup, you can export notebooks to PDF or use the File &gt; Export feature to save local copies.
               </p>
             </details>
 
-            <details className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+            <details className="accent-purple-bg p-6 rounded-lg border">
               <summary className="text-xl font-extrabold cursor-pointer text-default py-3 px-2">Can I import notes from other apps?</summary>
               <p className="mt-4 text-muted px-2">
                 Yes! OneNote can import from many sources including Evernote, PDF files, Word documents, and more. Use the File &gt; Export feature or the OneNote Importer tool.
               </p>
             </details>
-          </div>
-
-          <h2 className="text-default">Contact Support</h2>
-          <p className="text-muted">
-            If you can't find the answer to your question, here are ways to get additional help:
-          </p>
-
-          <ul className="list-disc list-inside space-y-2 text-muted">
-            <li><strong className="text-default">Microsoft Support:</strong> Use the built-in help in OneNote or visit the Microsoft Support website</li>
-            <li><strong className="text-default">Community Forums:</strong> Post questions in the OneNote subreddit or Discord community</li>
-            <li><strong className="text-default">Social Media:</strong> Follow @msonenote on Twitter for updates and tips</li>
-            <li><strong className="text-default">Feedback:</strong> Use the feedback option in OneNote to report bugs or suggest features</li>
-          </ul>
-
-          <div className="my-8 p-4 accent-purple-bg rounded-lg">
-            <p className="text-center text-sm text-subtle mb-2">
-              <strong>SCREENSHOT HERE OF OneNote's Help menu showing options like "Help", "What's New", "Send Feedback", and "Contact Support"</strong>
-            </p>
           </div>
         </div>
       </div>

@@ -117,7 +117,7 @@ export default function SearchPage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+            <div className="bg-purple-50/50 dark:bg-purple-950/40 rounded-lg p-4 border border-purple-200/50 dark:border-purple-800/50">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Quick Search Tips</h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• Use Ctrl+F for page-level search</li>
@@ -126,7 +126,7 @@ export default function SearchPage() {
                 <li>• Recent searches are saved</li>
               </ul>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+            <div className="bg-purple-50/50 dark:bg-purple-950/40 rounded-lg p-4 border border-purple-200/50 dark:border-purple-800/50">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Search Scope Options</h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• Current page only</li>
@@ -154,19 +154,19 @@ export default function SearchPage() {
               <h4 className="font-semibold text-gray-900 dark:text-white mb-3">OCR Capabilities</h4>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Text extraction from photos and screenshots</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Document and whiteboard text recognition</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Multiple language support</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Automatic text indexing for search</span>
                 </li>
               </ul>
@@ -176,19 +176,19 @@ export default function SearchPage() {
               <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Handwriting Search</h4>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Handwritten text recognition and search</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Shape and drawing recognition</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Mathematical equation search</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Ink-to-text conversion for better search</span>
                 </li>
               </ul>
@@ -225,7 +225,7 @@ export default function SearchPage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+            <div className="bg-purple-50/50 dark:bg-purple-950/40 rounded-lg p-4 border border-purple-200/50 dark:border-purple-800/50">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Common Tag Uses</h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• Project categorization</li>
@@ -234,7 +234,7 @@ export default function SearchPage() {
                 <li>• Review reminders</li>
               </ul>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+            <div className="bg-purple-50/50 dark:bg-purple-950/40 rounded-lg p-4 border border-purple-200/50 dark:border-purple-800/50">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Tag Best Practices</h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• Use consistent naming</li>
@@ -243,7 +243,7 @@ export default function SearchPage() {
                 <li>• Color coordination</li>
               </ul>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+            <div className="bg-purple-50/50 dark:bg-purple-950/40 rounded-lg p-4 border border-purple-200/50 dark:border-purple-800/50">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Tag Shortcuts</h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• Ctrl+1: To Do tag</li>
@@ -251,6 +251,9 @@ export default function SearchPage() {
                 <li>• Ctrl+3: Question tag</li>
                 <li>• Ctrl+0: Remove tags</li>
               </ul>
+              <p className="text-xs text-gray-500 dark:text-gray-400 italic mt-2">
+                These shortcuts are only available on OneNote for Windows.
+              </p>
             </div>
           </div>
         </section>
@@ -320,7 +323,7 @@ export default function SearchPage() {
           </Callout>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+            <div className="bg-purple-50/50 dark:bg-purple-950/40 rounded-lg p-4 border border-purple-200/50 dark:border-purple-800/50">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Known Limitations</h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• Password-protected sections aren't searchable</li>
@@ -329,7 +332,7 @@ export default function SearchPage() {
                 <li>• Audio transcription requires internet connection</li>
               </ul>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+            <div className="bg-purple-50/50 dark:bg-purple-950/40 rounded-lg p-4 border border-purple-200/50 dark:border-purple-800/50">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Workarounds</h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• Add text descriptions to images</li>

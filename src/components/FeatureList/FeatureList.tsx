@@ -23,7 +23,7 @@ export function FeatureList({
       )}
       <div className={`grid ${gridCols[columns]} gap-2`}>
         {features.map((feature, index) => (
-          <div key={index} className={`bg-white dark:bg-gray-800 ${padding} rounded-lg border border-gray-200 dark:border-gray-700`}>
+          <div key={index} className={`bg-purple-50/50 dark:bg-purple-950/40 ${padding} rounded-lg border border-purple-200/50 dark:border-purple-800/50`}>
             <div className="flex items-center gap-3">
               {feature.icon && (
                 <div className="text-blue-600 dark:text-blue-400">{feature.icon}</div>
