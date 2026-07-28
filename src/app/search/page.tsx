@@ -1,9 +1,8 @@
 import { PageLayout } from '@/components/PageLayout';
-import { InfoCard } from '@/components/InfoCard';
 import { FeatureList } from '@/components/FeatureList';
 import { Callout } from '@/components/Callout';
 import { QuickStats } from '@/components/QuickStats';
-import { Search, FileText, Image, Mic, Tag, Filter, Zap } from 'lucide-react';
+import { Search, FileText, Image, Mic } from 'lucide-react';
 
 export default function SearchPage() {
   return (
@@ -35,63 +34,6 @@ export default function SearchPage() {
             { label: 'Audio Content', value: 'Transcribed', icon: <Mic className="w-5 h-5" /> }
           ]}
         />
-
-        {/* Search Types */}
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-            Types of Search
-          </h3>
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-6">
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              <strong>SCREENSHOT HERE OF:</strong> OneNote search interface showing different search options
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <InfoCard
-              title="Text Search"
-              icon={<FileText className="w-6 h-6" />}
-              variant="purple"
-            >
-              Find typed text across all notebooks and pages
-            </InfoCard>
-            <InfoCard
-              title="Image Text (OCR)"
-              icon={<Image className="w-6 h-6" />}
-              variant="blue"
-            >
-              Search for text within images and screenshots
-            </InfoCard>
-            <InfoCard
-              title="Handwriting Recognition"
-              icon={<Search className="w-6 h-6" />}
-              variant="green"
-            >
-              Find handwritten notes and drawings
-            </InfoCard>
-            <InfoCard
-              title="Audio Transcription"
-              icon={<Mic className="w-6 h-6" />}
-              variant="orange"
-            >
-              Search within audio recording transcripts
-            </InfoCard>
-            <InfoCard
-              title="Tag-Based Search"
-              icon={<Tag className="w-6 h-6" />}
-              variant="red"
-            >
-              Filter content by custom tags and categories
-            </InfoCard>
-            <InfoCard
-              title="Advanced Filters"
-              icon={<Filter className="w-6 h-6" />}
-              variant="indigo"
-            >
-              Narrow results by date, author, and notebook
-            </InfoCard>
-          </div>
-        </section>
 
         {/* Search Techniques */}
         <section>
