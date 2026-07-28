@@ -1,5 +1,4 @@
 import { PageLayout } from '@/components/PageLayout';
-import { FeatureList } from '@/components/FeatureList';
 import { Callout } from '@/components/Callout';
 import { QuickStats } from '@/components/QuickStats';
 import { Search, FileText, Image, Mic } from 'lucide-react';
@@ -98,62 +97,6 @@ export default function SearchPage() {
           </Callout>
         </section>
 
-        {/* Organization with Tags */}
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-            Organization with Tags
-          </h3>
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-6">
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              <strong>SCREENSHOT HERE OF:</strong> Tag interface showing custom tags and tag search
-            </p>
-          </div>
-
-          <FeatureList
-            title="Tag System Features"
-            features={[
-              { title: "Create custom tags for categorizing content", description: "Design your own organizational system" },
-              { title: "Built-in tags: To Do, Important, Question, Remember", description: "Use predefined tags for common needs" },
-              { title: "Tag summary pages for quick overview", description: "View all tagged content in one place" },
-              { title: "Search and filter by specific tags", description: "Find content by tag categories" },
-              { title: "Tag-based task management", description: "Organize tasks with tag systems" },
-              { title: "Color-coded tag organization", description: "Visual organization with colored tags" }
-            ]}
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-            <div className="bg-purple-50/50 dark:bg-purple-950/40 rounded-lg p-4 border border-purple-200/50 dark:border-purple-800/50">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Common Tag Uses</h4>
-              <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                <li>• Project categorization</li>
-                <li>• Priority levels</li>
-                <li>• Action items</li>
-                <li>• Review reminders</li>
-              </ul>
-            </div>
-            <div className="bg-purple-50/50 dark:bg-purple-950/40 rounded-lg p-4 border border-purple-200/50 dark:border-purple-800/50">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Tag Best Practices</h4>
-              <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                <li>• Use consistent naming</li>
-                <li>• Create tag hierarchies</li>
-                <li>• Regular tag cleanup</li>
-                <li>• Color coordination</li>
-              </ul>
-            </div>
-            <div className="bg-purple-50/50 dark:bg-purple-950/40 rounded-lg p-4 border border-purple-200/50 dark:border-purple-800/50">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Tag Shortcuts</h4>
-              <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                <li>• Ctrl+1: To Do tag</li>
-                <li>• Ctrl+2: Important tag</li>
-                <li>• Ctrl+3: Question tag</li>
-                <li>• Ctrl+0: Remove tags</li>
-              </ul>
-              <p className="text-xs text-gray-500 dark:text-gray-400 italic mt-2">
-                These shortcuts are only available on OneNote for Windows.
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* Search Performance Tips */}
         <section>
