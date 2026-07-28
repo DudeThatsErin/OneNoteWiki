@@ -168,10 +168,10 @@ export function Sidebar({ children, className = '' }: SidebarProps) {
             <li key={item.href}>
               <Link
                 href={item.href}
-                className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-base font-medium text-white transition-colors ${
+                className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-base font-medium transition-colors ${
                   isActive(item.href) || hasActiveChild(item)
-                    ? 'bg-purple-900 dark:bg-purple-600'
-                    : 'hover:bg-black/10 dark:hover:bg-white/10'
+                    ? 'bg-purple-600 text-white'
+                    : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
                 }`}
               >
                 {item.icon}
@@ -184,10 +184,10 @@ export function Sidebar({ children, className = '' }: SidebarProps) {
                     <li key={child.href}>
                       <Link
                         href={child.href}
-                        className={`flex items-center space-x-2 px-3 py-1.5 rounded-md text-base text-white transition-colors ${
+                        className={`flex items-center space-x-2 px-3 py-1.5 rounded-md text-base transition-colors ${
                           isActive(child.href)
-                            ? 'bg-purple-900 dark:bg-purple-600'
-                            : 'hover:bg-black/10 dark:hover:bg-white/10'
+                            ? 'bg-purple-600 text-white'
+                            : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800'
                         }`}
                       >
                         {child.icon}
