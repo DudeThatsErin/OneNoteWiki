@@ -20,7 +20,7 @@ export default function HelpPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
             <InfoCard
               title="Official Microsoft Support"
-              variant="gray"
+              variant="purple"
             >
               <ul className="list-disc list-inside space-y-2 text-muted">
                 <li><a href="https://support.microsoft.com/onenote" className="accent-purple hover:underline">Microsoft OneNote Help Center</a></li>
