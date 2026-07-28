@@ -7,7 +7,7 @@ export function GettingStartedSection({
   className = ""
 }: GettingStartedSectionProps) {
   return (
-    <div className={`bg-gray-50/50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200/50 dark:border-gray-700 ${className}`}>
+    <div className={`bg-purple-50/50 dark:bg-purple-950/30 rounded-lg p-6 border border-purple-200/50 dark:border-purple-800/50 ${className}`}>
       <div className="mb-6">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
           {title}
@@ -23,14 +23,14 @@ export function GettingStartedSection({
         {steps.map((step, index) => (
           <div key={index} className="flex items-start gap-4">
             <div className="flex-shrink-0">
-              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+              <div className="w-8 h-8 bg-purple-600 dark:bg-purple-700 text-white rounded-full flex items-center justify-center text-sm font-bold">
                 {index + 1}
               </div>
             </div>
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2">
                 {step.icon && (
-                  <div className="text-blue-600 dark:text-blue-400">
+                  <div className="text-purple-600 dark:text-purple-400">
                     {step.icon}
                   </div>
                 )}
