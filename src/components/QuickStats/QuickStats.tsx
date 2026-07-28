@@ -23,16 +23,16 @@ export function QuickStats({
       )}
       <div className={`grid ${gridCols[columns]} gap-6`}>
         {stats.map((stat, index) => (
-          <div 
-            key={index} 
-            className={`${padding} bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 text-center`}
+          <div
+            key={index}
+            className={`${padding} bg-purple-50/50 dark:bg-purple-950/40 rounded-lg border border-purple-200/50 dark:border-purple-800/50 text-center`}
           >
             {stat.icon && (
-              <div className="flex justify-center mb-2 text-blue-600 dark:text-blue-400">
+              <div className="flex justify-center mb-2 text-purple-600 dark:text-purple-400">
                 {stat.icon}
               </div>
             )}
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+            <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">
               {stat.value}
             </div>
             <div className="text-sm text-gray-600 dark:text-gray-300">
