@@ -113,19 +113,19 @@ export default function SettingsPage() {
               <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Sync Options</h4>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Automatic sync frequency settings</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>WiFi-only sync for mobile devices</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Offline notebook downloads</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Sync conflict resolution preferences</span>
                 </li>
               </ul>
@@ -135,19 +135,19 @@ export default function SettingsPage() {
               <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Storage Management</h4>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>OneDrive storage usage monitoring</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Notebook location management</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Cache size and cleanup options</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Storage optimization settings</span>
                 </li>
               </ul>
@@ -222,19 +222,19 @@ export default function SettingsPage() {
               <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Interface Layout</h4>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Navigation pane visibility and size</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Ribbon interface customization</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Quick access toolbar setup</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1">•</span>
+                  <span className="text-purple-500 mt-1">•</span>
                   <span>Page tabs and section organization</span>
                 </li>
               </ul>
