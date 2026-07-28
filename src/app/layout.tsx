@@ -68,7 +68,7 @@ export default function RootLayout({
         <ThemeProvider>
           <SearchProvider>
             <div className="min-h-screen bg-white dark:bg-almost-black-purple flex">
-              <div className="w-64 bg-white dark:bg-dark-purple border-r border-dark-purple dark:border-dark-purple">
+              <div className="w-64 bg-[#6d6770]">
                 <Sidebar className='fixed top-0 left-0 w-64 overflow-y-auto' />
               </div>
               <div className="flex-1 flex flex-col">
