@@ -26,14 +26,14 @@ export default function ResourcesPage() {
               </p>
             </InfoCard>
 
-            <InfoCard title="OneNote 2016" variant="blue">
+            <InfoCard title="OneNote 2016" variant="purple">
               <p>
                 The legacy desktop version with a few power-user features (like custom tags and
                 the classic ribbon) that haven&apos;t made it to the modern app yet.
               </p>
             </InfoCard>
 
-            <InfoCard title="OneNote for the web / mobile" variant="green">
+            <InfoCard title="OneNote for the web / mobile" variant="purple">
               <p>
                 Browser and mobile apps that mirror the modern app&apos;s feature set, letting you
                 read and edit notebooks from anywhere.

@@ -58,31 +58,31 @@ export default function SharingPage() {
               title="Share Link"
               description="Generate shareable links with access controls"
               icon={<Link className="w-6 h-6" />}
-              variant="blue"
+              variant="purple"
             />
             <InfoCard
               title="Organization Sharing"
               description="Share within your Microsoft 365 organization"
               icon={<Users className="w-6 h-6" />}
-              variant="green"
+              variant="purple"
             />
             <InfoCard
               title="Public Sharing"
               description="Make notebooks publicly viewable on the web"
               icon={<Eye className="w-6 h-6" />}
-              variant="orange"
+              variant="purple"
             />
             <InfoCard
               title="Team Integration"
               description="Share through Microsoft Teams channels"
               icon={<Shield className="w-6 h-6" />}
-              variant="red"
+              variant="purple"
             />
             <InfoCard
               title="Class Notebooks"
               description="Educational sharing with student/teacher roles"
               icon={<Users className="w-6 h-6" />}
-              variant="indigo"
+              variant="purple"
             />
           </div>
         </section>

@@ -62,7 +62,7 @@ export default function NotebooksPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
             <InfoCard
               title="Academic Organization"
-              variant="blue"
+              variant="purple"
             >
               <ul className="list-disc list-inside space-y-2">
                 <li>One notebook per subject/course</li>

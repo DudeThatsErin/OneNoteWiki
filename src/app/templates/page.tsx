@@ -30,7 +30,7 @@ export default function TemplatesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
             <InfoCard
               title="Academic Templates"
-              variant="blue"
+              variant="purple"
             >
               <ul className="list-disc list-inside space-y-2">
                 <li>Lecture Notes</li>
@@ -60,7 +60,7 @@ export default function TemplatesPage() {
             
             <InfoCard
               title="Personal Templates"
-              variant="green"
+              variant="purple"
             >
               <ul className="list-disc list-inside space-y-2">
                 <li>Daily Journal</li>

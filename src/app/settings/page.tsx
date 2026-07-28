@@ -35,35 +35,35 @@ export default function SettingsPage() {
           <InfoCard
             title="Sync & Storage"
             icon={<RefreshCw className="w-6 h-6" />}
-            variant="blue"
+            variant="purple"
           >
             OneDrive sync settings and storage management
           </InfoCard>
           <InfoCard
             title="Privacy & Security"
             icon={<Shield className="w-6 h-6" />}
-            variant="green"
+            variant="purple"
           >
             Data protection and sharing permissions
           </InfoCard>
           <InfoCard
             title="Notifications"
             icon={<Bell className="w-6 h-6" />}
-            variant="orange"
+            variant="purple"
           >
             Alert preferences and reminder settings
           </InfoCard>
           <InfoCard
             title="Appearance"
             icon={<Palette className="w-6 h-6" />}
-            variant="red"
+            variant="purple"
           >
             Theme, layout, and display customization
           </InfoCard>
           <InfoCard
             title="Backup & Export"
             icon={<Cloud className="w-6 h-6" />}
-            variant="indigo"
+            variant="purple"
           >
             Data backup and export options
           </InfoCard>

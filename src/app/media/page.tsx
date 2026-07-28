@@ -35,21 +35,21 @@ export default function MediaPage() {
           <InfoCard
             title="Audio Recordings"
             icon={<Mic className="w-6 h-6" />}
-            variant="blue"
+            variant="purple"
           >
             Record voice notes and audio clips
           </InfoCard>
           <InfoCard
             title="Video Content"
             icon={<Video className="w-6 h-6" />}
-            variant="green"
+            variant="purple"
           >
             Embed videos and screen recordings
           </InfoCard>
           <InfoCard
             title="File Attachments"
             icon={<FileText className="w-6 h-6" />}
-            variant="orange"
+            variant="purple"
           >
             Attach documents, PDFs, and other files
           </InfoCard>

@@ -58,31 +58,31 @@ export default function MobilePage() {
               title="Voice Recording"
               description="Record audio notes with automatic transcription"
               icon={<Mic className="w-6 h-6" />}
-              variant="blue"
+              variant="purple"
             />
             <InfoCard
               title="Touch & Pen Input"
               description="Draw, sketch, and handwrite with finger or stylus"
               icon={<Pen className="w-6 h-6" />}
-              variant="green"
+              variant="purple"
             />
             <InfoCard
               title="Offline Access"
               description="View and edit notes without internet connection"
               icon={<WifiOff className="w-6 h-6" />}
-              variant="orange"
+              variant="purple"
             />
             <InfoCard
               title="Quick Capture"
               description="Fast note creation with widgets and shortcuts"
               icon={<Smartphone className="w-6 h-6" />}
-              variant="red"
+              variant="purple"
             />
             <InfoCard
               title="Cross-Device Sync"
               description="Seamless synchronization across all devices"
               icon={<Wifi className="w-6 h-6" />}
-              variant="indigo"
+              variant="purple"
             />
           </div>
         </section>
