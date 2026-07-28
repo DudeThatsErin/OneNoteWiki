@@ -110,64 +110,170 @@ h3 {
   @apply bg-gray-400 dark:bg-gray-500;
 }
 
-@layer utilities {
+/* OneNote purple utilities, registered via @utility (not plain classes
+   inside @layer utilities) so they compose correctly with variants like
+   dark:/hover:. Tailwind v3 let any class in @layer utilities combine
+   with variants automatically; v4 only does that for utilities
+   registered this way. Two of these (dark:bg-almost-black-purple,
+   dark:bg-dark-purple in layout.tsx) were silently no-ops after the v4
+   migration -- the whole page fell back to a plain white/gray
+   background instead of OneNote's dark purple. */
   /* OneNote Purple Text Colors */
-  .text-onenote-50 { color: var(--onenote-purple-50); }
-  .text-onenote-100 { color: var(--onenote-purple-100); }
-  .text-onenote-200 { color: var(--onenote-purple-200); }
-  .text-onenote-300 { color: var(--onenote-purple-300); }
-  .text-onenote-400 { color: var(--onenote-purple-400); }
-  .text-onenote-500 { color: var(--onenote-purple-500); }
-  .text-onenote-600 { color: var(--onenote-purple-600); }
-  .text-onenote-700 { color: var(--onenote-purple-700); }
-  .text-onenote-800 { color: var(--onenote-purple-800); }
-  .text-onenote-900 { color: var(--onenote-purple-900); }
-  .text-onenote-950 { color: var(--onenote-purple-950); }
+@utility text-onenote-50 {
+  color: var(--onenote-purple-50);
+}
+@utility text-onenote-100 {
+  color: var(--onenote-purple-100);
+}
+@utility text-onenote-200 {
+  color: var(--onenote-purple-200);
+}
+@utility text-onenote-300 {
+  color: var(--onenote-purple-300);
+}
+@utility text-onenote-400 {
+  color: var(--onenote-purple-400);
+}
+@utility text-onenote-500 {
+  color: var(--onenote-purple-500);
+}
+@utility text-onenote-600 {
+  color: var(--onenote-purple-600);
+}
+@utility text-onenote-700 {
+  color: var(--onenote-purple-700);
+}
+@utility text-onenote-800 {
+  color: var(--onenote-purple-800);
+}
+@utility text-onenote-900 {
+  color: var(--onenote-purple-900);
+}
+@utility text-onenote-950 {
+  color: var(--onenote-purple-950);
+}
 
-  .color-dark-purple { color: rgba(24, 3, 60, 0.846); }
-  .border-dark-purple { border-color: rgba(24, 3, 60, 0.846); }
+@utility color-dark-purple {
+  color: rgba(24, 3, 60, 0.846);
+}
+@utility border-dark-purple {
+  border-color: rgba(24, 3, 60, 0.846);
+}
 
   /* OneNote Purple Background Colors */
-  .bg-dark-purple { background-color: rgba(24, 3, 60, 0.846); }
-  .bg-almost-black-purple { background-color: #1a142b; }
-  .bg-onenote-50 { background-color: var(--onenote-purple-50); }
-  .bg-onenote-100 { background-color: var(--onenote-purple-100); }
-  .bg-onenote-200 { background-color: var(--onenote-purple-200); }
-  .bg-onenote-300 { background-color: var(--onenote-purple-300); }
-  .bg-onenote-400 { background-color: var(--onenote-purple-400); }
-  .bg-onenote-500 { background-color: var(--onenote-purple-500); }
-  .bg-onenote-600 { background-color: var(--onenote-purple-600); }
-  .bg-onenote-700 { background-color: var(--onenote-purple-700); }
-  .bg-onenote-800 { background-color: var(--onenote-purple-800); }
-  .bg-onenote-900 { background-color: var(--onenote-purple-900); }
-  .bg-onenote-950 { background-color: var(--onenote-purple-950); }
+@utility bg-dark-purple {
+  background-color: rgba(24, 3, 60, 0.846);
+}
+@utility bg-almost-black-purple {
+  background-color: #1a142b;
+}
+@utility bg-onenote-50 {
+  background-color: var(--onenote-purple-50);
+}
+@utility bg-onenote-100 {
+  background-color: var(--onenote-purple-100);
+}
+@utility bg-onenote-200 {
+  background-color: var(--onenote-purple-200);
+}
+@utility bg-onenote-300 {
+  background-color: var(--onenote-purple-300);
+}
+@utility bg-onenote-400 {
+  background-color: var(--onenote-purple-400);
+}
+@utility bg-onenote-500 {
+  background-color: var(--onenote-purple-500);
+}
+@utility bg-onenote-600 {
+  background-color: var(--onenote-purple-600);
+}
+@utility bg-onenote-700 {
+  background-color: var(--onenote-purple-700);
+}
+@utility bg-onenote-800 {
+  background-color: var(--onenote-purple-800);
+}
+@utility bg-onenote-900 {
+  background-color: var(--onenote-purple-900);
+}
+@utility bg-onenote-950 {
+  background-color: var(--onenote-purple-950);
+}
 
   /* OneNote Purple Border Colors */
-  .border-onenote-50 { border-color: var(--onenote-purple-50); }
-  .border-onenote-100 { border-color: var(--onenote-purple-100); }
-  .border-onenote-200 { border-color: var(--onenote-purple-200); }
-  .border-onenote-300 { border-color: var(--onenote-purple-300); }
-  .border-onenote-400 { border-color: var(--onenote-purple-400); }
-  .border-onenote-500 { border-color: var(--onenote-purple-500); }
-  .border-onenote-600 { border-color: var(--onenote-purple-600); }
-  .border-onenote-700 { border-color: var(--onenote-purple-700); }
-  .border-onenote-800 { border-color: var(--onenote-purple-800); }
-  .border-onenote-900 { border-color: var(--onenote-purple-900); }
-  .border-onenote-950 { border-color: var(--onenote-purple-950); }
+@utility border-onenote-50 {
+  border-color: var(--onenote-purple-50);
+}
+@utility border-onenote-100 {
+  border-color: var(--onenote-purple-100);
+}
+@utility border-onenote-200 {
+  border-color: var(--onenote-purple-200);
+}
+@utility border-onenote-300 {
+  border-color: var(--onenote-purple-300);
+}
+@utility border-onenote-400 {
+  border-color: var(--onenote-purple-400);
+}
+@utility border-onenote-500 {
+  border-color: var(--onenote-purple-500);
+}
+@utility border-onenote-600 {
+  border-color: var(--onenote-purple-600);
+}
+@utility border-onenote-700 {
+  border-color: var(--onenote-purple-700);
+}
+@utility border-onenote-800 {
+  border-color: var(--onenote-purple-800);
+}
+@utility border-onenote-900 {
+  border-color: var(--onenote-purple-900);
+}
+@utility border-onenote-950 {
+  border-color: var(--onenote-purple-950);
+}
 
   /* OneNote Purple Ring Colors */
-  .ring-onenote-50 { --tw-ring-color: var(--onenote-purple-50); }
-  .ring-onenote-100 { --tw-ring-color: var(--onenote-purple-100); }
-  .ring-onenote-200 { --tw-ring-color: var(--onenote-purple-200); }
-  .ring-onenote-300 { --tw-ring-color: var(--onenote-purple-300); }
-  .ring-onenote-400 { --tw-ring-color: var(--onenote-purple-400); }
-  .ring-onenote-500 { --tw-ring-color: var(--onenote-purple-500); }
-  .ring-onenote-600 { --tw-ring-color: var(--onenote-purple-600); }
-  .ring-onenote-700 { --tw-ring-color: var(--onenote-purple-700); }
-  .ring-onenote-800 { --tw-ring-color: var(--onenote-purple-800); }
-  .ring-onenote-900 { --tw-ring-color: var(--onenote-purple-900); }
-  .ring-onenote-950 { --tw-ring-color: var(--onenote-purple-950); }
+@utility ring-onenote-50 {
+  --tw-ring-color: var(--onenote-purple-50);
+}
+@utility ring-onenote-100 {
+  --tw-ring-color: var(--onenote-purple-100);
+}
+@utility ring-onenote-200 {
+  --tw-ring-color: var(--onenote-purple-200);
+}
+@utility ring-onenote-300 {
+  --tw-ring-color: var(--onenote-purple-300);
+}
+@utility ring-onenote-400 {
+  --tw-ring-color: var(--onenote-purple-400);
+}
+@utility ring-onenote-500 {
+  --tw-ring-color: var(--onenote-purple-500);
+}
+@utility ring-onenote-600 {
+  --tw-ring-color: var(--onenote-purple-600);
+}
+@utility ring-onenote-700 {
+  --tw-ring-color: var(--onenote-purple-700);
+}
+@utility ring-onenote-800 {
+  --tw-ring-color: var(--onenote-purple-800);
+}
+@utility ring-onenote-900 {
+  --tw-ring-color: var(--onenote-purple-900);
+}
+@utility ring-onenote-950 {
+  --tw-ring-color: var(--onenote-purple-950);
+}
 
+
+
+@layer utilities {
   /* Dark Mode Responsive OneNote Colors
      Rewritten as plain CSS instead of @apply: these were @apply-ing OTHER
      custom classes from this same file (e.g. .text-onenote-600), not real
