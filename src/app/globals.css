@@ -147,10 +147,7 @@ h3 {
    inside @layer utilities) so they compose correctly with variants like
    dark:/hover:. Tailwind v3 let any class in @layer utilities combine
    with variants automatically; v4 only does that for utilities
-   registered this way. Two of these (dark:bg-almost-black-purple,
-   dark:bg-dark-purple in layout.tsx) were silently no-ops after the v4
-   migration -- the whole page fell back to a plain white/gray
-   background instead of OneNote's dark purple. */
+   registered this way. */
   /* OneNote Purple Text Colors */
 @utility text-onenote-50 {
   color: var(--onenote-purple-50);
@@ -186,20 +183,7 @@ h3 {
   color: var(--onenote-purple-950);
 }
 
-@utility color-dark-purple {
-  color: var(--onenote-purple-900);
-}
-@utility border-dark-purple {
-  border-color: var(--onenote-purple-900);
-}
-
   /* OneNote Purple Background Colors */
-@utility bg-dark-purple {
-  background-color: var(--onenote-purple-900);
-}
-@utility bg-almost-black-purple {
-  background-color: var(--onenote-purple-950);
-}
 @utility bg-onenote-50 {
   background-color: var(--onenote-purple-50);
 }

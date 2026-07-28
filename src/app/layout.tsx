@@ -67,8 +67,8 @@ export default function RootLayout({
         <SpeedInsights />
         <ThemeProvider>
           <SearchProvider>
-            <div className="min-h-screen bg-white dark:bg-almost-black-purple flex">
-              <div className="w-64 bg-purple-950">
+            <div className="min-h-screen bg-white dark:bg-neutral-950 flex">
+              <div className="w-64 bg-purple-700 dark:bg-purple-950">
                 <Sidebar className='fixed top-0 left-0 w-64 overflow-y-auto' />
               </div>
               <div className="flex-1 flex flex-col">
