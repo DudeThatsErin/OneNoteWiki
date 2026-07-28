@@ -35,51 +35,6 @@ export default function SearchPage() {
           ]}
         />
 
-        {/* Search Techniques */}
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-            Advanced Search Techniques
-          </h3>
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-6">
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              <strong>SCREENSHOT HERE OF:</strong> Advanced search filters and operators in action
-            </p>
-          </div>
-
-          <FeatureList
-            title="Search Operators & Filters"
-            features={[
-              { title: 'Use quotes for exact phrases: "project meeting"', description: 'Search for exact phrase matches' },
-              { title: 'Wildcard searches with asterisk: proj* finds project, projects, etc.', description: 'Use wildcards for partial matches' },
-              { title: 'Boolean operators: AND, OR, NOT for complex queries', description: 'Combine search terms with logical operators' },
-              { title: 'Date filters: created:today, modified:last week', description: 'Filter results by creation or modification date' },
-              { title: 'Author filters: author:"John Smith"', description: 'Find content by specific authors' },
-              { title: 'Notebook filters: notebook:"Work Notes"', description: 'Limit search to specific notebooks' }
-            ]}
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div className="bg-purple-50/50 dark:bg-purple-950/40 rounded-lg p-4 border border-purple-200/50 dark:border-purple-800/50">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Quick Search Tips</h4>
-              <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                <li>• Use Ctrl+F for page-level search</li>
-                <li>• Use Ctrl+E for global search</li>
-                <li>• Search results show context snippets</li>
-                <li>• Recent searches are saved</li>
-              </ul>
-            </div>
-            <div className="bg-purple-50/50 dark:bg-purple-950/40 rounded-lg p-4 border border-purple-200/50 dark:border-purple-800/50">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Search Scope Options</h4>
-              <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                <li>• Current page only</li>
-                <li>• Current section</li>
-                <li>• Current notebook</li>
-                <li>• All notebooks</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
         {/* OCR and Handwriting */}
         <section>
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
