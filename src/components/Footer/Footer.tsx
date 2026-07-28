@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { Github, Heart, Code } from 'lucide-react';
+import { Code } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDiscord, faReddit } from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faReddit, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FooterProps } from './types';
 
 export function Footer({ children, className = '' }: FooterProps) {
@@ -93,7 +93,7 @@ export function Footer({ children, className = '' }: FooterProps) {
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
                 >
-                  <Github className="w-5 h-5" />
+                  <FontAwesomeIcon icon={faGithub} className="w-5 h-5" />
                   <span className="text-sm">Wiki GitHub</span>
                 </a>
               </div>
@@ -104,7 +104,7 @@ export function Footer({ children, className = '' }: FooterProps) {
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
                 >
-                  <Github className="w-5 h-5" />
+                  <FontAwesomeIcon icon={faGithub} className="w-5 h-5" />
                   <span className="text-sm">Bot GitHub</span>
                 </a>
               </div>

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import ProgressBar from './ProgressBar';
+import { ProgressBar } from './ProgressBar';
 
 describe('ProgressBar', () => {
   it('renders with correct progress value', () => {

@@ -32,12 +32,8 @@ describe('Callout', () => {
         <Callout type={type}>Content</Callout>
       );
       
-      // Check that an icon is rendered (Lucide icons are mocked as divs with data-testid)
-      const icon = container.querySelector(`[data-testid="${type === 'info' ? 'info' : 
-                                                         type === 'warning' ? 'alert-triangle' :
-                                                         type === 'error' ? 'alert-circle' :
-                                                         type === 'success' ? 'check-circle' :
-                                                         'lightbulb'}-icon"]`);
+      // Callout tags its default icon with data-testid={`${type}-icon`}.
+      const icon = container.querySelector(`[data-testid="${type}-icon"]`);
       expect(icon).toBeInTheDocument();
     });
   });

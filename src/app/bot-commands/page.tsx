@@ -1,8 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type ReactElement } from 'react';
 import Link from 'next/link';
-import { ChevronDown, ChevronRight, Bot, MessageCircle, Hash, Users, Settings, HelpCircle, Github, Zap, Smile, Heart } from 'lucide-react';
+import { ChevronDown, ChevronRight, Bot, MessageCircle, Hash, Users, Settings, HelpCircle, Zap, Smile, Heart } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { PageLayout } from '@/components/PageLayout';
 import { QuickStats } from '@/components/QuickStats';
 import { InfoCard } from '@/components/InfoCard';
@@ -33,14 +35,14 @@ interface CommandData {
 interface CommandCategory {
   id: string;
   title: string;
-  icon: JSX.Element;
+  icon: ReactElement;
   description: string;
   commands: BotCommand[];
   type: 'prefix' | 'slash';
 }
 
 // Function to get icon for category
-const getCategoryIcon = (iconName: string, type: 'prefix' | 'slash'): JSX.Element => {
+const getCategoryIcon = (iconName: string, type: 'prefix' | 'slash'): ReactElement => {
   const name = iconName?.toLowerCase() || '';
   
   switch (name) {
@@ -289,7 +291,7 @@ export default function BotCommandsPage() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
           >
-            <Github className="w-4 h-4" />
+            <FontAwesomeIcon icon={faGithub} className="w-4 h-4" />
             <span>Contribute on GitHub</span>
           </a>
           <a

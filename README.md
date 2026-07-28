@@ -30,8 +30,8 @@ A comprehensive wiki for mastering Microsoft OneNote, created by the OneNote com
 
 ## Tech Stack
 
-- **Framework:** Next.js 14 with TypeScript
-- **Styling:** Tailwind CSS with modern layout patterns
+- **Framework:** Next.js 16 (React 19) with TypeScript
+- **Styling:** Tailwind CSS v4 with modern layout patterns
 - **Icons:** Lucide React & FontAwesome
 - **Components:** Professional folder-based architecture (13 components)
 - **Database:** Interactive DataTable with advanced filtering and search

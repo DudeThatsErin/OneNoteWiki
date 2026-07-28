@@ -51,7 +51,10 @@ export function Callout({
 }: CalloutProps) {
   const styles = calloutStyles[type];
   const IconComponent = defaultIcons[type];
-  const displayIcon = icon || <IconComponent className="w-5 h-5" />;
+  // data-testid is keyed off `type` (not the icon's own name) so tests don't
+  // depend on lucide-react's internal icon-name strings, which have changed
+  // between versions (e.g. alert-triangle -> triangle-alert).
+  const displayIcon = icon || <IconComponent className="w-5 h-5" data-testid={`${type}-icon`} />;
 
   return (
     <div className={`rounded-lg border p-4 ${styles.container} ${className}`}>

@@ -9,7 +9,8 @@ export interface GettingStartedStep {
 }
 
 export interface GettingStartedSectionProps {
-  title: string;
+  // Optional: the component falls back to "🚀 Getting Started" when omitted.
+  title?: string;
   description?: string;
   steps: GettingStartedStep[];
   className?: string;

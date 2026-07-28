@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import GettingStartedSection from './GettingStartedSection';
+import { GettingStartedSection } from './GettingStartedSection';
 import { Download, Code } from 'lucide-react';
 
 describe('GettingStartedSection', () => {
