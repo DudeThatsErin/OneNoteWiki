@@ -17,46 +17,50 @@ export default function ResourcesPage() {
             Microsoft ships a few different versions of OneNote, and which one you have affects
             which features are available to you.
           </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
-            <InfoCard title="OneNote for Windows 10 / Microsoft 365" variant="purple">
-              <p>
-                The actively developed, modern version bundled with Windows and Microsoft 365.
-                Gets new features first and syncs across all platforms.
-              </p>
-            </InfoCard>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <InfoCard title="OneNote for Windows 10 / Microsoft 365" variant="purple">
+            <p>
+              The actively developed, modern version bundled with Windows and Microsoft 365.
+              Gets new features first and syncs across all platforms.
+            </p>
+          </InfoCard>
 
-            <InfoCard title="OneNote 2016" variant="purple">
-              <p>
-                The legacy desktop version with a few power-user features (like custom tags and
-                the classic ribbon) that haven&apos;t made it to the modern app yet.
-              </p>
-            </InfoCard>
+          <InfoCard title="OneNote 2016" variant="purple">
+            <p>
+              The legacy desktop version with a few power-user features (like custom tags and
+              the classic ribbon) that haven&apos;t made it to the modern app yet.
+            </p>
+          </InfoCard>
 
-            <InfoCard title="OneNote for the web / mobile" variant="purple">
-              <p>
-                Browser and mobile apps that mirror the modern app&apos;s feature set, letting you
-                read and edit notebooks from anywhere.
-              </p>
-            </InfoCard>
-          </div>
+          <InfoCard title="OneNote for the web / mobile" variant="purple">
+            <p>
+              Browser and mobile apps that mirror the modern app&apos;s feature set, letting you
+              read and edit notebooks from anywhere.
+            </p>
+          </InfoCard>
+        </div>
 
+        <div className="prose prose-lg dark:prose-invert max-w-none">
           <h2 suppressHydrationWarning>Keyboard Shortcuts</h2>
           <p>A handful of the shortcuts people reach for most often:</p>
+        </div>
 
-          <FeatureList
-            title="Common Shortcuts"
-            columns={3}
-            features={[
-              { title: 'Ctrl + N', description: 'Create a new page', icon: '📄' },
-              { title: 'Ctrl + Shift + M', description: 'Create a quick note', icon: '📝' },
-              { title: 'Ctrl + Alt + N', description: 'Create a new notebook', icon: '📓' },
-              { title: 'Ctrl + 1 / 2 / 3', description: 'Apply a tag (To Do, Important, Question)', icon: '🏷️' },
-              { title: 'Ctrl + E', description: 'Jump to search', icon: '🔍' },
-              { title: 'Ctrl + Alt + D', description: 'Insert the current date and time', icon: '📅' },
-            ]}
-          />
+        <FeatureList
+          title="Common Shortcuts"
+          columns={3}
+          features={[
+            { title: 'Ctrl + N', description: 'Create a new page', icon: '📄' },
+            { title: 'Ctrl + Shift + M', description: 'Create a quick note', icon: '📝' },
+            { title: 'Ctrl + Alt + N', description: 'Create a new notebook', icon: '📓' },
+            { title: 'Ctrl + 1 / 2 / 3', description: 'Apply a tag (To Do, Important, Question)', icon: '🏷️' },
+            { title: 'Ctrl + E', description: 'Jump to search', icon: '🔍' },
+            { title: 'Ctrl + Alt + D', description: 'Insert the current date and time', icon: '📅' },
+          ]}
+        />
 
+        <div className="prose prose-lg dark:prose-invert max-w-none">
           <h2 suppressHydrationWarning>Third-Party Tools</h2>
           <p>
             Tools built by the community that extend or connect to OneNote:

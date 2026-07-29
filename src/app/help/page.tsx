@@ -16,32 +16,34 @@ export default function HelpPage() {
           <p className="text-muted">
             Whether you're new to OneNote or an experienced user, there are many resources available to help you succeed.
           </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-            <InfoCard
-              title="Official Microsoft Support"
-              variant="purple"
-            >
-              <ul className="list-disc list-inside space-y-2 text-muted">
-                <li><a href="https://support.microsoft.com/onenote" className="accent-purple hover:underline">Microsoft OneNote Help Center</a></li>
-                <li><a href="https://techcommunity.microsoft.com/t5/onenote/ct-p/OneNote" className="accent-purple hover:underline">OneNote Tech Community</a></li>
-                <li><a href="https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app" className="accent-purple hover:underline">OneNote Product Page</a></li>
-                <li>In-app help and tutorials</li>
-              </ul>
-            </InfoCard>
-            <InfoCard
-              title="Community Resources"
-              variant="purple"
-            >
-              <ul className="list-disc list-inside space-y-2 text-muted">
-                <li><a href="https://www.reddit.com/r/OneNote/" className="accent-purple hover:underline">r/OneNote Subreddit</a></li>
-                <li><a href="https://discord.gg/5kv4bDUkpc" className="accent-purple hover:underline">OneNote Discord Community</a></li>
-                <li>YouTube tutorials and guides</li>
-                <li>OneNote user forums and blogs</li>
-              </ul>
-            </InfoCard>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <InfoCard
+            title="Official Microsoft Support"
+            variant="purple"
+          >
+            <ul className="list-disc list-inside space-y-2 text-muted">
+              <li><a href="https://support.microsoft.com/onenote" className="accent-purple hover:underline">Microsoft OneNote Help Center</a></li>
+              <li><a href="https://techcommunity.microsoft.com/t5/onenote/ct-p/OneNote" className="accent-purple hover:underline">OneNote Tech Community</a></li>
+              <li><a href="https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app" className="accent-purple hover:underline">OneNote Product Page</a></li>
+              <li>In-app help and tutorials</li>
+            </ul>
+          </InfoCard>
+          <InfoCard
+            title="Community Resources"
+            variant="purple"
+          >
+            <ul className="list-disc list-inside space-y-2 text-muted">
+              <li><a href="https://www.reddit.com/r/OneNote/" className="accent-purple hover:underline">r/OneNote Subreddit</a></li>
+              <li><a href="https://discord.gg/5kv4bDUkpc" className="accent-purple hover:underline">OneNote Discord Community</a></li>
+              <li>YouTube tutorials and guides</li>
+              <li>OneNote user forums and blogs</li>
+            </ul>
+          </InfoCard>
+        </div>
 
+        <div className="prose prose-lg dark:prose-invert max-w-none">
           <h2 className="text-default">Common Issues & Solutions</h2>
           <p className="text-muted">
             Here are solutions to the most frequently encountered OneNote problems:

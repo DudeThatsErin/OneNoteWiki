@@ -58,32 +58,34 @@ export default function NotebooksPage() {
           <p>
             Effective organization is key to getting the most out of OneNote. Here are proven strategies for keeping your notes organized and easily accessible.
           </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-            <InfoCard
-              title="Academic Organization"
-              variant="purple"
-            >
-              <ul className="list-disc list-inside space-y-2">
-                <li>One notebook per subject/course</li>
-                <li>Sections for different topics or units</li>
-                <li>Pages for individual lectures or assignments</li>
-                <li>Use consistent naming conventions</li>
-              </ul>
-            </InfoCard>
-            <InfoCard
-              title="Professional Organization"
-              variant="purple"
-            >
-              <ul className="list-disc list-inside space-y-2">
-                <li>Separate notebooks for different projects</li>
-                <li>Sections for meetings, planning, resources</li>
-                <li>Date-based page naming for meetings</li>
-                <li>Shared notebooks for team collaboration</li>
-              </ul>
-            </InfoCard>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <InfoCard
+            title="Academic Organization"
+            variant="purple"
+          >
+            <ul className="list-disc list-inside space-y-2">
+              <li>One notebook per subject/course</li>
+              <li>Sections for different topics or units</li>
+              <li>Pages for individual lectures or assignments</li>
+              <li>Use consistent naming conventions</li>
+            </ul>
+          </InfoCard>
+          <InfoCard
+            title="Professional Organization"
+            variant="purple"
+          >
+            <ul className="list-disc list-inside space-y-2">
+              <li>Separate notebooks for different projects</li>
+              <li>Sections for meetings, planning, resources</li>
+              <li>Date-based page naming for meetings</li>
+              <li>Shared notebooks for team collaboration</li>
+            </ul>
+          </InfoCard>
+        </div>
 
+        <div className="prose prose-lg dark:prose-invert max-w-none">
           <h2>Advanced Organization Tips</h2>
           <ul className="list-disc list-inside space-y-2">
             <li><strong>Color Coding:</strong> Use section colors to categorize content visually</li>
