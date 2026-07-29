@@ -12,19 +12,7 @@ export default function MobilePage() {
       description="Master OneNote on your mobile devices. Learn about mobile-specific features, offline capabilities, and tips for productive note-taking on the go."
       icon={<Smartphone className="w-8 h-8 text-purple-600" />}
     >
-      {/* Overview */}
       <div className="flex flex-col gap-6 md:gap-8">
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-            OneNote on Mobile Devices
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-6">
-            OneNote mobile apps bring the full power of digital note-taking to your smartphone and tablet. 
-            Whether you're capturing ideas on the go, reviewing notes offline, or using touch and pen input, 
-            mobile OneNote keeps you productive anywhere.
-          </p>
-        </div>
-
         {/* Platform Support */}
         <QuickStats
           title="Platform Availability"

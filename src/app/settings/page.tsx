@@ -11,18 +11,7 @@ export default function SettingsPage() {
       description="Configure OneNote to work perfectly for your needs. Learn about account settings, sync options, backup strategies, and customization features."
       icon={<Settings className="w-8 h-8 text-purple-600" />}
     >
-      {/* Overview */}
       <div className="flex flex-col gap-6 md:gap-8">
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-            OneNote Settings & Configuration
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-6">
-            Customize OneNote to match your workflow and preferences. From sync settings to privacy controls, 
-            proper configuration ensures OneNote works exactly how you need it to across all your devices.
-          </p>
-        </div>
-
         {/* Settings Categories */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <InfoCard

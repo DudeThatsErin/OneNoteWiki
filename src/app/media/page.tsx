@@ -11,18 +11,7 @@ export default function MediaPage() {
       description="Learn how to work with images, audio, video, and file attachments in OneNote to create rich, multimedia notes."
       icon={<Image className="w-8 h-8 text-purple-600" />}
     >
-      {/* Overview */}
       <div className="flex flex-col gap-6 md:gap-8">
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-            Rich Media Support
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-6">
-            OneNote excels at handling various types of media and attachments, making your notes more engaging and informative. 
-            You can insert images, record audio, embed videos, and attach files directly into your pages.
-          </p>
-        </div>
-
         {/* Media Types */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <InfoCard

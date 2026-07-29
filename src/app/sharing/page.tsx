@@ -12,19 +12,7 @@ export default function SharingPage() {
       description="Learn how to share OneNote notebooks and collaborate in real-time. Master permission settings, team workflows, and collaborative note-taking strategies."
       icon={<Share2 className="w-8 h-8 text-purple-600" />}
     >
-      {/* Overview */}
       <div className="flex flex-col gap-6 md:gap-8">
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-            OneNote Sharing & Collaboration
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-6">
-            OneNote's collaboration features enable seamless teamwork and knowledge sharing. 
-            From simple notebook sharing to complex team workflows, OneNote provides the tools 
-            you need for effective collaborative note-taking and project management.
-          </p>
-        </div>
-
         {/* Sharing Stats */}
         <QuickStats
           title="Collaboration Features"

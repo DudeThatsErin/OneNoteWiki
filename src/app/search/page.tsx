@@ -10,19 +10,7 @@ export default function SearchPage() {
       description="Master OneNote's powerful search capabilities. Learn to find information quickly across notebooks, including text in images, handwritten notes, and audio recordings."
       icon={<Search className="w-8 h-8 text-purple-600" />}
     >
-      {/* Overview */}
       <div className="flex flex-col gap-6 md:gap-8">
-        <div>
-          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-            OneNote Search & Organization
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-6">
-            OneNote's search functionality goes far beyond simple text matching. With OCR technology, 
-            handwriting recognition, and audio transcription, you can find information in any format 
-            across all your notebooks instantly.
-          </p>
-        </div>
-
         {/* Search Capabilities */}
         <QuickStats
           title="Search Capabilities"
