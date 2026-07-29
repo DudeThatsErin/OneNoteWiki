@@ -11,16 +11,6 @@ export default function NotebooksPage() {
       icon={<BookOpen className="w-8 h-8 text-purple-600" />}
     >
       <div className="flex flex-col gap-8">
-        {/* Hero Section */}
-        <div className="text-center py-8">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Notebooks & Organisation
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Learn how to create, organise, and manage your OneNote notebooks for maximum productivity.
-          </p>
-        </div>
-
         {/* Quick Stats */}
         <QuickStats
           stats={[

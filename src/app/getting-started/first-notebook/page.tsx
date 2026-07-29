@@ -13,16 +13,6 @@ export default function FirstNotebookPage() {
       icon={<BookOpen className="w-8 h-8 text-purple-600" />}
     >
       <div className="flex flex-col gap-8">
-        {/* Hero Section */}
-        <div className="text-center py-8">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Creating Your First Notebook
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Get started with OneNote by creating your first notebook. We'll walk you through the process 
-            step-by-step and share best practices for organizing your notes.
-          </p>
-        </div>
 
         {/* Quick Overview */}
         <QuickStats
